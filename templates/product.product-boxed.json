@@ -1,0 +1,715 @@
+{
+  "sections": {
+    "breadcrumbs_ka3wVn": {
+      "type": "breadcrumbs",
+      "settings": {
+        "section_width": "container",
+        "alignment": "start",
+        "text_size": "text-size-small",
+        "type_breadcrumb": "diamond",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 24,
+        "padding_bottom": 12,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "subheading"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "rating_UhVAtV": {
+          "type": "rating",
+          "settings": {
+            "target_to_section": false,
+            "section_id": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_sale_badge": true,
+            "sale_badge_type": "fixed"
+          }
+        },
+        "rich_text_gJV7TU": {
+          "type": "rich-text",
+          "settings": {
+            "align": "start",
+            "icon": "lightning_bolt",
+            "width": 20,
+            "heading": "",
+            "content": "<p><strong>Use the code IMPACT20 to receive a 20% discount on your order<\/strong><\/p>",
+            "background": "#ecefe2",
+            "color": "#156742"
+          }
+        },
+        "popup_ChfgqK": {
+          "type": "popup",
+          "settings": {
+            "text": "What my size?",
+            "icon": "none",
+            "content": "",
+            "content_liquid": "",
+            "page": "size-guide"
+          }
+        },
+        "inventory_xyPUV8": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 9,
+            "inventory_base_quantity": 100,
+            "show_inventory_ping": true,
+            "show_inventory_quantity": true,
+            "show_progress_bar": true
+          }
+        },
+        "siblings_j3h7Cg": {
+          "type": "siblings",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "hide_sold_out_variants": false,
+            "color_picker_type": "variant_image",
+            "style": "solid",
+            "option_name": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "enable_quantity_rules": true
+          }
+        },
+        "sku_yqmVAY": {
+          "type": "sku",
+          "settings": {
+            "text_style": "subheading"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_two_columns": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_pickup_availability": true,
+            "show_back_in_stock": false,
+            "text_back_in_stock": "Notify me"
+          }
+        },
+        "trust_badge_bcKXnr": {
+          "type": "trust-badge",
+          "settings": {
+            "text": "",
+            "badge_type": "payment-icon",
+            "show_border": false,
+            "align": "start"
+          }
+        },
+        "text_UGxVVA": {
+          "type": "text",
+          "settings": {
+            "text": "This is a demo store. You can buy products like this from.",
+            "text_style": "body"
+          }
+        },
+        "separator_BcFrTM": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 0.5
+          }
+        },
+        "collapsible_tab_6kicUP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Lifetime warranty",
+            "heading_size": "sub-heading",
+            "icon": "sheild",
+            "content": "<p>For warranty requests made after 30 days from the purchase, our quality team will evaluate the case, and if the conditions to proceed with the warranty are met, we will initiate the replacement of the jewelry or, if this is not possible, a gift card for the value of the damaged jewelry will be created.<\/p>",
+            "content_liquid": "",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_bVRE3V": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Base Materials",
+            "heading_size": "sub-heading",
+            "icon": "leather",
+            "content": "<p>Not to be confused with regular gold plating, our vermeil is a thick layer of 18k solid gold on sterling silver meaning it will last longer. You get the look & feel of gold jewelry at a fraction of the price. Our vermeil is a thick layer of 18k solid gold plated on 92% recycled sterling silver<\/p>",
+            "content_liquid": "",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_4UNrkz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & returns",
+            "heading_size": "sub-heading",
+            "icon": "global",
+            "content": "<p>We aim to dispatch Standard and Express orders on the next business day.<\/p><p>Free shipping on all orders above $99 and over within Australia. $10 flat rate for all orders under $99.<\/p>",
+            "content_liquid": "",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "separator_CgCj4T": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 1
+          }
+        },
+        "complementary_7gy8hM": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "column_width": 60,
+            "product_list_limit": 10,
+            "enable_quick_add": true
+          }
+        },
+        "icon_with_text_6bTTF3": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_size": 20,
+            "icon_1": "lock",
+            "heading_1": "Safe Payment",
+            "icon_2": "truck",
+            "heading_2": "Free Express Shipping*",
+            "icon_3": "box",
+            "heading_3": "Delivery 2-5 days",
+            "icon_4": "shoe",
+            "heading_4": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share:"
+          }
+        },
+        "countdown_kiaRLz": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "end_time": "2025\/12\/31 23:59:59",
+            "style": "highlight",
+            "font_family": "heading",
+            "number_size": "h5",
+            "heading": "🔥Hurry up! Offer expires in:"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "rating_UhVAtV",
+        "price",
+        "rich_text_gJV7TU",
+        "popup_ChfgqK",
+        "inventory_xyPUV8",
+        "siblings_j3h7Cg",
+        "variant_picker",
+        "quantity_selector",
+        "sku_yqmVAY",
+        "buy_buttons",
+        "trust_badge_bcKXnr",
+        "text_UGxVVA",
+        "separator_BcFrTM",
+        "collapsible_tab_6kicUP",
+        "collapsible_tab_bVRE3V",
+        "collapsible_tab_4UNrkz",
+        "separator_CgCj4T",
+        "complementary_7gy8hM",
+        "icon_with_text_6bTTF3",
+        "share",
+        "countdown_kiaRLz"
+      ],
+      "settings": {
+        "section_width": "container",
+        "enable_sticky_info": true,
+        "enable_max_width_content": false,
+        "show_sticky_add_to_cart_bar": true,
+        "media_width": 60,
+        "media_aspect_ratio": "adapt",
+        "thumbnail_aspect_ratio": "square",
+        "gallery_layout": "thumbnail_left",
+        "media_position": "left",
+        "show_lightbox": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_thumbnails": "show",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 12,
+        "padding_bottom": 32,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "information-products": {
+      "type": "information-tabs-products",
+      "blocks": {
+        "description_6CNYAh": {
+          "type": "description",
+          "settings": {
+            "tab_heading": "Description"
+          }
+        },
+        "custom_content_73AKnk": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Product care",
+            "content": "<p><strong>Caring for your Jewellery<\/strong><\/p><p>This piece should be stored in a cool, dry place and cleaned carefully with a soft non-abrasive cloth to maintain shine.<\/p><p>Read our jewellery care guide to find out how best to care for your jewellery.<\/p>",
+            "page": ""
+          }
+        },
+        "custom_content_mitrbj": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Sustainability",
+            "content": "<h6>Carbon-Neutral Delivery<\/h6><p>We offer worldwide carbon-neutral shipping and returns. 100% of our packaging is now also recyclable.<\/p><h6>Responsibly Made<\/h6><p>Our products are handcrafted by our teams in India and Thailand. We have built relationships with these factories over 15 years – and they are regularly audited by the Responsible Jewellery Council.<\/p><h6>Consciously Sourced<\/h6><p>We only source conflict-free diamonds, and we are committed to using recycled metals – our goal is to work with our factories to further this with every new collection.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description_6CNYAh",
+        "custom_content_73AKnk",
+        "custom_content_mitrbj"
+      ],
+      "settings": {
+        "section_width": "container",
+        "enable_uppercase": true,
+        "tabs_font_family": "body_font",
+        "align": "start",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "image_with_text_Y3wxrR": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_WPcKWF": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our craftsmanship"
+          }
+        },
+        "heading_Bg8CUx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made with Passion",
+            "heading_size": "h2"
+          }
+        },
+        "text_WhicLW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Over 4 decades of heritage and experience in manufacturing are at the <strong>heart<\/strong> of Brilliant Monaco which means we can align our craftsmanship with that of fine jewelry making. We hand-craft our <strong>high-end silver jewelry<\/strong> in our own production sites and our teams oversee each stage of the process.<\/p><p>Our jewelry is mostly made of zirconia or freshwater pearls. The pure sterling silver 925 we use is also mostly from recycled sources. <\/p>",
+            "large_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_WPcKWF",
+        "heading_Bg8CUx",
+        "text_WhicLW"
+      ],
+      "settings": {
+        "section_width": "container",
+        "media_size": "square",
+        "show_image_2": false,
+        "position_image_2": "middle-right",
+        "media_size_2": "adapt",
+        "desktop_image_width": "50",
+        "active_video": false,
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": false,
+        "layout": "left",
+        "column_gap": "16",
+        "vertical_alignment": "center",
+        "content_alignment": "start",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "bg_column": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "image_with_text_WgETz6": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_FXgeVg": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Sophisticated Design"
+          }
+        },
+        "heading_AUgeBB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Certified Lab Diamonds",
+            "heading_size": "h2"
+          }
+        },
+        "text_Mm6QKA": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li> 1 ct. Total Weight  <\/li><li>Clarity: VS1 <\/li><li>Color: DEF <\/li><li>Cut: Theian Ideal<\/li><\/ul>",
+            "large_text": false
+          }
+        },
+        "button_EhhMnB": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_FXgeVg",
+        "heading_AUgeBB",
+        "text_Mm6QKA",
+        "button_EhhMnB"
+      ],
+      "settings": {
+        "section_width": "container",
+        "media_size": "square",
+        "show_image_2": false,
+        "position_image_2": "bottom-left",
+        "media_size_2": "adapt",
+        "desktop_image_width": "50",
+        "active_video": false,
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": false,
+        "layout": "right",
+        "column_gap": "16",
+        "vertical_alignment": "center",
+        "content_alignment": "start",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "bg_column": "",
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "video_with_text_overlay_tqNjTQ": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "heading_hygaHh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<i>Harmony of Form <i><\/i><\/i>",
+            "highlighted_word_type": "single_line",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_UjfACV": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "From inspiration"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hygaHh",
+        "subheading_UjfACV"
+      ],
+      "settings": {
+        "section_width": "container",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description_video": "Crafted from the Finest Materials",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 560,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 480,
+        "content_width": "max-w-4xl",
+        "desktop_content_position": "bottom-center",
+        "mobile_content_position": "bottom-center",
+        "color_text": "#ffffff",
+        "color_text_highlighted": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_gradient": "",
+        "overlay_opacity": 0
+      }
+    },
+    "collapsible_content_83Xcee": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_QGmACa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I find the right size ?",
+            "icon": "none",
+            "row_content": "<p>For rings, we advise you to check the top of the product page. There you can find just below the buy button, the \"Ring Size Converter\"<br\/>By doing so, you will find the perfect size for you.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_397MBA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long until I have my jewelry?",
+            "icon": "none",
+            "row_content": "<p>Each piece in our collection is handcrafted with care, a process that takes approximately 3 to 5 days. Delivery time varies depending on the product ordered. Most items arrive within 5 to 12 business days<\/p><p>You will be notified of any delays. These are estimated timeframes and may be affected by factors such as material availability, order volume, and shipping destination.<\/p><p>If you have any questions about your order’s expected delivery date, our customer support team is available to assist you.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ncFnnH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your Return Policy",
+            "icon": "none",
+            "row_content": "<p>We take pride in offering more than just exquisite gems—we provide an experience built on trust and confidence.<\/p><p>If you're not completely satisfied with your order, we offer a 30-day return or exchange policy.<\/p><p>For more details, please refer to our Return Policy.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6gmfVa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I track my order?",
+            "icon": "none",
+            "row_content": "<p>We aim to process and ship orders within 24-48 hours of placement.<\/p><p>Once your order has been dispatched, you will receive an email with tracking details, allowing you to monitor its progress. Simply use the provided tracking information on our delivery partner’s website to stay updated on your shipment.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kenNmj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have another question",
+            "icon": "none",
+            "row_content": "<p>Visit our main Frequent Asked Questions<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_QGmACa",
+        "collapsible_row_397MBA",
+        "collapsible_row_ncFnnH",
+        "collapsible_row_6gmfVa",
+        "collapsible_row_kenNmj"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "FAQs",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "heading_size": "h5",
+        "enable_vertical_middle": false,
+        "open_first_collapsible_row": false,
+        "enable_narrow_content": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "media_grid_Vnij3b": {
+      "type": "media-grid",
+      "blocks": {
+        "media_jziGGF": {
+          "type": "media",
+          "settings": {
+            "active_video": false,
+            "subheading": "",
+            "heading": "Chat with us",
+            "heading_size": "h4",
+            "text": "<p>24\/7 - Live Chat support available!<\/p>",
+            "button_label": "Personal Shopping",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": false,
+            "column": 2,
+            "row": 1,
+            "desktop_content_position": "middle-center",
+            "column_mobile": "2",
+            "row_mobile": "1",
+            "bg_color": "#f7f7f7",
+            "bg_gradient": "",
+            "text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": ""
+          }
+        },
+        "media_xjAmdk": {
+          "type": "media",
+          "settings": {
+            "active_video": false,
+            "subheading": "",
+            "heading": "Call us",
+            "heading_size": "h4",
+            "text": "<ul><li>Mon-Fri 9am-6pm, Sat-Sun 9am-5pm<\/li><\/ul>",
+            "button_label": "Contact us",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": false,
+            "column": 2,
+            "row": 1,
+            "desktop_content_position": "middle-center",
+            "column_mobile": "2",
+            "row_mobile": "1",
+            "bg_color": "#f7f7f7",
+            "bg_gradient": "",
+            "text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_jziGGF",
+        "media_xjAmdk"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "desktop_row_height": 250,
+        "mobile_row_height": 250,
+        "column_count": 4,
+        "column_gap": 3,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "You may also like",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "enable_stack_products": false,
+        "show_progress_bar": true,
+        "enable_overflow_visible": false,
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "column_gap": 1,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1,
+        "swipe_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "recently_viewed_products_FTLchU": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "Recently viewed products",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "products_limit": 4,
+        "columns_desktop": 4,
+        "column_gap": 1,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1,
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 72,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_ka3wVn",
+    "main",
+    "information-products",
+    "image_with_text_Y3wxrR",
+    "image_with_text_WgETz6",
+    "video_with_text_overlay_tqNjTQ",
+    "collapsible_content_83Xcee",
+    "media_grid_Vnij3b",
+    "related-products",
+    "recently_viewed_products_FTLchU"
+  ]
+}

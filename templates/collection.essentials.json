@@ -1,0 +1,229 @@
+{
+  "sections": {
+    "slideshow_new_Xrp76W": {
+      "type": "slideshow-new",
+      "blocks": {
+        "slide_gtiKNr": {
+          "type": "_slide",
+          "settings": {
+            "slide_link": "",
+            "video_background": false,
+            "content_width": 500,
+            "content_position": "middle-center",
+            "mobile_content_position": "middle-center",
+            "content_space": 2,
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          },
+          "blocks": {
+            "slide_image_rAQTet": {
+              "type": "_slide_image",
+              "name": "Image",
+              "settings": {
+                "image_width": 50,
+                "image_width_mobile": 50
+              },
+              "blocks": {}
+            },
+            "slide_subheading_HgqQzp": {
+              "type": "_slide_subheading",
+              "settings": {
+                "subheading": "Everyday Jewelry"
+              },
+              "blocks": {}
+            },
+            "slide_heading_NycJpC": {
+              "type": "_slide_heading",
+              "settings": {
+                "heading": "<i>Hit [f]Refresh[\/f]<\/i>",
+                "highlighted_word_type": "single_line",
+                "heading_size": "h1",
+                "color_text_highlighted": "#ffaa47"
+              },
+              "blocks": {}
+            },
+            "slide_button_aLhHk7": {
+              "type": "_slide_button",
+              "settings": {
+                "button_text": "Shop now",
+                "button_link": "",
+                "button_type": "underlined-white",
+                "show_icon": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_image_rAQTet",
+            "slide_subheading_HgqQzp",
+            "slide_heading_NycJpC",
+            "slide_button_aLhHk7"
+          ]
+        },
+        "slide_7x4WXG": {
+          "type": "_slide",
+          "settings": {
+            "slide_link": "",
+            "video_background": false,
+            "content_width": 500,
+            "content_position": "middle-center",
+            "mobile_content_position": "middle-center",
+            "content_space": 2,
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          },
+          "blocks": {
+            "slide_image_ez36ym": {
+              "type": "_slide_image",
+              "name": "Image",
+              "settings": {
+                "image_width": 50,
+                "image_width_mobile": 50
+              },
+              "blocks": {}
+            },
+            "slide_subheading_CYxViQ": {
+              "type": "_slide_subheading",
+              "settings": {
+                "subheading": "Spring sale"
+              },
+              "blocks": {}
+            },
+            "slide_heading_je8LAx": {
+              "type": "_slide_heading",
+              "settings": {
+                "heading": "<i>Get the [f]Look[\/f]<\/i>",
+                "highlighted_word_type": "single_line",
+                "heading_size": "h1",
+                "color_text_highlighted": "#ffaa47"
+              },
+              "blocks": {}
+            },
+            "slide_button_cjDQkY": {
+              "type": "_slide_button",
+              "settings": {
+                "button_text": "Shop now",
+                "button_link": "",
+                "button_type": "underlined-white",
+                "show_icon": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_image_ez36ym",
+            "slide_subheading_CYxViQ",
+            "slide_heading_je8LAx",
+            "slide_button_cjDQkY"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_gtiKNr",
+        "slide_7x4WXG"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "slide_width": "w-full",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 400,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 400,
+        "auto_rotate": true,
+        "pause_on_hover": false,
+        "change_slides_speed": 8,
+        "transition": "zoom",
+        "show_moving_cursor": true,
+        "controls": "numbers",
+        "accessibility_info": "Slideshow about our brand",
+        "bg_color": "",
+        "controls_color": "#ffffff",
+        "controls_color_text": "#ffffff",
+        "controls_color_arrows": "#000000"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_breadcrumb": true,
+        "text_size": "text-size-small",
+        "type_breadcrumb": "diamond",
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "section_width": "container-fluid",
+        "heading_size": "h1",
+        "image_size": "350px",
+        "align_content": "center",
+        "navigation": "",
+        "text_color": "#ffffff",
+        "border_color": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 25,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "divider_QtLJCH": {
+      "type": "divider",
+      "settings": {
+        "section_width": "container-fluid",
+        "spacer_mobile": 2,
+        "spacer_desktop": 2,
+        "show_border": true,
+        "bg_color": "",
+        "color": "",
+        "style": "solid",
+        "thickness": 1
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "section_width": "container-fluid",
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "column_gap": 1,
+        "row_gap": 3,
+        "pagination_type": "page-numbers",
+        "filter_type": "vertical",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "show_filter_values_count": true,
+        "show_product_count": true,
+        "show_view_mode": true,
+        "collapsible_state": "expanded",
+        "show_color_swatch": true,
+        "filter_color_type": "list",
+        "show_block_style": true,
+        "matching_block_names": "Size",
+        "heading_size_filter_block": "sub-heading",
+        "enable_bold_heading": false,
+        "columns_mobile": "2",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 40,
+        "padding_bottom": 72,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "slideshow_new_Xrp76W",
+    "banner",
+    "divider_QtLJCH",
+    "product-grid"
+  ]
+}

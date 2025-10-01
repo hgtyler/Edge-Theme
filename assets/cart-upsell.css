@@ -1,0 +1,42 @@
+#main-cart-footer.is-empty .cart-upsell, .cart-order.is-empty .cart-upsell{
+  display: none;
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.custom-checkbox__icon {
+  width: 16px;
+  height: 16px;
+  border: 1px solid currentColor;
+  margin-inline-end: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__icon {
+  background-color: rgb(var(--color-background));
+}
+.custom-checkbox__input:focus-visible ~ .custom-checkbox {
+  outline: 2px solid rgba(var(--color-foreground)/ 0.5);
+  outline-offset: -0.2rem;
+}
+
+.custom-checkbox__icon::before {
+  content: '';
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid currentColor; 
+  border-bottom: 2px solid currentColor;
+  transform: translate(0, -1px) rotate(-45deg);
+  opacity: 0; /* Hidden when unchecked */
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__icon::before {
+  opacity: 1; /* Show checkmark when checked */
+}

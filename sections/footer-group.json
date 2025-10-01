@@ -1,0 +1,203 @@
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "gallery_socical_mFxMby": {
+      "type": "gallery-socical",
+      "blocks": {
+        "gallery_QXbWi3": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.78ct-Zircon-Flat-Tapered-Ring4.png",
+            "text": "\"I love my new ring\"",
+            "link": ""
+          }
+        },
+        "gallery_aPTA76": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4.48ct-Burma-Sapphire-Bezel-Ring2.png",
+            "text": "\"I love my new ring\"",
+            "link": ""
+          }
+        },
+        "gallery_YNH7Hk": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Donut-Ring-2mm-Carre2.png",
+            "text": "\"I love my new ring\"",
+            "link": ""
+          }
+        },
+        "gallery_9yYMax": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BANNER.png",
+            "text": "\"I love my new ring\"",
+            "link": ""
+          }
+        },
+        "gallery_Mtf7P3": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/classic-Shadow-Band3.png",
+            "text": "\"I love my new ring\"",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_QXbWi3",
+        "gallery_aPTA76",
+        "gallery_YNH7Hk",
+        "gallery_9yYMax",
+        "gallery_Mtf7P3"
+      ],
+      "name": "Gallery social",
+      "settings": {
+        "section_width": "container",
+        "subheading": "testimonials",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "horizontal",
+        "link_url": "shopify:\/\/pages\/our-story",
+        "link_text": "View more",
+        "button_type": "outline",
+        "show_icon": false,
+        "layout_gallery": "carousel",
+        "image_size": "square",
+        "icon": "none",
+        "text_type": "static",
+        "images_per_row": 5,
+        "gap": 0.6,
+        "columns_mobile": "2",
+        "gap_mobile": 1,
+        "swipe_on_mobile": true,
+        "bg_color": "#fff9ef",
+        "text_color": "#76232f",
+        "border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_EGQWeg": {
+      "type": "rich-text",
+      "blocks": {
+        "image_j3Yjfz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Starling_submark_red_5c36f2fc-ca41-4188-8da3-29318d3ee70c.png",
+            "image_width": 60,
+            "image_width_mobile": 60,
+            "url": ""
+          }
+        },
+        "separator_aCttWc": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 27
+          }
+        }
+      },
+      "block_order": [
+        "image_j3Yjfz",
+        "separator_aCttWc"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "#4f0e0d",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsletter_TTLiWm": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "",
+            "content": "<h5>Hello, darling. Join our newsletter.<\/h5>",
+            "term_policy": "",
+            "show_social": true,
+            "order_first": true
+          }
+        },
+        "link_list_7nmBjj": {
+          "type": "link_list",
+          "settings": {
+            "heading": "House of Starling",
+            "menu": "house-of-starling",
+            "open_details": false
+          }
+        },
+        "link_list_4j8WJb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop",
+            "open_details": false
+          }
+        },
+        "link_list_Nx4gLF": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help",
+            "menu": "help",
+            "open_details": false
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_TTLiWm",
+        "link_list_7nmBjj",
+        "link_list_4j8WJb",
+        "link_list_Nx4gLF"
+      ],
+      "custom_css": [
+        ".footer-block__heading.body-2.md\\:mb-8 {font-family: Whyte Book; letter-spacing: 0.6px; font-size: var(--text-size-base);}",
+        "a.link.no-underline {font-family: \"Whyte\"; letter-spacing: 0.6px; font-size: var(--text-size-base);}"
+      ],
+      "settings": {
+        "section_width": "container",
+        "heading_size": "h5",
+        "enable_follow_on_shop": false,
+        "enable_country_selector": false,
+        "enable_country_flag": false,
+        "enable_country_name": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "show_powered_by": false,
+        "border_color_newsletter": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "show_top_divider": false,
+        "divider_top_width": "w-full",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "w-full",
+        "show_bottom_border_mobile": false
+      }
+    }
+  },
+  "order": [
+    "gallery_socical_mFxMby",
+    "rich_text_EGQWeg",
+    "footer"
+  ]
+}

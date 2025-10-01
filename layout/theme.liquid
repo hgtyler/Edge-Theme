@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="theme-color" content="{{ settings.settings.body_bg }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    <meta name="description" content="{{ page_description | escape | default: shop.description | escape }}">
+
+    {% render 'preload' %}
+    {% render 'meta-tags' %}
+    
+    {{ content_for_header }}
+
+    {% render 'css-variables' %}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    
+    {% comment %} The custom fonts have been consolidated into a single style block. {% endcomment %}
+    <style>
+      {% if settings.more_css != blank %}
+        {{ settings.more_css }}
+      {% endif %}
+
+      @font-face {
+        font-family: 'Nantes';
+        src: url('{{ "Nantes-Regular.woff2" | file_url }}') format('woff2'),
+             url('{{ "Nantes-Regular.woff" | file_url }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Nantes';
+        src: url('{{ "Nantes-RegularItalic.woff2" | file_url }}') format('woff2'),
+             url('{{ "Nantes-RegularItalic.woff" | file_url }}') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Aman Medium Caption';
+        src: url('{{ "Aman-MediumCaption.woff2" | file_url }}') format('woff2'),
+             url('{{ "Aman-MediumCaption.woff" | file_url }}') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Aman Medium Text';
+        src: url('{{ "Aman-MediumText.woff2" | file_url }}') format('woff2'),
+             url('{{ "Aman-MediumText.woff" | file_url }}') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'AubergeScriptBasicOne';
+        src: url('{{ "AubergeScriptBasicOne.woff2" | file_url }}') format('woff2'),
+             url('{{ "AubergeScriptBasicOne.woff" | file_url }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+
+      @font-face {
+        font-family: 'Whyte';
+        src: url('{{ "Whyte-ExtraLight.woff2" | file_url }}') format('woff2'),
+             url('{{ "Whyte-ExtraLight.woff" | file_url }}') format('woff');
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+      }
+
+@font-face {
+  font-family: 'Whyte';
+  src: url('{{ "Whyte-Light.woff2" | file_url }}') format('woff2'),
+       url('{{ "Whyte-Light.woff" | file_url }}') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte Book';
+  src: url('{{ "Whyte-Book.woff2" | file_url }}') format('woff2'),
+       url('{{ "Whyte-Book.woff" | file_url }}') format('woff');
+  font-weight: 400; /* 'normal' = 400 */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte';
+  src: url('{{ "Whyte-Medium.woff2" | file_url }}') format('woff2'),
+       url('{{ "Whyte-Medium.woff" | file_url }}') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+ 
+    </style>
+    
+    {% render 'scripts-tag' %} 
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.predictive_search_enabled -%}
+      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'" >
+    {%- endif -%}
+
+  </head>
+
+  <body class="template-{{ template | replace: '.', '-' | handle }} type-anim-{{ settings.animations_style }}">
+    <a class="skip-to-content-link button visually-hidden btn btn-primary" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+    {%- if settings.show_page_transition and request.design_mode == false -%}
+      <page-transition id="page-transition" class="active" duration="350"></page-transition>
+    {%- endif-%}
+    {%- if settings.cart_type == 'drawer' and template != 'cart' -%}
+      {%- render 'cart-drawer' -%}
+    {%- endif -%}
+    {%- render 'block-search' -%}
+    
+    {%- sections 'header-group' -%}
+    
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {%- sections 'footer-group' -%}
+    {%- sections 'overlay-group' -%}
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+    </ul>
+    
+    {% render 'js-variables' %}
+    
+    {% render 'product-quick-view' %}
+    {% if settings.show_scroll_to_top %}
+      {% render 'scroll-to-top' %}
+    {% endif %}
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.cart_type == 'drawer' -%}
+      <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.show_free_shipping_bar -%}
+      <link rel="stylesheet" href="{{ 'free-shipping.css' | asset_url }}" media="print" onload="this.media='all'">
+      <script src="{{ 'free-shipping.js' | asset_url }}" defer="defer"></script> 
+    {%- endif -%}
+    {% assign upsell_product = all_products[settings.cart_upsell_product] %}
+    {% if settings.enable_cart_upsell and template != 'cart' and upsell_product != blank %}
+      <script src="{{ 'cart-checkbox-upsell.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
+    {%- if settings.show_cart_note or settings.show_cart_calc_shipping -%}
+      <script src="{{ 'modal-drawer.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    
+    {%- if settings.show_page_transition and request.design_mode == false -%}
+      <script src="{{ 'page-transition.js' | asset_url }}" defer="defer"></script> 
+   {%- endif -%}
+   <script src="{{ 'instant.page.js' | asset_url }}" type="module"></script>
+  </body>
+</html>

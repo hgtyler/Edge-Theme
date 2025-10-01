@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "breadcrumbs_FYp3jd": {
+      "type": "breadcrumbs",
+      "settings": {
+        "section_width": "container-fluid",
+        "alignment": "start",
+        "text_size": "text-size-small",
+        "type_breadcrumb": "arrow",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container-fluid"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_breadcrumb": false,
+        "text_size": "text-size-small",
+        "type_breadcrumb": "dot",
+        "show_collection_title": true,
+        "show_collection_image": false,
+        "section_width": "container",
+        "heading_size": "h4",
+        "image_size": "350px",
+        "image": "{{ collection.image }}",
+        "align_content": "start",
+        "show_collection_description": true,
+        "show_more_toggle": false,
+        "max_height": 2,
+        "navigation": "",
+        "text_color": "#ffffff",
+        "border_color": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "w-full"
+      }
+    },
+    "collection_list_tribB7": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_KhdfMR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Diamond_Cloud_Engagement_Ring_7.jpg",
+            "title": "Engagement Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/rings?sort_by=manual&filter.p.m.my_fields.collection=ENGAGEMENT"
+          }
+        },
+        "featured_collection_L8K9qB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-4.jpg",
+            "title": "Signet Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/rings?sort_by=manual&filter.p.m.custom.style=SIGNET"
+          }
+        },
+        "featured_collection_XxbfnW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/CLOUD_33b3f04a-da9b-4423-8769-6c4864f34804.jpg",
+            "title": "Cloud Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/rings?sort_by=manual&filter.p.m.custom.style=CLOUD"
+          }
+        },
+        "featured_collection_3Cdc7x": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/ripples-1_5a3cc62b-1494-44ea-b466-b01ef17d3ed7.jpg",
+            "title": "Ripple Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/rings?sort_by=manual&filter.p.m.custom.style=RIPPLE"
+          }
+        },
+        "featured_collection_DJnQRA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Round-Topaz-Bezel-Cloud-Ring-1.jpg",
+            "title": "Bezel Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/rings?sort_by=manual&filter.p.m.custom.style=BEZEL"
+          }
+        },
+        "featured_collection_LeaFpA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/BIRTHSTONE.jpg",
+            "title": "Birthstone Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/all?sort_by=manual&filter.p.m.my_fields.style=Rings&filter.p.m.my_fields.collection=BIRTHSTONES"
+          }
+        },
+        "featured_collection_eYwLHG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/STARLING-0231.jpg",
+            "title": "One of a Kind Rings",
+            "url": "https:\/\/www.starlingjewelry.com\/collections\/all?sort_by=manual&filter.p.m.my_fields.style=Rings&filter.p.m.my_fields.collection=ONE+OF+A+KIND"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_KhdfMR",
+        "featured_collection_L8K9qB",
+        "featured_collection_XxbfnW",
+        "featured_collection_3Cdc7x",
+        "featured_collection_DJnQRA",
+        "featured_collection_LeaFpA",
+        "featured_collection_eYwLHG"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "section_width": "container-fluid",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h6",
+        "description": "",
+        "layout": "horizontal",
+        "link_url": "",
+        "link_text": "",
+        "button_type": "underlined",
+        "show_icon": false,
+        "card_type": "standard",
+        "image_ratio": "square",
+        "show_collection_count": false,
+        "show_button_arrow": false,
+        "show_zoom_on_hover": true,
+        "use_title_italic": false,
+        "heading_size": "text-body",
+        "content_alignment": "center",
+        "title_color": "",
+        "overlay_color": "#000000",
+        "enable_gradient": true,
+        "overlay_opacity": 0,
+        "enable_stack_collections": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": true,
+        "columns_desktop": 7,
+        "column_gap": 2,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1.8,
+        "swipe_on_mobile": true,
+        "bg_color": "#ffffff",
+        "text_color": "#76232f",
+        "border_color": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "promotion_D34afj": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 1,
+            "column_span": "2",
+            "fill_height": true,
+            "custom_height": 100,
+            "custom_height_mobile": 100,
+            "active_video": false,
+            "subheading": "FREE GIFT",
+            "heading": "On All $50 + Orders",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "bottom-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "promotion_RJEJbr": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 8,
+            "column_span": "2",
+            "fill_height": true,
+            "custom_height": 100,
+            "custom_height_mobile": 100,
+            "active_video": false,
+            "subheading": "Stacking season",
+            "heading": "Ready . Set . Stack",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "bottom-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_D34afj",
+        "promotion_RJEJbr"
+      ],
+      "settings": {
+        "section_width": "w-full",
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "column_gap": 1,
+        "row_gap": 2,
+        "pagination_type": "load-more-button",
+        "filter_type": "drawer",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "show_filter_values_count": true,
+        "show_product_count": false,
+        "show_view_mode": false,
+        "collapsible_state": "collapsed",
+        "show_color_swatch": true,
+        "filter_color_type": "inline",
+        "show_block_style": true,
+        "matching_block_names": "Size",
+        "heading_size_filter_block": "sub-heading",
+        "enable_bold_heading": false,
+        "columns_mobile": "2",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 24,
+        "padding_bottom": 28,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_FYp3jd",
+    "banner",
+    "collection_list_tribB7",
+    "product-grid"
+  ]
+}

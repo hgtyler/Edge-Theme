@@ -1,0 +1,15 @@
+.rich-text__text-image responsive-image, .rich-text__text-image .placeholder-image{
+  display: inline-block;
+  width: var(--width-image);
+}
+.rich-text__text-image .text-media{
+  margin: 6px;
+  transition: transform var(--duration-medium);
+  backface-visibility: hidden;
+}
+.rich-text__text-image .text-media:hover {
+  transform: scale(1.1);
+}
+.rich-text__text-image .rich-text__text-image-heading{
+  line-height: var(--line-height); 
+}

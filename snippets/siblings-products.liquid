@@ -1,0 +1,20 @@
+{% liquid
+  assign siblings = product.metafields.ortheme.siblings
+  assign sibling_color = product.metafields.ortheme.sibling_color
+%}
+{%- if siblings != blank and collections[siblings] != blank -%}
+<fieldset class="product__siblings product__siblings--color" {{ block.shopify_attributes }} >
+  <div class="form__label">{{ 'products.product.sibling_color' | t }}<span class="form__label-value">{{ sibling_color }}</span></div>
+  <div class="variant-picker variant-picker__color flex gap-1 flex-wrap variant-picker__solid">
+    {%- for sibling in collections[siblings].products limit: 20 -%}
+      <a href="{{ sibling.url }}" class="swatch-image {% if sibling.id == product.id %} active {% endif %}">
+        <span class="sr-only">{{ sibling_color }}</span>
+        {%- assign media = sibling.featured_media -%}
+        {%- if media %}
+          {{- media | image_url: width: media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
+        {%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</fieldset>
+{%- endif -%}

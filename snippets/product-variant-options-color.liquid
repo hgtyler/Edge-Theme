@@ -1,0 +1,154 @@
+{% comment %}
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+  - color_picker_type: {String} type of picker to dispay
+
+
+  Usage:
+  {% render 'product-variant-options',
+    product: product,
+    option: option,
+    block: block
+    color_picker_type: color_picker_type
+  %}
+{% endcomment %}
+{%- liquid
+  assign variants_available_arr = product.variants | map: 'available'
+  assign variants_option1_arr = product.variants | map: 'option1'
+  assign variants_option2_arr = product.variants | map: 'option2'
+  assign variants_option3_arr = product.variants | map: 'option3'
+
+  assign product_form_id = 'product-form-' | append: section.id
+  assign color_swatch_style = settings.color_swatch_style
+-%}
+
+{%- for value in option.values -%}
+  {%- liquid
+    assign option_disabled = true
+
+    for option1_name in variants_option1_arr
+      case option.position
+        when 1
+          if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 2
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 3
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+      endcase
+    endfor
+
+    assign config = settings.color_swatch_config | newline_to_br | split: '<br />'
+    assign selected_value = value | downcase
+    assign css_property = '--swatch-color: ' | append: selected_value
+
+    for item in config
+        assign parts = item | split: ':'
+        assign name = parts.first | downcase | strip
+        if selected_value == name
+            assign swatch_value = parts.last | strip
+            if swatch_value contains '#'
+                assign css_property = '--swatch-color: ' | append: swatch_value
+            elsif images[swatch_value] != blank
+                assign image_url = images[swatch_value] | image_url: width: 356
+                assign css_property = '--swatch-color: url(' | append: image_url | append: ')'
+            endif
+        endif
+    endfor
+
+    assign option_index = option.position  | minus: 1
+      for variant in product.variants
+          if variant.options[option_index] == value
+            assign media =  variant.image
+            break
+          endif
+      endfor
+
+  -%}
+
+  {%- capture input_id -%}
+    {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
+  {%- endcapture -%}
+  {%- capture help_text -%}
+    <span class="sr-only">{{ value | escape }}</span>
+    {{ label_unavailable }}
+  {%- endcapture -%}
+  {%- capture input_swatch -%}
+    <input
+      type="radio"
+      id="{{ input_id }}"
+      name="{{ option.name }}"
+      value="{{ value | escape }}"
+      form="{{ product_form_id }}"
+      {% if option.selected_value == value %}
+        checked
+      {% endif %}
+      {% if option_disabled %}
+        class="disabled"
+      {% endif %}
+    >
+  {%- endcapture -%}
+      {%- if color_picker_type == 'color_swatch' -%}
+      {{ input_swatch }}
+        <label class="swatch-color {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif -%} " for="{{ input_id }}" style="{{ css_property }}">
+          <span class="sr-only">{{ value -}}</span> 
+        </label>
+      {%- elsif color_picker_type == 'native_color_swatch' -%}
+        {%
+          render 'swatch-input',
+          id: input_id,
+          name: option.name,
+          value: value | escape,
+          swatch: value.swatch,
+          product_form_id: product_form_id,
+          checked: value.selected,
+          visually_disabled: option_disabled,
+          shape: color_swatch_style,
+          help_text: help_text,
+          color_swatch_style: color_swatch_style
+        %}
+      {%- elsif color_picker_type == 'variant_image' -%}
+        {{ input_swatch }}
+        {%- if media != blank -%}
+          <label class="swatch-image" for="{{ input_id }}">
+            <span class="sr-only">{{ value -}}</span> 
+            {{- media | image_url: width: media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
+          </label>
+        {%- else -%}
+          <label class="swatch-block" for="{{ input_id }}" >
+            {{ value -}}
+          </label>
+        {%- endif -%}
+      {%- elsif color_picker_type == 'block' -%}
+        {{ input_swatch }}
+        <label class="swatch-block" for="{{ input_id }}" >
+          {{ value -}}
+        </label>
+      {%- elsif color_picker_type == 'dropdown' -%}
+        <option
+          {% if option_disabled -%}
+            class="disabled"
+          {% endif %}
+          value="{{ value | escape }}"
+          {% if option.selected_value == value %}
+            selected="selected"
+          {% endif %}
+        >
+          {% if option_disabled -%}
+            {{- 'products.product.value_unavailable' | t: option_value: value -}}
+          {%- else -%}
+            {{- value -}}
+          {%- endif %}
+        </option>
+      {%- endif -%}
+{%- endfor -%}
+

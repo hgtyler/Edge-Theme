@@ -1,0 +1,105 @@
+{%- liquid
+  assign read_more = 'blogs.article.read_more' | t
+  if enable_button_underlined_white 
+    assign button_style = 'underlined-white'
+  else 
+    assign button_style = 'underlined'
+  endif
+-%}
+{%- if article and article != empty -%}
+  <div class="article-card-wrapper">
+    <div class="article-card">
+      {%- if show_image == true and article.image -%}
+        <div class="article-card__image-wrapper">
+          <div class="article-card__image overflow-hidden relative">
+            <a href="{{ article.url }}">
+            {%- render 'responsive-image' , 
+              image: article.image.src, 
+              sizes: sizes, 
+              image_aspect_ratio: media_aspect_ratio,
+              alt: article.image.src.alt | escape 
+              -%}
+              </a>
+              {%- if show_category and article.tags.size > 0 -%}
+                <span class="badge badge-article top-4 left-4 absolute">{{ article.tags | first }}</span>
+              {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+      <div class="article__content pt-4">
+        <div class="article__information">
+          <div class="article-card__info light text-size-small pb-6">
+            {%- if show_date -%}
+              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if show_author -%}
+              <span>{{ article.author }}</span>
+            {%- endif -%}
+          </div>
+          <h3 class="article-card__heading h4 pb-6">
+            <a href="{{ article.url }}" class="full-unstyled-link">
+              {{ article.title | escape }}
+            </a>
+          </h3>
+          {%- if show_excerpt -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <p class="article-card__excerpt pb-8">
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 20 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 20 }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+          {%- endif -%}
+          {%- if show_read_more -%}
+            {%- render 'button', button_style: button_style , button_text: read_more, button_url:  article.url  , button_type: 'link' -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- else -%}
+<div class="article-card-wrapper">
+  <div class="article-card">
+    {%- if show_image == true -%}
+      <div class="article-card__image-wrapper">
+      <div class="article-card__image overflow-hidden relative">
+        {% render 'placeholder-image', image_placeholder : 'image', image_aspect_ratio : media_aspect_ratio  %}
+        </div>
+      </div>
+    {%- endif -%}
+    <div class="article__content pt-4">
+      <div class="article__information">
+        <div class="article-card__info light text-size-small pb-6">
+          {%- if show_date -%}
+            <span class="circle-divider">{{ "today" | time_tag: format: 'date' }}</span>
+          {%- endif -%}
+          {%- if show_author -%}
+            <span>{{ 'sections.featured_blog.onboarding_author' | t  }}</span>
+          {%- endif -%}
+        </div>
+        <h3 class="article-card__heading h4 pb-6">
+          <a role="link" aria-disabled="true" class="full-unstyled-link">
+            {{ 'sections.featured_blog.onboarding_title' | t }}
+          </a>
+        </h3>
+        {%- if show_excerpt -%}
+            <p class="article-card__excerpt pb-8">
+              {{ 'sections.featured_blog.onboarding_content' | t }}
+            </p>
+        {%- endif -%}
+        {%- if show_read_more -%}
+          {%- render 'button', button_style: button_style , button_text: read_more , button_type: 'no-link' -%}
+        {%- endif -%}
+      </div>
+      {%- if show_badge -%}
+        <div class="card__badge">
+          <span class="badge">{{ 'blogs.article.blog' | t }}</span>
+        </div>
+      {%- endif -%}
+      
+    </div>
+  </div>
+</div>
+{%- endif -%}

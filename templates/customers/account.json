@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-account",
+      "settings": {
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "padding_top": 0,
+        "padding_bottom": 84
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

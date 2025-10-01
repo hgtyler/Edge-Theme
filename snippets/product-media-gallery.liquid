@@ -1,0 +1,378 @@
+{% comment %}
+  Renders a product media gallery.
+  Also see 'product-media-modal'
+
+  Accepts:
+  - product: {Object} Product liquid object
+  - variant_images: {Array} Product images associated with a variant
+  - limit: {Number} (optional) When passed, limits the number of media items to render
+
+  Usage:
+  {% render 'product-media-gallery' %}
+{% endcomment %}
+
+{%- liquid
+
+  assign media_width = section.settings.media_width | divided_by: 100.0
+  assign gallery_layout = section.settings.gallery_layout
+  assign mobile_thumbnails = section.settings.mobile_thumbnails
+  assign media_count = product.media.size
+  assign section_width = section.settings.section_width | default: 'container'
+  assign enable_media_grouping = section.settings.enable_media_grouping
+  assign grouping_successfully_applied  = false
+
+  if enable_media_grouping
+    for variant in product.variants
+      if variant.featured_media
+        assign grouping_successfully_applied = true
+        break
+      endif
+    endfor
+  endif
+-%}
+
+
+{% assign has_variant = false %}
+{% for media in product.media %}
+  {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
+    {% assign has_variant = true %}
+  {% endif %}
+{% endfor %}
+{%- capture direction_splide -%}
+{%- case request.locale.iso_code -%}
+  {%- when 'ae' or 'ar' or 'arc' or 'bcc' or 'bqi' or 'ckb' or 'dv' or 'fa' or 'glk' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'mzn' or 'nqo' or 'pnb' or 'ps' or 'sd' or 'ug' or 'ur' or 'yi' -%}
+    slide
+  {%- else -%}
+    fade
+{%- endcase -%}
+{%- endcapture -%}
+
+{%- liquid
+  if enable_media_grouping
+    assign option_names = settings.matching_option_names | split:","
+    assign option_name_present = false 
+    assign image_positions = ""
+    assign group_values = ""
+    for option in option_names
+      for product_option in product.options
+        if option == product_option
+            assign option_index = forloop.index0
+            assign option_name_present = true 
+            break
+        endif 
+      endfor
+    endfor
+    if option_name_present
+      for variant in product.variants
+        assign group_values_arr = group_values | split:","
+        assign value_already_present = false
+        for value in group_values_arr
+          if value == variant.options[option_index]
+              assign value_already_present = true  
+              break
+          endif
+        endfor
+        unless value_already_present 
+          assign group_values = group_values | append: variant.options[option_index] | append:"," 
+          assign image_positions = image_positions| append: variant.featured_media.position| append:"," 
+        endunless 
+      endfor
+      assign image_positions = image_positions | split: ','
+      assign group_values = group_values | split: ','
+      assign group_values_size = image_positions.size | minus : 1
+      assign data_group_arr = "" 
+      for media in product.media
+        for i in (0..group_values_size)
+          if i == 0 
+            assign start_position = 1 
+          else 
+            assign start_position = image_positions[i] | plus: 0
+          endif 
+          assign end_index = i | plus: 1  
+          assign end_position = image_positions[end_index] | default:9999 | plus: 0 
+          if media.position >= start_position and media.position < end_position 
+            assign data_group_arr = data_group_arr | append: group_values[i] | append: "," 
+          endif
+        endfor
+      endfor 
+      assign data_group_arr = data_group_arr | split:","
+    endif
+  endif
+-%}
+{%- liquid
+  if enable_media_grouping
+    assign option_names = settings.matching_option_names | split: ","
+    assign option_name_present = false
+    assign selected_variant = product.selected_or_first_available_variant
+
+  for option in option_names
+    for product_option in product.options
+      if option == product_option
+        assign option_index = forloop.index0
+        assign option_name_present = true
+        break
+      endif
+    endfor
+    if option_name_present
+      break
+    endif
+  endfor
+
+   if option_name_present
+    assign selected_option_value = selected_variant.options[option_index]
+    else
+      assign selected_option_value = ""
+    endif
+  endif
+
+-%}
+
+<media-gallery
+  id="MediaGallery-{{ section.id }}"
+  role="region"
+  {% if section.settings.enable_sticky_info %}
+    class="product__column-sticky"
+  {% endif %}
+  data-desktop-layout="{{ section.settings.gallery_layout }}"
+>
+  <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+<gallery-carousel id="Gallery-carousel-{{ section.id }}" class=" flex  gap-y-6 product__media-list {% if gallery_layout == 'thumbnail_left' %} gallery_layout-left flex-col md:flex-row-reverse  gap-x-6{% else %} flex-col {% endif %}" data-autoplay="{{ section.settings.enable_video_autoplay }}" {% if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%} desktop-grid {% endif %}  
+  aria-labelledby="{{ 'products.product.media.gallery_viewer' | t }}"
+  {% if grouping_successfully_applied %}
+      data-filter-selected="{{ selected_option_value }}"
+    data-media-grouping="{{ grouping_successfully_applied }}"
+  {% endif %}
+  >
+    <div
+    id="Main-Carousel-{{ section.id }}"
+    class="splide-slider splide main-carousel"
+    data-splide='{
+      "direction":"{%- render 'direction' -%}",
+      "type": "{{ direction_splide }}",
+      "pagination": false,
+      "arrows": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or media_count <= 1 -%} false {%- else -%} true {%- endif -%},
+      "rewind" : false,
+      "destroy": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%} true {%- else -%} false {%- endif -%},
+      "speed":400,
+      "breakpoints": {
+        "767": {
+          "destroy": false,
+          "arrows": false,
+          "focus": "center"
+        }
+      }
+    }'
+  >
+    <div class="splide__track">
+      <div class="splide__list splide__gallery splide__gallery-{{ gallery_layout }} {% if has_variant %} has-variant {% endif %} {% if section.settings.media_aspect_ratio == 'adapt' %}splide__gallery-adapt{% endif %}" >
+        {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+        {%- for media in product.media -%}
+            <div
+              id="Slide-{{ section.id }}-{{ media.id }}"
+              class="splide__slide {% if media.id == featured_media.id %} is-active is-visible splide__slide--current-variant {% endif %} {% if media.media_type != 'image' %} product__media-item--full{% endif %}"
+              data-type="{{ media.media_type }}"
+              data-media-id="{{ media.id }}" 
+              {% if grouping_successfully_applied %}
+                data-media-group="{{data_group_arr[forloop.index0]}}"
+              {% endif %}
+              {% if media.id == featured_media.id %}
+                data-selected="true"
+              {% endif %}
+            >
+              {% if section.settings.info_in_media != blank and forloop.first %}
+                <div class="info-in-media absolute  text-size-tiny" style="--color-foreground: 0 0 0; --color-background: 255 255 255;">
+                  {{ section.settings.info_in_media }}
+                </div>
+              {% endif %}
+              {%- liquid
+                assign media_position = media_position | default: 0 | plus: 1
+              -%}
+              {% render 'product-thumbnail',
+                media: media,
+                media_count: media_count,
+                position: media_position,
+                desktop_layout: section.settings.gallery_layout,
+                mobile_layout: section.settings.mobile_thumbnails,
+                loop: section.settings.enable_video_looping,
+                modal_id: section.id,
+                xr_button: true,
+                media_width: media_width,
+                media_aspect_ratio:section.settings.media_aspect_ratio,
+                section_width: section_width
+              %}
+            </div>
+        {%- endfor -%}
+      </div>
+      {%- if media_count > 1 -%}
+        <div class="slide-counter slide-counter__main inline-flex items-center justify-center absolute z-[1] text-size-tiny">
+          <span class="current-slide">1</span>/<span class="total-slides">{{ media_count }}</span>
+        </div>
+      {%- endif -%}
+     
+      <div class="splide__arrows ">
+          <button
+            class="splide__arrow splide__arrow--prev "
+            type="button"
+          >
+          {% render 'icon-arrow-right' %}
+          </button>
+          <button
+            class="splide__arrow splide__arrow--next "
+            type="button"
+          >
+          {% render 'icon-arrow-right' %}
+          </button>
+        </div>
+    </div>
+  </div>
+  {%- capture show_thumbnails -%}
+    {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%}
+      {%- if mobile_thumbnails == 'show' -%}
+         thumbnail-carousel-desk 
+      {%- else -%}
+        thumbnail-carousel-hidden
+      {%- endif -%}
+    {%- else -%}
+      {%- if mobile_thumbnails == 'hide' -%}
+        thumbnail-carousel-hidden
+      {%- endif -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  {% liquid
+    assign perpage = 5
+    if section.settings.thumbnail_aspect_ratio == 'landscape'
+      assign perpage = 7
+    endif
+    assign width_thumbnail = '18%'
+  %}
+  <div id="Thumbnail-Carousel-{{ section.id }}" class="splide-slider splide thumbnail-carousel {{ show_thumbnails }}"
+  data-thumbnail="{%- if gallery_layout == 'thumbnail_left' -%} vertical {%- else -%} horizontal {%- endif -%}"
+  data-splide='{
+    "direction":"{%- if gallery_layout == 'thumbnail_left'-%} ttb {%- else -%} {%- render 'direction' -%} {%- endif -%}",
+    {%- if gallery_layout == 'thumbnail_left' -%}
+    "height": "400px",
+    "autoHeight": true,
+    "perPage": {{ perpage }},
+      {%- if product.media.size >= perpage and grouping_successfully_applied == false  -%}
+      "focus": "center",
+      {%- endif -%}
+    {%- else -%}
+    "perPage": {%- if quick_view -%}5{%- else -%}6{%- endif -%},
+      {%- if product.media.size >= 6 and grouping_successfully_applied == false -%}
+      "focus": "center",
+      {%- endif -%}
+    {%- endif -%}
+    "isNavigation": true,
+    "rewind":false,
+    "gap": "0.5rem",
+    "speed":400,
+    "pagination": false,
+    "arrows": {%- if product.media.size > perpage -%}true{%- else -%}false{%- endif -%},
+    "updateOnMove":true,
+    "breakpoints": {
+        "767": {
+         {%- if product.media.size >= 5 and grouping_successfully_applied == false -%}
+          "focus": "center",
+          {%- endif -%}
+          "direction":"{%- render 'direction' -%}",
+          "perPage": 5,
+          "height":"auto",
+          "arrows": false,
+          "fixedWidth":"{{ width_thumbnail }}"
+        }
+      }
+  }' style="--width-thunbnail:{{ width_thumbnail }};">
+    <div class="splide__track"  >
+        <div class="splide__list" >
+          {%- for media in product.media -%}
+          
+              {%- liquid
+                capture media_index
+                  if media.media_type == 'model'
+                    increment model_index
+                  elsif media.media_type == 'video' or media.media_type == 'external_video'
+                    increment video_index
+                  elsif media.media_type == 'image'
+                    increment image_index
+                  endif
+                endcapture
+                assign media_index = media_index | plus: 1
+              -%}
+              <div
+                id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}"
+                class="thumbnail-list__item splide__slide splide__thumbnail "
+                data-target="{{ section.id }}-{{ media.id }}"
+                data-media-position="{{ media_index }}"
+                data-media-id="{{ media.id }}" 
+                {% if grouping_successfully_applied %}
+                  data-media-group="{{data_group_arr[forloop.index0]}}"
+                {% endif %}
+                {% if media.id == featured_media.id %}
+                  data-selected="true"
+                {% endif %}
+              >
+                {%- if media.media_type == 'model' -%}
+                  <span class="thumbnail__badge" aria-hidden="true">
+                    {%- render 'icon-3d-model' -%}
+                  </span>
+                {%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}
+                  <span class="thumbnail__badge" aria-hidden="true">
+                    {%- render 'icon-play' -%}
+                  </span>
+                {%- endif -%}
+                {%- capture thumbnail_id -%}
+                  Thumbnail-Carousel-{{ section.id }}-{{ forloop.index }}
+                {%- endcapture -%}
+                <span
+                 tabindex="-1"
+                  class="thumbnail global-media-settings global-media-settings--no-shadow {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+                  {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }}" {% endif %}
+                 aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
+                  aria-controls="Thumbnail-Carousel-{{ section.id }}"
+                  aria-describedby="{{ thumbnail_id }}" 
+                 
+                >
+                {% liquid
+                  if gallery_layout == 'thumbnail_left'
+                    assign width = 70
+                    assign widths = '70,140'
+                  else
+                    assign width = 90
+                    assign widths = '90,180'
+                  endif
+                  assign height = width |  divided_by: media.preview_image.aspect_ratio | ceil
+                %}
+                  {%- render 'responsive-image' , 
+                    image: media.preview_image, 
+                    sizes: width_thumbnail,
+                    image_aspect_ratio: section.settings.thumbnail_aspect_ratio,
+                    width: width,
+                    height: height,
+                    id: thumbnail_id, 
+                    widths: widths -%}
+                </span>
+              </div>
+          
+          {%- endfor -%}
+        </div>
+        {%- if product.media.size > perpage -%}
+        <div class="splide__arrows splide__arrows-thumbnail">
+          <button
+            class="splide__arrow splide__arrow--prev "
+            type="button"
+          >
+          {% render 'icon-arrow-right' %}
+          </button>
+          <button
+            class="splide__arrow splide__arrow--next "
+            type="button"
+          >
+          {% render 'icon-arrow-right' %}
+          </button>
+        </div>
+        {%- endif -%}
+      </div>
+  
+  </div>
+</gallery-carousel>
+</media-gallery>

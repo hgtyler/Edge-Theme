@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-quick-view",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "subheading"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "rating_wQwitD": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_sale_badge": true,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "separator_FBwGCx": {
+          "type": "separator",
+          "settings": {
+            "show_border": true,
+            "divider_space": 2
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "hide_sold_out_variants": false,
+            "color_picker_type": "native_color_swatch",
+            "style": "solid",
+            "option_name": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "enable_quantity_rules": true
+          }
+        },
+        "sku_YdqVF7": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_two_columns": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_pickup_availability": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "rating_wQwitD",
+        "price",
+        "separator_FBwGCx",
+        "variant_picker",
+        "quantity_selector",
+        "sku_YdqVF7",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "media_width": 55,
+        "media_aspect_ratio": "square",
+        "thumbnail_aspect_ratio": "square",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "show_lightbox": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "mobile_thumbnails": "show"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,172 @@
+{% if card_color_type != 'hide' %}
+    {% liquid
+        assign config = settings.color_swatch_config | newline_to_br | split: '<br />' 
+        assign option_limit = 4
+        assign widths = widths | default: '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1950, 2100, 2260, 2450, 2700, 3000, 3400, 3800'
+    %}
+    {%- for option in product.options_with_values -%}
+        {%- liquid
+            assign variants_available_arr = product.variants | map: 'available'
+            assign variants_option_1_arr = product.variants | map: 'option1'
+            assign variants_option_2_arr = product.variants | map: 'option2'
+            assign variants_option_3_arr = product.variants | map: 'option3'
+
+            assign matching_option_names = settings.matching_option_names | split:","
+            assign use_color = false 
+            for option_color in matching_option_names 
+                if option_color == option.name 
+                    assign use_color = true 
+                    break
+                endif 
+            endfor
+        -%}
+        {% if use_color %}
+            {%- if card_color_type != 'count' -%}
+                <card-product-swatch class="card-product-swatch block no-js-hidden{% if card_color_type == 'image' %} pt-3 card-product-swatch__image  {%  elsif card_color_type == 'color' %} pt-2 {% endif %}">
+                    <div class="flex gap-x-4 items-center justify-{{ text_alignment }}">
+                        <ul class="list-unstyled card-product__swatch-list flex flex-row flex-wrap justify-{{ text_alignment }} gap-y-4">
+                        {%- for value in option.values limit: option_limit -%}
+                            {% liquid
+                                assign option_disabled = true
+                
+                                for option1_name in variants_option_1_arr
+                                    case option.position
+                                        when 1
+                                        if variants_option_1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                            assign option_disabled = false
+                                        endif
+                                        when 2
+                                        if option1_name == product.selected_or_first_available_variant.option1 and variants_option_2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                            assign option_disabled = false
+                                        endif
+                                        when 3
+                                        if option1_name == product.selected_or_first_available_variant.option1 and variants_option_2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option_3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                            assign option_disabled = false
+                                        endif
+                                    endcase
+                                endfor
+                                
+                
+                                assign selected_value = value | downcase
+                                assign css_property = '--swatch-color: ' | append: selected_value
+                
+                                for item in config
+                                    assign parts = item | split: ':'
+                                    assign name = parts.first | downcase | strip
+                                    if selected_value == name
+                                        assign swatch_value = parts.last | strip
+                                        if swatch_value contains '#'
+                                            assign css_property = '--swatch-color: ' | append: swatch_value
+                                        elsif images[swatch_value] != blank
+                                            assign image_url = images[swatch_value] | image_url: width: 120 
+                                            assign css_property = '--swatch-color: url(' | append: image_url | append: ')'
+                                        endif
+                                    endif
+                                endfor
+
+                                assign active = ''
+                                assign variant_url = ''
+                                assign media = ''
+                                assign option_index = option.position  | minus: 1
+                                    for variant in product.variants
+                                      if variant.options[option_index] == value
+                                            if variant.image.id == product.featured_image.id and product.media.size > 0
+                                                assign active = 'active'
+                                            endif
+                                            assign variant_url = variant.url
+                                        endif
+
+                                        if variant.options[option_index] == value
+                                            assign media =  variant.image
+                                        break
+                                    endif
+                                endfor
+
+                                capture srcset
+                                    if media
+                                        render 'image-srcset', image: media, widths: widths
+                                    endif
+                                endcapture
+                                capture src
+                                    if media
+                                     echo media | image_url: width: media.width 
+                                    endif
+                                endcapture
+
+                                assign swatch_focal_point = null
+                                if value.swatch.image
+                                  assign image_url = value.swatch.image | image_url: width: 120 
+                                  assign swatch_value = 'url(' | append: image_url | append: ')'
+                                  assign swatch_focal_point = value.swatch.image.presentation.focal_point
+                                elsif value.swatch.color
+                                  assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                                else
+                                  assign swatch_value = null
+                                endif
+                            %}
+                            
+                            <li class="card-product__swatch-item">
+                                {%- if card_color_type == 'color' -%}
+                                        <button
+                                        type="button"
+                                        class="swatch-button swatch-button-color {{ active }} {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif -%} "
+                                        style="{{ css_property }}"
+                                        aria-label="{{ value }}"
+                                        data-option-disabled="{{ option_disabled }}"
+                                        data-link="{{ variant_url }}"
+                                        data-srcset="{{ srcset }}"
+                                        data-src="{{ src }}"
+                                    >
+                                        <span class="sr-only">{{ value }}</span>
+                                    </button>
+                                {%- elsif card_color_type == 'native_color_swatch' -%}
+                                      <button
+                                          type="button"
+                                          class="swatch-button swatch-button-color {{ active }} {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif -%} "
+                                          aria-label="{{ value }}"
+                                          data-option-disabled="{{ option_disabled }}"
+                                          data-link="{{ variant_url }}"
+                                          data-srcset="{{ srcset }}"
+                                          data-src="{{ src }}"
+                                      >
+                                          <span class="sr-only">{{ value }}</span>
+                                          <span {% if swatch_value %}
+                                          class="swatch{% if color_swatch_style == 'square' %} swatch--square {% elsif color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch--rectangle {% endif %}"
+                                          style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
+                                        {% else %}
+                                          class="swatch swatch--unavailable{% if color_swatch_style == 'square' %} swatch--square {% elsif color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch--rectangle {% endif %}"
+                                        {% endif %}>
+                                          </span>
+                                      </button>
+                                {%- elsif card_color_type == 'image' -%}
+                                    {%- if media != blank -%}
+                                        <button
+                                            type="button"
+                                            class="swatch-button swatch-button-image {{ active }}"
+                                            aria-label="{{ value }}"
+                                            data-option-disabled="{{ option_disabled }}"
+                                            data-link="{{ variant_url }}"
+                                            data-srcset="{{ srcset }}"
+                                            data-src="{{ src }}"
+                                            >
+                                            {{- media | image_url: width: 120 | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
+                                        </button>
+                                    {%- endif -%}
+                                    
+                                {%- endif -%}
+                            </li>
+                        {%- endfor -%}
+                        </ul>
+                    {%- if option.values.size > option_limit -%}
+                        {%- assign remaining = option.values.size | minus: option_limit -%}
+                        <a href="{{ product.url }}" class="color-swatch__view-more">+ {{ remaining }} </a>
+                    {%- endif -%}
+                    </div>
+                </card-product-swatch>
+            {%- else -%}
+                <span class="product-card-swatches--count text-sm light">{{ 'products.product.available' | t: count: option.values.size }}</span>
+             {%- endif -%}
+        {% endif %}
+        
+    {%- endfor -%}
+{% endif %}
