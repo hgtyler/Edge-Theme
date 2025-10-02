@@ -17,18 +17,40 @@
         "divider_bottom_width": "container"
       }
     },
-    "breadcrumbs_VHQgP4": {
-      "type": "breadcrumbs",
+    "rich_text_7mLQef": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UgpaCH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h6"
+          }
+        },
+        "text_gtUax8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hi, We love answering questions!<\/p><p>Feel free to email us at <a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\"><strong>hello@starlingjewelry.com<\/strong><\/a><\/p><p>Or reach us during business hours (9am-4pm PST) at<\/p><p><strong>Phone: (213) 278-0348<\/strong><\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_UgpaCH",
+        "text_gtUax8"
+      ],
+      "name": "Rich text",
       "settings": {
-        "section_width": "container-fluid",
-        "alignment": "center",
-        "text_size": "text-size-small",
-        "type_breadcrumb": "arrow",
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 12,
-        "padding_bottom": 12,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -81,6 +103,7 @@
         "separator_RgbxnG",
         "text_aaxk9n"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "container",
         "media_size": "landscape",
@@ -110,6 +133,7 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "subheading": "",
         "heading": "Get in Touch",
@@ -133,29 +157,12 @@
         "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
-    },
-    "custom_html_i83nHp": {
-      "type": "custom-html",
-      "settings": {
-        "section_width": "container-fluid",
-        "custom_html": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d152817.23194504768!2d-104.99843629279908!3d39.76466851919576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO%2C%20USA!5e0!3m2!1sen!2s!4v1736070679436!5m2!1sen!2s\" width=\"100%\" height=\"550\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 48,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
     }
   },
   "order": [
     "main",
-    "breadcrumbs_VHQgP4",
+    "rich_text_7mLQef",
     "image_with_text_HMjC49",
-    "form",
-    "custom_html_i83nHp"
+    "form"
   ]
 }
