@@ -1,1 +1,484 @@
-{"sections":{"image_with_text_overlay_X8LKzQ":{"type":"image-with-text-overlay","blocks":{"heading_kWRydM":{"type":"heading","settings":{"heading":"Bespoke Designs <i>&<\/i> Special Commissions","highlighted_word_type":"single_line","heading_size":"h4"}},"separator_8PakT6":{"type":"separator","settings":{"show_border":false,"space":4}}},"block_order":["heading_kWRydM","separator_8PakT6"],"name":"Image with text overlay","settings":{"section_width":"w-full","image":"shopify:\/\/shop_images\/bespoke-starling-rings.png","link":"","desktop_height_mode":"fixed","desktop_fixed_height":650,"mobile_height_mode":"fixed","mobile_fixed_height":550,"desktop_content_position":"bottom-center","mobile_content_position":"bottom-center","content_alignment":"center","mobile_content_alignment":"center","content_width":"max-w-5xl","enable_parallax":false,"enable_scroll_reveal":true,"enable_scroll_reveal_top":false,"direction_scroll_reveal":"0","threshold_down":2,"color_text":"#ffffff","color_text_highlighted":"#ffffff","overlay_color":"#000000","overlay_opacity":0,"overlay_gradient":"linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"}},"main":{"type":"main-page","disabled":true,"settings":{"section_width":"container","show_default_heading":true,"bg_color":"","text_color":"","border_color":"","padding_top":28,"padding_bottom":28,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"divider_ctQ6Pz":{"type":"divider","name":"Divider","settings":{"section_width":"container","spacer_mobile":50,"spacer_desktop":50,"show_border":false,"bg_color":"","color":"","style":"solid","thickness":1}},"rich_text_D3EwF8":{"type":"rich-text","blocks":{"image_nAQpp8":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/face-wine_1_85f2bab1-5685-4e03-9db7-34bf7ef7018b.png","image_width":110,"image_width_mobile":70,"url":""}},"separator_RC3VUh":{"type":"separator","settings":{"show_border":false,"space":8}},"heading_U9AXym":{"type":"heading","disabled":true,"settings":{"heading":"Founder's Note","heading_size":"h5"}},"separator_EjEUpj":{"type":"separator","disabled":true,"settings":{"show_border":false,"space":8}},"button_Vij846":{"type":"button","disabled":true,"settings":{"button_label":"explore chelsey's picks","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["image_nAQpp8","separator_RC3VUh","heading_U9AXym","separator_EjEUpj","button_Vij846"],"name":"Rich text","settings":{"section_width":"w-full","content_width":"max-w-3xl","content_alignment":"center","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":0,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"rich_text_bYhGgn":{"type":"rich-text","blocks":{"heading_nFE4WA":{"type":"heading","disabled":true,"settings":{"heading":"Founder's Note","heading_size":"h5"}},"separator_6eF9Md":{"type":"separator","settings":{"show_border":false,"space":8}},"text_6HN8xC":{"type":"text","settings":{"text":"<p>At Starling, we believe a bespoke jewel is more than a design, it is the beginning of an heirloom. From an engagement ring that marks a lifelong commitment, to a piece created for a milestone—or simply for the joy of owning something singular—every commission is a personal journey.<\/p><p>Our process begins with your vision: the stone you’ve dreamed of, the setting that speaks to your style, and the story you wish to tell. From there, our artisans translate these details into a work of art, hand-crafted to endure for generations.<\/p><p>Each bespoke piece is a collaboration, blending your inspiration with our expertise, resulting in a jewel that is both timeless and deeply personal.<\/p>","large_text":true,"show_more_toggle":false,"max_height":16}},"separator_YygBj9":{"type":"separator","settings":{"show_border":false,"space":8}},"button_QEzkWx":{"type":"button","disabled":true,"settings":{"button_label":"explore chelsey's picks","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["heading_nFE4WA","separator_6eF9Md","text_6HN8xC","separator_YygBj9","button_QEzkWx"],"name":"Rich text","settings":{"section_width":"w-full","content_width":"max-w-3xl","content_alignment":"start","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":0,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"divider_ARtepb":{"type":"divider","name":"Divider","settings":{"section_width":"container","spacer_mobile":50,"spacer_desktop":50,"show_border":false,"bg_color":"","color":"","style":"solid","thickness":1}},"content_tabs_Pik6nD":{"type":"content-tabs","blocks":{"tab_gmwAaR":{"type":"tab","settings":{"image_size":"landscape-v2","image_placement":"left","nav_label":"2000","subheading":"","heading":"The Birth of the Brand","heading_size":"h2","content":"<p>The fashion brand was founded with a mission to bring a fresh perspective to the industry, blending creativity with practicality. From the very beginning, we set out to define trends and craft designs that carry a unique identity.<\/p>","button_label":"","button_link":"","button_type":"primary","show_icon":false}},"tab_JDCmBc":{"type":"tab","settings":{"image_size":"landscape-v2","image_placement":"left","nav_label":"2005","subheading":"","heading":"Launch of the First Collection","heading_size":"h2","content":"<p>After five years of development, the first collection was officially introduced, marking a significant milestone in the brand’s journey. With its distinctive style and premium materials, the collection quickly gained recognition and admiration from fashion enthusiasts.<\/p>","button_label":"","button_link":"","button_type":"primary","show_icon":false}},"tab_8JaDCF":{"type":"tab","settings":{"image_size":"landscape-v2","image_placement":"left","nav_label":"2010","subheading":"","heading":"Opening of the First Flagship Store","heading_size":"h2","content":"<p>To meet the growing demand from customers, the brand opened its first flagship store in [location]. More than just a retail space, the store became a destination for fashion lovers to explore the latest designs and immerse themselves in a modern lifestyle experience.<\/p>","button_label":"","button_link":"","button_type":"primary","show_icon":false}},"tab_JbBERb":{"type":"tab","settings":{"image_size":"landscape-v2","image_placement":"left","nav_label":"2015","subheading":"","heading":"Strategic Collaborations & Market Expansion","heading_size":"h2","content":"<p>Entering a phase of strong growth, the brand began collaborating with artists, influencers, and participating in major fashion events. At the same time, we expanded into international markets, bringing our designs to a global audience.<\/p>","button_label":"","button_link":"","button_type":"primary","show_icon":false}},"tab_H6mXCB":{"type":"tab","settings":{"image_size":"landscape-v2","image_placement":"left","nav_label":"2020","subheading":"","heading":"Sustainability & Innovation","heading_size":"h2","content":"<p>Adapting to global trends, the brand embraced sustainability by utilizing eco-friendly materials and integrating advanced technology into the production process. This marked a crucial step in ensuring long-term growth and solidifying our position in the fashion industry.<\/p>","button_label":"","button_link":"","button_type":"primary","show_icon":false}}},"block_order":["tab_gmwAaR","tab_JDCmBc","tab_8JaDCF","tab_JbBERb","tab_H6mXCB"],"disabled":true,"settings":{"section_width":"container","type_tabs":"underline","enable_uppercase":false,"tabs_font_family":"headings_font","tab_heading_size":"h5","tabs_gap":5,"align":"center","header_position":"top","text_alignment":"left","vertical_alignment":"end","bg_color":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","border_color":"","padding_top":56,"padding_bottom":20,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"custom_content_XMrF74":{"type":"custom-content","blocks":{"text_PriQJq":{"type":"text","settings":{"block_width":"33","subheading":"Our Services","heading":"A multidisciplinaryapproach to bridgingpeople and brands","heading_size":"h2","text":"","vertical_alignment":"center","text_alignment":"start","button_label":"","button_link":"","button_type":"underlined","show_icon":true,"bg_color":"","text_color":"","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":48,"padding_top_mobile":0,"padding_bottom_mobile":0,"padding_left_mobile":0,"padding_right_mobile":0}},"image_7BCmDR":{"type":"image","settings":{"block_width":"33","image_size":"portrait","link":"","vertical_alignment":"center"}},"text_9xeDXJ":{"type":"text","settings":{"block_width":"33","subheading":"","heading":"","heading_size":"h2","text":"<h4>Xstreet Brand<\/h4><p>We design and develop lifestyle apparel that empowers you to explore and interact with the world around you.<br\/><\/p><h4>Personal Expression<\/h4><p>Quality: Uncompromising standards in material selection<\/p><p>Innovation: Continuous exploration of design possibilities<\/p><p>Authenticity: Transparent and genuine approach to jewelry creation<br\/><\/p>","vertical_alignment":"center","text_alignment":"start","button_label":"","button_link":"","button_type":"primary","show_icon":false,"bg_color":"","text_color":"","padding_top":0,"padding_bottom":0,"padding_left":32,"padding_right":0,"padding_top_mobile":0,"padding_bottom_mobile":0,"padding_left_mobile":0,"padding_right_mobile":0}}},"block_order":["text_PriQJq","image_7BCmDR","text_9xeDXJ"],"disabled":true,"settings":{"section_width":"container","subheading":"","heading":"","heading_size_section":"h2","description":"","layout":"vertical","column_gap":"24","row_gap":"24","bg_color":"","text_color":"","border_color":"","padding_top":60,"padding_bottom":100,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"scrolling_text_7HMrdG":{"type":"scrolling-text","blocks":{"text_pDd66t":{"type":"text","settings":{"text":"Urban Wear","link":"","outline_text":false}},"text_HeNfji":{"type":"text","settings":{"text":"✦","link":"","outline_text":true}},"text_7YTydW":{"type":"text","settings":{"text":"Outdoor Lifestyle","link":"","outline_text":false}},"text_Pa9rUR":{"type":"text","settings":{"text":"✦","link":"","outline_text":true}},"text_KhQFeE":{"type":"text","settings":{"text":"Sustainable Elegance","link":"","outline_text":false}},"text_rjH7F8":{"type":"text","settings":{"text":"✦","link":"","outline_text":true}}},"block_order":["text_pDd66t","text_HeNfji","text_7YTydW","text_Pa9rUR","text_KhQFeE","text_rjH7F8"],"disabled":true,"settings":{"section_width":"w-full","text_size":"hxl","pause_scroll_on_hover":true,"spacing":80,"spacing_mobile":30,"image_width":80,"speed":20,"direction":"left","bg_color":"rgba(0,0,0,0)","text_color":"#555555","border_color":"","padding_top":40,"padding_bottom":40,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"image_with_text_nt7rxE":{"type":"image-with-text","blocks":{"image_YDxKBN":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/ribg.png","image_width":60,"image_width_mobile":60,"url":""}},"circular_text_xNqnNz":{"type":"circular_text","disabled":true,"settings":{"text":"Street style • urban wear  •","size":70,"font_size":4,"show_icon":true,"show_border":false,"show_background":false,"show_animation":true,"background_color":"","text_color":"","border_color":""}},"heading_i3KjWQ":{"type":"heading","disabled":true,"settings":{"heading":"Core Values","heading_size":"h2"}},"separator_W4G4Q3":{"type":"separator","settings":{"show_border":false,"space":48}},"text_wA6qez":{"type":"text","settings":{"text":"<p>Whether refining one of our signature designs or envisioning an entirely new creation, we guide you through each stage of the journey. From the first sketch to the careful sourcing of stones and the final hand-crafted details in our workshop, every step is overseen with artistry and expertise—ensuring your bespoke jewel becomes a treasured heirloom for generations to come.<\/p><p>Each piece is designed to be versatile, durable, and bold — made to layer, mix, and express who you are without saying a word. We don’t just make clothes — we create a canvas for your individuality.<\/p>","large_text":true}},"separator_HxqLX3":{"type":"separator","settings":{"show_border":false,"space":48}},"button_aqAKDh":{"type":"button","disabled":true,"settings":{"button_label":"Contact us","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["image_YDxKBN","circular_text_xNqnNz","heading_i3KjWQ","separator_W4G4Q3","text_wA6qez","separator_HxqLX3","button_aqAKDh"],"settings":{"section_width":"w-full","image":"shopify:\/\/shop_images\/TOI-ET-MOI-COLLAGE.png","media_size":"adapt","show_image_2":false,"position_image_2":"bottom-right","media_size_2":"square","desktop_image_width":"50","active_video":false,"video":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","video_autoplay":true,"video_controls":true,"layout":"left","column_gap":"20","vertical_alignment":"center","content_alignment":"start","bg_color":"","text_color":"","border_color":"","bg_column":"","padding_top":40,"padding_bottom":40,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"image_with_text_cpBKW3":{"type":"image-with-text","blocks":{"image_NMgziA":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/ribg.png","image_width":60,"image_width_mobile":60,"url":""}},"circular_text_rfVWyT":{"type":"circular_text","disabled":true,"settings":{"text":"Street style • urban wear  •","size":70,"font_size":4,"show_icon":true,"show_border":false,"show_background":false,"show_animation":true,"background_color":"","text_color":"","border_color":""}},"heading_bJAYPT":{"type":"heading","disabled":true,"settings":{"heading":"Core Values","heading_size":"h2"}},"separator_g4QjXQ":{"type":"separator","settings":{"show_border":false,"space":48}},"text_3AFA69":{"type":"text","settings":{"text":"<p>Once your design direction is set, we begin the search for the stones that will bring it to life. Our in-house diamantaire will present a curated selection of diamonds and gemstones, each chosen for its rarity, beauty, and character—yet the final choice is always yours. <br\/><br\/>For those wishing to honor the past, we often weave heirloom stones into new creations, carefully sourcing complementary gems to complete a design that feels both timeless and uniquely personal.<\/p>","large_text":true}},"separator_T7UVDJ":{"type":"separator","settings":{"show_border":false,"space":48}},"button_HcRfDx":{"type":"button","disabled":true,"settings":{"button_label":"Contact us","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["image_NMgziA","circular_text_rfVWyT","heading_bJAYPT","separator_g4QjXQ","text_3AFA69","separator_T7UVDJ","button_HcRfDx"],"settings":{"section_width":"container","image":"shopify:\/\/shop_images\/MARQUISE-COLLAGE.png","media_size":"adapt","show_image_2":false,"position_image_2":"bottom-right","media_size_2":"square","desktop_image_width":"50","active_video":false,"video":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","video_autoplay":true,"video_controls":true,"layout":"right","column_gap":"20","vertical_alignment":"center","content_alignment":"start","bg_color":"","text_color":"","border_color":"","bg_column":"","padding_top":40,"padding_bottom":40,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"rich_text_yMYV9P":{"type":"rich-text","blocks":{"separator_wFdMC8":{"type":"separator","disabled":true,"settings":{"show_border":false,"space":8}},"heading_VPzhLT":{"type":"heading","settings":{"heading":"The Bespoke <i>Journey<\/i>","heading_size":"h5"}},"separator_qtkf6B":{"type":"separator","disabled":true,"settings":{"show_border":false,"space":8}},"button_knerkt":{"type":"button","disabled":true,"settings":{"button_label":"explore chelsey's picks","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["separator_wFdMC8","heading_VPzhLT","separator_qtkf6B","button_knerkt"],"name":"Rich text","settings":{"section_width":"w-full","content_width":"max-w-screen-lg","content_alignment":"center","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":0,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"image_with_text_icons_aGkA38":{"type":"image-with-text-icons","blocks":{"icon_jgj7D4":{"type":"icon","settings":{"icon":"ruler","custom_icon":"shopify:\/\/shop_images\/INSPECT_fa24da62-6511-4366-9357-f329de5f6534.webp","title":"1. Define Your Vision","text":"<p>Share what inspires you: the style you love, gemstones or metals you imagine, and pieces (if any) you’d like to combine or re-interpret. Browse our portfolio or send us sketches\/photos to help us understand your aesthetic. The more specific you are, the better we can tailor the proposal.<\/p>","button_label":"","button_link":""}},"icon_JkypjD":{"type":"icon","settings":{"icon":"check_circle","custom_icon":"shopify:\/\/shop_images\/INSPOPAPER.webp","title":"2. Proposal & Estimate","text":"<p>We’ll create preliminary sketches or mood boards based on your vision, estimate cost, timeline, and technical feasibility. Expect to receive this within a few days. This stage ensures we’re aligned before moving forward.<\/p><p><\/p>","button_label":"","button_link":""}},"icon_fUtjGR":{"type":"icon","settings":{"icon":"eye","custom_icon":"shopify:\/\/shop_images\/PICKYOURJEWELRY.webp","title":"3. Design & Approval","text":"<p>We’ll develop detailed renderings or CAD mockups, allowing up to two rounds of revisions. Once you sign off on the final design and deposit, we lock in the materials and production schedule. This ensures your bespoke piece is exactly what you envision.<\/p>","button_label":"","button_link":""}},"icon_RJgLD7":{"type":"icon","settings":{"icon":"snowflake","custom_icon":"shopify:\/\/shop_images\/MAILBIRD_9f706e43-9600-4b0e-b242-516db448627c.webp","title":"4. Craft & Deliver","text":"<p>Our artisans bring your design to life—cutting, setting, polishing, and finishing with care. When the piece is complete, we’ll arrange insured shipping with signature required or a studio pickup. Then you get to enjoy your custom piece knowing it was made uniquely for you.<\/p>","button_label":"","button_link":""}}},"block_order":["icon_jgj7D4","icon_JkypjD","icon_fUtjGR","icon_RJgLD7"],"settings":{"section_width":"container","image":"shopify:\/\/shop_images\/STARLING-9096-2.jpg","media_size":"portrait","desktop_image_width":"50","column_gap":"8","layout":"right","vertical_alignment":"center","content_alignment":"start","layout_column":"2","heading_size":"h6","icon_background":"none","icon_width":56,"button_type":"underlined","show_icon":true,"bg_color":"","text_color":"","border_color":"","icon_bg_color":"#f1e5dd","icon_color":"","padding_top":76,"padding_bottom":76,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"divider_iCi8mX":{"type":"divider","settings":{"section_width":"container","spacer_mobile":52,"spacer_desktop":100,"show_border":false,"bg_color":"","color":"","style":"solid","thickness":1}},"video_with_text_overlay_4AXiQ7":{"type":"video-with-text-overlay","settings":{"section_width":"container","video_hosted":"shopify:\/\/files\/videos\/Rebrand_Red Jacket_Banner_nologo.mp4","video_url":"","description_video":"","desktop_height_mode":"fixed","desktop_fixed_height":640,"mobile_height_mode":"fixed","mobile_fixed_height":510,"content_width":"max-w-4xl","desktop_content_position":"bottom-center","mobile_content_position":"bottom-center","color_text":"#ffffff","color_text_highlighted":"#ffffff","overlay_color":"#000000","overlay_gradient":"","overlay_opacity":0}},"gallery_socical_aEBBwF":{"type":"gallery-socical","blocks":{"gallery_NTknMj":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/download_10.png","text":"@Sam","link":""}},"gallery_mEprQQ":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/IMG_3672.webp","text":"@Orange","link":""}},"gallery_KJXpFa":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/STARLING-0113.jpg","text":"@pinklio","link":""}},"gallery_yjVhcD":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/scattered-cloud-huggies-1.jpg","text":"@Splash","link":""}},"gallery_aWy8dL":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/BEZEL_a047008d-f768-4ec7-93e3-ed8298c5c01d.jpg","text":"@Paml","link":""}},"gallery_qBwYNz":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/527532818_18516511225062086_4014960535908167766_n.jpg","text":"@OneTi","link":""}},"gallery_iefXFB":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/STARLING-0231.jpg","text":"@Blind","link":""}},"gallery_iHbncm":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/Starling_03272025-8443_1.jpg","text":"@Coco","link":""}},"gallery_RwQr98":{"type":"gallery","settings":{"image":"shopify:\/\/shop_images\/Toi_et_Moi_Round_and_Radiant_Diamond_Ring_1.webp","text":"@Ice","link":""}}},"block_order":["gallery_NTknMj","gallery_mEprQQ","gallery_KJXpFa","gallery_yjVhcD","gallery_aWy8dL","gallery_qBwYNz","gallery_iefXFB","gallery_iHbncm","gallery_RwQr98"],"settings":{"section_width":"container-fluid","subheading":"","heading":"Custom & Bespoke Work","heading_size_section":"h5","description":"","layout":"vertical","link_url":"","link_text":"Create Your own","button_type":"underlined","show_icon":false,"layout_gallery":"metro","image_size":"portrait","icon":"none","text_type":"hover","images_per_row":6,"gap":0.1,"columns_mobile":"1","gap_mobile":0.1,"swipe_on_mobile":true,"bg_color":"#ffffff","text_color":"","border_color":"","padding_top":84,"padding_bottom":84,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"image_with_text_VMGNzq":{"type":"image-with-text","blocks":{"image_WEiCNy":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/ribg.png","image_width":60,"image_width_mobile":60,"url":""}},"circular_text_aRR8Wp":{"type":"circular_text","disabled":true,"settings":{"text":"Street style • urban wear  •","size":70,"font_size":4,"show_icon":true,"show_border":false,"show_background":false,"show_animation":true,"background_color":"","text_color":"","border_color":""}},"heading_BazW8N":{"type":"heading","settings":{"heading":"Meet Your Maker, Chelsey","heading_size":"h6"}},"separator_bimCta":{"type":"separator","settings":{"show_border":false,"space":20}},"text_etRG8B":{"type":"text","settings":{"text":"<p>Whether refining one of our signature designs or envisioning an entirely new creation, we guide you through each stage of the journey. From the first sketch to the careful sourcing of stones and the final hand-crafted details in our workshop, every step is overseen with artistry and expertise—ensuring your bespoke jewel becomes a treasured heirloom for generations to come.<\/p><p>Each piece is designed to be versatile, durable, and bold — made to layer, mix, and express who you are without saying a word. We don’t just make clothes — we create a canvas for your individuality.<\/p>","large_text":true}},"separator_Bf8KtB":{"type":"separator","settings":{"show_border":false,"space":48}},"button_RKpfWx":{"type":"button","disabled":true,"settings":{"button_label":"Contact us","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["image_WEiCNy","circular_text_aRR8Wp","heading_BazW8N","separator_bimCta","text_etRG8B","separator_Bf8KtB","button_RKpfWx"],"settings":{"section_width":"w-full","image":"shopify:\/\/shop_images\/about-page-founder.jpg","media_size":"adapt","show_image_2":false,"position_image_2":"bottom-right","media_size_2":"square","desktop_image_width":"50","active_video":false,"video":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","video_autoplay":true,"video_controls":true,"layout":"left","column_gap":"20","vertical_alignment":"center","content_alignment":"start","bg_color":"","text_color":"","border_color":"","bg_column":"","padding_top":40,"padding_bottom":40,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"divider_YMxBwC":{"type":"divider","settings":{"section_width":"container","spacer_mobile":52,"spacer_desktop":100,"show_border":false,"bg_color":"","color":"","style":"solid","thickness":1}},"rich_text_ArAxAH":{"type":"rich-text","blocks":{"separator_aQpQPb":{"type":"separator","disabled":true,"settings":{"show_border":false,"space":8}},"heading_wz6qkJ":{"type":"heading","settings":{"heading":"Discover Bespoke","heading_size":"h5"}},"separator_7Te3gE":{"type":"separator","disabled":true,"settings":{"show_border":false,"space":8}},"button_YbtcMC":{"type":"button","disabled":true,"settings":{"button_label":"explore chelsey's picks","button_link":"","button_type":"underlined","show_icon":true}}},"block_order":["separator_aQpQPb","heading_wz6qkJ","separator_7Te3gE","button_YbtcMC"],"name":"Rich text","settings":{"section_width":"w-full","content_width":"max-w-3xl","content_alignment":"center","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":0,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"rich_text_bfEzgD":{"type":"rich-text","blocks":{"separator_CL8m6t":{"type":"separator","settings":{"show_border":false,"space":8}},"text_8MWTik":{"type":"text","settings":{"text":"<p>Look through our site or socials for inspiration and reach out with your project below! We can't wait to make something magical together.<\/p><p>Please tell us: Your dream stone, dream setting, budget, & any timeline requests.<\/p>","large_text":true,"show_more_toggle":false,"max_height":16}},"separator_DhAPCF":{"type":"separator","settings":{"show_border":false,"space":8}},"button_kgH6Pn":{"type":"button","settings":{"button_label":"Get in Touch","button_link":"mailto:hello@starlingjewelry.com","button_type":"primary","show_icon":true}}},"block_order":["separator_CL8m6t","text_8MWTik","separator_DhAPCF","button_kgH6Pn"],"name":"Rich text","settings":{"section_width":"w-full","content_width":"max-w-3xl","content_alignment":"center","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":0,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"divider_gicBKW":{"type":"divider","settings":{"section_width":"container","spacer_mobile":52,"spacer_desktop":100,"show_border":false,"bg_color":"","color":"","style":"solid","thickness":1}},"text_with_icons_NYRGMa":{"type":"text-with-icons","blocks":{"icon_rKADcp":{"type":"icon","settings":{"icon":"return","title":"Thoughtful Returns","text":"<p>To thank you for embracing this circular practice, we’ll gift you 20% off your next purchase.<\/p>","caption":"","button_label":"","button_link":""}},"icon_tLYhjr":{"type":"icon","settings":{"icon":"check_circle","title":"Repair Services","text":"<p>Online and in-store repair options. Re-Worn popup repair locations<\/p>","caption":"","button_label":"","button_link":""}},"icon_QLNUTh":{"type":"icon","settings":{"icon":"recycle","title":"Recycle Program","text":"<p>Transforming Jewelry's Environmental Legacy. 100% traceable material sourcing<\/p>","caption":"","button_label":"","button_link":""}},"icon_FFtDgy":{"type":"icon","settings":{"icon":"box","title":"Product Communication","text":"<p>Detailed product descriptions, Style and availability insights.<\/p>","caption":"","button_label":"","button_link":""}}},"block_order":["icon_rKADcp","icon_tLYhjr","icon_QLNUTh","icon_FFtDgy"],"disabled":true,"settings":{"section_width":"container","subheading":"","heading":"","heading_size_section":"h2","description":"","layout":"vertical","item_type":"vertical","heading_size":"h5","column_alignment":"center","icon_background":"none","icon_width":32,"button_type":"outline","show_icon":false,"columns_mobile":"2","swipe_on_mobile":false,"show_progress_bar":false,"bg_color":"","text_color":"","border_color":"","icon_bg_color":"","icon_color":"","padding_top":40,"padding_bottom":100,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"collection_list_parK8V":{"type":"collection-list","blocks":{"featured_collection_xNDwmL":{"type":"featured_collection","settings":{"collection":"tees","title":"","url":""}},"featured_collection_tqraMf":{"type":"featured_collection","settings":{"collection":"shorts","title":"","url":""}},"featured_collection_pq87q7":{"type":"featured_collection","settings":{"collection":"footwear","title":"","url":""}},"featured_collection_mjK8La":{"type":"featured_collection","settings":{"collection":"accessories","title":"","url":""}}},"block_order":["featured_collection_xNDwmL","featured_collection_tqraMf","featured_collection_pq87q7","featured_collection_mjK8La"],"disabled":true,"settings":{"section_width":"container","subheading":"","heading":"Our Collection","heading_size_section":"h2","description":"<p>Shine with sophisticated, luxurious, and captivating designs — perfect for every moment.<\/p>","layout":"horizontal","link_url":"","link_text":"View all","button_type":"underlined-white","show_icon":true,"card_type":"standard","image_ratio":"square","show_collection_count":true,"show_button_arrow":true,"show_zoom_on_hover":true,"use_title_italic":false,"heading_size":"h5","content_alignment":"start","title_color":"","overlay_color":"#000000","enable_gradient":false,"overlay_opacity":10,"enable_stack_collections":false,"show_progress_bar":false,"enable_overflow_visible":false,"columns_desktop":4,"column_gap":0.5,"columns_mobile":"2","column_gap_mobile":0.5,"swipe_on_mobile":false,"bg_color":"","text_color":"","border_color":"","padding_top":80,"padding_bottom":100,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"custom_content_P79tBf":{"type":"custom-content","blocks":{"image_MzEzX4":{"type":"image","settings":{"block_width":"50","image_size":"square","link":"","vertical_alignment":"center"}},"text_scolling_bQkiHy":{"type":"text_scolling","disabled":true,"settings":{"block_width":"25","text_scrolling":"Gold Jewellery\nSilver Jewellery\nHera Collection","direction":"left","speed":30,"position":"top","bg_color_scrolling":"#f6f2e9","text_color_scrolling":"","subheading":"","heading":"Mixed Metal Jewellery","heading_size":"h2","text":"<p>Discover our collection of mixed metal jewellery, made by combining 18ct recycled gold plated and gold plated vermeil and sterling silver.<\/p>","vertical_alignment":"end","text_alignment":"start","button_label":"","button_link":"","button_type":"underlined","show_icon":true,"bg_color":"","text_color":"","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":0,"padding_top_mobile":0,"padding_bottom_mobile":0,"padding_left_mobile":0,"padding_right_mobile":0}},"text_YRq9mC":{"type":"text","settings":{"block_width":"25","subheading":"","heading":"Mixed Textures","heading_size":"h3","text":"<p>Discover our collection of urban essentials made by blending contrasting fabrics, bold silhouettes, and unexpected details — where street meets statement.<\/p>","vertical_alignment":"end","text_alignment":"start","button_label":"Shop now","button_link":"","button_type":"primary","show_icon":true,"bg_color":"","text_color":"","padding_top":0,"padding_bottom":0,"padding_left":24,"padding_right":0,"padding_top_mobile":0,"padding_bottom_mobile":0,"padding_left_mobile":0,"padding_right_mobile":0}},"banner_card_pnGAc9":{"type":"banner_card","settings":{"block_width":"25","vertical_alignment":"start","card_style":"design-6","image_size":"square","subheading":"","heading":"","heading_size":"h4","text":"","button_label":"The Essentials","button_link":"","button_type":"primary-white","show_icon":true,"text_color":"#000000","overlay_color":"#000000","overlay_opacity":0,"overlay_gradient":""}}},"block_order":["image_MzEzX4","text_scolling_bQkiHy","text_YRq9mC","banner_card_pnGAc9"],"disabled":true,"settings":{"section_width":"container","subheading":"","heading":"","heading_size_section":"h2","description":"","layout":"vertical","column_gap":"24","row_gap":"32","bg_color":"","text_color":"","border_color":"","padding_top":0,"padding_bottom":100,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}},"newsletter_GtpVEH":{"type":"newsletter","blocks":{"heading_V6EfXH":{"type":"heading","settings":{"heading":"Subscribe to Our Emails","heading_size":"h2"}},"paragraph_bgEXNE":{"type":"paragraph","settings":{"text":"<p>Be the first to know about new collections and exclusive offers. Subscribe to receive all our updates and offers, and get 10% off your first purchase.<\/p>"}},"email_form_aCBEq3":{"type":"email_form","settings":{}}},"block_order":["heading_V6EfXH","paragraph_bgEXNE","email_form_aCBEq3"],"disabled":true,"settings":{"section_width":"container-fluid","form_position":"center","text_alignment":"center","bg_color":"rgba(0,0,0,0)","text_color":"#ffffff","border_color":"","input_text_color":"#ffffff","input_border_color":"","overlay_color":"#000000","overlay_gradient":"","overlay_opacity":20,"padding_top":60,"padding_bottom":60,"show_top_divider":false,"divider_top_width":"container","show_bottom_divider":false,"divider_bottom_width":"container"}}},"order":["image_with_text_overlay_X8LKzQ","main","divider_ctQ6Pz","rich_text_D3EwF8","rich_text_bYhGgn","divider_ARtepb","content_tabs_Pik6nD","custom_content_XMrF74","scrolling_text_7HMrdG","image_with_text_nt7rxE","image_with_text_cpBKW3","rich_text_yMYV9P","image_with_text_icons_aGkA38","divider_iCi8mX","video_with_text_overlay_4AXiQ7","gallery_socical_aEBBwF","image_with_text_VMGNzq","divider_YMxBwC","rich_text_ArAxAH","rich_text_bfEzgD","divider_gicBKW","text_with_icons_NYRGMa","collection_list_parK8V","custom_content_P79tBf","newsletter_GtpVEH"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "container",
+        "show_default_heading": true,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_wQ7Pyy": {
+      "type": "rich-text",
+      "blocks": {
+        "image_ptxEkd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bespoke-Designs-Burgundy.png",
+            "image_width": 260,
+            "image_width_mobile": 200,
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ptxEkd"
+      ],
+      "name": "Header",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_D3EwF8": {
+      "type": "rich-text",
+      "blocks": {
+        "separator_Xpjiq8": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
+        },
+        "text_LMbFfe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Starling, we love doing custom designs for engagement rings, important milestones or just because. Look through our site or socials for inspiration and reach out with your project below! We can't wait to make something magical together.<\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "button_BrKGPk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        },
+        "separator_tQpfNH": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
+        }
+      },
+      "block_order": [
+        "separator_Xpjiq8",
+        "text_LMbFfe",
+        "button_BrKGPk",
+        "separator_tQpfNH"
+      ],
+      "name": "Intro",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "gallery_grid_x7CEUg": {
+      "type": "gallery-grid",
+      "blocks": {
+        "image_WMF9PA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_8912.heic",
+            "active_video": false,
+            "media_size": "portrait",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "Past Project #1",
+            "button_link": "",
+            "button_type": "underlined-white",
+            "show_icon": true,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_MEAY4X": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Starling_03272025-8960.jpg",
+            "active_video": false,
+            "media_size": "portrait",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "Past Project #2",
+            "button_link": "",
+            "button_type": "underlined-white",
+            "show_icon": true,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_hMACkP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
+            "active_video": false,
+            "media_size": "portrait",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "Past Project #3",
+            "button_link": "",
+            "button_type": "underlined-white",
+            "show_icon": true,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_WMF9PA",
+        "image_MEAY4X",
+        "image_hMACkP"
+      ],
+      "name": "Past Projects",
+      "settings": {
+        "section_width": "container-fluid",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h6",
+        "description": "",
+        "layout": "vertical",
+        "column_gap": "24",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": true,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_4Ead8T": {
+      "type": "rich-text",
+      "blocks": {
+        "button_AJy7Na": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "outline",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "button_AJy7Na"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": true,
+        "divider_bottom_width": "container"
+      }
+    },
+    "content_tabs_nq7tBW": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_ibw3Tb": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_8912.heic",
+            "image_size": "portrait",
+            "image_placement": "left",
+            "nav_label": "Client Stories #1",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>I'm baby irony sus forage, seitan aesthetic adaptogen dreamcatcher. Meggings yes plz praxis cray fanny pack tumblr next level street art. Vape grailed polaroid distillery. Seitan distillery actually, ethical trust fund hexagon drinking vinegar narwhal la croix fam lo-fi helvetica salvia.<\/p>",
+            "button_label": "Read More",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        },
+        "tab_qdBatA": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_8912.heic",
+            "image_size": "portrait",
+            "image_placement": "left",
+            "nav_label": "Client Stories #2",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>I'm baby irony sus forage, seitan aesthetic adaptogen dreamcatcher. Meggings yes plz praxis cray fanny pack tumblr next level street art. Vape grailed polaroid distillery. Seitan distillery actually, ethical trust fund hexagon drinking vinegar narwhal la croix fam lo-fi helvetica salvia.<\/p>",
+            "button_label": "Read More",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        },
+        "tab_ckGGEA": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_8912.heic",
+            "image_size": "portrait",
+            "image_placement": "left",
+            "nav_label": "Client Stories #3",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>I'm baby irony sus forage, seitan aesthetic adaptogen dreamcatcher. Meggings yes plz praxis cray fanny pack tumblr next level street art. Vape grailed polaroid distillery. Seitan distillery actually, ethical trust fund hexagon drinking vinegar narwhal la croix fam lo-fi helvetica salvia.<\/p>",
+            "button_label": "Read More",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_ibw3Tb",
+        "tab_qdBatA",
+        "tab_ckGGEA"
+      ],
+      "name": "Content Tabs",
+      "settings": {
+        "section_width": "container",
+        "type_tabs": "underline",
+        "enable_uppercase": false,
+        "tabs_font_family": "body_font",
+        "tab_heading_size": "body-2",
+        "tabs_gap": 4,
+        "align": "center",
+        "header_position": "top",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_9DVg9U": {
+      "type": "rich-text",
+      "blocks": {
+        "button_HQNPc9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "outline",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "button_HQNPc9"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": true,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_KXziFU": {
+      "type": "rich-text",
+      "blocks": {
+        "button_ArKept": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "outline",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "button_ArKept"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": true,
+        "divider_bottom_width": "container"
+      }
+    },
+    "text_with_icons_wX8Mqx": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_WW6pXn": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "custom_icon": "shopify:\/\/shop_images\/eyewing_c117e35c-5516-4c37-a9cb-e5bb51ef5dc2.png",
+            "title": "Heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "caption": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_LnV8KC": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "custom_icon": "shopify:\/\/shop_images\/Asset_2_5062dc92-00a1-4407-97b3-4039651e626e.png",
+            "title": "Heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "caption": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_GfkwKc": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "caption": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_mtfqxm": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "caption": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_WW6pXn",
+        "icon_LnV8KC",
+        "icon_GfkwKc",
+        "icon_mtfqxm"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "<p>How It Works<\/p>",
+        "layout": "vertical",
+        "item_type": "vertical",
+        "heading_size": "h6",
+        "column_alignment": "center",
+        "icon_background": "none",
+        "icon_width": 24,
+        "button_type": "outline",
+        "show_icon": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_progress_bar": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "icon_bg_color": "",
+        "icon_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wQ7Pyy",
+    "rich_text_D3EwF8",
+    "gallery_grid_x7CEUg",
+    "rich_text_4Ead8T",
+    "content_tabs_nq7tBW",
+    "rich_text_9DVg9U",
+    "text_with_icons_wX8Mqx",
+    "rich_text_KXziFU"
+  ]
+}
