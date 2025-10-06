@@ -77,6 +77,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "gifts",
+            "image": "shopify:\/\/shop_images\/packaging2_1.png",
             "title": "Holiday Gifts",
             "url": "shopify:\/\/collections\/gifts"
           }
