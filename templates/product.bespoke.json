@@ -24,7 +24,6 @@
       "blocks": {
         "breadcrumbs_exXzaX": {
           "type": "breadcrumbs",
-          "disabled": true,
           "settings": {
             "text_size": "text-size-small",
             "type_breadcrumb": "line-horizontal"
@@ -40,7 +39,7 @@
           "type": "price",
           "settings": {
             "show_tax_note": false,
-            "show_sale_badge": true,
+            "show_sale_badge": false,
             "sale_badge_type": "fixed"
           }
         },
@@ -51,12 +50,12 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "hide_sold_out_variants": false,
             "color_picker_type": "color_swatch",
-            "style": "solid",
-            "option_name": "Style",
-            "size_chart_page": "sizing-chart"
+            "style": "outline",
+            "option_name": "Size",
+            "size_chart_page": "size-chart"
           }
         },
         "custom_liquid_ErCJbJ": {
@@ -83,98 +82,17 @@
             "max_height": 20
           }
         },
-        "inventory_xyPUV8": {
-          "type": "inventory",
-          "disabled": true,
-          "settings": {
-            "inventory_threshold": 9,
-            "inventory_base_quantity": 100,
-            "show_inventory_ping": true,
-            "show_inventory_quantity": true,
-            "show_progress_bar": true
-          }
-        },
-        "custom_liquid_gXKBrz": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<p style=\"margin-bottom: -20px;\" class=\"section__sub-heading sub-heading  scroll-trigger animate--slide-in\">how it works<\/p>"
-          }
-        },
-        "icon_with_text_H9XjLf": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_size": 26,
-            "icon_1": "none",
-            "heading_1": "<em><strong>1 . <\/strong><\/em><strong>Choose Your Style:<\/strong> Select a ring or charm in your preferred gold color, with prong, bezel, or cloud setting.",
-            "icon_2": "none",
-            "heading_2": "<em><strong>2. <\/strong><\/em><strong>Personalized Fit:<\/strong> Rings are made to your size—if you don’t know it, choose “I Don’t Know” and we’ll send a free ring sizer. Side stones can be added upon request.",
-            "icon_3": "none",
-            "heading_3": "<em><strong>3. <\/strong><\/em><strong>Preview Your Design:<\/strong> Within 5–10 days, you’ll receive a 3D CAD design of your selections for approval before we begin crafting.",
-            "icon_4": "none",
-            "heading_4": "<em><strong>4. <\/strong><\/em><strong>Handcrafted & Final Sale:<\/strong> Bespoke rings and charms take 6–8 weeks to complete. Due to their custom nature, all pieces are final sale."
-          }
-        },
-        "rating_UhVAtV": {
-          "type": "rating",
-          "settings": {
-            "target_to_section": true,
-            "section_id": "#judgeme_product_reviews"
-          }
-        },
         "siblings_j3h7Cg": {
           "type": "siblings",
           "settings": {}
         },
-        "link_XB4KUC": {
-          "type": "link",
-          "disabled": true,
-          "settings": {
-            "text": "Learn More About Our Settings",
-            "url": "",
-            "open_new_tab": false,
-            "style": "link"
-          }
-        },
-        "icon_with_text_XeAjfA": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "stacked",
-            "icon_size": 48,
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading",
-            "icon_4": "truck",
-            "heading_4": "Heading"
-          }
-        },
-        "icon_with_text_w9xPGA": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "stacked",
-            "icon_size": 48,
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "none",
-            "heading_3": "",
-            "icon_4": "none",
-            "heading_4": ""
-          }
-        },
         "collapsible_tab_jHUPM9": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
+            "heading": "Details",
             "heading_size": "body-1",
             "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<br\/><br\/>We hand select each beautiful stone. All stones are responsibly sourced, recycled or traceable.<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<br\/><\/p>",
             "content_liquid": "",
             "page": "",
             "open_by_default": false
@@ -183,65 +101,25 @@
         "collapsible_tab_bVRE3V": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "How it Works",
             "heading_size": "body-1",
             "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
+            "content": "<ul><li>Select a ring or charm in your preferred gold color, with prong, bezel, or cloud setting.<\/li><li>Rings are made to your size—if you don’t know it, choose “I Don’t Know” and we’ll send a free ring sizer. Side stones can be added upon request.<\/li><li>Within 5–10 days, you’ll receive a 3D CAD design of your selections for approval before we begin crafting.<\/li><li>Bespoke rings and charms take 6–8 weeks to complete. Due to their custom nature, all pieces are final sale.<\/li><\/ul>",
             "content_liquid": "",
             "page": "",
             "open_by_default": false
-          }
-        },
-        "collapsible_tab_jbGbQd": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Warranty",
-            "heading_size": "body-1",
-            "icon": "none",
-            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee\/Warranty on all handmade jewelry purchased through us directly or our website. We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery. Please note that shipping costs are not included in our Warranty\/Happiness Guarantee after 90 days.<\/p>",
-            "content_liquid": "",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "collapsible_tab_AEkqTf": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care",
-            "heading_size": "body-1",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
-            "content_liquid": "",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "icon_with_text_PGjJ6L": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "stacked",
-            "icon_size": 20,
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading",
-            "icon_4": "truck",
-            "heading_4": "Heading"
           }
         },
         "icon_with_text_CqGeaM": {
           "type": "icon-with-text",
           "settings": {
             "layout": "stacked",
-            "icon_size": 48,
-            "icon_1": "heart",
-            "image_1": "shopify:\/\/shop_images\/Screenshot_2025-08-26_at_10.36.06_AM-gigapixel-high_fidelity_v2-1000h-removebg_copy.png",
+            "icon_size": 34,
+            "icon_1": "question_mark",
+            "image_1": "shopify:\/\/shop_images\/wine-question-mark.png",
             "heading_1": "<strong>Questions?<\/strong><a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\"><strong> Ask Away.<\/strong><\/a>",
             "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/Screenshot_2025-08-26_at_10.36.06_AM-gigapixel-high_fidelity_v2-1000h-removebg_copy_ed7ab89d-01e6-4e44-a6cd-196ca713de6e.png",
+            "image_2": "shopify:\/\/shop_images\/wine-bird.png",
             "heading_2": "<strong>{{ product.metafields.checkoutblocks.trigger.value }}<\/strong>",
             "icon_3": "none",
             "heading_3": "",
@@ -259,24 +137,14 @@
         "custom_liquid_ErCJbJ",
         "buy_buttons",
         "description",
-        "inventory_xyPUV8",
-        "custom_liquid_gXKBrz",
-        "icon_with_text_H9XjLf",
-        "rating_UhVAtV",
         "siblings_j3h7Cg",
-        "link_XB4KUC",
-        "icon_with_text_XeAjfA",
-        "icon_with_text_w9xPGA",
         "collapsible_tab_jHUPM9",
         "collapsible_tab_bVRE3V",
-        "collapsible_tab_jbGbQd",
-        "collapsible_tab_AEkqTf",
-        "icon_with_text_PGjJ6L",
         "icon_with_text_CqGeaM"
       ],
       "custom_css": [],
       "settings": {
-        "section_width": "w-full",
+        "section_width": "container",
         "enable_sticky_info": true,
         "enable_max_width_content": true,
         "show_sticky_add_to_cart_bar": false,
@@ -305,36 +173,9 @@
     "information-products": {
       "type": "information-tabs-products",
       "blocks": {
-        "custom_content_qnMhGh": {
-          "type": "custom-content",
-          "disabled": true,
-          "settings": {
-            "tab_heading": "Materials",
-            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<br\/><br\/>We hand select each beautiful stone. All stones are responsibly sourced, recycled or traceable.<\/p>",
-            "page": ""
-          }
-        },
-        "custom_content_KMdqKQ": {
-          "type": "custom-content",
-          "disabled": true,
-          "settings": {
-            "tab_heading": "Dimensions",
-            "content": "<p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
-            "page": ""
-          }
-        },
-        "custom_content_hFfTT3": {
-          "type": "custom-content",
-          "disabled": true,
-          "settings": {
-            "tab_heading": "Warranty",
-            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee\/Warranty on all handmade jewelry purchased through us directly or our website. We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery. Please note that shipping costs are not included in our Warranty\/Happiness Guarantee after 90 days.<br\/><\/p>",
-            "page": ""
-          }
-        },
         "custom_content_UVpUnP": {
           "type": "custom-content",
-          "disabled": true,
+          "name": "Care",
           "settings": {
             "tab_heading": "Care",
             "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
@@ -343,37 +184,57 @@
         },
         "custom_content_73AKnk": {
           "type": "custom-content",
+          "name": "Shipping & Returns",
           "settings": {
             "tab_heading": "Shipping & Returns",
-            "content": "<p>Fine jewelry, like people, can be both delicate and strong. Here at Starling, we stand behind the quality of our products and offer a Happiness Guarantee on all of our handmade jewelry. <\/p><p><a href=\"\/pages\/happiness-guarantee\" target=\"_blank\" title=\"Happiness Guarantee\">Read More<\/a><\/p>",
+            "content": "",
+            "page": "shipping-returns"
+          }
+        },
+        "custom_content_hFfTT3": {
+          "type": "custom-content",
+          "name": "Happiness Guarantee",
+          "settings": {
+            "tab_heading": "Happiness Guarantee",
+            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee\/Warranty on all handmade jewelry purchased through us directly or our website. <\/p><p>We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery. <\/p><p>Please note that shipping costs are not included in our Warranty\/Happiness Guarantee after 90 days.<br\/><\/p>",
             "page": ""
           }
         },
         "custom_content_4bDa3X": {
           "type": "custom-content",
+          "name": "Packaging",
           "settings": {
             "tab_heading": "Packaging",
-            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
+            "content": "<p>Lush burgundy velvet oval shaped box with velvet interior. <\/p><p>Included with every piece valued at $800 or more. <\/p><p>Option to add to cart for $60 for pieces less than $800.<\/p>",
             "page": ""
           }
         },
         "custom_content_qc4j6x": {
           "type": "custom-content",
+          "name": "Sustainability",
           "settings": {
             "tab_heading": "Sustainability",
-            "content": "",
+            "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. <\/p><p>Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. <\/p><p>Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. <\/p><p>Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
+            "page": ""
+          }
+        },
+        "custom_content_4K49dM": {
+          "type": "custom-content",
+          "name": "Holiday 2025",
+          "settings": {
+            "tab_heading": "Holiday 2025",
+            "content": "<h6>For all Bespoke Gems, Heirloom Revival and Custom pieces:<\/h6><p>Order by October 14th<\/p><h6>For all Main Collection Made to Order pieces:<\/h6><p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx 2Day<\/p><p><\/p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "custom_content_qnMhGh",
-        "custom_content_KMdqKQ",
-        "custom_content_hFfTT3",
         "custom_content_UVpUnP",
         "custom_content_73AKnk",
+        "custom_content_hFfTT3",
         "custom_content_4bDa3X",
-        "custom_content_qc4j6x"
+        "custom_content_qc4j6x",
+        "custom_content_4K49dM"
       ],
       "settings": {
         "section_width": "container",
@@ -382,234 +243,101 @@
         "tabs_font_family": "body_font",
         "tab_heading_size": "body-1",
         "tabs_gap": 3,
-        "align": "center",
+        "align": "start",
         "bg_color": "",
         "text_color": "",
         "border_color": "#622128",
         "padding_top": 52,
-        "padding_bottom": 52,
+        "padding_bottom": 28,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
     },
-    "custom_liquid_fmLzpK": {
-      "type": "custom-liquid",
-      "name": "Custom liquid",
-      "settings": {
-        "section_width": "container",
-        "custom_liquid": "<div id=\"settings\"><\/div>",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "text_with_icons_gVx3BF": {
-      "type": "text-with-icons",
+    "press_tgBaHV": {
+      "type": "press",
       "blocks": {
-        "icon_WkVkWL": {
-          "type": "icon",
+        "press_cPBn7V": {
+          "type": "press",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
-            "title": "Prong Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p><strong>Prong Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/Prong-Set.png",
+            "image_width": 120
           }
         },
-        "icon_EXWgkx": {
-          "type": "icon",
+        "press_7bYcme": {
+          "type": "press",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Bezel-set.webp",
-            "title": "Bezel Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p><strong>Bezel Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/Bezel-set.png",
+            "image_width": 120
           }
         },
-        "icon_pEMmzt": {
-          "type": "icon",
+        "press_tRbwGJ": {
+          "type": "press",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Cloud-set_b99b6ee9-de7a-488a-b750-2a8dc7643b3a.png",
-            "title": "Cloud Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p><strong>Ripple Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/ripple_c36f97b6-46fb-4933-a760-26b39714134b.png",
+            "image_width": 120
           }
         },
-        "icon_r8BDnR": {
-          "type": "icon",
+        "press_p6Mn7k": {
+          "type": "press",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/ripple_f4801f66-9960-4775-a627-17f635531e7c.png",
-            "title": "Ripple Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p><strong>Cloud Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/Cloud-set.png",
+            "image_width": 120
           }
         },
-        "icon_C7iVDc": {
-          "type": "icon",
-          "disabled": true,
+        "press_XJatkE": {
+          "type": "press",
           "settings": {
-            "icon": "check_mark",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p><strong>Basket Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/Basket-set_637aa5c4-015a-42c9-b6a2-cd0b6b91f8f2.png",
+            "image_width": 120
+          }
+        },
+        "press_Xp9AzN": {
+          "type": "press",
+          "settings": {
+            "content": "<p><strong>Dove Setting<\/strong><\/p>",
+            "url": "",
+            "image": "shopify:\/\/shop_images\/Dove-set.png",
+            "image_width": 120
           }
         }
       },
       "block_order": [
-        "icon_WkVkWL",
-        "icon_EXWgkx",
-        "icon_pEMmzt",
-        "icon_r8BDnR",
-        "icon_C7iVDc"
+        "press_cPBn7V",
+        "press_7bYcme",
+        "press_tRbwGJ",
+        "press_p6Mn7k",
+        "press_XJatkE",
+        "press_Xp9AzN"
       ],
-      "name": "Text with icons",
+      "name": "Press",
       "settings": {
-        "section_width": "container",
         "subheading": "",
-        "heading": "Bespoke Gems Offered in These Setting Styles",
+        "heading": "Our Setting Styles",
         "heading_size_section": "h5",
-        "description": "<p>Choose between a ring or charm in either a prong, bezel, or cloud setting style, and your preferred gold color.<\/p>",
-        "layout": "vertical",
-        "item_type": "vertical",
-        "heading_size": "h6",
-        "column_alignment": "center",
-        "icon_background": "circle",
-        "icon_width": 84,
-        "button_type": "outline",
-        "show_icon": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "show_progress_bar": false,
-        "bg_color": "#fcfbf9",
-        "text_color": "",
-        "border_color": "#622128",
-        "icon_bg_color": "rgba(0,0,0,0)",
-        "icon_color": "",
-        "padding_top": 48,
-        "padding_bottom": 60,
-        "show_top_divider": true,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "text_with_icons_KL9JqM": {
-      "type": "text-with-icons",
-      "blocks": {
-        "icon_zeLTtL": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
-            "title": "Basket Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_jBrVCP": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
-            "title": "Basket Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_wkrN4b": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
-            "title": "Dove Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_ApT8bf": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/signet-2.png",
-            "title": "Signet Setting",
-            "text": "",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_YV4CXU": {
-          "type": "icon",
-          "disabled": true,
-          "settings": {
-            "icon": "check_mark",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "icon_zeLTtL",
-        "icon_jBrVCP",
-        "icon_wkrN4b",
-        "icon_ApT8bf",
-        "icon_YV4CXU"
-      ],
-      "name": "Text with icons",
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "",
-        "heading_size_section": "h6",
         "description": "",
-        "layout": "horizontal",
-        "item_type": "vertical",
-        "heading_size": "h6",
-        "column_alignment": "center",
-        "icon_background": "circle",
-        "icon_width": 84,
-        "button_type": "outline",
-        "show_icon": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "show_progress_bar": false,
-        "bg_color": "#fcfbf9",
+        "layout": "vertical",
+        "content_size": "h5",
+        "image_opacity": 35,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "bg_color": "rgba(0,0,0,0)",
         "text_color": "",
-        "border_color": "#622128",
-        "icon_bg_color": "rgba(0,0,0,0)",
-        "icon_color": "",
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "show_top_divider": false,
+        "border_color": "#4f0e0d",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": true,
         "divider_top_width": "container",
         "show_bottom_divider": true,
         "divider_bottom_width": "container"
@@ -790,37 +518,24 @@
     },
     "video_with_text_overlay_7VRPGz": {
       "type": "video-with-text-overlay",
-      "blocks": {
-        "heading_9tcYaw": {
-          "type": "heading",
-          "settings": {
-            "heading": "<i>How <\/i>It's Made",
-            "highlighted_word_type": "single_line",
-            "heading_size": "h5"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9tcYaw"
-      ],
       "name": "Video with text overlay",
       "settings": {
         "section_width": "w-full",
-        "video_hosted": "shopify:\/\/files\/videos\/LightBoxRoom.mov",
+        "video_hosted": "shopify:\/\/files\/videos\/Making of_Overview_60sec_4k_Master.mp4",
         "video_url": "",
         "description_video": "",
         "desktop_height_mode": "fixed",
         "desktop_fixed_height": 650,
         "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 490,
+        "mobile_fixed_height": 300,
         "content_width": "max-w-4xl",
         "desktop_content_position": "bottom-left",
         "mobile_content_position": "bottom-left",
         "color_text": "#ffffff",
         "color_text_highlighted": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
-        "overlay_opacity": 70
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_gradient": "",
+        "overlay_opacity": 0
       }
     },
     "stacking_card_m9d8hG": {
@@ -1033,9 +748,7 @@
     "breadcrumbs_ka3wVn",
     "main",
     "information-products",
-    "custom_liquid_fmLzpK",
-    "text_with_icons_gVx3BF",
-    "text_with_icons_KL9JqM",
+    "press_tgBaHV",
     "testimonials_NmwCVP",
     "rich_text_pTJdFa",
     "apps_EfaDmG",

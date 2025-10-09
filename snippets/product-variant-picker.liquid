@@ -50,16 +50,16 @@
         assign use_size = false
         if option.name == 'Size' or option.name == 'size'
           assign use_size = true
-        endif
-        assign use_style = false
+        endif 
+      -%}
+      {% comment %} assign use_style = false
         if option.name == 'Style' or option.name == 'style'
           assign use_style = true
         endif
         assign use_setting = false
         if option.name == 'Setting' or option.name == 'setting'
           assign use_setting = true
-        endif
-      -%}
+        endif {% endcomment %}
       {%- capture sizeguide_label -%}
         {%- if use_size -%}
           <div class="flex flex-wrap justify-between items-center">
@@ -153,7 +153,7 @@
               {% render 'icon-caret' %}
             </div>
           </div>
-      {%- elsif use_style -%}
+      {% comment %} {%- elsif use_style -%}
           <fieldset class="js product-form__input product-form__input--color">
             <div class="form__label">
               Choose your style: 
@@ -188,7 +188,7 @@
               picker_type: picker_type
             %}
             </div>
-          </fieldset>
+          </fieldset> {% endcomment %}
       {%- elsif picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <div class="form__label">

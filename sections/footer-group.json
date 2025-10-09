@@ -96,18 +96,10 @@
             "image_width_mobile": 60,
             "url": ""
           }
-        },
-        "separator_aCttWc": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 27
-          }
         }
       },
       "block_order": [
-        "image_j3Yjfz",
-        "separator_aCttWc"
+        "image_j3Yjfz"
       ],
       "name": "Rich text",
       "settings": {

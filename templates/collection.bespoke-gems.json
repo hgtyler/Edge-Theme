@@ -31,7 +31,7 @@
         "image_size": "350px",
         "image": "{{ collection.image }}",
         "align_content": "start",
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_more_toggle": false,
         "max_height": 2,
         "navigation": "",

@@ -39,7 +39,7 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term",
+      "reset": "Clear search",
       "trending": "Trending Searches",
       "recommend": "May We Recommend"
     },
@@ -353,7 +353,7 @@
     },
     "breadcrumbs": {
       "home": "Home",
-      "shop": "Shop",
+      "shop": "Shop All",
       "collection_list": "Collections",
       "cart": "Cart",
       "search": "Search",
