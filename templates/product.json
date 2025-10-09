@@ -49,6 +49,7 @@
         },
         "siblings_j3h7Cg": {
           "type": "siblings",
+          "disabled": true,
           "settings": {}
         },
         "variant_picker": {

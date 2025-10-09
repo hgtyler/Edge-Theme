@@ -88,11 +88,11 @@
           {%- if block.settings.color_picker_type != 'dropdown' -%}
             <fieldset class="js product-form__input product-form__input--color">
               <div class="form__label">
-                {{ option.name }}:
+                {{ option.name }}: <span class="form__label-value">{{ option.selected_value }}</span>
                 {% if current_swatch %}
                   {% render 'swatch', swatch: current_swatch, shape: block.settings.swatch_shape %}
                 {% endif %}
-                <span class="form__label-value">{{ option.selected_value }}</span>
+                
               </div>
               <div class="variant-picker variant-picker__color flex gap-1 flex-wrap {% if block.settings.style == 'solid' %} variant-picker__solid {% endif %}">
                 {% render 'product-variant-options-color',
@@ -192,7 +192,7 @@
       {%- elsif picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <div class="form__label">
-            {{ option.name }}:
+            {{ option.name }}: 
             {% if current_swatch %}
               {% render 'swatch', swatch: current_swatch, shape: block.settings.swatch_shape %}
             {% endif %}

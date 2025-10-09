@@ -48,31 +48,39 @@ assign matching_block_names = matching_block_names | split:","
     </div>
     {%- endif -%}
     {%- if enable_filtering -%}
-    <drawer-button class="open-drawer-btn  focus-inset cursor-pointer inline-flex gap-x-4 drawer-filter items-center lg:w-auto {% if show_view_mode == false %} w-full {% endif %}" data-target="drawer-filter" aria-label="{{ 'products.facets.filter_and_sort' | t }}"
+    <drawer-button class="open-drawer-btn focus-inset cursor-pointer drawer-filter  {% if show_view_mode == false %} w-full {% endif %}" data-target="drawer-filter" aria-label="{{ 'products.facets.filter_and_sort' | t }}"
     tabindex="0">
-      <span id="ProductCountActive" class="block"> 
+    <button class="drawer-filter-desktop">
+      <span class="drawer-filter-desktop-text">
+      {{ 'products.facets.filter_button' | t }}:
+      </span> {% render 'icon-caret' %}
+    </button>
+
+    {% comment %} PART OF ORIGINAL THEME CODE - REALLY BUGGY  {% endcomment %}
+
+      {% comment %} <span id="ProductCountActive" class="block"> 
         <span class="drawer-filter-desktop gap-x-4 hidden lg:inline-flex">
           {% render 'icon-filter' %}
           <span class="mobile-facets__heading">
+            {{ 'products.facets.filter_button' | t }}: 
+          </span>
+          {% comment %} {{ active_filters }} {% endcomment %}
+        </span>
+      </span> {% endcomment %}
+      <span class="drawer-filter-mobile inline-flex gap-x-4 lg:hidden">
+        <span class="btn btn-underlined">
+        {% render 'icon-filter' %}
+        <span class="mobile-facets__heading">
+          {%- if enable_filtering and enable_sorting -%}
+            {{ 'products.facets.filter_and_sort' | t }}
+          {%- elsif enable_filtering -%}
             {{ 'products.facets.filter_button' | t }}
-          </span>
-          {{ active_filters }}
+          {%- elsif enable_sorting -%}
+            {{ 'products.facets.sort_button' | t }}
+          {%- endif -%}
         </span>
-        <span class="drawer-filter-mobile inline-flex gap-x-4 lg:hidden">
-          <span class="btn btn-underlined">
-          {% render 'icon-filter' %}
-          <span class="mobile-facets__heading">
-            {%- if enable_filtering and enable_sorting -%}
-              {{ 'products.facets.filter_and_sort' | t }}
-            {%- elsif enable_filtering -%}
-              {{ 'products.facets.filter_button' | t }}
-            {%- elsif enable_sorting -%}
-              {{ 'products.facets.sort_button' | t }}
-            {%- endif -%}
+        {% comment %} {{ active_filters }} {% endcomment %}
           </span>
-          {{ active_filters }}
-            </span>
-        </span>
       </span>
     </drawer-button>
     {%- endif -%}
@@ -560,7 +568,7 @@ assign matching_block_names = matching_block_names | split:","
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill">
       <form id="FacetFiltersPillsForm" class="facets__form">
-        <div class="active-facets active-facets-desktop pt-8 pb-4">
+        <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}
             {%- for value in filter.active_values -%}
               <facet-remove>

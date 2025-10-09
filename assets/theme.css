@@ -518,7 +518,7 @@ deferred-media {
   height: 0.7rem;
   pointer-events: none;
   position: absolute;
-  top: calc(50% - 0.2rem);
+  top: calc(50% - 0.5rem);
   right: 1.5rem;
 }
 .select__select, .customer select {
@@ -611,7 +611,7 @@ input[type='checkbox'] {
 }
 .form__label {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .form__message {
   align-items: center;
@@ -3968,7 +3968,6 @@ img.size-48.rounded-full.object-cover {
   font-weight: var(--font-heading-weight);
   letter-spacing: var(--font-heading-spacing);
   word-break: break-word;
-  text-transform: uppercase;
 }
 .hxl {
   font-size: var(--text-size-hxl);
@@ -4232,7 +4231,7 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   column-gap: 1.2rem;
   text-align: center;
   padding: var(--btn-padding-vertical) var(--btn-padding-horizontal);
-   font-family: "ABCWhyte-Book"; /* HERE  */
+  font-family: "ABCWhyte-Book"; /* HERE  */
   font-size: var(--btn-font-size);
   font-weight: var(--btn-font-weight);
   line-height: calc(1 + .5 / var(--btn-font-scale ));
@@ -4486,10 +4485,10 @@ h3.article-card__heading.h4.pb-6 {
 }
 
 .swatch-color {
-  --space-offset: 3px;
-  --swacth-size: 35px;
-  width: var(--swacth-size);
-  height: var(--swacth-size);
+  --space-offset: 2px;
+  --swatch-size: 25px;
+  width: var(--swatch-size);
+  height: var(--swatch-size);
   background: var(--swatch-color);
   display: block;
   cursor: pointer;
@@ -6249,7 +6248,6 @@ LETTER-SPACING: .6PX;
         padding-left: var(--fluid-offset, 24px);
     padding-right: var(--fluid-offset, 24px);
     letter-spacing: .6px !important;
-    font-family: Whyte Book !important;
     max-width: var(--container-max-width);
     width: 100%;
     max-width: var(--container-max-width);
@@ -6451,7 +6449,7 @@ span.drawer-filter-mobile.inline-flex.gap-x-4.lg\:hidden .btn-outline {
 }
 
 span.mobile-facets__heading {
-    font-size: var(--text-size-base) !important;
+    font-size: 1.5rem;
     letter-spacing: .6px !important;
 }
 

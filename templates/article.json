@@ -26,16 +26,16 @@
           "settings": {
             "content_width": "max-w-7xl",
             "heading_size": "h1",
-            "blog_show_date": true,
-            "blog_show_author": true,
-            "blog_show_comments": true,
+            "blog_show_date": false,
+            "blog_show_author": false,
+            "blog_show_comments": false,
             "content_alignment": "center"
           }
         },
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "content_width": "container",
+            "content_width": "max-w-7xl",
             "image_ratio": "wide"
           }
         },

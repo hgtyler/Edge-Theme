@@ -5,7 +5,7 @@
   max-width: 100%;
   border-radius: var(--swatch-input--border-radius);
   cursor: pointer;
-  outline-offset: 0.2rem;
+  outline-offset: 0.1rem;
   outline-color: transparent;
   outline-style: solid;
   transition-property: outline-color, outline-width, box-shadow;
