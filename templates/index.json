@@ -8,7 +8,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-1.png",
             "slide_link": "",
-            "video_background": false,
+            "video_background": true,
+            "video_hosted": "shopify:\/\/files\/videos\/Oct_OOAK_Banner_Master.mp4",
             "content_width": 920,
             "content_position": "bottom-left",
             "mobile_content_position": "bottom-center",
@@ -23,7 +24,7 @@
               "type": "_slide_heading",
               "name": "Heading",
               "settings": {
-                "heading": "October OOAK",
+                "heading": "The le Fay Collection",
                 "highlighted_word_type": "single_line",
                 "heading_size": "h6",
                 "color_text_highlighted": "#ffffff"
@@ -34,8 +35,8 @@
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Shop the Collection",
-                "button_link": "",
+                "button_text": "Explore",
+                "button_link": "shopify:\/\/collections\/one-of-a-kind",
                 "button_type": "underlined-white",
                 "show_icon": true
               },

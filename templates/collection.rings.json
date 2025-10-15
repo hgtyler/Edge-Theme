@@ -226,13 +226,13 @@
         "promotion_RJEJbr"
       ],
       "settings": {
-        "section_width": "container",
+        "section_width": "container-fluid",
         "products_per_page": 20,
         "columns_desktop": 4,
         "column_gap": 1,
         "row_gap": 2,
         "pagination_type": "load-more-button",
-        "filter_type": "drawer",
+        "filter_type": "vertical",
         "enable_filtering": true,
         "enable_sorting": true,
         "show_filter_values_count": false,
