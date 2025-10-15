@@ -22,7 +22,7 @@
       "type": "main-collection-banner",
       "settings": {
         "show_breadcrumb": false,
-        "text_size": "text-size-small",
+        "text_size": "text-size-tiny",
         "type_breadcrumb": "dot",
         "show_collection_title": true,
         "show_collection_image": false,

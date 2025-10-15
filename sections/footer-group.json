@@ -53,6 +53,7 @@
         "gallery_9yYMax",
         "gallery_Mtf7P3"
       ],
+      "disabled": true,
       "name": "Gallery social",
       "settings": {
         "section_width": "container",
