@@ -1,3 +1,4 @@
+
 {% if card_color_type != 'hide' %}
     {% liquid
         assign config = settings.color_swatch_config | newline_to_br | split: '<br />' 
@@ -58,7 +59,7 @@
                                         if swatch_value contains '#'
                                             assign css_property = '--swatch-color: ' | append: swatch_value
                                         elsif images[swatch_value] != blank
-                                            assign image_url = images[swatch_value] | image_url: width: 120 
+                                            assign image_url = images[swatch_value] | image_url: width: 56
                                             assign css_property = '--swatch-color: url(' | append: image_url | append: ')'
                                         endif
                                     endif
@@ -95,7 +96,7 @@
 
                                 assign swatch_focal_point = null
                                 if value.swatch.image
-                                  assign image_url = value.swatch.image | image_url: width: 120 
+                                  assign image_url = value.swatch.image | image_url: width: 50
                                   assign swatch_value = 'url(' | append: image_url | append: ')'
                                   assign swatch_focal_point = value.swatch.image.presentation.focal_point
                                 elsif value.swatch.color
@@ -149,7 +150,7 @@
                                             data-srcset="{{ srcset }}"
                                             data-src="{{ src }}"
                                             >
-                                            {{- media | image_url: width: 120 | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
+                                            {{- media | image_url: width: media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
                                         </button>
                                     {%- endif -%}
                                     
@@ -164,7 +165,7 @@
                     </div>
                 </card-product-swatch>
             {%- else -%}
-                <span class="product-card-swatches--count text-sm light">{{ 'products.product.available' | t: count: option.values.size }}</span>
+                <span class="product-card-swatches--count text-size-tiny light">{{ 'products.product.available' | t: count: option.values.size }}</span>
              {%- endif -%}
         {% endif %}
         

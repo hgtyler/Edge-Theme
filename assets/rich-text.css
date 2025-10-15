@@ -13,3 +13,43 @@
 .rich-text__text-image .rich-text__text-image-heading{
   line-height: var(--line-height); 
 }
+.rich-text__promotion-banner-heading{
+  --size-hxl:6.5rem;
+  --min-width: 768px; 
+  --max-width: 1440px;
+  --min-font-size: calc(0.7 * var(--size-hxl));
+  --max-font-size: calc(var(--font-heading-scale) * var(--size-hxl));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - var(--min-width)) / (var(--max-width) - var(--min-width)))),
+    var(--max-font-size)
+  );
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.heading-inline-end{
+  padding-inline-end: 0;
+  border-inline-end: none;
+  border-bottom: 2px solid rgb(var(--color-foreground));
+  padding-bottom: 1rem;
+}
+@media screen and (min-width:749px) {
+  .heading-inline-end{
+    padding-inline-end: 1rem;
+    border-inline-end: 2px solid rgb(var(--color-foreground));
+    padding-bottom: 0;
+    border-bottom: none;
+   
+  }
+  .rich-text__promotion-banner-heading{
+    margin-bottom: 0;
+  }
+}
+.heading-border-all{
+  border: 2px solid rgb(var(--color-foreground));
+  padding:1rem;
+}
+.heading-none{
+  border: none;
+}

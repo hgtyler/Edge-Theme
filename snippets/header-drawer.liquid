@@ -6,6 +6,7 @@
 {% endcomment %}
 
 {%- assign mobile_menu_behavior = section.settings.mobile_menu_behavior  -%}
+{%- assign submenu_behavior = section.settings.submenu_behavior  -%}
 
 <header-drawer class="" data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -13,10 +14,6 @@
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
       aria-label="{{ 'sections.header.menu' | t }}"
     >
-      {% comment %} <span>
-        {% render 'icon-hamburger' %}
-        {% render 'icon-close' %}
-      </span> {% endcomment %}
       <span class="header__icon--hamburger">
         <span class="header__icon--hamburger-line"></span>
         <span class="header__icon--hamburger-line"></span>
@@ -31,18 +28,33 @@
               {%- for link in section.settings.menu.links -%}
                 {%- liquid
                     assign has_mega = false
+                    assign use_label = false
                     assign menu_title = link.title | strip | downcase
                     
                     for block in blocks
                       assign block =  block
                       assign menu_item = block.settings.menu_item | strip | downcase 
+                      assign menu_item_label = block.settings.menu_item_label | strip | downcase
             
                       if menu_title == menu_item
                         assign has_mega = true
                         assign current_block = block
                         assign index_mega = forloop.index
+                        assign label_text = block.settings.label_text
+                        assign label_color = block.settings.label_color
+                        assign label_bg_color = block.settings.label_bg_color
+                        assign label_type = block.settings.label_type
                       break 
                       endif 
+
+                      if menu_title == menu_item_label
+                        assign use_label = true
+                        assign label_text = block.settings.label_text
+                        assign label_color = block.settings.label_color
+                        assign label_bg_color = block.settings.label_bg_color
+                        assign label_type = block.settings.label_type 
+                      break
+                      endif
                     endfor
                     assign enable_custom_image_nav = block.settings.enable_custom_image_nav
                     assign custom_image_config = block.settings.custom_image_config | newline_to_br | split: '<br />'
@@ -61,23 +73,35 @@
                       <div class="flex flex-row gap-x-4 menu-drawer__menu-link-and-toggle items-center menu-drawer__menu-lv-1">
                         <a
                             href="{{ link.url }}"
-                            class="menu-drawer__menu-item list-menu__item link link--text focus-inset flex-1 {% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                            class="menu-drawer__menu-item list-menu__item link link--text focus-inset flex-1 {% if link.current %} menu-drawer__menu-item--active{% endif %} {% if has_mega and label_text != blank and label_type == 'only_color' %} menu-drawer__menu-item--color {% endif %}"
                             {% if link.current %}
                               aria-current="page"
                             {% endif %}
+                            {% if has_mega and label_text != blank and label_type == 'only_color' %}
+                              style="--label-color:{{ label_color }};"
+                            {% endif %}
                           >
                         {{ link.title | escape }}
+                        {%- if has_mega and label_text != blank and label_type == 'badge' -%}
+                          <span class="badge badge-menu" style="--label-color:{{ label_color }};--label-bg:{{ label_bg_color }};"> {{ label_text }}</span>
+                        {%- endif -%}
                       </a>
                     {% endif %}
                       <details id="Details-menu-drawer-menu-item-{{ forloop.index }}" {% if mobile_menu_behavior == 'link-and-toggle' %} class="details-link-and-toggle" {% endif %}>
                         <summary
                           id="HeaderDrawer-{{ link.handle }}"
-                          class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
+                          class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %} {% if has_mega and label_text != blank and label_type == 'only_color' %} menu-drawer__menu-item--color {% endif %}"
+                          {% if has_mega and label_text != blank and label_type == 'only_color' %}
+                            style="--label-color:{{ label_color }};"
+                          {% endif %}
                         >
                           {% if mobile_menu_behavior == 'link-and-toggle' %}
                             <span class="sr-only">{{ link.title | escape }}</span>
                           {% else %}
                             {{ link.title | escape }}
+                            {%- if has_mega and label_text != blank and label_type == 'badge' -%}
+                              <span class="badge badge-menu" style="--label-color:{{ label_color }};--label-bg:{{ label_bg_color }};"> {{ label_text }}</span>
+                            {%- endif -%}
                           {% endif %}
                           {% render 'icon-arrow' %}
                         </summary>
@@ -91,117 +115,14 @@
                               {% render 'icon-arrow-back' %}
                                 {{ link.title | escape }}
                             </button>
-                            <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                              {%- for childlink in link.links -%}
-                                <li>
-                                  {%- if childlink.links == blank -%}
-                                    <a
-                                      id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
-                                      href="{{ childlink.url }}"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if childlink.current %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      {{ childlink.title | escape }}
-                                    </a>
-                                  {%- else -%}
-                                    {% if mobile_menu_behavior == 'link-and-toggle' %}
-                                      <div class="flex flex-row gap-x-4 menu-drawer__menu-link-and-toggle items-center">
-                                      <a
-                                        href="{{ childlink.url }}"
-                                        class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %} flex-1"
-                                        {% if childlink.current %}
-                                          aria-current="page"
-                                        {% endif %}
-                                      >
-                                        {{ childlink.title | escape }}
-                                      </a>
-                                    {% endif %}
-                                    <details id="Details-menu-drawer-{{ link.handle }}-{{ childlink.handle }}" {% if mobile_menu_behavior == 'link-and-toggle' %} class="details-link-and-toggle" {% endif %}>
-                                      <summary
-                                        id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
-                                        class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                                      >
-                                        {% if mobile_menu_behavior == 'link-and-toggle' %}
-                                          <span class="sr-only">{{ childlink.title | escape }}</span>
-                                        {% else %}
-                                          {{ childlink.title | escape }}
-                                        {% endif %}
-                                        {% render 'icon-arrow' %}
-                                      </summary>
-                                      <div
-                                        id="childlink-{{ childlink.handle | escape }}"
-                                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                                      >
-                                        <button
-                                          class="menu-drawer__close-button link link--text focus-inset"
-                                          aria-expanded="true"
-                                        >
-                                          {% render 'icon-arrow-back' %}
-                                          {{ childlink.title | escape }}
-                                        </button>
-                                        <ul
-                                          class="menu-drawer__menu list-menu"
-                                          role="list"
-                                          tabindex="-1"
-                                        >
-                                          {%- for grandchildlink in childlink.links -%}
-                                            {%- if has_mega and current_block != nil -%}
-                                              {% liquid 
-                                                  assign selected_value = grandchildlink.title | downcase | strip
-                                                  assign image_custom = blank
-                                                  for item in custom_image_config
-                                                      assign parts = item | split: ':'
-                                                      assign name = parts.first | downcase | strip
-                                                      if selected_value == name
-                                                          assign swatch_value = parts.last | strip
-                                                          if images[swatch_value] != blank and enable_custom_image_nav
-                                                              assign image_custom = images[swatch_value]
-                                                          endif
-                                                      endif
-                                                  endfor
-                                              %}
-                                            {%- endif -%}
-                                            <li>
-                                              <a
-                                                id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                                href="{{ grandchildlink.url }}"
-                                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %} {% if image_custom != blank %} menu-drawer__menu-item--image {% endif %}"
-                                                {% if grandchildlink.current %}
-                                                  aria-current="page"
-                                                {% endif %}
-                                              >
-                                              {%- if has_mega and current_block != nil -%}
-                                                  {%- capture image_custom_mobile -%}
-                                                    {%- if image_custom != blank -%}
-                                                      <span class="menu-drawer__menu-item--image-custom">
-                                                        {{- image_custom | image_url: width: image_custom.width | image_tag: loading: 'lazy', sizes: '36px', widths: '36,72', class: 'object-cover absolute inset-0 size-full' -}} 
-                                                      </span>
-                                                    {%- endif -%}
-                                                  {%- endcapture -%}
-                                                  {%- case current_block.type -%}
-                                                    {%- when 'megamenu' -%}
-                                                      {{ image_custom_mobile }}
-                                                    {%- when 'megamenu_classic' -%}
-                                                      {{ image_custom_mobile }}
-                                                  {%- endcase -%}
-                                                {%- endif -%}
-                                                {{ grandchildlink.title | escape }}
-                                              </a>
-                                            </li>
-                                          {%- endfor -%}
-                                        </ul>
-                                      </div>
-                                    </details>
-                                    {% if mobile_menu_behavior == 'link-and-toggle' %}
-                                    </div>
-                                    {% endif %}
-                                  {%- endif -%}
-                                </li>
-                              {%- endfor -%}
-                              
-                            </ul>
+                            {% case submenu_behavior %}
+                              {% when 'slide-to-left' %}
+                                {% render 'header-drawer-sub-slide' , link: link, mobile_menu_behavior: mobile_menu_behavior, has_mega: has_mega, enable_custom_image_nav: enable_custom_image_nav, custom_image_config: custom_image_config, current_block: current_block, block: block %}
+                              {% when 'collapsing' %}
+                                {% render 'header-drawer-sub-collapsing' , link: link, has_mega: has_mega, enable_custom_image_nav: enable_custom_image_nav, custom_image_config: custom_image_config, current_block: current_block, block: block, submenu_behavior: submenu_behavior,mobile_menu_behavior: mobile_menu_behavior %}
+                              {% when 'always-open' %}
+                                {% render 'header-drawer-sub-collapsing' , link: link, has_mega: has_mega, enable_custom_image_nav: enable_custom_image_nav, custom_image_config: custom_image_config, current_block: current_block, block: block, submenu_behavior: submenu_behavior, mobile_menu_behavior: mobile_menu_behavior %}
+                            {% endcase %}
                             {%- if has_mega and current_block != nil -%}
                               {%- case current_block.type -%}
                                 {%- when 'megamenu' -%}
@@ -223,15 +144,36 @@
                     <a
                       id="HeaderDrawer-{{ link.handle }}"
                       href="{{ link.url }}"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %} {% if use_label and label_text != blank and label_type == 'only_color' %} menu-drawer__menu-item--color {% endif %}"
                       {% if link.current %}
                         aria-current="page"
                       {% endif %}
+                      {% if use_label and label_text != blank and label_type == 'only_color' %}
+                        style="--label-color:{{ label_color }};"
+                      {% endif %}
                     >
                       {{ link.title | escape }}
+                      {% if use_label and label_text != blank and label_type == 'badge' %}
+                        <span class="badge badge-menu" style="--label-color:{{ label_color }};--label-bg:{{ label_bg_color }};"> {{ label_text }}</span>
+                      {% endif %}
                     </a>
                   {%- endif -%}
                 </li>
+              {%- endfor -%}
+              {%- assign link_next_icon = section.blocks | where: 'type', 'link_next_icon' -%}
+              {%- for block in link_next_icon -%}
+                {%- if block.settings.menu_next_icon != blank -%}
+                    {%- for link in block.settings.menu_next_icon.links -%}
+                      <li>
+                        <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %} >
+                          {{ link.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                {%- endif -%}
               {%- endfor -%}
             </ul>
           </nav>
@@ -267,7 +209,7 @@
                         <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
                           {{ 'localization.country_label' | t }}
                         </h2>
-                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile', enable_country_flag : section.settings.enable_country_flag -%}
                       </div>
                     {%- endform -%}
                   </localization-form>

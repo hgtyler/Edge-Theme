@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Turite teisę į nemokamą pristatymą."
-      }
+      },
+      "terms_checkbox": "Sutinku su pristatymo sąlygomis",
+      "terms_checkbox_html": "Sutinku su <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">pristatymo sąlygomis<\/a>",
+      "terms_checkbox_notify": "Sutinku su pristatymo sąlygomis",
+      "discounts": "Nuolaidos",
+      "discount_code": "Nuolaidos kodas",
+      "discount_code_error": "Nuolaidos kodas negali būti pritaikytas",
+      "shipping_discount_error": "Nuolaidos pristatymui rodomos po adresų pridėjimo",
+      "discount_apply": "Pritaikyti",
+      "discount_applied": "Pritaikytas nuolaidos kodas: {{ code }}",
+      "remove_discount": "Pašalinti nuolaidos kodą: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Pradžia",

@@ -11,6 +11,7 @@
     assign show_category = section.settings.show_category
     assign media_size = section.settings.media_size
     assign media_placement = section.settings.media_placement
+    assign badge_style = settings.badge_style
 -%}
 {%- capture sizes -%}(min-width: {{ settings.page_width }}px) 48rem, (min-width: 750px) calc((100vw - 130px) / 2), 80px){%- endcapture -%}
     
@@ -24,7 +25,7 @@
                         <div class="md:basis-3/5 flex items-start flex-col justify-between self-stretch">
                             {%- if show_category and article.tags.size > 0 -%}
                                 <div>
-                                    <span class="badge badge-article badge-article__spotlight  mb-8 ">{{ article.tags | first }}</span>
+                                    <span class="badge badge-article badge-article__spotlight  mb-8 {% if badge_style == 'rotate' %} badge-rotate {% endif %}">{{ article.tags | first }}</span>
                                 </div>
                             {%- endif -%}
                             <div class="max-w-3xl w-full flex flex-col  gap-y-6 md:gap-y-10">
@@ -73,7 +74,7 @@
                         <div class="md:basis-3/5 flex items-start flex-col justify-between self-stretch">
                             <div>
                                 {%- if show_category -%}
-                                    <span class="badge badge-article badge-article__spotlight mb-8">First tag</span>
+                                    <span class="badge badge-article badge-article__spotlight mb-8 {% if badge_style == 'rotate' %} badge-rotate {% endif %}">First tag</span>
                                 {%- endif -%}
                             </div>
                             <div class="max-w-3xl flex flex-col gap-y-12">
@@ -432,7 +433,8 @@
         ],
         "presets": [
           {
-            "name": "Featured blog spotlight"
+            "name": "Featured blog spotlight",
+            "category": "Blog"
           }
         ]
     }

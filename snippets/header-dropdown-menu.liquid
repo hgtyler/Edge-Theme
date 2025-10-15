@@ -56,7 +56,7 @@
               {%- if has_mega -%}
               <a href="{{ link.url }}"
                 class="header__menu-item list-menu__item focus-inset relative h-full {% if link.current %} header__active-menu-item {% endif %} {% if has_mega and label_type == 'only_color' %} header__menu-item--color {% endif %}"
-                {% if has_mega and label_type == 'only_color' %}
+                {% if has_mega and label_text != blank and label_type == 'only_color' %}
                   style="--label-color:{{ label_color }};"
                 {% endif %}
               >
@@ -144,18 +144,18 @@
         {%- else -%}
           <a
             href="{{ link.url }}"
-            class="header__menu-item list-menu__item focus-inset h-full relative {% if link.current %} header__active-menu-item {% endif %} {% if use_label and label_type == 'only_color' %} header__menu-item--color {% endif %}"
+            class="header__menu-item list-menu__item focus-inset h-full relative {% if link.current %} header__active-menu-item {% endif %} {% if use_label and label_text != blank and label_type == 'only_color' %} header__menu-item--color {% endif %}"
             {% if link.current %}
               aria-current="page"
             {% endif %}
-            {% if use_label and label_type == 'only_color' %}
+            {% if use_label and label_text != blank and label_type == 'only_color' %}
               style="--label-color:{{ label_color }};"
             {% endif %}
           >
             <span class="h-full flex items-center list-menu__item-text">
               {{- link.title | escape -}}
             </span>
-            {% if use_label and label_type == 'badge' %}
+            {% if use_label and label_text != blank and label_type == 'badge' %}
               <span class="badge badge-menu" style="--label-color:{{ label_color }};--label-bg:{{ label_bg_color }};"> {{ label_text }}</span>
             {% endif %}
           </a>

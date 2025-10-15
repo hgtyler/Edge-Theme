@@ -288,7 +288,7 @@
                       {%- endcapture -%}
                       <li id="promo-{{ section.id }}-{{ block.id }}" class="promo-productlist {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--column-span:span {{ block.settings.column_span }};">
                         <div class="promo-grid__item h-full" {{ block.shopify_attributes }}>
-                          <div class="promo-grid__content global-radius relative overflow-hidden  {% if block.settings.fill_height %} h-full {% else %} promo-grid__content-customize {% endif %}" style="{% unless block.settings.fill_height %}--aspect-ratio-customize:{{ block.settings.custom_height }}%; --aspect-ratio-customize-mobile:{{ block.settings.custom_height_mobile }}%; {% endunless  %}{{ style }}">
+                          <div class="promo-grid__content global-radius relative overflow-hidden {% if settings.enable_border_card %} product-card-wrapper-border {% endif %} {% if block.settings.fill_height %} h-full {% else %} promo-grid__content-customize {% endif %}" style="{% unless block.settings.fill_height %}--aspect-ratio-customize:{{ block.settings.custom_height }}%; --aspect-ratio-customize-mobile:{{ block.settings.custom_height_mobile }}%; {% endunless  %}{{ style }}">
                             {%- if active_video -%}
                                 {%- if video_hosted != blank -%}
                                   <viewport-media> 

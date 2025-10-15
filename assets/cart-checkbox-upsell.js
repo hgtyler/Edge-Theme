@@ -92,6 +92,21 @@ class CartCheckboxUpsell {
         section: mainCartItems.dataset.id,
         selector: '.js-contents',
       }] : []),
+      ...(mainCartItems ? [{
+        id: 'main-cart-shipping',
+        section: mainCartItems.dataset.id,
+        selector: '#main-cart-shipping',
+      }] : []),
+      ...(mainCartItems ? [{
+        id: 'main-cart-discount',
+        section: mainCartItems.dataset.id,
+        selector: '#main-cart-discount',
+      }] : []),
+      ...(mainCartItems ? [{
+        id: 'main-cart-total',
+        section: mainCartItems.dataset.id,
+        selector: '#main-cart-total',
+      }] : []),
       {
         id: 'cart-icon-bubble',
         section: 'cart-icon-bubble',
@@ -129,11 +144,22 @@ class CartCheckboxUpsell {
             } else {
               console.error(`Container not found for selector: ${section.selector}`);
             }
+            
+          } else if (['main-cart-shipping', 'main-cart-discount', 'main-cart-total'].includes(section.id)) {
+            const newElement = doc.querySelector(section.selector);
+            const currentElement = document.querySelector(section.selector);
+            
+            if (currentElement && newElement) {
+              currentElement.innerHTML = newElement.innerHTML;
+            } else if (!currentElement) {
+              console.error(`Element not found for selector: ${section.selector}`);
+            }
           }
         })
         .catch(error => console.error(`Error updating section ${section.id}:`, error));
     });
   }
+  
   
 }
 

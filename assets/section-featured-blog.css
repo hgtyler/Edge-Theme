@@ -1,15 +1,13 @@
 .featured-blog-slider.is-initialized:not(.is-active) .splide__list{
   display: grid;
   grid-template-columns: repeat(var(--column-item-mobile), minmax(0, 1fr));
-  column-gap: var(--column-gap-mobile);
-  row-gap: calc(var(--column-gap-mobile) + 1rem);
+  gap: var(--column-gap-mobile);
 }
 .no-js .featured-blog-slider:not(.is-initialized) .splide__list{ 
   --column-width: calc((100% - ((var(--column-item-mobile) - 1) * var(--column-gap))) / var(--column-item-mobile));
   display: grid;
   grid-auto-flow: column;
-  column-gap: var(--column-gap-mobile);
-  row-gap: calc(var(--column-gap-mobile) + 1rem);
+  gap: var(--column-gap-mobile);
   overflow-x: auto;
   overflow-y: hidden;
   grid-template-columns: repeat(auto-fill,minmax(calc(100% / var(--column-width)),1fr));
@@ -25,15 +23,12 @@
 @media screen and (min-width: 768px) {
   .featured-blog-slider.is-initialized:not(.is-active) .splide__list{
     grid-template-columns: repeat(var(--column-item), minmax(0, 1fr));
-    column-gap: var(--column-gap);
+    gap: var(--column-gap);
   }
   .no-js .featured-blog-slider:not(.is-initialized) .splide__list{ 
     --column-width: calc((100% - ((var(--column-item) - 1) * var(--column-gap))) / var(--column-item));
     grid-template-columns: repeat(auto-fill,minmax(var(--column-width)),1fr);
     grid-auto-columns: minmax(var(--column-width),1fr);
-    column-gap: var(--column-gap);
+   gap: var(--column-gap);
   }
 }
-
-a.btn.btn-underlined {
-    font-size: var(--text-size-base);}

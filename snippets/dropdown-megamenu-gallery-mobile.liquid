@@ -18,6 +18,7 @@
               assign var_overlay_color = 'overlay_color_' | append: i
               assign var_overlay_opacity = 'overlay_opacity_' | append: i
               assign var_overlay_gradient = 'overlay_gradient_' | append: i
+              assign var_show_icon = 'show_icon_' | append: i
   
               assign banner_image = block.settings[var_image]
               assign banner_image_ratio = block.settings[var_image_ratio]
@@ -33,6 +34,7 @@
               assign banner_overlay_color = block.settings[var_overlay_color]
               assign banner_overlay_opacity = block.settings[var_overlay_opacity]
               assign banner_overlay_gradient = block.settings[var_overlay_gradient]
+              assign banner_show_icon = block.settings[var_show_icon]
   
               case banner_align_text
                   when 'top-left'
@@ -109,7 +111,8 @@
                               button_style: banner_button_type,
                               button_text: banner_text_button,
                               button_url: banner_url,
-                              button_type: 'link'
+                              button_type: 'link',
+                              show_icon: banner_show_icon
                           -%}
                       {%- endif -%}
                       </div>

@@ -40,7 +40,7 @@ tabs-component .tabs-content > .tab-content {
 tabs-component .tabs-content > .tab-content.active {
     display: block;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 640px) {
     tabs-component .tab-scrollable {
         overflow-x: scroll;
         scrollbar-width: none;

@@ -12,6 +12,7 @@
   assign column_gap = section.settings.column_gap | append: 'rem'
   assign column_gap_mobile = section.settings.column_gap_mobile | append: 'rem'
   assign image_width = section.settings.image_width
+  assign show_border_card = section.settings.show_border_card
 
   assign arrows = true
   if stack_columns or columns_to_show <= columns_desktop
@@ -42,19 +43,19 @@
 {%- endcapture -%}
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
 <div class="section-{{ class_section }} isolate section-padding section-bg {% if enable_overflow_visible %} overflow-hidden {% else %} overflow-hidden lg:overflow-visible {% endif %}" {% render 'section-attributes' %}>
-  <div class="{{ section.settings.section_width }}" style="--column-item:{{ columns_desktop }};--column-item-mobile:{{ columns_mobile }};--column-gap:{{ column_gap }};">
+  <div class="{{ section.settings.section_width }}" style="--column-item:{{ columns_desktop }};--column-item-mobile:{{ columns_mobile }};--column-gap:{{ column_gap }};--column-gap-mobile:{{ column_gap_mobile }};">
   {% render 'section-header', layout_header: section.settings.layout, subheading: section.settings.subheading, heading: section.settings.heading, description: section.settings.description, link_text: section.settings.link_text, button_style: section.settings.button_type, button_url: section.settings.link_url, show_icon : section.settings.show_icon, class:"header-multicolumn", heading_size: section.settings.heading_size_section %}
   <splide-carousel>
     <div id="{{ class_section }}-{{ section.id }}"
     class="splide-slider splide {{ class_section }}-slider" 
     data-splide='{{ data_splide }}'
     aria-labelledby="{{ class_section }}">
-      <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %}">
+      <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %} {% if show_border_card %} splide-border-card {% endif %}">
           <div class="splide__list">
             {%- for block in section.blocks -%}
               {% assign desktop_image_placement = block.settings.desktop_image_placement %}
               <div class="splide__slide" data-splide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-                <div class="{{ class_section }}-card text-{{ section.settings.column_alignment }} {{ animate_slide_in }} {% if desktop_image_placement == 'bottom' %} {{ class_section }}-card--bottom{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
+                <div class="{{ class_section }}-card text-{{ section.settings.column_alignment }} {{ animate_slide_in }} {% if desktop_image_placement == 'bottom' %} {{ class_section }}-card--bottom{% endif %} {% if show_border_card %} {{ class_section }}-card-border h-full {% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
                   <div class="{{ class_section }}-card__media">
                     <div class="{{ class_section }}-card__media--{{ section.settings.image_width }} inline-block">
                       {%- if block.settings.link != blank -%}
@@ -328,7 +329,12 @@
       "default": "start",
       "label": "Column alignment"
     },
-    
+    {
+      "type": "checkbox",
+      "id": "show_border_card",
+      "label": "Show border card",
+      "default": false
+    },
     {
       "type": "header",
       "content": "View all button"
@@ -624,6 +630,7 @@
   "presets": [
     {
       "name": "Multicolumn",
+      "category": "Content",
       "blocks": [
         {
           "type": "column"

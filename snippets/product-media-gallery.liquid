@@ -136,26 +136,31 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-<gallery-carousel id="Gallery-carousel-{{ section.id }}" class=" flex  gap-y-6 product__media-list {% if gallery_layout == 'thumbnail_left' %} gallery_layout-left flex-col md:flex-row-reverse  gap-x-6{% else %} flex-col {% endif %}" data-autoplay="{{ section.settings.enable_video_autoplay }}" {% if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%} desktop-grid {% endif %}  
+<gallery-carousel id="Gallery-carousel-{{ section.id }}" 
+class=" flex  gap-y-6 product__media-list {% if gallery_layout == 'thumbnail_left' or gallery_layout == 'thumbnail_left_2_columns' %} gallery_layout-left flex-col md:flex-row-reverse  gap-x-6{% else %} flex-col {% endif %} {% if section.settings.enable_border_media %} product__media-list-border {% endif %}" 
+data-autoplay="{{ section.settings.enable_video_autoplay }}" {% if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or gallery_layout == 'sticky_first_image' -%} desktop-grid {% endif %}  
   aria-labelledby="{{ 'products.product.media.gallery_viewer' | t }}"
   {% if grouping_successfully_applied %}
       data-filter-selected="{{ selected_option_value }}"
     data-media-grouping="{{ grouping_successfully_applied }}"
   {% endif %}
+  style="--column-gap-media:{{ section.settings.column_gap_media | default: 0.5 }}rem;"
   >
     <div
     id="Main-Carousel-{{ section.id }}"
     class="splide-slider splide main-carousel"
     data-splide='{
       "direction":"{%- render 'direction' -%}",
-      "type": "{{ direction_splide }}",
+      "type": "{%- if gallery_layout == 'thumbnail_2_columns' or gallery_layout == 'thumbnail_left_2_columns' -%}slide{%- else -%}{{ direction_splide }}{%- endif -%}",
       "pagination": false,
-      "arrows": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or media_count <= 1 -%} false {%- else -%} true {%- endif -%},
+      "arrows": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or media_count <= 1 or gallery_layout == 'sticky_first_image' -%} false {%- else -%} true {%- endif -%},
       "rewind" : false,
-      "destroy": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%} true {%- else -%} false {%- endif -%},
+      "destroy": {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or gallery_layout == 'sticky_first_image' -%} true {%- else -%} false {%- endif -%},
+      "perPage":{%- if gallery_layout == 'thumbnail_2_columns' or gallery_layout == 'thumbnail_left_2_columns' and media_count > 1 -%} 2 {%- else -%} 1 {%- endif -%},
       "speed":400,
       "breakpoints": {
         "767": {
+          "perPage":1,
           "destroy": false,
           "arrows": false,
           "focus": "center"
@@ -169,7 +174,8 @@
         {%- for media in product.media -%}
             <div
               id="Slide-{{ section.id }}-{{ media.id }}"
-              class="splide__slide {% if media.id == featured_media.id %} is-active is-visible splide__slide--current-variant {% endif %} {% if media.media_type != 'image' %} product__media-item--full{% endif %}"
+              class="splide__slide {% if media.id == featured_media.id %} is-active is-visible splide__slide--current-variant {% endif %} {% if media.media_type != 'image' %} product__media-item--full{% endif %}
+              {% if forloop.index > 2 %} splide__slide--extra {% endif %} {% if forloop.first and featured_media == blank %} splide__slide-first {% endif %}"
               data-type="{{ media.media_type }}"
               data-media-id="{{ media.id }}" 
               {% if grouping_successfully_applied %}
@@ -180,9 +186,40 @@
               {% endif %}
             >
               {% if section.settings.info_in_media != blank and forloop.first %}
-                <div class="info-in-media absolute  text-size-tiny" style="--color-foreground: 0 0 0; --color-background: 255 255 255;">
+                <div class="info-in-media absolute  text-size-tiny">
                   {{ section.settings.info_in_media }}
                 </div>
+              {% endif %}
+              {% liquid 
+              assign badge_style = settings.badge_style
+	            assign card_label_texts = settings.card_label_text | split: ','
+              assign card_badge_position = settings.card_badge_position
+              assign show_badge_in_media = section.settings.show_badge_in_media
+              assign use_tags = false
+                for tag in product.tags
+                  assign tag_label = tag | handle |  downcase |  escape
+                  for card_label_text in card_label_texts
+                    assign card_label = card_label_text | handle |  downcase |  escape
+                    if tag_label == card_label and show_badge_in_media
+                      assign use_tags = true
+                    break 
+                    endif
+                  endfor
+                endfor
+              %}
+              {% if use_tags and settings.card_label_position == 'inner' and forloop.first %}
+                <div class="card__badge {{ card_badge_position }} z-1">
+                  {% for tag in product.tags %}
+                      {%- assign tag_label = tag | handle |  downcase |  escape -%}
+                      {% for card_label_text in card_label_texts  %}
+                          {%- assign card_label = card_label_text | handle |  downcase |  escape -%}
+                          {% if tag_label == card_label %}
+                              <div class="badge product__badge-label badge-{{ badge_style }}">{{ card_label_text }}</div>
+                          {%  break  %}
+                          {% endif %}
+                      {% endfor %}
+                  {% endfor %}
+                  </div>
               {% endif %}
               {%- liquid
                 assign media_position = media_position | default: 0 | plus: 1
@@ -226,7 +263,7 @@
     </div>
   </div>
   {%- capture show_thumbnails -%}
-    {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' -%}
+    {%- if gallery_layout == 'stacked' or gallery_layout == 'columns' or gallery_layout == 'columns_mix' or gallery_layout == 'sticky_first_image' -%}
       {%- if mobile_thumbnails == 'show' -%}
          thumbnail-carousel-desk 
       {%- else -%}
@@ -248,8 +285,8 @@
   <div id="Thumbnail-Carousel-{{ section.id }}" class="splide-slider splide thumbnail-carousel {{ show_thumbnails }}"
   data-thumbnail="{%- if gallery_layout == 'thumbnail_left' -%} vertical {%- else -%} horizontal {%- endif -%}"
   data-splide='{
-    "direction":"{%- if gallery_layout == 'thumbnail_left'-%} ttb {%- else -%} {%- render 'direction' -%} {%- endif -%}",
-    {%- if gallery_layout == 'thumbnail_left' -%}
+    "direction":"{%- if gallery_layout == 'thumbnail_left' or gallery_layout == 'thumbnail_left_2_columns'-%} ttb {%- else -%} {%- render 'direction' -%} {%- endif -%}",
+    {%- if gallery_layout == 'thumbnail_left' or gallery_layout == 'thumbnail_left_2_columns' -%}
     "height": "400px",
     "autoHeight": true,
     "perPage": {{ perpage }},
@@ -264,7 +301,7 @@
     {%- endif -%}
     "isNavigation": true,
     "rewind":false,
-    "gap": "0.5rem",
+    "gap": "1.5rem",
     "speed":400,
     "pagination": false,
     "arrows": {%- if product.media.size > perpage -%}true{%- else -%}false{%- endif -%},

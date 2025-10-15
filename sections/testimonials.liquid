@@ -1,3 +1,5 @@
+
+
 {%- liquid
   assign testimonial_type = section.settings.testimonial_type
   assign content_alignment = section.settings.content_alignment
@@ -71,21 +73,20 @@
                                     {{ block.settings.text }}
                                   </div>
                                 {%- endif -%}
-                          <div class="testimonials__quote-bio flex flex-row items-center justify-{{ content_alignment }} mt-10 gap-x-2">
-  {%- if block.settings.avatar != blank -%}
-    <div class="testimonials__quote-avatar basis-72">
-      {{- block.settings.avatar | image_url: width:140 | image_tag: sizes: '120px', widths: '120,240', loading: 'lazy', class:'rounded-full object-cover', style:'width: 144px; height: 144px;' -}}
-    </div>
-  {%- endif -%}
-  <div class="testimonials__quote-info {% if block.settings.avatar != blank %} text-start {% else %} text-{{ content_alignment }} {% endif %}">
-    {% if block.settings.name != blank %}
-      <div class="testimonials__quote-name">{{ block.settings.name }}</div>
-    {% endif %}
-    {%- if block.settings.position != blank -%}
-      <div class="testimonials__quote-position text-size-small">{{ block.settings.position }}</div>
-    {%- endif -%}
-  </div>
-
+                                <div class="testimonials__quote-bio flex flex-row items-center justify-{{ content_alignment }} mt-10 gap-x-8">
+                                  {%- if block.settings.avatar != blank -%}
+                                    <div class="testimonials__quote-avatar basis-24">
+                                      {{- block.settings.avatar | image_url: width:160 | image_tag: sizes: '80px', widths: '80,160', loading: 'lazy', class:'size-24 rounded-full object-cover' -}}
+                                    </div>
+                                  {%- endif -%}
+                                  <div class="testimonials__quote-info {% if block.settings.avatar != blank %} text-start {% else %} text-{{ content_alignment }} {% endif %}">
+                                    {% if block.settings.name != blank %}
+                                      <div class="testimonials__quote-name">{{ block.settings.name }}</div>
+                                    {% endif %}
+                                    {%- if block.settings.position != blank -%}
+                                      <div class="testimonials__quote-position text-size-tiny opacity-70">{{ block.settings.position }}</div>
+                                    {%- endif -%}
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -156,11 +157,11 @@
                                     {%- endif -%}
                                     <div class="testimonials-with-image__quote-bio mt-10" style="--transition-delay: 0.3s;">
                                       <div class="testimonials__quote-bio flex flex-row items-center justify-{{ content_alignment }} mt-10 gap-x-8">
-                                     {%- if block.settings.avatar != blank -%}
-  <div class="testimonials__quote-avatar basis-34">
-    {{- block.settings.avatar | image_url: width:136 | image_tag: sizes: '136px', widths: '136,272', loading: 'lazy', class:'size-34 rounded-full object-cover' -}}
-  </div>
-{%- endif -%}
+                                        {%- if block.settings.avatar != blank -%}
+                                          <div class="testimonials__quote-avatar basis-24">
+                                            {{- block.settings.avatar | image_url: width:160 | image_tag: sizes: '80px', widths: '80,160', loading: 'lazy', class:'size-24 rounded-full object-cover' -}}
+                                          </div>
+                                        {%- endif -%}
                                         <div class="testimonials-with-image__quote-info {% if block.settings.avatar != blank %} text-start {% else %} text-{{ content_alignment }} {% endif %}">
                                           {% if block.settings.name != blank %}
                                             <div class="testimonials-with-image__quote-name">{{ block.settings.name }}</div>
@@ -645,6 +646,7 @@
     "presets": [
       {
         "name": "Testimonials",
+        "category": "Content",
         "blocks": [
           {
             "type": "quote"

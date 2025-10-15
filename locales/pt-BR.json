@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Você tem direito a frete grátis."
-      }
+      },
+      "terms_checkbox": "Aceito os termos de envio",
+      "terms_checkbox_html": "Aceito <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">os termos de envio<\/a>",
+      "terms_checkbox_notify": "Aceito os termos de envio",
+      "discounts": "Descontos",
+      "discount_code": "Código de desconto",
+      "discount_code_error": "O código de desconto não pode ser aplicado",
+      "shipping_discount_error": "Os descontos de envio são mostrados após adicionar um endereço",
+      "discount_apply": "Aplicar",
+      "discount_applied": "Código de desconto aplicado: {{ code }}",
+      "remove_discount": "Remover código de desconto: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Lar",

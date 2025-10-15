@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Kwalifikujesz się do bezpłatnej wysyłki."
-      }
+      },
+      "terms_checkbox": "Akceptuję warunki dostawy",
+      "terms_checkbox_html": "Akceptuję <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">warunki dostawy<\/a>",
+      "terms_checkbox_notify": "Akceptuję warunki dostawy",
+      "discounts": "Rabaty",
+      "discount_code": "Kod rabatu",
+      "discount_code_error": "Kod rabatu nie może być zastosowany",
+      "shipping_discount_error": "Rabaty na wysyłkę są widoczne po dodaniu adresu",
+      "discount_apply": "Zastosuj",
+      "discount_applied": "Zastosowany kod rabatu: {{ code }}",
+      "remove_discount": "Usuń kod rabatu: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Dom",

@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Είστε κατάλληλοι για δωρεάν αποστολή."
-      }
+      },
+      "terms_checkbox": "Αποδέχομαι τις συνθήκες αποστολής",
+      "terms_checkbox_html": "Αποδέχομαι <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">συνθήκες αποστολής<\/a>",
+      "terms_checkbox_notify": "Παρακαλώ διαβάστε και αποδεχθείτε τις συνθήκες αποστολής",
+      "discounts": "Έκπτωση",
+      "discount_code": "Κωδικός έκπτωσης",
+      "discount_code_error": "Ο κωδικός έκπτωσης δεν μπορεί να εφαρμοστεί",
+      "shipping_discount_error": "Η έκπτωση στην αποστολή εμφανίζεται μετά την προσθήκη διεύθυνσης",
+      "discount_apply": "Εφαρμογή",
+      "discount_applied": "Εφαρμοσμένος κωδικός έκπτωσης: {{ code }}",
+      "remove_discount": "Αφαίρεση κωδικού έκπτωσης: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Σπίτι",

@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Bạn đủ điều kiện để được miễn phí vận chuyển."
-      }
+      },
+      "terms_checkbox": "Tôi đồng ý với điều kiện vận chuyển",
+      "terms_checkbox_html": "Tôi đồng ý với <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">điều kiện vận chuyển<\/a>",
+      "terms_checkbox_notify": "Tôi đồng ý với điều kiện vận chuyển",
+      "discounts": "Chiết khấu",
+      "discount_code": "Mã chiết khấu",
+      "discount_code_error": "Mã chiết khấu không thể được áp dụng",
+      "shipping_discount_error": "Chiết khấu vận chuyển được hiển thị sau khi thêm địa chỉ",
+      "discount_apply": "Áp dụng",
+      "discount_applied": "Mã chiết khấu đã áp dụng: {{ code }}",
+      "remove_discount": "Xóa mã chiết khấu: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Trang chủ",

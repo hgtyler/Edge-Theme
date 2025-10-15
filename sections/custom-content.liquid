@@ -17,7 +17,7 @@
 <div class="section-custom-content section-padding section-bg" {% render 'section-attributes' %}>
   <div class="{{ section_width }}">
     {% render 'section-header', layout_header: section.settings.layout, subheading: section.settings.subheading, heading: section.settings.heading, description: section.settings.description, class:"header-custom-content", heading_size: section.settings.heading_size_section %}
-      <div class="flex flex-wrap row section-custom-content" style="--fluid-offset:{{ column_gap }}px; --fluid-offset-y:{{ row_gap }}px;">
+      <div class="flex flex-wrap row section-custom-content" style="--fluid-offset:{{ column_gap }}rem; --fluid-offset-y:{{ row_gap }}rem;">
           {% for block in section.blocks %}
             {% liquid
               assign vertical_alignment = block.settings.vertical_alignment
@@ -451,91 +451,23 @@
       "content": "Grid settings"
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "column_gap",
-      "options": [
-        {
-          "value": "0",
-          "label": "No gap"
-        },
-        {
-          "value": "4",
-          "label": "Extra small"
-        },
-        {
-          "value": "8",
-          "label": "Small"
-        },
-        {
-          "value": "16",
-          "label": "Medium"
-        },
-        {
-          "value": "24",
-          "label": "Large"
-        },
-        {
-          "value": "32",
-          "label": "Extra large"
-        },
-        {
-          "value": "40",
-          "label": "Xl large"
-        },
-        {
-          "value": "48",
-          "label": "XXl large"
-        },
-        {
-          "value": "80",
-          "label": "XXXl large"
-        }
-      ],
-      "default": "24",
+      "min": 0,
+      "max": 8,
+      "step": 0.1,
+      "default": 3,
+      "unit": "rem",
       "label": "Column gap"
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "row_gap",
-      "options": [
-        {
-          "value": "0",
-          "label": "No gap"
-        },
-        {
-          "value": "4",
-          "label": "Extra small"
-        },
-        {
-          "value": "8",
-          "label": "Small"
-        },
-        {
-          "value": "16",
-          "label": "Medium"
-        },
-        {
-          "value": "24",
-          "label": "Large"
-        },
-        {
-          "value": "32",
-          "label": "Extra large"
-        },
-        {
-          "value": "40",
-          "label": "Xl large"
-        },
-        {
-          "value": "48",
-          "label": "XXl large"
-        },
-        {
-          "value": "80",
-          "label": "XXXl large"
-        }
-      ],
-      "default": "24",
+      "min": 0,
+      "max": 8,
+      "step": 0.1,
+      "default": 3,
+      "unit": "rem",
       "label": "Row gap"
     },
     {
@@ -3234,6 +3166,7 @@
   "presets": [
     {
       "name": "Advanced content",
+      "category": "Advanced",
       "blocks": [
         {
           "type": "image"

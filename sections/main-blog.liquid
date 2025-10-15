@@ -16,6 +16,10 @@
   assign subheading = section.settings.subheading
   assign heading_size = section.settings.heading_size_section
   assign description = section.settings.description
+  assign show_border_card = section.settings.show_border_card
+  assign title_size = section.settings.title_size
+  assign align_content_card = section.settings.align_content_card
+  assign show_icon_read_more = section.settings.show_icon_read_more
 -%}
 
 {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns_desktop }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
@@ -84,7 +88,11 @@
               show_excerpt: show_excerpt,
               columns_desktop: columns_desktop
               sizes: sizes,
-              enable_button_underlined_white: enable_button_underlined_white
+              enable_button_underlined_white: enable_button_underlined_white,
+              title_size: title_size,
+              show_border_card: show_border_card,
+              align_content_card: align_content_card,
+              show_icon_read_more: show_icon_read_more
             -%}
           </div>
         {%- endfor -%}
@@ -198,6 +206,76 @@
       "label": "Image ratio"
     },
     {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+          {
+              "value": "h1",
+              "label": "Heading 1"
+          },
+          {
+              "value": "h2",
+              "label": "Heading 2"
+          },
+          {
+              "value": "h3",
+              "label": "Heading 3"
+          },
+          {
+              "value": "h4",
+              "label": "Heading 4"
+          },
+          {
+              "value": "h5",
+              "label": "Heading 5"
+          },
+          {
+              "value": "h6",
+              "label": "Heading 6"
+          },
+          {
+              "value": "body-1",
+              "label": "Body 1"
+          },
+          {
+            "value": "body-2",
+            "label": "Body 2"
+          },
+          {
+            "value": "sub-heading",
+            "label": "Caption"
+          }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "select",
+      "id": "align_content_card",
+      "label": "Align content card",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border_card",
+      "label": "Show border card",
+      "default": false
+    },
+    {
       "type": "checkbox",
       "id": "show_image",
       "default": true,
@@ -238,6 +316,12 @@
       "id": "enable_button_underlined_white",
       "default": false,
       "label": "Enable white button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon_read_more",
+      "label": "Show arrow icon",
+      "default": false
     },
     {
       "type": "header",

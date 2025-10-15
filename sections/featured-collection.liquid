@@ -7,6 +7,7 @@
 {%- endif -%}
 
 {%- liquid
+  assign enable_border_card = settings.enable_border_card
   assign  section_width = section.settings.section_width
   assign columns_desktop = section.settings.columns_desktop
   assign columns_mobile = section.settings.columns_mobile
@@ -43,7 +44,7 @@
           data-splide='{{ data_splide }}' 
           aria-labelledby="featured-collection"
           >
-            <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %}">
+            <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %} {% if enable_border_card %} splide-border-card {% endif %}">
                 <div class="splide__list">
                   {%- for product in products limit: products_to_show -%}
                   
@@ -430,7 +431,8 @@
   ],
   "presets": [
     {
-      "name": "Featured collection"
+      "name": "Featured collection",
+      "category": "Collections"
     }
   ]
 }

@@ -21,7 +21,14 @@
                 assign url = block.settings.url | default: block.settings.collection.url
                 assign count = block.settings.collection.all_products_count
               %}
-              <li class="collection-list-tabs-text__item {{ animate_slide_in }}" data-tab-index="{{ forloop.index }}" data-bg-color="{{ block.settings.bg_color.rgb }}" data-text-color="{{ block.settings.text_color.rgb }}" role="tabpanel" aria-controls="tabpanel-{{ forloop.index }}" aria-labelledby="tab-{{ forloop.index }}" tabindex="0" {{ block.shopify_attributes }} {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
+              <li class="collection-list-tabs-text__item {{ animate_slide_in }}" 
+              data-tab-index="{{ forloop.index }}" 
+              data-bg-color="{{ block.settings.bg_color.rgb }}" 
+              data-text-color="{{ block.settings.text_color.rgb }}" 
+              role="tab" 
+              aria-controls="tabpanel-{{ forloop.index }}" 
+              tabindex="0" {{ block.shopify_attributes }} 
+              {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
                 <div class="flex items-center justify-between lg:gap-4 gap-8">
                   <div>
                     <div class="{{ section.settings.heading_size }} collection-list-tabs-text__heading">{{ heading }} 
@@ -59,7 +66,7 @@
                 {%- endif -%}
               {%- if  image != blank -%}
                 <div class="collection-list-tabs-images__image {% if tabs_type == 'tabs_background' %}collection-list-tabs-images__image--background{% endif %}">
-                  {% render 'responsive-image' , image : image, sizes: '25vw',  image_aspect_ratio: section.settings.image_ratio %}
+                  {% render 'responsive-image' , image : image, sizes: '50vw',  image_aspect_ratio: section.settings.image_ratio %}
                 </div>
               {%- else -%}
                 <div class="collection-list-tabs-images__image {% if tabs_type == 'tabs_background' %}collection-list-tabs-images__image--background{% endif %}">
@@ -348,6 +355,7 @@
     "presets": [
         {
           "name": "Collection list tabs",
+          "category": "Collections",
           "blocks": [
             {
               "type": "tab",

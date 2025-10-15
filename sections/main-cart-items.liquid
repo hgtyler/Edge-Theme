@@ -14,6 +14,8 @@
 {%-liquid
     assign show_cart_note = settings.show_cart_note
     assign show_cart_calc_shipping = settings.show_cart_calc_shipping
+    assign show_discount_code = settings.show_discount_code
+    assign accordion_show_discount_code = settings.accordion_show_discount_code
     assign show_accept = section.settings.show_accept
    
 -%}
@@ -478,26 +480,50 @@ data-id="{{ section.id }}">
                         </div>
                       </div>
                     {%- endif -%}
-                    {%- if show_cart_calc_shipping -%}
+                    {%- if show_cart_calc_shipping or show_discount_code -%}
                       <div class="mb-8">
-                      <div class="accordion">
+                      {%- if show_cart_calc_shipping -%}
+                        <div class="accordion">
+                            <collapsible-details>
+                            <details>
+                              <summary>
+                                  <div class="summary__title">
+                                    {% render 'icon-cube' %}
+                                    <div class="accordion__title ps-4">{{ 'sections.cart.shipping_estimate' | t }}</div>
+                                  </div>
+                                  {% render 'icon-caret' %}
+                              </summary>
+                              <div class="collapsible__content">
+                                <div class="collapsible__content-inner ">
+                                  {%- render 'estimate-shipping' -%}
+                                </div>
+                              </div>
+                            </details>
+                          </collapsible-details>
+                        </div>
+                      {%- endif -%}
+                      {%- if show_discount_code -%}
+                        <div class="accordion" id="main-cart-discount">
+                          <div class="js-contents-discount">
                           <collapsible-details>
-                          <details>
-                            <summary>
+                            <details {% if accordion_show_discount_code %} open class="is-open" {% endif %} >
+                              <summary>
                                 <div class="summary__title">
-                                  {% render 'icon-cube' %}
-                                  <div class="accordion__title ps-4">{{ 'sections.cart.shipping_estimate' | t }}</div>
+                                  {% render 'icon-tag' %}
+                                  <div class="accordion__title ps-4">{{ 'sections.cart.discounts' | t }}</div>
                                 </div>
                                 {% render 'icon-caret' %}
-                            </summary>
-                            <div class="collapsible__content">
-                              <div class="collapsible__content-inner ">
-                                {%- render 'estimate-shipping' -%}
+                              </summary>
+                              <div class="collapsible__content">
+                                <div class="collapsible__content-inner">
+                                 {% render 'cart-discounts' %}
+                                </div>
                               </div>
-                            </div>
-                          </details>
-                        </collapsible-details>
-                      </div>
+                            </details>
+                          </collapsible-details>
+                          </div>
+                        </div>
+                      {%- endif -%}
                       </div>
                     {%- endif -%}
                     <div id="main-cart-total">
@@ -520,7 +546,7 @@ data-id="{{ section.id }}">
                           <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
                           <p class="totals__total-value font-bold">{{ cart.total_price | money_with_currency }}</p>
                         </div>
-
+                        {%- if settings.show_tax_note -%}
                         <small class="tax-note caption-large rte light !mb-0">
                           {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                             {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -532,6 +558,7 @@ data-id="{{ section.id }}">
                             {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
                           {%- endif -%}
                         </small>
+                        {%- endif -%}
                       </div>
                     </div>
                   </div>
@@ -552,6 +579,21 @@ data-id="{{ section.id }}">
                   {%- endif -%}
                 {%- else -%}
                   <div class="cart__ctas" {{ block.shopify_attributes }}>
+                    {%- if settings.enable_terms_checkbox -%}
+                      <cart-terms-check class="grid gap-y-4 w-full">
+                    {%- endif -%}
+                    {%- if settings.enable_terms_checkbox -%}
+                      <label for="CartPage-Terms" class="cart__terms-label flex flex-row items-center gap-x-1 cursor-pointer">
+                        <input type="checkbox" class="cart__terms-checkbox custom-checkbox" id="CartPage-Terms" required>
+                        {%- if settings.link_terms_checkbox != blank -%}
+                          <span class="cart__terms-text">
+                          {{ 'sections.cart.terms_checkbox_html' | t: link: settings.link_terms_checkbox }}
+                          </span>
+                        {%- else -%}
+                          {{ 'sections.cart.terms_checkbox' | t }}
+                        {%- endif -%}
+                      </label>
+                    {%- endif -%}
                     <button
                       type="submit"
                       id="checkout"
@@ -567,6 +609,9 @@ data-id="{{ section.id }}">
                     {%- endif -%}
                     {{ 'sections.cart.checkout' | t }}
                     </button>
+                    {%- if settings.enable_terms_checkbox -%}
+                      </cart-terms-check>
+                    {%- endif -%}
                   </div>
                   {%- if additional_checkout_buttons -%}
                     <div class="cart__dynamic-checkout-buttons additional-checkout-buttons pt-4">

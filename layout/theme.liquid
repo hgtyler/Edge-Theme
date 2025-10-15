@@ -22,7 +22,11 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    <meta name="description" content="{{ page_description | escape | default: shop.description | escape }}">
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% else %}
+      <meta name="description" content="{{ shop.description | escape }}">
+    {% endif %}
 
     {% render 'preload' %}
     {% render 'meta-tags' %}
@@ -31,7 +35,7 @@
 
     {% render 'css-variables' %}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
-    
+     
     {% comment %} The custom fonts have been consolidated into a single style block. {% endcomment %}
     <style>
       {% if settings.more_css != blank %}
@@ -122,7 +126,6 @@
 
  
     </style>
-    
     {% render 'scripts-tag' %} 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -131,6 +134,7 @@
       }
     </script>
     
+
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
       <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
@@ -186,6 +190,12 @@
     {% if settings.enable_cart_upsell and template != 'cart' and upsell_product != blank %}
       <script src="{{ 'cart-checkbox-upsell.js' | asset_url }}" defer="defer"></script>
     {% endif %}
+    {%- if settings.enable_terms_checkbox -%}
+      <script src="{{ 'cart-terms-check.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.show_discount_code -%}
+      <script src="{{ 'cart-discount.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     {%- if settings.show_cart_note or settings.show_cart_calc_shipping -%}
       <script src="{{ 'modal-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -193,6 +203,6 @@
     {%- if settings.show_page_transition and request.design_mode == false -%}
       <script src="{{ 'page-transition.js' | asset_url }}" defer="defer"></script> 
    {%- endif -%}
-   <script src="{{ 'instant.page.js' | asset_url }}" type="module"></script>
+   <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
   </body>
 </html>

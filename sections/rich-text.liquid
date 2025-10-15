@@ -2,8 +2,11 @@
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
 <div class="isolate section-rich-text">
   <div class="{{ section.settings.section_width }}">
-    <div class=" section-padding section-bg {% if section.settings.section_width != 'w-full'  %} global-radius {% endif %}" {% render 'section-attributes' %}>
-      <div class="rich-text padding-x {{ section.settings.content_width }}">
+    <div class=" section-padding section-bg {% if section.settings.bg_color_gradient != blank %} section-bg__gradient {% endif %} {% if section.settings.section_width != 'w-full'  %} global-radius {% endif %}" {% render 'section-attributes' %}>
+      {%- if section.settings.image != blank -%}
+        {% render 'responsive-image' , image: section.settings.image, decoding:"async", wrapper_class: 'defer-image absolute inset-0 w-full h-full overflow-hidden', class: 'absolute inset-0 w-full h-full object-cover' %}
+      {%- endif -%}
+      <div class="rich-text padding-x {{ section.settings.content_width }} relative z-[1]">
         <div class="rich-text__wrapper ">
           <div class="rich-text__blocks text-{{ section.settings.content_alignment }}">
             {% assign skip_block = 0 %}
@@ -163,6 +166,33 @@
                       </div>
                     {%- endif -%}
                     </div>
+                  {%- when 'promotion_banner' -%}
+                    {% liquid
+                      assign big_heading_size = block.settings.big_heading_size | divided_by: 100.0
+                      assign subheading = block.settings.subheading
+                      assign highlight = block.settings.highlight
+                      assign text_bottom = block.settings.text_bottom
+                    %}
+                    <div class="rich-text__promotion-banner flex md:flex-row flex-col items-center justify-{{ section.settings.content_alignment }} gap-x-10" {{ block.shopify_attributes }}>
+                      {%- if block.settings.big_heading != blank -%}
+                        <h2 class="rich-text__promotion-banner-heading hxl heading-{{ block.settings.heading_border_type }} {{ block.settings.big_heading_size }}" style="--font-heading-scale:{{ big_heading_size }};">
+                          {{ block.settings.big_heading }}
+                        </h2>
+                      {%- endif -%}
+                      {% if subheading != blank or highlight != blank or text_bottom != blank %}
+                        <div class="rich-text__promotion-banner-subheading-wrapper md:text-start text-{{ section.settings.content_alignment }} grid gap-2">
+                          {%- if subheading != blank -%}
+                            <p class="rich-text__promotion-banner-subheading sub-heading">{{ subheading }}</p>
+                          {%- endif -%}
+                          {%- if highlight != blank -%}
+                            <span class="rich-text__promotion-banner-highlight {{ block.settings.highlight_size }}">{{ highlight }}</span>
+                          {%- endif -%}
+                          {%- if text_bottom != blank -%}
+                            <div class="rich-text__promotion-banner-text-bottom body-2">{{ text_bottom }}</div>
+                          {%- endif -%}
+                        </div>  
+                      {% endif %}
+                    </div>
                   {%- when 'separator' -%}
                     {% assign space = block.settings.space |  append: 'px' %}
                     <div class="rich-text__separator" style="--space : {{ space }}" {{ block.shopify_attributes }}>
@@ -187,48 +217,52 @@
   },
   "settings": [
     {
-        "type": "select",
-        "id": "section_width",
-        "label": "Width",
-        "options": [
-          {
-              "value": "container-fluid",
-              "label": "Wide"
-          },
-          {
-              "value": "w-full",
-              "label": "Full"
-          }
-        ],
-        "default": "w-full"
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+            "value": "container-fluid",
+            "label": "Wide"
+        },
+        {
+            "value": "w-full",
+            "label": "Full"
+        }
+      ],
+      "default": "w-full"
     },
     {
-        "type": "select",
-        "id": "content_width",
-        "label": "Content width",
-        "options": [
-            {
-              "value": "max-w-3xl",
-              "label": "Small"
-            },
-            {
-              "value": "max-w-4xl",
-              "label": "Normal"
-            },
-            {
-              "value": "max-w-7xl",
-              "label": "Large"
-            },
-            {
-              "value": "max-w-screen-lg",
-              "label": "Extra large"
-            },
-            {
-            "value": "container",
-          "label": "Boxed"
-            }
-        ],
-        "default": "max-w-4xl"
+      "type": "select",
+      "id": "content_width",
+      "label": "Content width",
+      "options": [
+        {
+          "value": "max-w-3xl",
+          "label": "Small"
+        },
+        {
+          "value": "max-w-4xl",
+          "label": "Normal"
+        },
+        {
+          "value": "max-w-7xl",
+          "label": "Large"
+        },
+        {
+          "value": "max-w-screen-lg",
+          "label": "Extra large"
+        },
+        {
+        "value": "container",
+        "label": "Boxed"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Wide"
+        }
+      ],
+      "default": "max-w-4xl"
     },
     {
       "type": "select",
@@ -251,6 +285,11 @@
       "label": "Content alignment"
     },
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
         "type": "header",
         "content": "Colors"
     },
@@ -258,6 +297,12 @@
         "type": "color",
         "id": "bg_color",
         "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color_gradient",
+      "label": "Background gradient",
+      "info": "Overwrite the background color."
     },
     {
         "type": "color",
@@ -277,7 +322,7 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "Top padding",
@@ -287,7 +332,7 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "Bottom padding",
@@ -490,6 +535,106 @@
           "label": "Show arrow icon",
           "default": false
         }
+      ]
+    },
+    {
+      "type": "promotion_banner",
+      "name": "Promotion banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "big_heading",
+          "default": "SALE",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "big_heading_size",
+          "min": 50,
+          "max": 400,
+          "step": 5,
+          "default": 100,
+          "unit": "%",
+          "label": "Heading size"
+        },
+        {
+          "type": "select",
+          "id": "heading_border_type",
+          "label": "Heading border type",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "inline-end",
+              "label": "End border"
+            },
+            {
+              "value": "border-all",
+              "label": "All borders"
+            }
+          ],
+          "default": "inline-end"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "AT LEAST",
+          "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "highlight",
+          "label": "Highlight text",
+          "default": "50% OFF"
+        },
+        {
+          "type": "select",
+          "id": "highlight_size",
+          "label": "Highlight size",
+          "options": [
+            {
+              "value": "hxl",
+              "label": "Heading xl"
+            },
+            {
+              "value": "h0",
+              "label": "Heading 0"
+            },
+            {
+              "value": "h1",
+              "label": "Heading 1"
+            },
+            {
+              "value": "h2",
+              "label": "Heading 2"
+            },
+            {
+              "value": "h3",
+              "label": "Heading 3"
+            },
+            {
+              "value": "h4",
+              "label": "Heading 4"
+            },
+            {
+              "value": "h5",
+              "label": "Heading 5"
+            },
+            {
+              "value": "h6",
+              "label": "Heading 6"
+            }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "text",
+          "id": "text_bottom",
+          "default": "ALL NEXT SALE ITEMS*",
+          "label": "Text"
+        },
       ]
     },
     {
@@ -919,6 +1064,7 @@
   "presets": [
     {
       "name": "Rich text",
+      "category": "Content",
       "blocks": [
         {
           "type": "heading"

@@ -10,6 +10,29 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+{% liquid
+  assign button_style = block.settings.button_type | default: 'outline'
+  case button_style
+  when 'primary'
+      assign style_class = 'btn btn-primary'
+  when 'outline'
+      assign style_class = 'btn btn-outline'
+  when 'underlined'
+      assign style_class = 'btn btn-underlined'
+  when 'primary-white'
+      assign style_class = 'btn btn-primary-white'
+  when 'outline-white'
+      assign style_class = 'btn btn-outline-white'
+  when 'underlined-white'
+      assign style_class = 'btn btn-underlined btn-underlined-white'
+  when 'secondary'
+      assign style_class = 'btn btn-secondary' 
+  when 'link'
+      assign style_class = 'link'
+  else
+      assign style_class = 'btn btn-primary'
+  endcase
+%}
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
@@ -72,7 +95,7 @@
             {% if product.metafields.ortheme.preorder %}
               data-preorder="true"
             {% endif %}
-            class="product-form__submit btn button--full-width {% if show_dynamic_checkout %} btn-outline {% else %} btn-primary{% endif %}"
+            class="product-form__submit btn button--full-width {{ style_class }}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
@@ -88,6 +111,9 @@
                 {%- endif -%}
               {%- endif -%}
             </span>
+            {% if block.settings.show_price_in_button %}
+              <span class="buttonPrice">— {{ product.selected_or_first_available_variant.price | money }}</span>
+            {% endif %}
             {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}

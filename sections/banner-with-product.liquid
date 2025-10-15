@@ -10,6 +10,7 @@
   assign widths = '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400'
   assign column_gap = section.settings.column_gap | append: 'rem'
   assign column_gap_mobile = section.settings.column_gap_mobile | append: 'rem'
+  assign enable_border_card = settings.enable_border_card
 -%}
 {%- capture scroll_animation -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{%- endcapture -%}
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
@@ -75,7 +76,7 @@
                         {%- assign aspect_ratio_percent = 1 | divided_by: video_hosted.aspect_ratio | times: 100 | append: '%'-%}
                       {% endif %}
                       <div class="products-with-banner__item-video media-video" style="--aspect-ratio:{{ aspect_ratio_percent }}">
-                      <viewport-media > 
+                      <viewport-media class="block w-full h-full absolute inset-0"> 
                         <template>
                           {{ video_hosted | video_tag: autoplay: true, loop: true, controls: false, muted: true, class:'pointer-events-none', preload: 'metadata', image_size:'300x', data-ignore-pause:"true" }}
                         </template>  
@@ -134,7 +135,7 @@
             %}    
             <div class="products-with-banner__list" {{ block.shopify_attributes }}>
               <div class="products-with-banner__item top-header md:sticky">
-                <div class=" grid md:grid-cols-{{ block.settings.columns_desktop }} grid-cols-{{ block.settings.columns_mobile }} orgap-desk orgap-mobile  products-with-banner__column-{{ block.settings.columns_desktop }} {% if block.settings.swipe_on_mobile %} grid--mobile-slider {% endif %}" style="--column-gap:{{ column_gap }};--column-gap-mobile:{{ column_gap_mobile }};--row-gap:{{ row_gap }};--row-gap-mobile:{{ row_gap_mobile }};">
+                <div class="{% if enable_border_card %} products-with-banner__item-border {% endif %} grid md:grid-cols-{{ block.settings.columns_desktop }} grid-cols-{{ block.settings.columns_mobile }} orgap-desk orgap-mobile  products-with-banner__column-{{ block.settings.columns_desktop }} {% if block.settings.swipe_on_mobile %} grid--mobile-slider {% endif %}" style="--column-gap:{{ column_gap }};--column-gap-mobile:{{ column_gap_mobile }};--row-gap:{{ row_gap }};--row-gap-mobile:{{ row_gap_mobile }};">
                 {%- for product in block.settings.product -%}
                   <div class="products-with-banner__list-item {{ scroll_animation }}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
                     {% render 'card-product', card_product: product, section_width: section_width, columns: block.settings.columns_desktop  %}
@@ -690,6 +691,7 @@
     "presets": [
       {
         "name": "Products with banner",
+        "category": "Products",
         "blocks": [
           {
             "type": "product"

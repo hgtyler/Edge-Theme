@@ -1,108 +1,9 @@
+
+
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
 <div class="section-breadcrumb section-padding section-bg " {% render 'section-attributes' %}>
   <div class="{{ section.settings.section_width }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in {% endif %}">
-   <nav class="flex justify-{{ section.settings.alignment }}" role="navigation" aria-label="Breadcrumbs">
-      <ol role="list" class="flex items-center truncate">
-        {% if collection.url %}
-            <li>
-                <div class="flex items-center">
-                    <a href="{{ routes.all_products_collection_url }}" class="me-4 {{ section.settings.text_size }} focus-inset" aria-current="page">{{ 'sections.breadcrumbs.shop' | t }}</a>
-                    <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"/></svg>
-                    <a href="{{ collection.url }}" class="ms-4 {{ section.settings.text_size }} focus-inset">{{ collection.title }}</a>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'list-collections' %}
-            <li>
-                <div class="flex items-center">
-                    <a href="{{ routes.all_products_collection_url }}" class="me-4 {{ section.settings.text_size }} focus-inset" aria-current="page">{{ 'sections.breadcrumbs.shop' | t }}</a>
-                </div>
-            </li>
-            <li>
-                <div class="flex items-center">
-                    <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"/></svg>
-                    <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ 'sections.breadcrumbs.collection_list' | t }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'product' %}
-            {% if product.collections.first %}
-            <li>
-                <div class="flex items-center">
-                    <a href="{{ product.collections.first.url }}" class="ms-4 me-4 {{ section.settings.text_size }} focus-inset">{{ product.collections.first.title }}</a>
-                </div>
-            </li>
-            {% endif %}
-            <li class="truncate">
-                <div class="flex items-center">
-                    <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"/></svg>
-                    <span class="ms-4 {{ section.settings.text_size }} truncate opacity-80" aria-current="page">{{ product.title }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'cart' %}
-            <li>
-                <div class="flex items-center">
-                    <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ 'sections.breadcrumbs.cart' | t }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'blog' %}
-            {% if current_tags %}
-            <li class="inline-flex">
-                <div class="flex items-center">
-                    <a href="{{ blog.url }}" class="ms-4 {{ section.settings.text_size }} focus-inset">{{ blog.title }}</a>
-                </div>
-            </li>
-            <li class="inline-flex">
-                <div class="flex items-center">
-                    <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ current_tags }}</span>
-                </div>
-            </li>
-            {% else %}
-                <li>
-                    <div class="flex items-center">
-                        <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ blog.title }}</span>
-                    </div>
-                </li>
-            {% endif %}
-        {% endif %}
-        {% if template contains 'article' %}
-            <li class="inline-flex ">
-                <div class="flex items-center">
-                    <a href="{{ blog.url }}" class="ms-4 {{ section.settings.text_size }} focus-inset">{{ blog.title }}</a>
-                </div>
-            </li>
-            <li class="truncate">
-                <div class="flex items-center ms-4">
-                    <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"/></svg>
-                    <span class="ms-4 {{ section.settings.text_size }} truncate" aria-current="page">{{ article.title }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'page' %}
-            <li class="truncate">
-                <div class="flex items-center">
-                    <span class="ms-4 {{ section.settings.text_size }} truncate" aria-current="page">{{ page.title }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'search' %}
-            <li>
-                <div class="flex items-center">
-                    <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ 'sections.breadcrumbs.search' | t }}</span>
-                </div>
-            </li>
-        {% endif %}
-        {% if template contains 'customers' %}
-            <li>
-                <div class="flex items-center">
-                    <span class="ms-4 {{ section.settings.text_size }}" aria-current="page">{{ 'sections.breadcrumbs.account' | t }}</span>
-                </div>
-            </li>
-        {% endif %}
-      </ol>
-   </nav>
+   {% render 'breadcrumb' , section: section, text_size: section.settings.text_size , alignment: section.settings.alignment , type_breadcrumb: section.settings.type_breadcrumb %}
   </div>
 </div>
 {%- render 'bottom-divider', show_bottom_divider: section.settings.show_bottom_divider, divider_bottom_width: section.settings.divider_bottom_width -%}
@@ -313,7 +214,8 @@
    ],
    "presets": [
       {
-         "name": "Breadcrumbs"
+         "name": "Breadcrumbs",
+         "category": "Utilities"
       }
    ]
 }

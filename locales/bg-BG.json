@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Отговаряте на условията за безплатна доставка."
-      }
+      },
+      "terms_checkbox": "Съгласен съм с условията за доставка",
+      "terms_checkbox_html": "Съгласен съм с <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">условията за доставка<\/a>",
+      "terms_checkbox_notify": "Моля, прочетете и примите условията за доставка",
+      "discounts": "Отстъпки",
+      "discount_code": "Код на отстъпка",
+      "discount_code_error": "Кодът на отстъпката не може да бъде приложен",
+      "shipping_discount_error": "Отстъпките за доставка се показват при добавяне на адрес",
+      "discount_apply": "Приложи",
+      "discount_applied": "Приложен код на отстъпка: {{ code }}",
+      "remove_discount": "Премахнете кода на отстъпка: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Начало",

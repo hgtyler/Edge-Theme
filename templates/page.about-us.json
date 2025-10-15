@@ -1,0 +1,1149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "container",
+        "show_default_heading": true,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_overlay_zygnHj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_g6zbDx": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Crafting Timeless Treasures"
+          }
+        },
+        "heading_QAMGQg": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're on a [f]mission[\/f] to redefine luxury",
+            "highlighted_word_type": "single_line",
+            "heading_size": "h0"
+          }
+        },
+        "separator_qazcTY": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 2
+          }
+        },
+        "text_PNmHY4": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>At Luminous Jewels, we curate exceptional pieces that tell your personal story, blend contemporary design with timeless craftsmanship, and elevate every moment of your life.<br\/><\/h6>",
+            "large_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_g6zbDx",
+        "heading_QAMGQg",
+        "separator_qazcTY",
+        "text_PNmHY4"
+      ],
+      "settings": {
+        "section_width": "w-full",
+        "link": "",
+        "desktop_height_mode": "full",
+        "desktop_fixed_height": 650,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 550,
+        "desktop_content_position": "middle-center",
+        "mobile_content_position": "bottom-center",
+        "content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "content_width": "max-w-4xl",
+        "enable_parallax": false,
+        "enable_scroll_reveal": true,
+        "enable_scroll_reveal_top": true,
+        "direction_scroll_reveal": "0",
+        "threshold_down": 1.3,
+        "color_text": "#ffffff",
+        "color_text_highlighted": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 15,
+        "overlay_gradient": ""
+      }
+    },
+    "content_tabs_Pik6nD": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_gmwAaR": {
+          "type": "tab",
+          "settings": {
+            "image_size": "landscape-v2",
+            "image_placement": "left",
+            "nav_label": "2000",
+            "subheading": "",
+            "heading": "The Birth of the Brand",
+            "heading_size": "h2",
+            "content": "<p>The fashion brand was founded with a mission to bring a fresh perspective to the industry, blending creativity with practicality. From the very beginning, we set out to define trends and craft designs that carry a unique identity.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_JDCmBc": {
+          "type": "tab",
+          "settings": {
+            "image_size": "landscape-v2",
+            "image_placement": "left",
+            "nav_label": "2005",
+            "subheading": "",
+            "heading": "Launch of the First Collection",
+            "heading_size": "h2",
+            "content": "<p>After five years of development, the first collection was officially introduced, marking a significant milestone in the brand’s journey. With its distinctive style and premium materials, the collection quickly gained recognition and admiration from fashion enthusiasts.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_8JaDCF": {
+          "type": "tab",
+          "settings": {
+            "image_size": "landscape-v2",
+            "image_placement": "left",
+            "nav_label": "2010",
+            "subheading": "",
+            "heading": "Opening of the First Flagship Store",
+            "heading_size": "h2",
+            "content": "<p>To meet the growing demand from customers, the brand opened its first flagship store in [location]. More than just a retail space, the store became a destination for fashion lovers to explore the latest designs and immerse themselves in a modern lifestyle experience.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_JbBERb": {
+          "type": "tab",
+          "settings": {
+            "image_size": "landscape-v2",
+            "image_placement": "left",
+            "nav_label": "2015",
+            "subheading": "",
+            "heading": "Strategic Collaborations & Market Expansion",
+            "heading_size": "h2",
+            "content": "<p>Entering a phase of strong growth, the brand began collaborating with artists, influencers, and participating in major fashion events. At the same time, we expanded into international markets, bringing our designs to a global audience.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_H6mXCB": {
+          "type": "tab",
+          "settings": {
+            "image_size": "landscape-v2",
+            "image_placement": "left",
+            "nav_label": "2020",
+            "subheading": "",
+            "heading": "Sustainability & Innovation",
+            "heading_size": "h2",
+            "content": "<p>Adapting to global trends, the brand embraced sustainability by utilizing eco-friendly materials and integrating advanced technology into the production process. This marked a crucial step in ensuring long-term growth and solidifying our position in the fashion industry.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_gmwAaR",
+        "tab_JDCmBc",
+        "tab_8JaDCF",
+        "tab_JbBERb",
+        "tab_H6mXCB"
+      ],
+      "settings": {
+        "section_width": "container",
+        "enable_uppercase": false,
+        "tabs_font_family": "body_font",
+        "align": "center",
+        "header_position": "top",
+        "text_alignment": "left",
+        "vertical_alignment": "end",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "padding_top": 56,
+        "padding_bottom": 20
+      }
+    },
+    "custom_content_XMrF74": {
+      "type": "custom-content",
+      "blocks": {
+        "text_PriQJq": {
+          "type": "text",
+          "settings": {
+            "block_width": "33",
+            "subheading": "Our vision",
+            "heading": "Illuminating Personal Narratives Through Jewelry",
+            "heading_size": "h2",
+            "text": "",
+            "vertical_alignment": "center",
+            "text_alignment": "start",
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true,
+            "bg_color": "",
+            "text_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_right": 48,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0
+          }
+        },
+        "image_7BCmDR": {
+          "type": "image",
+          "settings": {
+            "block_width": "33",
+            "image_size": "adapt",
+            "link": "",
+            "vertical_alignment": "center"
+          }
+        },
+        "text_9xeDXJ": {
+          "type": "text",
+          "settings": {
+            "block_width": "33",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<h4>Where Artistry<\/h4><p>Luminous Jewels doesn't just create jewelry we craft personal narratives, emotional landscapes, and timeless memories that transcend generations.<\/p><h4>Personal Expression<\/h4><ul><li>Quality: Uncompromising standards in material selection<\/li><li>Innovation: Continuous exploration of design possibilities<\/li><li>Authenticity: Transparent and genuine approach to jewelry creation<br\/><\/li><\/ul>",
+            "vertical_alignment": "center",
+            "text_alignment": "start",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false,
+            "bg_color": "",
+            "text_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 32,
+            "padding_right": 0,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_PriQJq",
+        "image_7BCmDR",
+        "text_9xeDXJ"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "column_gap": 2,
+        "row_gap": 2,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    },
+    "scrolling_text_7HMrdG": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_pDd66t": {
+          "type": "text",
+          "settings": {
+            "text": "Artistic Craftsmanship",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_HeNfji": {
+          "type": "text",
+          "settings": {
+            "text": "♦",
+            "link": "",
+            "outline_text": true
+          }
+        },
+        "text_7YTydW": {
+          "type": "text",
+          "settings": {
+            "text": "Personal Empowerment",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_Pa9rUR": {
+          "type": "text",
+          "settings": {
+            "text": "♦",
+            "link": "",
+            "outline_text": true
+          }
+        },
+        "text_KhQFeE": {
+          "type": "text",
+          "settings": {
+            "text": "Sustainable Elegance",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "text_rjH7F8": {
+          "type": "text",
+          "settings": {
+            "text": "♦",
+            "link": "",
+            "outline_text": true
+          }
+        }
+      },
+      "block_order": [
+        "text_pDd66t",
+        "text_HeNfji",
+        "text_7YTydW",
+        "text_Pa9rUR",
+        "text_KhQFeE",
+        "text_rjH7F8"
+      ],
+      "settings": {
+        "section_width": "w-full",
+        "text_size": "hxl",
+        "pause_scroll_on_hover": true,
+        "spacing": 80,
+        "spacing_mobile": 30,
+        "image_width": 80,
+        "speed": 20,
+        "direction": "left",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "#d7cec2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_nt7rxE": {
+      "type": "image-with-text",
+      "blocks": {
+        "circular_text_xNqnNz": {
+          "type": "circular_text",
+          "settings": {
+            "text": "Jewelry is a powerful tool •",
+            "size": 70,
+            "font_size": 4,
+            "show_icon": true,
+            "show_border": false,
+            "show_background": false,
+            "show_animation": true,
+            "background_color": "",
+            "text_color": "",
+            "border_color": ""
+          }
+        },
+        "heading_i3KjWQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Core Values",
+            "heading_size": "h2"
+          }
+        },
+        "text_wA6qez": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe that jewelry should be a reflection of your personal journey, and accompany you through every twist and turn. Our pieces are designed to be versatile, adaptable, and enduring, so you can wear them effortlessly day or night. We strive to create jewelry that seamlessly blends into everyday life and will become an expression of your individuality.<\/p>",
+            "large_text": false
+          }
+        },
+        "separator_HxqLX3": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 4
+          }
+        },
+        "button_aqAKDh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "circular_text_xNqnNz",
+        "heading_i3KjWQ",
+        "text_wA6qez",
+        "separator_HxqLX3",
+        "button_aqAKDh"
+      ],
+      "settings": {
+        "section_width": "container",
+        "media_size": "adapt",
+        "show_image_2": true,
+        "position_image_2": "bottom-right",
+        "media_size_2": "square",
+        "desktop_image_width": "50",
+        "active_video": false,
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": true,
+        "layout": "left",
+        "column_gap": "16",
+        "vertical_alignment": "center",
+        "content_alignment": "start",
+        "bg_color": "",
+        "text_color": "",
+        "bg_column": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "layer_image_with_text_bpLnEt": {
+      "type": "layer-image-with-text",
+      "blocks": {
+        "image_6fd3VB": {
+          "type": "image",
+          "settings": {
+            "width_image": 180,
+            "image_size": "square",
+            "offset_config": 200,
+            "top_position": 16,
+            "left_position": 0,
+            "top_position_mobile": 20,
+            "left_position_mobile": -26
+          }
+        },
+        "image_3NVXda": {
+          "type": "image",
+          "settings": {
+            "width_image": 300,
+            "image_size": "square",
+            "offset_config": 250,
+            "top_position": 68,
+            "left_position": -8,
+            "top_position_mobile": 80,
+            "left_position_mobile": -38
+          }
+        },
+        "image_a7gAWT": {
+          "type": "image",
+          "settings": {
+            "width_image": 232,
+            "image_size": "square",
+            "offset_config": 300,
+            "top_position": 20,
+            "left_position": 96,
+            "top_position_mobile": 64,
+            "left_position_mobile": 84
+          }
+        },
+        "image_tjWKcd": {
+          "type": "image",
+          "settings": {
+            "width_image": 300,
+            "image_size": "adapt",
+            "offset_config": 200,
+            "top_position": 70,
+            "left_position": 74,
+            "top_position_mobile": 100,
+            "left_position_mobile": 68
+          }
+        },
+        "image_YhFzr4": {
+          "type": "image",
+          "settings": {
+            "width_image": 140,
+            "image_size": "square",
+            "offset_config": -1000,
+            "top_position": 6,
+            "left_position": 66,
+            "top_position_mobile": -16,
+            "left_position_mobile": 68
+          }
+        }
+      },
+      "block_order": [
+        "image_6fd3VB",
+        "image_3NVXda",
+        "image_a7gAWT",
+        "image_tjWKcd",
+        "image_YhFzr4"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "content_width": "max-w-4xl",
+        "subheading": "solid gold and diamonds",
+        "heading": "Our Jewellry Better for Everyone",
+        "heading_size": "h0",
+        "text": "<p>We never want to waste a scrap of precious metal. Our pieces are handcrafted from recycled 18ct gold vermeil and gold plating, and recycled sterling silver.<\/p>",
+        "button_label": "Shop all Jewellery",
+        "button_type": "primary",
+        "show_icon": true,
+        "type_animation": "scale",
+        "bg_color": "#f7f7f7",
+        "text_color": ""
+      }
+    },
+    "image_with_text_icons_aGkA38": {
+      "type": "image-with-text-icons",
+      "blocks": {
+        "icon_jgj7D4": {
+          "type": "icon",
+          "settings": {
+            "icon": "ruler",
+            "title": "Personalized Design Consultation",
+            "text": "<p>One-on-one personal consultation, Explore your individual style<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_JkypjD": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_circle",
+            "title": "Initial Consultation",
+            "text": "<p>Understanding your vision. Exploring design inspirations<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_fUtjGR": {
+          "type": "icon",
+          "settings": {
+            "icon": "eye",
+            "title": "Concept Development",
+            "text": "<p>Initial sketch creation. Material recommendations<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_RJgLD7": {
+          "type": "icon",
+          "settings": {
+            "icon": "snowflake",
+            "title": "Design Refinement",
+            "text": "<p>Digital 3D rendering. Multiple revision options. Precision detailing<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_jgj7D4",
+        "icon_JkypjD",
+        "icon_fUtjGR",
+        "icon_RJgLD7"
+      ],
+      "settings": {
+        "section_width": "container",
+        "media_size": "square",
+        "desktop_image_width": "50",
+        "column_gap": "24",
+        "layout": "right",
+        "vertical_alignment": "center",
+        "content_alignment": "start",
+        "layout_column": "2",
+        "heading_size": "h5",
+        "icon_background": "none",
+        "icon_width": 24,
+        "button_type": "underlined",
+        "show_icon": false,
+        "bg_color": "",
+        "text_color": "",
+        "icon_bg_color": "#f1e5dd",
+        "icon_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "press_pd8AJc": {
+      "type": "press",
+      "blocks": {
+        "press_7Y4PqG": {
+          "type": "press",
+          "settings": {
+            "content": "<p>Luminous Jewels represents a revolutionary approach to personal adornment. Their collections seamlessly blend contemporary aesthetics with traditional craftsmanship, creating pieces that are both art and personal expression.<\/p>",
+            "url": "",
+            "image_width": 120
+          }
+        },
+        "press_xTnNxi": {
+          "type": "press",
+          "settings": {
+            "content": "<p>What sets Luminous Jewels apart is their profound understanding that jewelry is more than an accessory - it's a deeply personal storytelling medium. Each piece captures emotions, memories, and individual journeys.<\/p>",
+            "url": "",
+            "image_width": 120
+          }
+        },
+        "press_KmRJ7k": {
+          "type": "press",
+          "settings": {
+            "content": "<p>In a world of mass production, Luminous Jewels stands as a beacon of authentic, meticulously crafted jewelry. Their commitment to quality and individual design is unparalleled.<\/p>",
+            "url": "",
+            "image_width": 120
+          }
+        },
+        "press_wzDEDm": {
+          "type": "press",
+          "settings": {
+            "content": "<p>Luminous Jewels emerges as a revolutionary force in the world of fine jewelry, blending cutting-edge design with deeply personal craftsmanship. Their collections are not just accessories, but wearable narratives that speak to the individual's unique style.<\/p>",
+            "url": "",
+            "image_width": 120
+          }
+        }
+      },
+      "block_order": [
+        "press_7Y4PqG",
+        "press_xTnNxi",
+        "press_KmRJ7k",
+        "press_wzDEDm"
+      ],
+      "settings": {
+        "subheading": "The Press",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "content_size": "h4",
+        "image_opacity": 50,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "bg_color": "#f7f7f8",
+        "text_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "divider_iCi8mX": {
+      "type": "divider",
+      "settings": {
+        "section_width": "container",
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "show_border": false,
+        "bg_color": "",
+        "color": "",
+        "style": "solid",
+        "thickness": 1
+      }
+    },
+    "video_with_text_overlay_4AXiQ7": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "heading_cKXdFc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<i>Redefining Luxury<\/i>",
+            "highlighted_word_type": "single_line",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cKXdFc"
+      ],
+      "settings": {
+        "section_width": "container",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description_video": "",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 400,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 300,
+        "content_width": "max-w-4xl",
+        "desktop_content_position": "bottom-center",
+        "mobile_content_position": "bottom-center",
+        "color_text": "#ffffff",
+        "color_text_highlighted": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
+        "overlay_opacity": 70
+      }
+    },
+    "text_with_icons_NYRGMa": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_rKADcp": {
+          "type": "icon",
+          "settings": {
+            "icon": "return",
+            "title": "Thoughtful Returns",
+            "text": "<p>To thank you for embracing this circular practice, we’ll gift you 20% off your next purchase.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_tLYhjr": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_circle",
+            "title": "Repair Services",
+            "text": "<p>Online and in-store repair options. Re-Worn popup repair locations<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_QLNUTh": {
+          "type": "icon",
+          "settings": {
+            "icon": "recycle",
+            "title": "Recycle Program",
+            "text": "<p>Transforming Jewelry's Environmental Legacy. 100% traceable material sourcing<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_FFtDgy": {
+          "type": "icon",
+          "settings": {
+            "icon": "box",
+            "title": "Product Communication",
+            "text": "<p>Detailed product descriptions, Style and availability insights.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_rKADcp",
+        "icon_tLYhjr",
+        "icon_QLNUTh",
+        "icon_FFtDgy"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "item_type": "vertical",
+        "heading_size": "h5",
+        "column_alignment": "center",
+        "icon_background": "none",
+        "icon_width": 32,
+        "button_type": "outline",
+        "show_icon": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_progress_bar": false,
+        "bg_color": "",
+        "text_color": "",
+        "icon_bg_color": "",
+        "icon_color": "",
+        "padding_top": 40,
+        "padding_bottom": 100
+      }
+    },
+    "testimonials_G8WwNt": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_gA3cYq": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Extremely pleased with purchase, a classy buy, fitting to wear either casually or dressed up. Seriously considering purchasing the next size up.",
+            "media_size": "square",
+            "name": "Broken hearted",
+            "position": "Ceo at Oran"
+          }
+        },
+        "quote_NKjAxH": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Double sided gold\/silver hoop earrings. Perfect size switch round to have rither gold or silver on the outer view, goes with everything. Great everyday earrings",
+            "media_size": "square",
+            "name": "Lucy KR",
+            "position": "Mangager Biosh"
+          }
+        },
+        "quote_yhEmKA": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Lovely size - not too small, good weight and they look different to any other hoops I have. I have worn them almost everyday since I got them.",
+            "media_size": "square",
+            "name": "Andri Z",
+            "position": "From UK"
+          }
+        }
+      },
+      "block_order": [
+        "quote_gA3cYq",
+        "quote_NKjAxH",
+        "quote_yhEmKA"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "testimonial_type": "image_right",
+        "content_alignment": "start",
+        "content_size": "h4",
+        "show_rating": true,
+        "show_arrows": true,
+        "enable_loop": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "vertical_alignment": "center",
+        "show_border": false,
+        "per_page": 3,
+        "bg_color": "#f7f7f8",
+        "text_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "collection_list_parK8V": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_xNDwmL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "18k-gold",
+            "title": "",
+            "url": ""
+          }
+        },
+        "featured_collection_pq87q7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings",
+            "title": "",
+            "url": ""
+          }
+        },
+        "featured_collection_mjK8La": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces",
+            "title": "",
+            "url": ""
+          }
+        },
+        "featured_collection_tqraMf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_xNDwmL",
+        "featured_collection_pq87q7",
+        "featured_collection_mjK8La",
+        "featured_collection_tqraMf"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "Our Collection ✨",
+        "heading_size_section": "h2",
+        "description": "<p>Shine with sophisticated, luxurious, and captivating designs — perfect for every moment.<\/p>",
+        "layout": "horizontal",
+        "link_text": "View all",
+        "button_type": "underlined",
+        "show_icon": true,
+        "card_type": "standard",
+        "image_ratio": "square",
+        "show_collection_count": true,
+        "show_button_arrow": true,
+        "show_zoom_on_hover": true,
+        "heading_size": "h5",
+        "content_alignment": "start",
+        "title_color": "",
+        "overlay_color": "#000000",
+        "enable_gradient": false,
+        "overlay_opacity": 10,
+        "enable_stack_collections": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "columns_desktop": 4,
+        "column_gap": 3,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1,
+        "swipe_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    },
+    "custom_content_P79tBf": {
+      "type": "custom-content",
+      "blocks": {
+        "image_MzEzX4": {
+          "type": "image",
+          "settings": {
+            "block_width": "50",
+            "image_size": "square",
+            "link": "",
+            "vertical_alignment": "center"
+          }
+        },
+        "text_scolling_bQkiHy": {
+          "type": "text_scolling",
+          "disabled": true,
+          "settings": {
+            "block_width": "25",
+            "text_scrolling": "Gold Jewellery\nSilver Jewellery\nHera Collection",
+            "direction": "left",
+            "speed": 30,
+            "position": "top",
+            "bg_color_scrolling": "#f6f2e9",
+            "text_color_scrolling": "",
+            "subheading": "",
+            "heading": "Mixed Metal Jewellery",
+            "heading_size": "h2",
+            "text": "<p>Discover our collection of mixed metal jewellery, made by combining 18ct recycled gold plated and gold plated vermeil and sterling silver.<\/p>",
+            "vertical_alignment": "end",
+            "text_alignment": "start",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true,
+            "bg_color": "",
+            "text_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_right": 0,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0
+          }
+        },
+        "text_YRq9mC": {
+          "type": "text",
+          "settings": {
+            "block_width": "25",
+            "subheading": "",
+            "heading": "Mixed Metal Jewellery",
+            "heading_size": "h3",
+            "text": "<p>Discover our collection of mixed metal jewellery, made by combining 18ct recycled gold plated and gold plated vermeil and sterling silver.<\/p>",
+            "vertical_alignment": "end",
+            "text_alignment": "start",
+            "button_label": "Shop now",
+            "button_type": "primary",
+            "show_icon": true,
+            "bg_color": "",
+            "text_color": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 24,
+            "padding_right": 0,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0
+          }
+        },
+        "banner_card_pnGAc9": {
+          "type": "banner_card",
+          "settings": {
+            "block_width": "25",
+            "vertical_alignment": "start",
+            "card_style": "design-6",
+            "image_size": "square",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "The Essentials",
+            "button_type": "primary-white",
+            "show_icon": true,
+            "text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_MzEzX4",
+        "text_scolling_bQkiHy",
+        "text_YRq9mC",
+        "banner_card_pnGAc9"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "column_gap": 2,
+        "row_gap": 2,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "newsletter_GtpVEH": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_V6EfXH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to Our Emails",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_bgEXNE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers. Subscribe to receive all our updates and offers, and get 10% off your first purchase.<\/p>"
+          }
+        },
+        "email_form_aCBEq3": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_V6EfXH",
+        "paragraph_bgEXNE",
+        "email_form_aCBEq3"
+      ],
+      "settings": {
+        "section_width": "container-fluid",
+        "form_position": "center",
+        "text_alignment": "center",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "#ffffff",
+        "input_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_gradient": "",
+        "overlay_opacity": 60,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "multicolumn_ptngYF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_6NUcKk": {
+          "type": "column",
+          "settings": {
+            "link": "",
+            "title": "Top brands",
+            "text": "<p>Globally optimize superior leadership via team building e-business<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": false,
+            "desktop_image_placement": "top"
+          }
+        },
+        "column_N7TbFN": {
+          "type": "column",
+          "settings": {
+            "link": "",
+            "title": "Carbon neutral products",
+            "text": "<p>Interactively monetize impactful models vis-a-vis unique benefits<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": false,
+            "desktop_image_placement": "bottom"
+          }
+        },
+        "column_9iQpyL": {
+          "type": "column",
+          "settings": {
+            "link": "",
+            "title": "Organic materials",
+            "text": "<p>Assertively seize cross-unit growth strategies via low-risk high-yield niche markets<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": false,
+            "desktop_image_placement": "top"
+          }
+        }
+      },
+      "block_order": [
+        "column_6NUcKk",
+        "column_N7TbFN",
+        "column_9iQpyL"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "More to Explore",
+        "heading_size_section": "h2",
+        "description": "<p>Get all the details about our efforts to clean up the industry—from our partners to our processes.<\/p>",
+        "layout": "vertical",
+        "image_width": "full",
+        "image_ratio": "square",
+        "heading_size": "h4",
+        "column_alignment": "center",
+        "link_url": "",
+        "link_text": "",
+        "button_type": "primary",
+        "show_icon": false,
+        "enable_stack_columns": true,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "columns_desktop": 3,
+        "column_gap": 6,
+        "column_gap_mobile": 2,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_zygnHj",
+    "content_tabs_Pik6nD",
+    "custom_content_XMrF74",
+    "scrolling_text_7HMrdG",
+    "image_with_text_nt7rxE",
+    "layer_image_with_text_bpLnEt",
+    "image_with_text_icons_aGkA38",
+    "press_pd8AJc",
+    "divider_iCi8mX",
+    "video_with_text_overlay_4AXiQ7",
+    "text_with_icons_NYRGMa",
+    "testimonials_G8WwNt",
+    "collection_list_parK8V",
+    "custom_content_P79tBf",
+    "newsletter_GtpVEH",
+    "multicolumn_ptngYF"
+  ]
+}

@@ -85,7 +85,6 @@
         "thumbnail_aspect_ratio": "square",
         "gallery_layout": "thumbnail",
         "media_position": "left",
-        "show_lightbox": false,
         "enable_video_autoplay": true,
         "enable_video_looping": false,
         "mobile_thumbnails": "show"

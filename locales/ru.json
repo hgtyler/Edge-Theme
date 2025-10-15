@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Вы имеете право на бесплатную доставку."
-      }
+      },
+      "terms_checkbox": "Я принимаю условия доставки",
+      "terms_checkbox_html": "Я принимаю <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">условия доставки<\/a>",
+      "terms_checkbox_notify": "Я принимаю условия доставки",
+      "discounts": "Скидки",
+      "discount_code": "Код скидки",
+      "discount_code_error": "Код скидки не может быть применен",
+      "shipping_discount_error": "Скидки на доставку отображаются после добавления адреса",
+      "discount_apply": "Применить",
+      "discount_applied": "Примененный код скидки: {{ code }}",
+      "remove_discount": "Удалить код скидки: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Дом",

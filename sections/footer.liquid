@@ -13,12 +13,13 @@
     assign border_color_newsletter = section.settings.border_color_newsletter
     assign padding_top =  section.settings.padding_top
     assign padding_bottom =  section.settings.padding_bottom
+    assign divider_type = section.settings.divider_type
   -%}
 {%- capture animate_slide_in -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{%- endcapture -%}
-<footer class="footer footer__section" >
+<footer class="footer footer__section footer__section--{{ divider_type }}" >
   {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
   <div class="footer__padding" style="--section-padding-top: {{ padding_top |  append: 'px' }};--section-padding-bottom: {{ padding_bottom |  append: 'px' }};" >
-    <div class="footer__content-top {{ section.settings.section_width }}">
+    <div class="footer__content-top lg:pb-20 {% if section.settings.show_bottom_border_mobile %} pb-14 {% endif %} {{ section.settings.section_width }}">
       {%- if section.blocks.size > 0 -%}
         <div class="footer__blocks-wrapper flex md:flex-row flex-col gap-x-12 lg:gap-x-20 xl:gap-x-36 justify-between {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade {% endif %} >
           {%- for block in section.blocks -%}
@@ -184,7 +185,7 @@
                                   id="Subscribe"
                                   aria-label="{{ 'newsletter.button_label' | t }}"
                                 >
-                                  {% render 'icon-arrow' %}
+                                  {% render 'icon-line-arrow' %}
                                 </button>
                               </div>
                                 <small class="newsletter-form__message form__message" id="ContactFooter-error">
@@ -227,7 +228,7 @@
         </div>
       {%- endif -%}
     </div>
-    <div class="footer__content-bottom lg:mt-20 {% if section.settings.show_bottom_border_mobile %} mt-14 {% endif %} {{ animate_slide_in }} ">
+    <div class="footer__content-bottom  {{ animate_slide_in }} ">
       {% liquid
         assign show_bottom_border_mobile = section.settings.show_bottom_border_mobile
         assign custom_class = 'footer__custom-border'
@@ -448,6 +449,18 @@
           }
         ],
         "default": "container"
+    },
+    {
+      "type": "select",
+      "id": "divider_type",
+      "label": "Divider type",
+      "options": [
+        { "value": "none","label": "None" },
+        { "value": "inline","label": "In" },
+        { "value": "outline","label": "Out" }
+      ],
+      "default": "none",
+      "info": "Style for desktop only"
     },
     {
       "type": "select",

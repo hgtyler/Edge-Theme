@@ -90,7 +90,7 @@
   },
   "blogs": {
     "general": {
-      "all_pots": "All pots"
+      "all_pots": "All posts"
     },
     "article": {
       "blog": "Blog",
@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "You are eligible for free shipping."
-      }
+      },
+      "terms_checkbox": "I agree with the terms and conditions",
+      "terms_checkbox_html": "I agree with the <a href='{{ link }}' target='_blank' class='link'>terms and conditions<\/a>",
+      "terms_checkbox_notify": "You must agree with the terms and conditions to check out",
+      "discounts": "Discounts",
+      "discount_code": "Discount code",
+      "discount_code_error": "Discount code cannot be applied to your cart",
+      "shipping_discount_error": "Shipping discounts are shown at checkout after adding an address",
+      "discount_apply": "Apply",
+      "discount_applied": "Applied discount code: {{ code }}",
+      "remove_discount": "Remove discount code: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Home",

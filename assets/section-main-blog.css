@@ -21,6 +21,6 @@
 @media screen and (min-width: 768px) {
   .blog-articles{
     column-gap: var(--column-gap);
-    row-gap: 6rem;
+    row-gap: var(--column-gap);
   }
 }

@@ -13,6 +13,7 @@
   assign stack_products = block.settings.enable_stack_products
   assign products_to_show = block.settings.products_to_show
   assign swipe_on_mobile = block.settings.swipe_on_mobile
+  assign enable_border_card = settings.enable_border_card
   
 
   assign arrows = true
@@ -58,7 +59,7 @@
     data-splide='{{ data_splide }}'
     aria-labelledby="featured-collection-{{ section.id }}"
     >
-      <div class="splide__track mb:splide-right-overflow">
+      <div class="splide__track mb:splide-right-overflow {% if enable_border_card %} splide-border-card {% endif %}">
         <div class="splide__list ">
           {%- for product in products limit: products_to_show -%} 
             <div class="splide__slide">

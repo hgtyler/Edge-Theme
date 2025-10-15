@@ -2,6 +2,10 @@
 <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+{% if section.settings.submenu_behavior == 'collapsing' or section.settings.submenu_behavior == 'always-open' %}
+  <link rel="stylesheet" href="{{ 'component-collapsible-menu-item.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'component-collapsible-menu-item.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if settings.cart_type == "drawer" and template != 'cart' -%}
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -97,12 +101,18 @@
     background-color: transparent;
     transition: all var(--duration-medium) var(--ease-out-slow); 
   }
+  /*body:has(main > .shopify-section:first-child[has-transparent-header]) .header {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+  }*/
   .header--transparent.header-wrapper--border-bottom:not(:hover):not(.is-sticky){
     border-bottom-color: rgba(var(--color-header-transparent-background) / 0.2);
   }
   .header.header--transparent.is-sticky{
     background-color: rgb(var(--color-header-background));
   }
+
   /*hover header*/
   .header.header--transparent:not(:hover):not(.is-sticky) .header__heading-logo{
     opacity: 0;
@@ -758,17 +768,36 @@ if (announcementScrollingHeight) {
     {
       "type": "select",
       "id": "mobile_menu_behavior",
-      "label": "Mobile menu behavior",
+      "label": "Mobile menu action",
       "default": "link-and-toggle",
-      "info": "Work with menu mobile drawer and Desktop logo position: Logo center, menu drawer",
       "options": [
         {
           "value": "link-and-toggle",
-          "label": "Separate link and toggle (recommended)"
+          "label": "Link + Button"
         },
         {
           "value": "toggle-only",
-          "label": "Toggle entire item to open submenu"
+          "label": "Tap item to open"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "submenu_behavior",
+      "label": "Submenu behavior",
+      "default": "slide-to-left",
+      "options": [
+        {
+          "value": "slide-to-left",
+          "label": "Slide to left"
+        },
+        {
+          "value": "collapsing",
+          "label": "Collapsing"
+        },
+        {
+          "value": "always-open",
+          "label": "Always open"
         }
       ]
     },
@@ -887,6 +916,10 @@ if (announcementScrollingHeight) {
           "content": "Navigation"
         },
         {
+          "type": "paragraph",
+          "content": "If level 2 menu does not have a sub-menu, it will switch to a single column."
+        },
+        {
           "type": "range",
           "id": "columns_link",
           "label": "Columns per row",
@@ -896,10 +929,15 @@ if (announcementScrollingHeight) {
           "default": 4
         },
         {
-          "type": "checkbox",
-          "id": "show_border",
-          "label": "Show column dividers",
-          "default": false
+          "type": "select",
+          "id": "divider_type",
+          "label": "Divider type",
+          "options": [
+            { "value": "none","label": "None" },
+            { "value": "inline","label": "In" },
+            { "value": "outline","label": "Out" }
+          ],
+          "default": "none"
         },
         {
           "type": "checkbox",
@@ -1058,6 +1096,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_1",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_1",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",
@@ -1188,6 +1232,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_2",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_2",
           "label": "Text",
@@ -1314,6 +1364,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_3",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_3",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",
@@ -1444,6 +1500,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_4",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_4",
           "label": "Text",
@@ -1570,6 +1632,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_5",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_5",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",
@@ -1700,6 +1768,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_6",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_6",
           "label": "Text",
@@ -1789,19 +1863,28 @@ if (announcementScrollingHeight) {
           "content": "Navigation"
         },
         {
+          "type": "paragraph",
+          "content": "If level 2 menu does not have a sub-menu, it will switch to a single column."
+        },
+        {
           "type": "range",
           "id": "columns_link",
           "label": "Columns per row",
           "min": 1,
           "max": 6,
           "step": 1,
-          "default": 4
+          "default": 4,
         },
         {
-          "type": "checkbox",
-          "id": "show_border",
-          "label": "Show column dividers",
-          "default": false
+          "type": "select",
+          "id": "divider_type",
+          "label": "Divider type",
+          "options": [
+            { "value": "none","label": "None" },
+            { "value": "inline","label": "In" },
+            { "value": "outline","label": "Out" }
+          ],
+          "default": "none"
         },
         {
           "type": "checkbox",
@@ -1956,6 +2039,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_1",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_1",
           "label": "Text",
@@ -2054,6 +2143,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_2",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_2",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",
@@ -2156,6 +2251,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_3",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_3",
           "label": "Text",
@@ -2254,6 +2355,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_4",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_4",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",
@@ -2356,6 +2463,12 @@ if (announcementScrollingHeight) {
           "default": "Shop now"
         },
         {
+          "type": "checkbox",
+          "id": "show_icon_5",
+          "label": "Show arrow icon",
+          "default": false
+        },
+        {
           "type": "color",
           "id": "text_color_5",
           "label": "Text",
@@ -2454,6 +2567,12 @@ if (announcementScrollingHeight) {
           "id": "text_button_6",
           "label": "Button text",
           "default": "Shop now"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon_6",
+          "label": "Show arrow icon",
+          "default": false
         },
         {
           "type": "color",

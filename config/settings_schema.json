@@ -2,10 +2,10 @@
   {
     "name": "theme_info",
     "theme_name": "Edge",
-    "theme_version": "1.2.0",
+    "theme_version": "1.3.0",
     "theme_author": "OranThemes",
-    "theme_documentation_url": "https://oranthemes.gitbook.io/edge-theme",
-    "theme_support_url": "https://oranthemes.com/contact/"
+    "theme_documentation_url": "https:\/\/oranthemes.gitbook.io\/edge-theme",
+    "theme_support_url": "https:\/\/oranthemes.com\/contact\/"
   },
   {
     "name": "Favicon",
@@ -96,7 +96,7 @@
       },
       {
         "type": "color",
-        "id": "header_link_color_hover", 
+        "id": "header_link_color_hover",
         "label": "Links hover",
         "default": "#3F72E5"
       },
@@ -422,7 +422,7 @@
         "id": "navigation_scale",
         "min": 80,
         "max": 130,
-        "step": 2,
+        "step": 1,
         "unit": "%",
         "label": "Font size scale",
         "default": 100
@@ -952,9 +952,18 @@
         "label": "Button arrow type",
         "default": "icon-1",
         "options": [
-          { "value": "icon-1", "label": "Icon 1" },
-          { "value": "icon-2", "label": "Icon 2" },
-          { "value": "icon-3", "label": "Icon 3" }
+          {
+            "value": "icon-1",
+            "label": "Icon 1"
+          },
+          {
+            "value": "icon-2",
+            "label": "Icon 2"
+          },
+          {
+            "value": "icon-3",
+            "label": "Icon 3"
+          }
         ]
       },
       {
@@ -1090,6 +1099,12 @@
       },
       {
         "type": "checkbox",
+        "id": "enable_border_card",
+        "label": "Enable border card",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "enable_gray_background",
         "label": "Enable gray background for image",
         "default": false,
@@ -1113,7 +1128,7 @@
         "id": "card_show_secondary_image",
         "label": "Show secondary image on hover",
         "default": true
-      }, 
+      },
       {
         "type": "checkbox",
         "id": "card_show_short_description",
@@ -1159,6 +1174,22 @@
           }
         ],
         "default": "under_title"
+      },
+      {
+        "type": "select",
+        "id": "price_variant_type",
+        "label": "Price variant type",
+        "options": [
+          {
+            "value": "min_price",
+            "label": "Min price (From $10)"
+          },
+          {
+            "value": "max_price",
+            "label": "Max price"
+          }
+        ],
+        "default": "min_price"
       },
       {
         "type": "select",
@@ -1243,6 +1274,31 @@
       },
       {
         "type": "select",
+        "id": "card_title_line_clamp",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "line-clamp-1",
+            "label": "Line clamp 1"
+          },
+          {
+            "value": "line-clamp-2",
+            "label": "Line clamp 2"
+          },
+          {
+            "value": "line-clamp-3",
+            "label": "Line clamp 3"
+          }
+        ],
+        "default": "none",
+        "label": "Title line clamp",
+        "info": "Use line clamp to limit the number of lines in the title."
+      },
+      {
+        "type": "select",
         "id": "card_text_alignment",
         "options": [
           {
@@ -1260,6 +1316,55 @@
         ],
         "default": "start",
         "label": "Product info alignment"
+      },
+      {
+        "type": "header",
+        "content": "Siblings products"
+      },
+      {
+        "type": "paragraph",
+        "content": "Setup siblings products [Learn more](https:\/\/oranthemes.gitbook.io\/edge-theme\/collections-and-products-pages\/product-page\/product-information#id-10.-sibling-products)"
+      },
+      {
+        "type": "checkbox",
+        "id": "card_show_siblings",
+        "label": "Show siblings products",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "option_siblings_value",
+        "label": "Option value metafield",
+        "info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.color with type single line text",
+        "visible_if": "{{ settings.card_show_siblings == true }}"
+      },
+      {
+        "type": "text",
+        "id": "siblings_products_value",
+        "label": "Siblings products metafield",
+        "info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.siblings with type product list or type single collection",
+        "visible_if": "{{ settings.card_show_siblings == true }}"
+      },
+      {
+        "type": "select",
+        "id": "card_siblings_picker_type",
+        "options": [
+          {
+            "value": "block",
+            "label": "Block"
+          },
+          {
+            "value": "color-swatch",
+            "label": "Color swatch"
+          },
+          {
+            "value": "product-image",
+            "label": "Product image"
+          }
+        ],
+        "default": "product-image",
+        "label": "Picker type",
+        "visible_if": "{{ settings.card_show_siblings == true }}"
       },
       {
         "type": "header",
@@ -1290,10 +1395,26 @@
         "id": "button_quick_buy_type",
         "label": "Quick buy button type",
         "options": [
-          { "group": "Primary color","value": "primary","label": "Primary" },
-          { "group": "Primary color","value": "outline","label": "Outline" },
-          { "group": "White color","value": "primary-white","label": "Solid White" },
-          { "group": "Accent color","value": "secondary","label": "Secondary" }
+          {
+            "group": "Primary color",
+            "value": "primary",
+            "label": "Primary"
+          },
+          {
+            "group": "Primary color",
+            "value": "outline",
+            "label": "Outline"
+          },
+          {
+            "group": "White color",
+            "value": "primary-white",
+            "label": "Solid White"
+          },
+          {
+            "group": "Accent color",
+            "value": "secondary",
+            "label": "Secondary"
+          }
         ],
         "default": "primary-white"
       },
@@ -1348,6 +1469,26 @@
         ],
         "default": "top left",
         "label": "Badge position"
+      },
+      {
+        "type": "select",
+        "id": "badge_style",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "Horizontal"
+          },
+          {
+            "value": "vertical",
+            "label": "Vertical"
+          },
+          {
+            "value": "rotate",
+            "label": "Rotate(4deg)"
+          }
+        ],
+        "default": "horizontal",
+        "label": "Badge type"
       },
       {
         "type": "header",
@@ -1521,7 +1662,7 @@
             "label": "Popup notification"
           }
         ],
-        "default": "notification",
+        "default": "drawer",
         "label": "Cart type"
       },
       {
@@ -1584,7 +1725,6 @@
           }
         ]
       },
-      
       {
         "type": "checkbox",
         "id": "show_vendor",
@@ -1622,6 +1762,43 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "show_discount_code",
+        "label": "Show discount code",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "discount_code_info",
+        "label": "Discount code info",
+        "default": "Use code SUMMER25 for 25% off your order",
+        "visible_if": "{{ settings.show_discount_code == true }}"
+      },
+      {
+        "type": "select",
+        "id": "addons_display",
+        "label": "Add-ons display",
+        "default": "popup",
+        "info": "Order note, Shipping, Discounts",
+        "options": [
+          {
+            "value": "popup",
+            "label": "Popup"
+          },
+          {
+            "value": "accordion",
+            "label": "Accordion"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "accordion_show_discount_code",
+        "label": "Always open discount code in accordion",
+        "default": true,
+        "visible_if": "{{ settings.addons_display == 'accordion' }}"
+      },
+      {
         "type": "header",
         "content": "Cart empty"
       },
@@ -1633,7 +1810,7 @@
       },
       {
         "type": "collection_list",
-        "id": "cart_empty_collection", 
+        "id": "cart_empty_collection",
         "label": "Empty collection",
         "limit": 3
       },
@@ -1646,7 +1823,7 @@
         "type": "checkbox",
         "id": "show_free_shipping_bar",
         "label": "Show shipping bar",
-        "default": false
+        "default": true
       },
       {
         "type": "textarea",
@@ -1666,7 +1843,7 @@
         "type": "color",
         "id": "progress_bar_success",
         "label": "Progress bar success",
-        "default": "#3F72E5",
+        "default": "#3F72E5"
       },
       {
         "type": "header",
@@ -1675,7 +1852,8 @@
       {
         "type": "richtext",
         "id": "cart_message",
-        "label": "Message"
+        "label": "Message",
+        "default": "<p>New customers save 10% with code <b>WELCOME10<\/b><\/p>"
       },
       {
         "type": "color",
@@ -1746,7 +1924,7 @@
       {
         "type": "range",
         "id": "recommendations_limit",
-        "label": "Recommendations limit", 
+        "label": "Recommendations limit",
         "default": 4,
         "min": 1,
         "max": 12,
@@ -1773,6 +1951,21 @@
         "id": "cart_upsell_text",
         "label": "Cart upsell text",
         "default": "Add Gift Wrap"
+      },
+      {
+        "type": "header",
+        "content": "Terms checkbox"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_terms_checkbox",
+        "label": "Enable terms checkbox",
+        "default": false
+      },
+      {
+        "type": "url",
+        "id": "link_terms_checkbox",
+        "label": "Terms link"
       }
     ]
   },
@@ -1811,7 +2004,7 @@
         "id": "color_swatch_config",
         "label": "Configuration",
         "placeholder": "Red:#ff0000\nGreen:#00ff00\nBlue:#0000ff",
-        "info": "Each rule must be in its own line. [Learn more](https://oranthemes.gitbook.io/edge-theme/theme-settings/color-swatch)"
+        "info": "Each rule must be in its own line. [Learn more](https:\/\/oranthemes.gitbook.io\/edge-theme\/theme-settings\/color-swatch)"
       }
     ]
   },

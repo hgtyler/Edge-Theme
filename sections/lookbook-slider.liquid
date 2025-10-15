@@ -2,6 +2,7 @@
 {{ 'lookbook-slider.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
+  assign enable_border_card = settings.enable_border_card
   assign section_width = section.settings.section_width
   assign  columns_desktop = section.settings.columns_desktop | plus: 0
   assign arrows = section.settings.show_arrows
@@ -53,7 +54,7 @@
             class="splide-slider splide lookbook-slider mx-auto {% if request.visual_preview_mode %}splide-preview{% endif %}" 
             data-splide='{"direction":"{%- render 'direction' -%}", "type":"loop", "perPage":{{ columns_desktop }}, "perMove": 1 ,"rewind":true,"pagination":false,"arrows":{{ arrows }},"autoplay":false,"pauseOnHover":true,"pauseOnFocus":true, "gap": "{{ column_gap }}","breakpoints":{"640": {"destroy":{{ carousel_mobile }},"perPage":2, "arrows":false, "gap": "{{ column_gap_mobile }}", "padding":{"{%- render 'splide-rtl'-%}":"{{ column_gap_mobile }}"}, "perMove": 1, "type": "slide" }}}' 
             aria-labelledby="lookbook-slider">
-              <div class="splide__track mb:splide-right-overflow ">
+              <div class="splide__track mb:splide-right-overflow {% if enable_border_card %} splide-border-card {% endif %}">
                   <div class="splide__list {% if swipe_on_mobile == false %} splide__list-grid{% endif %}">
                     {%- for block in section.blocks -%}
                       {%- assign product = block.settings.product -%}
@@ -400,6 +401,7 @@
     "presets": [
       {
         "name": "Lookbook slider",
+        "category": "Hot spot",
         "blocks": [
           {
             "type": "product",

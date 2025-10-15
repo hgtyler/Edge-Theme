@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Olet oikeutettu ilmaiseen toimitukseen."
-      }
+      },
+      "terms_checkbox": "Hyväksyn toimitusehdot",
+      "terms_checkbox_html": "Hyväksyn <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">toimitusehdot<\/a>",
+      "terms_checkbox_notify": "Lue ja hyväksy toimitusehdot",
+      "discounts": "Alennus",
+      "discount_code": "Alennuskoodi",
+      "discount_code_error": "Alennuskoodia ei voida soveltaa",
+      "shipping_discount_error": "Alennus toimitukseen näytetään lisäämällä osoite",
+      "discount_apply": "Sovelleta",
+      "discount_applied": "Alennuskoodi sovellettu: {{ code }}",
+      "remove_discount": "Poista alennuskoodi: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Kotiin",

@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "무료 배송 혜택을 받으실 수 있습니다."
-      }
+      },
+      "terms_checkbox": "배송 조건에 동의합니다",
+      "terms_checkbox_html": "배송 조건에 동의합니다 <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">배송 조건<\/a>",
+      "terms_checkbox_notify": "배송 조건에 동의합니다",
+      "discounts": "할인",
+      "discount_code": "할인 코드",
+      "discount_code_error": "할인 코드를 적용할 수 없습니다",
+      "shipping_discount_error": "배송 할인은 주소를 추가한 후에 표시됩니다",
+      "discount_apply": "적용",
+      "discount_applied": "적용된 할인 코드: {{ code }}",
+      "remove_discount": "할인 코드 제거: {{ code }}"
     },
     "breadcrumbs": {
       "home": "집",

@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Vous avez droit à la livraison gratuite."
-      }
+      },
+      "terms_checkbox": "J'accepte les conditions de livraison",
+      "terms_checkbox_html": "J'accepte <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">les conditions de livraison<\/a>",
+      "terms_checkbox_notify": "Veuillez lire et accepter les conditions de livraison",
+      "discounts": "Réductions",
+      "discount_code": "Code de réduction",
+      "discount_code_error": "Le code de réduction ne peut pas être appliqué",
+      "shipping_discount_error": "Les réductions sur la livraison s'affichent après l'ajout d'une adresse",
+      "discount_apply": "Appliquer",
+      "discount_applied": "Code de réduction appliqué: {{ code }}",
+      "remove_discount": "Supprimer le code de réduction: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Maison",

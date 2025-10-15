@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Anda berhak mendapatkan pengiriman gratis."
-      }
+      },
+      "terms_checkbox": "Saya setuju dengan syarat dan ketentuan pengiriman",
+      "terms_checkbox_html": "Saya setuju dengan <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">syarat dan ketentuan pengiriman<\/a>",
+      "terms_checkbox_notify": "Silakan baca dan setujui syarat dan ketentuan pengiriman",
+      "discounts": "Diskon",
+      "discount_code": "Kode diskon",
+      "discount_code_error": "Kode diskon tidak dapat diterapkan",
+      "shipping_discount_error": "Diskon pengiriman ditampilkan setelah menambahkan alamat",
+      "discount_apply": "Terapkan",
+      "discount_applied": "Kode diskon diterapkan: {{ code }}",
+      "remove_discount": "Hapus kode diskon: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Rumah",

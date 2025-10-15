@@ -173,12 +173,8 @@
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 2rem 0;
-  min-width: min-content;
+  min-width: fit-content;
   border: none;
-}
-
-button#ProductPopup-variant_picker {
-    font-family: Whyte;
 }
 
 .product-form__input .form__label {
@@ -196,7 +192,7 @@ button#ProductPopup-variant_picker {
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
-
+  filter: grayscale(1);
 }
 
 @media screen and (forced-colors: active) {
@@ -257,6 +253,9 @@ a.product__text {
 .product__title > a {
   display: none;
 }
+.product__title + .product__price{
+  margin-top: 0;
+}
 
 .product__title + .product__text{
   margin-top: -1.5rem;
@@ -312,6 +311,14 @@ a.product__text {
 .main-carousel .splide__gallery-adapt:not(.splide__gallery-stacked), .main-carousel .splide__gallery-adapt:not(.splide__gallery-columns) {
   align-items: flex-start;
 }
+.product__media-list-border .main-carousel .product__media{
+  outline: 1px solid rgb(var(--color-border));
+  border-radius: var(--media-radius);
+}
+.product__media-list-border .main-carousel .splide__gallery{
+  padding:1px !important;
+}
+
 .product__media-list .main-carousel:not(.is-initialized){
   display: block;
 }
@@ -367,19 +374,20 @@ a.product__text {
   }
   .product__media-list .main-carousel:not(.is-active) .splide__gallery-stacked{
     display: grid !important;
-    row-gap: 0.5rem;
+    row-gap: var(--column-gap-media);
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .product__media-list .main-carousel:not(.is-active) .splide__gallery-columns{
     display: grid !important;
-    gap: 0.5rem;
+    gap: var(--column-gap-media);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .product__media-list .main-carousel:not(.is-active) .splide__gallery-columns_mix{
     display: grid !important;
-    gap: 0.5rem;
+    gap: var(--column-gap-media);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  
   /* .main-carousel .splide__gallery-columns_mix .splide__slide:nth-child(3n) {
     grid-column: span 2 / span 2;
   } */
@@ -391,9 +399,37 @@ a.product__text {
     grid-column: span 2 ;
     order: -1;
   }
+  /* sticky first image */
+  media-gallery[data-desktop-layout="sticky_first_image"] .main-carousel .splide__track{
+    overflow: visible;
+  }
+  .product__media-list .main-carousel:not(.is-active) .splide__gallery-sticky_first_image{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap:var(--column-gap-media);
+  }
+  .product__media-list .main-carousel:not(.is-active) .splide__gallery-sticky_first_image .splide__slide--current-variant{
+    grid-column: 1 !important;     
+    position: sticky;
+    top: var(--header-height);
+    left: 0;
+    z-index: 1;
+    align-self: start;   
+  }
+  .product__media-list .main-carousel:not(.is-active) .splide__gallery-sticky_first_image .splide__slide-first{
+    grid-column: 1 !important;     
+    position: sticky;
+    top: var(--header-height);
+    left: 0;
+    z-index: 1;
+    align-self: start;   
+  }
+  .product__media-list .main-carousel:not(.is-active) .splide__gallery-sticky_first_image .splide__slide{
+    grid-column: 2;
+  }
   
   
-  .splide__gallery-adapt.splide__gallery-columns .splide__slide:not(.is-active),  .splide__gallery-adapt.splide__gallery-stacked .splide__slide:not(.is-active), .splide__gallery-adapt.splide__gallery-columns_mix .splide__slide:not(.is-active){
+  .splide__gallery-adapt.splide__gallery-columns .splide__slide:not(.is-active),  .splide__gallery-adapt.splide__gallery-stacked .splide__slide:not(.is-active), .splide__gallery-adapt.splide__gallery-columns_mix .splide__slide:not(.is-active), .splide__gallery-adapt.splide__gallery-sticky_first_image .splide__slide:not(.is-active){
     height: auto;
   }
   .main-carousel .splide__arrows{
@@ -1300,6 +1336,9 @@ a.product__text {
 .icon-with-text--vertical .icon-with-text__item {
   margin-bottom:1.25rem;
 }
+.icon-with-text__item .inline-richtext{
+  line-height: calc(1 + 0.4 / var(--font-body-scale));
+}
 
 /* SKU block */
 
@@ -1583,6 +1622,9 @@ a.product__text {
 .product__richtext{
   background-color: var(--background);
 }
+.product__richtext--heading{
+  color: rgb(var(--color-heading));
+}
 .product__richtext .icon{
   fill: rgb(var(--color-heading));
   color: rgb(var(--color-heading));
@@ -1640,8 +1682,8 @@ a.product__text {
   margin: 0;
 }
 .info-in-media{
-  background-color: white;
-  color:#622128;
+  background-color: rgb(var(--color-background));
+  color:rgb(var(--color-foreground));
   z-index: 1;
   padding:4px 8px;
   border-radius: 3px;

@@ -134,6 +134,17 @@ details[open].menu-opening > .menu-drawer__submenu{
   font-size: calc(var(--text-size-base) * var(--navigation-scale-mobile));
   font-weight: normal;
 }
+.menu-drawer__menu-item.menu-drawer__menu-item--color{
+  color: var(--label-color);
+}
+.menu-drawer__menu-item.menu-drawer__menu-item--color:hover, .menu-drawer__menu-item.menu-drawer__menu-item--color:focus{
+  color: var(--label-color);
+}
+.menu-drawer__menu-item .badge-menu{
+  background-color: var(--label-bg);
+  color: var(--label-color);
+  margin-inline-start: 0.8rem;
+}
 .menu-drawer__menu-item.menu-drawer__menu-item--image{
   display: flex;
   align-items: center;
@@ -157,12 +168,14 @@ details[open].menu-opening > .menu-drawer__submenu{
 .menu-drawer .menu-drawer__menu-link-and-toggle{
   align-items: stretch;
 }
-.menu-drawer .menu-drawer__menu-link-and-toggle .details-link-and-toggle summary{
+.menu-drawer .menu-drawer__menu-link-and-toggle .details-link-and-toggle summary , .menu-drawer .menu-drawer__menu-link-and-toggle .details-link-and-toggle .collapsible-trigger{
   height: 100%;
   padding: 0;
   width: 54px;
 }
-
+.menu-drawer .menu-drawer__menu-link-and-toggle .details-link-and-toggle .collapsible-trigger{
+  min-height: 44px;
+}
 .menu-drawer summary.menu-drawer__menu-item {
   padding-inline-end: 5.2rem;
 }
@@ -314,3 +327,5 @@ details[open].menu-opening > .menu-drawer__submenu{
     transition: none !important;
   }
 }
+
+

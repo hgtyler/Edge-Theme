@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Du er berettiget til gratis forsendelse."
-      }
+      },
+      "terms_checkbox": "Jeg accepterer forsendelsesbetingelserne",
+      "terms_checkbox_html": "Jeg accepterer <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">forsendelsesbetingelserne<\/a>",
+      "terms_checkbox_notify": "Vennligst læs og accepter forsendelsesbetingelserne",
+      "discounts": "Rabat",
+      "discount_code": "Rabatkode",
+      "discount_code_error": "Rabatkoden kan ikke anvendes",
+      "shipping_discount_error": "Rabatten på forsendelse vises efter tilføjelse af adresse",
+      "discount_apply": "Anvend",
+      "discount_applied": "Anvendt rabatkode: {{ code }}",
+      "remove_discount": "Fjern rabatkode: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Hjem",

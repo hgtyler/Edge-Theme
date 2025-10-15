@@ -1,3 +1,5 @@
+
+
 {{ 'breadcrumb.css' | asset_url | stylesheet_tag }}
 {% liquid
     assign text_size = text_size
@@ -31,12 +33,18 @@
     {%- endcase -%}
 {%- endcapture -%}
 
-<nav class="flex justify-{{ alignment }} {{ class }}" role="navigation" aria-label="Breadcrumbs" {% if block %} {{ block.shopify_attributes }} {% endif %}>
+ <nav class="flex justify-{{ alignment }} {{ class }}" role="navigation" aria-label="Breadcrumbs" {% if block %} {{ block.shopify_attributes }} {% endif %}>
     <ol role="list" class="flex items-center truncate">
+        <li class="inline-flex">
+            <a href="{{ routes.root_url }}" title="{{ 'sections.breadcrumbs.home' | t | escape }}" class="{{ text_size }} me-4 focus-inset">
+                {{ 'sections.breadcrumbs.home' | t }}
+            </a>
+        </li>
         {% if collection.url %}
             <li>
                 <div class="flex items-center">
-                    <a href="{{ routes.all_products_collection_url }}" title="{{ 'sections.breadcrumbs.shop' | t | escape }}" class="me-4 {{ text_size }} focus-inset" aria-current="page">{{ 'sections.breadcrumbs.shop' | t }}</a>
+                    {{ icon }}
+                    <a href="{{ routes.all_products_collection_url }}" title="{{ 'sections.breadcrumbs.shop' | t | escape }}" class="me-4 ms-4 {{ text_size }} focus-inset" aria-current="page" >{{ 'sections.breadcrumbs.shop' | t }}</a>
                     {{ icon }}
                     <a href="{{ collection.url }}" title="{{ collection.title | escape }}" class="ms-4 {{ text_size }} focus-inset">{{ collection.title }}</a>
                 </div>
@@ -45,7 +53,8 @@
         {% if template contains 'list-collections' %}
             <li>
                 <div class="flex items-center">
-                    <a href="{{ routes.all_products_collection_url }}" title="{{ 'sections.breadcrumbs.shop' | t | escape }}" class="me-4 {{ text_size }} focus-inset" aria-current="page">{{ 'sections.breadcrumbs.shop' | t }}</a>
+                    {{ icon }}
+                    <a href="{{ routes.all_products_collection_url }}" title="{{ 'sections.breadcrumbs.shop' | t | escape }}" class="me-4 ms-4 {{ text_size }} focus-inset" aria-current="page" >{{ 'sections.breadcrumbs.shop' | t }}</a>
                 </div>
             </li>
             <li>
@@ -59,20 +68,22 @@
             {% if product.collections.first %}
             <li>
                 <div class="flex items-center">
-                    <a href="{{ product.collections.first.url }}" title="{{ product.collections.first.title | escape }}" class="ms-4 me-4 {{ text_size }} focus-inset">{{ product.collections.first.title }}</a>
+                    {{ icon }}
+                    <a href="{{ product.collections.first.url }}" title="{{ product.collections.first.title | escape }}" class="ms-4 me-4 {{ text_size }} focus-inset"> {{ product.collections.first.title }}</a>
                 </div>
             </li>
             {% endif %} 
             <li class="truncate">
                 <div class="flex items-center">
                     {{ icon }}
-                    <span class="ms-4 {{ text_size }} truncate opacity-80" aria-current="page">{{ product.title }}</span>
+                    <span class="ms-4 {{ text_size }} truncate opacity-60" aria-current="page">{{ product.title }}</span>
                 </div>
             </li>
         {% endif %}
         {% if template contains 'cart' %}
             <li>
                 <div class="flex items-center">
+                    {{ icon }}
                     <span class="ms-4 {{ text_size }}" aria-current="page">{{ 'sections.breadcrumbs.cart' | t }}</span>
                 </div>
             </li>
@@ -81,17 +92,20 @@
             {% if current_tags %}
             <li class="inline-flex">
                 <div class="flex items-center">
-                    <a href="{{ blog.url }}" class="ms-4 {{ text_size }} focus-inset" title="{{ blog.title | escape }}">{{ blog.title }}</a>
+                    {{ icon }}
+                    <a href="{{ blog.url }}" class="ms-4 {{ text_size }} focus-inset" title="{{ blog.title | escape }}" >{{ blog.title }}</a>
                 </div>
             </li>
             <li class="inline-flex">
                 <div class="flex items-center">
+                    {{ icon }}
                     <span class="ms-4 {{ text_size }}" aria-current="page">{{ current_tags }}</span>
                 </div>
             </li>
             {% else %}
                 <li>
                     <div class="flex items-center">
+                        {{ icon }}
                         <span class="ms-4 {{ text_size }}" aria-current="page">{{ blog.title }}</span>
                     </div>
                 </li>
@@ -100,36 +114,40 @@
         {% if template contains 'article' %}
             <li class="inline-flex ">
                 <div class="flex items-center">
-                    <a href="{{ blog.url }}" class="ms-4 {{ text_size }} focus-inset" title="{{ blog.title | escape }}">{{ blog.title }}</a>
+                    {{ icon }}
+                    <a href="{{ blog.url }}" class="ms-4 {{ text_size }} focus-inset" title="{{ blog.title | escape }}" >{{ blog.title }}</a>
                 </div>
             </li>
             <li class="truncate">
                 <div class="flex items-center ms-4">
                     {{ icon }}
-                    <span class="ms-4 {{ text_size }} truncate" aria-current="page">{{ article.title }}</span>
+                    <span class="ms-4 {{ text_size }} truncate" aria-current="page">{{ article.title  }}</span>
                 </div>
             </li>
         {% endif %}
         {% if template contains 'page' %}
             <li class="truncate">
                 <div class="flex items-center">
+                    {{ icon }}
                     <span class="ms-4 {{ text_size }} truncate" aria-current="page">{{ page.title }}</span>
                 </div>
             </li>
         {% endif  %}
         {% if template contains 'search' %}
-            <li>
+      <li>
                 <div class="flex items-center">
+                    {{ icon }}
                     <span class="ms-4 {{ text_size }}" aria-current="page">{{ 'sections.breadcrumbs.search' | t }}</span>
                 </div>
             </li>
-        {% endif %}
-        {% if template contains 'customers' %}
-            <li>
+    {% endif %}
+          {% if template contains 'customers' %}
+      <li>
                 <div class="flex items-center">
+                    {{ icon }}
                     <span class="ms-4 {{ text_size }}" aria-current="page">{{ 'sections.breadcrumbs.account' | t }}</span>
                 </div>
             </li>
-        {% endif %}
+    {% endif %}
     </ol>
 </nav>

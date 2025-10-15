@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Du är berättigad till fri frakt."
-      }
+      },
+      "terms_checkbox": "Jag accepterar leveransvillkor",
+      "terms_checkbox_html": "Jag accepterar <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">leveransvillkor<\/a>",
+      "terms_checkbox_notify": "Jag accepterar leveransvillkor",
+      "discounts": "Rabatter",
+      "discount_code": "Rabattkod",
+      "discount_code_error": "Rabattkod kan inte användas",
+      "shipping_discount_error": "Rabatter på frakt visas efter att du lagt till en adress",
+      "discount_apply": "Använd",
+      "discount_applied": "Använd rabattkod: {{ code }}",
+      "remove_discount": "Ta bort rabattkod: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Hem",

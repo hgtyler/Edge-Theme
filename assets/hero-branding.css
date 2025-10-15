@@ -2,7 +2,7 @@
   opacity: 1;
 }
 .header.hero-branding-active .header__logo{
-  opacity: 1;
+  opacity: 0;
 }
 .hero-branding{
   height:calc(100svh - var(--header-height,78px) + var(--header-height-transparent,0px) - var(--announcement-bar-height,0px) - var(--announcement-scrolling-height,0px));
@@ -12,16 +12,6 @@
   text-align: center;
   position: relative;
 }
-@media screen and (max-width: 767px) {
-.hero-branding{
-  height:calc(90svh - var(--header-height,78px) + var(--header-height-transparent,0px) - var(--announcement-bar-height,0px) - var(--announcement-scrolling-height,0px));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}}
-
 .hero-branding__logo{
   display: flex;
   align-items: center;

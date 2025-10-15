@@ -82,7 +82,6 @@
               "type": "_slide_button",
               "settings": {
                 "button_text": "Shop now",
-
                 "button_type": "primary-white",
                 "show_icon": true
               },
@@ -140,7 +139,6 @@
               "type": "_slide_button",
               "settings": {
                 "button_text": "Shop now",
-
                 "button_type": "primary-white",
                 "show_icon": true
               },
@@ -220,33 +218,28 @@
           "type": "collection",
           "settings": {
             "text": "SS25[img] Sale",
-            "image_width": 70,
-
+            "image_width": 70
           }
         },
         "collection_6BzgiG": {
           "type": "collection",
           "settings": {
             "text": "Coffee Jazz [img] Rap Special",
-            "image_width": 70,
-
+            "image_width": 70
           }
         },
         "collection_UGm8Df": {
           "type": "collection",
           "settings": {
             "text": "Peace [img] HBX",
-
-            "image_width": 70,
-
+            "image_width": 70
           }
         },
         "collection_QjNdia": {
           "type": "collection",
           "settings": {
             "text": "Fresh [img] x Off White",
-            "image_width": 70,
-
+            "image_width": 70
           }
         }
       },
@@ -287,7 +280,6 @@
             "heading_size": "h3",
             "text": "",
             "button_label": "Shop now",
-
             "button_type": "primary-white",
             "show_icon": true,
             "desktop_content_position": "bottom-center",
@@ -329,7 +321,6 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-
         "link_text": "Discover now",
         "button_type": "underlined",
         "show_icon": true,
@@ -353,7 +344,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "one-piece",
-
             "title": "",
             "url": ""
           }
@@ -362,7 +352,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "swim-bottoms",
-
             "title": "",
             "url": ""
           }
@@ -371,7 +360,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "tankini-tops",
-
             "title": "",
             "url": ""
           }
@@ -380,7 +368,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "outerwear",
-
             "title": "Rain Parka",
             "url": ""
           }
@@ -399,7 +386,6 @@
         "heading_size_section": "h3",
         "description": "",
         "layout": "vertical",
-
         "link_text": "Shop all",
         "button_type": "underlined",
         "show_icon": true,
@@ -538,11 +524,10 @@
             "heading_size": "h3",
             "text": "",
             "button_label": "Shop now",
-
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "bottom-center",
-            "block_width": "basis-1/2",
+            "block_width": "basis-1\/2",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -559,11 +544,10 @@
             "heading_size": "h3",
             "text": "",
             "button_label": "Shop now",
-
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "bottom-center",
-            "block_width": "basis-1/2",
+            "block_width": "basis-1\/2",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -582,7 +566,6 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-        "column_gap": "4",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -609,7 +592,6 @@
             "heading_size": "h3",
             "text": "",
             "button_label": "Shop now",
-
             "button_type": "primary-white",
             "show_icon": false,
             "text_color": "#ffffff",
@@ -630,7 +612,7 @@
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
-            "text": "<p>Navigate the warm weather with these key fabrics and noteworthy styles.</p>",
+            "text": "<p>Navigate the warm weather with these key fabrics and noteworthy styles.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -658,8 +640,6 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-        "column_gap": "4",
-        "row_gap": "4",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -684,7 +664,7 @@
         "heading_hDqXxE": {
           "type": "heading",
           "settings": {
-            "heading": "Mid season [f] sale[/f]",
+            "heading": "Mid season [f] sale[\/f]",
             "highlighted_word_type": "single_line",
             "heading_size": "hxl"
           }
@@ -699,7 +679,7 @@
         "text_zJ3pEF": {
           "type": "text",
           "settings": {
-            "text": "<p>Easy layers to see you through the season.</p>",
+            "text": "<p>Easy layers to see you through the season.<\/p>",
             "large_text": false
           }
         },
@@ -714,7 +694,6 @@
           "type": "buttons",
           "settings": {
             "button_label": "Shop Season",
-
             "button_type": "primary-white",
             "show_icon": true,
             "moving_button": true

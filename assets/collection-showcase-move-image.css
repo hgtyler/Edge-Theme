@@ -19,6 +19,9 @@ hover-image{
   transition-duration: 0s, 0.2s;    
   transition-timing-function: ease-out; 
 }
+.collection-showcase-item__icon{
+  display: inline-block;
+}
 .collection-showcase-item__icon .icon{
   --size:2.5rem;
   width: var(--size);
@@ -28,14 +31,16 @@ hover-image{
   -webkit-text-stroke: 1px rgb(var(--color-foreground));
   -webkit-text-fill-color: transparent;
 }
+.collection-spotlight__item-text{
+  position: relative;
+  z-index: 100;
+  mix-blend-mode: overlay;
+}
 hover-image:hover .hover-image {
   opacity:1;
 }
 hover-image:hover{
   z-index: 1;
-}
-hover-image:hover .hover-image{
-  mix-blend-mode: exclusion;
 }
 @media (max-width: 767px) {
   .hover-image {

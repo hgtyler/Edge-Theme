@@ -36,6 +36,7 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
+  assign badge_style = settings.badge_style
 -%}
 
 <div
@@ -117,33 +118,28 @@
       </span>
     </small>
   </div>
-{%- if show_badges -%}
-  <div class="flex items-center">
-    {%- if sale_badge_type == 'percentage' -%} 
-      <span class="badge price__badge-sale">
-        {%- capture save_amount -%}{{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round | append: '%' }}{%- endcapture -%}
+  {%- if show_badges -%}
+    {%- capture style_badge -%}
+      {%- if badge_style == 'rotate' %} badge-rotate {%- endif -%}
+    {%- endcapture -%}
+    {%-  if sale_badge_type == 'percentage' -%} 
+      <span class="badge price__badge-sale {{ style_badge }}">
+        {%- capture save_amount -%}{{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round  |  append: '%' }}{%- endcapture -%}
         {{ 'products.product.save_html' | t: save_amount: save_amount }}
       </span>
-    {%- elsif sale_badge_type == 'fixed' -%} 
-      <span class="badge price__badge-sale">
-        {%- capture save_amount -%}{{ compare_at_price | minus: price | money }}{%- endcapture -%}
-        {{ 'products.product.save_html' | t: save_amount: save_amount }}
+    {%-  elsif sale_badge_type == 'fixed' %} 
+      <span class="badge price__badge-sale {{ style_badge }}">
+        {%- capture save_amount -%}{{ compare_at_price | minus: price | money  }}{%- endcapture -%}
+          {{ 'products.product.save_html' | t: save_amount: save_amount }}
       </span>
     {%- else -%}
-      <span class="badge price__badge-sale">
+      <span class="badge price__badge-sale {{ style_badge }}">
         {{ 'products.product.on_sale' | t }}
       </span>
     {%- endif -%}
-
-    {%- assign tags_downcase = product.tags | join: ',' | downcase -%}
-    {%- if tags_downcase contains 'bespoke' -%}
-      <span class="badge price__badge-bespoke ml-[15px]">made to order</span>
-    {%- endif -%}
-  </div>
-
-  <span class="badge price__badge-sold-out">
-    {{ 'products.product.sold_out' | t }}
-  </span>
-{%- endif -%}
-
+  
+    <span class="badge price__badge-sold-out {{ style_badge }}">
+      {{ 'products.product.sold_out' | t }}
+    </span>
+  {%- endif -%}
 </div>

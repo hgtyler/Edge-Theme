@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "送料無料の対象となります。"
-      }
+      },
+      "terms_checkbox": "配送条件に同意します",
+      "terms_checkbox_html": "配送条件に同意します <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">配送条件<\/a>",
+      "terms_checkbox_notify": "配送条件に同意します",
+      "discounts": "割引",
+      "discount_code": "割引コード",
+      "discount_code_error": "割引コードを適用できません",
+      "shipping_discount_error": "配送割引は住所を追加した後に表示されます",
+      "discount_apply": "適用",
+      "discount_applied": "適用された割引コード: {{ code }}",
+      "remove_discount": "割引コードを削除: {{ code }}"
     },
     "breadcrumbs": {
       "home": "家",

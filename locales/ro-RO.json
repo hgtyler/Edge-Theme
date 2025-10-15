@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Sunteți eligibil pentru transport gratuit."
-      }
+      },
+      "terms_checkbox": "Sunt de acord cu termenele de livrare",
+      "terms_checkbox_html": "Sunt de acord cu <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">termenele de livrare<\/a>",
+      "terms_checkbox_notify": "Sunt de acord cu termenele de livrare",
+      "discounts": "Reducere",
+      "discount_code": "Cod de reducere",
+      "discount_code_error": "Codul de reducere nu poate fi aplicat",
+      "shipping_discount_error": "Reducerea de transport este afișată după adăugarea unei adrese",
+      "discount_apply": "Aplică",
+      "discount_applied": "Reducere aplicată: {{ code }}",
+      "remove_discount": "Elimină codul de reducere: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Acasă",

@@ -153,7 +153,7 @@
       </div>
       <div class="card__content pt-6 {% if enable_box_card %} card__content-bg {% endif %}">
         <div class="card__information text-{{ text_alignment }}">
-          <div class="card__heading mb-2">
+          <div class="card__heading mb-2 {% if settings.card_title_line_clamp != 'none' %} {{ settings.card_title_line_clamp }} {% endif %}">
             <a
               href="{{ card_product.url }}"
               title="{{ card_product.title | escape }}"

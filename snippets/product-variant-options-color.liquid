@@ -59,7 +59,7 @@
             if swatch_value contains '#'
                 assign css_property = '--swatch-color: ' | append: swatch_value
             elsif images[swatch_value] != blank
-                assign image_url = images[swatch_value] | image_url: width: 356
+                assign image_url = images[swatch_value] | image_url: width: 56
                 assign css_property = '--swatch-color: url(' | append: image_url | append: ')'
             endif
         endif
@@ -101,7 +101,7 @@
       {{ input_swatch }}
         <label class="swatch-color {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif -%} " for="{{ input_id }}" style="{{ css_property }}">
           <span class="sr-only">{{ value -}}</span> 
-        </label> 
+        </label>
       {%- elsif color_picker_type == 'native_color_swatch' -%}
         {%
           render 'swatch-input',

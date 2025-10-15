@@ -93,12 +93,17 @@ class CartItems extends HTMLElement {
       {
         id: 'main-cart-shipping',
         section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents-shipping',
+        selector: '#main-cart-shipping',
+      },
+      {
+        id: 'main-cart-discount',
+        section: document.getElementById('main-cart-items').dataset.id,
+        selector: '#main-cart-discount',
       },
       {
         id: 'main-cart-total',
         section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents-total',
+        selector: '#main-cart-total',
       },
       {
         id: 'cart-icon-bubble',
@@ -154,14 +159,24 @@ class CartItems extends HTMLElement {
         if (cartOrder) cartOrder.classList.toggle('is-empty', parsedState.item_count === 0);
 
         this.getSectionsToRender().forEach((section) => {
-          console.log(section);
-          const elementToReplace =
-            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-          elementToReplace.innerHTML = this.getSectionInnerHTML(
-            parsedState.sections[section.section],
-            section.selector
-          );
+          const container = document.getElementById(section.id);
+          if (!container) {
+            return; 
+          }
+        
+          const elementToReplace = container.querySelector(section.selector) || container;
+          const html = parsedState.sections[section.section];
+        
+          if (!html) {
+            return;
+          }
+        
+          const newInner = this.getSectionInnerHTML(html, section.selector);
+          if (newInner) {
+            elementToReplace.innerHTML = newInner;
+          }
         });
+        
         
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';

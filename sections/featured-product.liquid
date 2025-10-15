@@ -56,7 +56,7 @@
       <div class="product__info-wrapper lg:pt-0 pt-8 {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="--animation-order:1">
         <product-info
           id="ProductInfo-{{ section.id }}"
-          class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
+          class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %} {% if section.settings.enable_max_width_content %} lg:max-w-[52rem] mx-auto {% endif %}"
           data-section="{{ section.id }}"
           data-url="{{ product.url }}"
         >
@@ -602,6 +602,10 @@
                         </div>
                     </div>
                   {%- endif -%}
+                  {%- when 'shipping_info' -%}
+                    {% render 'shipping-info', block: block %}
+                  {%- when 'specification_table' -%}
+                    {% render 'specification-table', block: block %}
                   {%- when 'custom_option' -%}
                     {%- if block.settings.label != blank -%}
                     <div class="product__options product__info-inner" {{ block.shopify_attributes }}>
@@ -1139,6 +1143,27 @@
       "limit": 1,
       "settings": [
         {
+          "type": "select",
+          "id": "button_type",
+          "label": "Button add to cart type",
+          "options": [
+            { "group": "Primary color","value": "primary","label": "Primary" },
+            { "group": "Primary color","value": "outline","label": "Outline" },
+            { "group": "Primary color","value": "underlined","label": "Underlined" },
+            { "group": "White color","value": "primary-white","label": "Solid White" },
+            { "group": "White color","value": "outline-white","label": "Outline White" },
+            { "group": "White color","value": "underlined-white","label": "Underlined White" },
+            { "group": "Accent color","value": "secondary","label": "Secondary" }
+          ],
+          "default": "outline"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price_in_button",
+          "label": "Show price in button",
+          "default": false
+        },
+        {
           "type": "checkbox",
           "id": "show_two_columns",
           "label": "Show 2 columns",
@@ -1192,6 +1217,71 @@
         {
           "type": "paragraph",
           "content": "Setup siblings products [Learn more](https://oranthemes.gitbook.io/edge-theme/collections-and-products-pages/product-page/product-information#id-10.-sibling-products)"
+        },
+        {
+          "type": "select",
+          "id": "siblings_picker_type",
+          "options": [
+            {
+              "value": "block",
+              "label": "Block"
+            },
+            {
+              "value": "color-swatch",
+              "label": "Color swatch"
+            },
+            {
+              "value": "product-image",
+              "label": "Product image"
+            }
+          ],
+          "default": "product-image",
+          "label": "Picker type"
+        },
+        {
+          "type": "select", 
+          "id": "block_type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            }
+          ],
+          "default": "outline",
+          "label": "Block type",
+          "visible_if": "{{ block.settings.siblings_picker_type == 'block' }}"
+        }, 
+        {
+          "type": "checkbox",
+          "id": "show_siblings_sale_dot",
+          "default": true,
+          "label": "Show siblings sale dot"
+        },
+        {
+          "type": "text",
+          "id": "title_siblings",
+          "label": "Option name",
+          "default": "Color :"
+        },
+        {
+          "type": "text",
+          "id": "option_siblings_value",
+          "label": "Option value metafield",
+          "info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.color with type single line text"
+        },
+        {
+          "type": "text",
+          "id": "siblings_products_value",
+          "label": "Siblings products metafield",
+          "info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.siblings with type product list or type single collection"
+        },
+        {
+          "type": "paragraph",
+          "content": "There are two ways to use metafields: with a single collection or with a metafield product list."
         }
       ]
     },
@@ -3367,6 +3457,159 @@
           "limit": 6
         }
       ]
+    },
+    {
+      "type": "shipping_info",
+      "name": "Shipping info",
+      "limit": 1,
+      "settings": [
+        {
+         "type": "select",
+         "id": "block_type",
+         "label": "Type",
+         "options": [
+            {
+              "value": "horizontal",
+              "label": "Horizontal"
+            },
+            {
+              "value": "vertical",
+              "label": "Vertical"
+            }
+         ],
+         "default": "horizontal"
+        },
+        {
+         "type": "select",
+         "id": "block_style",
+         "label": "Style",
+         "options": [
+            {
+              "value": "background",
+              "label": "Background"
+            },
+            {
+              "value": "border",
+              "label": "Border"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
+         ],
+         "default": "background"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_border_in_block",
+          "label": "Show border in block",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "label": "Icon size",
+          "min": 16,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
+          "default": 24
+        },
+        {
+          "type": "header",
+          "content": "Shipping"
+        },
+        {
+          "type": "text",
+          "id": "heading_shipping_info",
+          "label": "Text",
+          "default": "Order now to receive by"
+        },
+        {
+          "type": "text",
+          "id": "shipping_from",
+          "label": "Shipping from",
+          "default": "4"
+        },
+        {
+          "type": "text",
+          "id": "shipping_to",
+          "label": "Shipping to",
+          "default": "6"
+        },
+        {
+          "type": "url",
+          "id": "shipping_link",
+          "label": "Shipping link"
+        },
+        {
+          "type": "header",
+          "content": "Return"
+        },
+        {
+          "type": "text",
+          "id": "heading_return_info",
+          "label": "Text",
+          "default": "21 day hassle free returns"
+        },
+        {
+          "type": "url",
+          "id": "return_link",
+          "label": "Return link"
+        }
+      ]
+    },
+    {
+      "type": "specification_table",
+      "name": "Specification table",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Specification table"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "Heading 4"
+            },
+            {
+              "value": "h5",
+              "label": "Heading 5"
+            },
+            {
+              "value": "h6",
+              "label": "Heading 6"
+            },
+            {
+                "value": "body-1",
+                "label": "Body 1"
+            },
+            {
+                "value": "body-2",
+                "label": "Body 2"
+            },
+            {
+                "value": "sub-heading",
+                "label": "Subheading"
+            }
+          ],
+          "default": "h6"
+        },
+        {
+          "type": "text",
+          "id": "specification_metafield_namespace",
+          "label": "Specification metafield",
+          "default": "custom.specification",
+          "info": "Namespace and key for specification metafield witd Multi-line text"
+        }
+      ]
     }
   ],
   "settings": [
@@ -3400,6 +3643,13 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "Enable sticky content on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_max_width_content",
+      "default": false,
+      "label": "Enable max width content product",
+      "info": "Max width is 52rem"
     },
     {
       "type": "header",
@@ -3496,10 +3746,34 @@
         {
           "value": "thumbnail_left",
           "label": "Thumbnail left (carousel)"
+        },
+        {
+          "value": "thumbnail_2_columns",
+          "label": "Thumbs bottom, 2 cols (carousel)"
+        },
+        {
+          "value": "thumbnail_left_2_columns",
+          "label": "Thumbs left, 2 cols (carousel)"
+        },
+        {
+          "value": "sticky_first_image",
+          "label": "Sticky first image"
         }
       ],
       "default": "thumbnail_left",
       "label": "Desktop layout"
+    },
+    {
+      "type": "range",
+      "id": "column_gap_media",
+      "min": 0,
+      "max": 4,
+      "step": 0.1,
+      "default": 0.5,
+      "unit": "rem",
+      "label": "Gap media (Desktop)",
+      "info": "Gap between media for Desktop layout not carousel",
+      "visible_if": "{{ section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' or section.settings.gallery_layout == 'columns_mix' or section.settings.gallery_layout == 'sticky_first_image' }}"
     },
     {
       "type": "select",
@@ -3523,6 +3797,19 @@
       "id": "info_in_media",
       "label": "Text in media",
       "info": "Show some information in first media"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badge_in_media",
+      "label": "Show badge in media",
+      "default": false,
+      "info": "Use product tags to display labels on product cards."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_border_media",
+      "default": false,
+      "label": "Enable border media"
     },
     {
       "type": "checkbox",
@@ -3674,6 +3961,7 @@
   "presets": [
     {
       "name": "Featured product",
+      "category": "Products",
       "blocks": [
         {
           "type": "text",

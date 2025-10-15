@@ -135,6 +135,14 @@ cart-drawer-items.is-empty + .drawer__footer {
   border-inline-start: 1px solid rgb(var(--color-border));
   padding-inline-start: 2rem;
 }
+.drawer__footer modal-trigger{
+  line-height: calc(1 + 0.2 / var(--font-body-scale));
+}
+modal-trigger .icon, modal-trigger svg{
+  width: calc(var(--spacing) * 7);
+  height: calc(var(--spacing) * 7);
+  flex:0 0 calc(var(--spacing) * 7);
+}
 cart-drawer {
   position: fixed;
   top: 0;
@@ -149,8 +157,8 @@ cart-drawer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(var(--color-overlay) / 0.3);
-
+  background-color: rgba(var(--color-overlay) / 0.7);
+  backdrop-filter: blur(var(--backdrop-blur));
   opacity: 0;
   visibility: hidden;
   transition: all var(--duration-medium) ease;
@@ -240,7 +248,7 @@ cart-drawer-items {
 .cart-drawer .cart-item__price-wrapper .cart-item__discounted-prices {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.3rem;
 }
 
 .cart-drawer .unit-price {

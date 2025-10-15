@@ -87,4 +87,17 @@
     max-width: var(--width-image);
   }
 }
-
+.image-with-text-overlay__image-desktop{
+  display: block;
+}
+.image-with-text-overlay__image-mobile{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .image-with-text-overlay__image-desktop{
+    display: none;
+  }
+  .image-with-text-overlay__image-mobile{
+    display: block;
+  }
+}

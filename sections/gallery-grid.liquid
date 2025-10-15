@@ -1,7 +1,7 @@
 
 {%- liquid
   assign widths = '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400'
-  assign column_gap = section.settings.column_gap |  append: 'px'
+  assign column_gap = section.settings.column_gap |  append: 'rem'
   assign section_width = section.settings.section_width
 -%}
 {%- capture scroll_animation -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{%- endcapture -%}
@@ -255,35 +255,13 @@
         "content": "Gallery settings"
       },
       {
-        "type": "select",
+        "type": "range",
         "id": "column_gap",
-        "options": [
-          {
-            "value": "0",
-            "label": "No gap"
-          },
-          {
-            "value": "4",
-            "label": "Extra small"
-          },
-          {
-            "value": "8",
-            "label": "Small"
-          },
-          {
-            "value": "16",
-            "label": "Medium"
-          },
-          {
-            "value": "24",
-            "label": "Large"
-          },
-          {
-            "value": "40",
-            "label": "Extra large"
-          }
-        ],
-        "default": "24",
+        "min": 0,
+        "max": 8,
+        "step": 0.1,
+        "default": 3,
+        "unit": "rem",
         "label": "Column gap"
       },
       {
@@ -612,6 +590,7 @@
     "presets": [
       {
         "name": "Gallery grid",
+        "category": "Promotions",
         "blocks": [
           {
             "type": "image"

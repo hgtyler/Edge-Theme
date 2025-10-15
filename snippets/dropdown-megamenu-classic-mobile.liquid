@@ -15,6 +15,7 @@
               assign var_type_button = 'type_button_' | append: i
               assign var_text_button = 'text_button_' | append: i
               assign var_text_color = 'text_color_' | append: i
+              assign var_show_icon = 'show_icon_' | append: i
               assign banner_image = block.settings[var_image]
               assign banner_image_ratio = block.settings[var_image_ratio]
               assign banner_url = block.settings[var_url]
@@ -26,7 +27,8 @@
               assign banner_button_type = block.settings[var_type_button]
               assign banner_text_button = block.settings[var_text_button]
               assign banner_text_color = block.settings[var_text_color]
-  
+              assign banner_show_icon = block.settings[var_show_icon]
+              
           -%}
             
           {%- if banner_image != blank -%}
@@ -72,7 +74,8 @@
                           button_style: banner_button_type,
                           button_text: banner_text_button,
                           button_url: banner_url,
-                          button_type: 'link'
+                          button_type: 'link',
+                          show_icon: banner_show_icon
                       -%}
                   {%- endif -%}
                   </div>

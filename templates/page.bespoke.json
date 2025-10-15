@@ -191,7 +191,6 @@
         "heading_size_section": "h6",
         "description": "",
         "layout": "vertical",
-        "column_gap": "24",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -392,7 +391,6 @@
             "custom_icon": "shopify:\/\/shop_images\/eyewing_c117e35c-5516-4c37-a9cb-e5bb51ef5dc2.png",
             "title": "Heading",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
             "button_label": "",
             "button_link": ""
           }
@@ -404,7 +402,6 @@
             "custom_icon": "shopify:\/\/shop_images\/Asset_2_5062dc92-00a1-4407-97b3-4039651e626e.png",
             "title": "Heading",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
             "button_label": "",
             "button_link": ""
           }
@@ -415,7 +412,6 @@
             "icon": "check_mark",
             "title": "Heading",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
             "button_label": "",
             "button_link": ""
           }
@@ -426,7 +422,6 @@
             "icon": "check_mark",
             "title": "Heading",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "caption": "",
             "button_label": "",
             "button_link": ""
           }

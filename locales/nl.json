@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "U komt in aanmerking voor gratis verzending."
-      }
+      },
+      "terms_checkbox": "Ik ga akkoord met de verzendvoorwaarden",
+      "terms_checkbox_html": "Ik ga akkoord met <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">de verzendvoorwaarden<\/a>",
+      "terms_checkbox_notify": "Ik ga akkoord met de verzendvoorwaarden",
+      "discounts": "Kortingen",
+      "discount_code": "Kortingscode",
+      "discount_code_error": "Kortingscode kan niet worden toegepast",
+      "shipping_discount_error": "Kortingen voor verzending worden getoond na het toevoegen van een adres",
+      "discount_apply": "Toepassen",
+      "discount_applied": "Toegepast kortingscode: {{ code }}",
+      "remove_discount": "Kortingscode verwijderen: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Thuis",

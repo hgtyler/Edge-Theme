@@ -1,16 +1,26 @@
 {% liquid
 assign enable_custom_image_nav = block.settings.enable_custom_image_nav
 assign custom_image_config = block.settings.custom_image_config | newline_to_br | split: '<br />' 
+assign divider_type = block.settings.divider_type
 %}
-<div class="py-16 mega-menu__content motion-reduce global-settings-popup mega-menu__{{ index_mega }}" tabindex="-1">
+<div class="{% if divider_type != 'outline' %} py-16 {% endif %} mega-menu__content motion-reduce global-settings-popup mega-menu__{{ index_mega }} {% if divider_type == 'outline' %} mega-menu__border-outline {% endif %}" tabindex="-1">
     <div class="{{ block.settings.menu_width }}">
 <div class="flex gap-16 {% if block.settings.postion_banner == 'left' %} flex-row-reverse {% else %} flex-row {% endif %} flex-wrap">
             {%- if link.links != blank -%}
+                {% liquid
+                assign has_child = false
+                for childlink in link.links
+                  if childlink.links != blank
+                    assign has_child = true
+                    break
+                  endif
+                endfor
+              %}
                 <div class="flex-1">
-                    <ul class="mega-menu__list gap-x-16 grid grid-cols-{{ block.settings.columns_link }} {% if link.levels == 1 %} mega-menu__list--condensed{% endif %} {% if block.settings.show_border %} mega-menu__border  {% endif %}" role="list" >
+                    <ul class="mega-menu__list {% if has_child %} gap-x-16 gap-y-10 grid grid-cols-{{ block.settings.columns_link }} {% endif %} {% if link.levels == 1 %} mega-menu__list--condensed{% endif %} {% if divider_type != 'none' %} mega-menu__border  {% endif %}" role="list" >
                         {%- for childlink in link.links -%}
                         <li class="menu__animation">
-                            <a  href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 {% if childlink.current %} mega-menu__link--active{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
+                            <a  href="{{ childlink.url }}" class="mega-menu__link {% if has_child %} mega-menu__link--level-2 {% endif %} {% if childlink.current %} mega-menu__link--active{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
                                 {{ childlink.title | escape }}
                             </a>
                             {%- if childlink.links != blank -%}
@@ -71,6 +81,7 @@ assign custom_image_config = block.settings.custom_image_config | newline_to_br 
                             assign var_overlay_color = 'overlay_color_' | append: i
                             assign var_overlay_opacity = 'overlay_opacity_' | append: i
                             assign var_overlay_gradient = 'overlay_gradient_' | append: i
+                            assign var_show_icon = 'show_icon_' | append: i
                 
                             assign banner_image = block.settings[var_image]
                             assign banner_image_ratio = block.settings[var_image_ratio]
@@ -86,7 +97,8 @@ assign custom_image_config = block.settings.custom_image_config | newline_to_br 
                             assign banner_overlay_color = block.settings[var_overlay_color]
                             assign banner_overlay_opacity = block.settings[var_overlay_opacity]
                             assign banner_overlay_gradient = block.settings[var_overlay_gradient]
-                
+                            assign banner_show_icon = block.settings[var_show_icon]
+
                             case banner_align_text
                                 when 'top-left'
                                     assign align_content = 'items-start justify-start'
@@ -162,7 +174,8 @@ assign custom_image_config = block.settings.custom_image_config | newline_to_br 
 																					button_style: banner_button_type,
 																					button_text: banner_text_button,
 																					button_url: banner_url,
-																					button_type: 'link'
+																					button_type: 'link',
+																					show_icon: banner_show_icon
 																			-%}
 																	{%- endif -%}
 																	</div>

@@ -32,13 +32,13 @@
         class="splide-slider splide collections-slider" 
         data-splide='{"direction":"{%- render 'direction' -%}", "type":"slide", "focusableNodes":false, "speed":800, "perPage":{{ columns_desktop }},"perMove": 1,"rewind":false,"pagination":false,"arrows":{{ arrows }},"autoplay":false,"pauseOnHover":true,"pauseOnFocus":true, "gap": "{{ column_gap }}" , "drag":{{ arrows }}, "destroy": {{ stack_collections }},"breakpoints":{"640": {"destroy":{{ carousel_mobile }}, "drag":true,"perPage":1, "arrows":false, "gap": "{{ column_gap_mobile }}", "fixedWidth": "{{ fixed_width_mobile }}", "perMove": 1, "speed":400, "flickPower":200 }}}' 
         aria-labelledby="collections">
-          <div class="splide__track mb:splide-right-overflow {% if enable_overflow_visible %} splide-right-overflow {% endif %}">
+          <div class="splide__track mb:splide-right-overflow {% if enable_overflow_visible %} splide-right-overflow {% endif %} {% if section.settings.show_border_card %} splide-border-card {% endif %}">
               <div class="splide__list">
                 {%- for block in section.blocks -%}
                   {%- case block.type -%}
                     {%- when 'featured_collection' -%}
                       <div class="splide__slide" data-splide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-                        <div class="collection-list__item {{ animate_slide_in }}"  {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
+                        <div class="collection-list__item h-full {{ animate_slide_in }}"  {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
                           {%- capture collection_placeholder -%}collection-{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
                           {% render 'collection-card',
                             collection: block.settings.collection,
@@ -60,7 +60,8 @@
                             overlay_color: section.settings.overlay_color,
                             overlay_opacity: section.settings.overlay_opacity,
                             show_button_arrow: section.settings.show_button_arrow,
-                            use_title_italic: use_title_italic
+                            use_title_italic: use_title_italic,
+                            show_border_card: section.settings.show_border_card
                           %}
                         </div>
                       </div>
@@ -265,6 +266,12 @@
         { "value": "wide","label": "Wide (16:9)" }
       ],
       "default": "adapt" 
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border_card",
+      "label": "Show border card",
+      "default": false
     },
     {
       "type": "checkbox",
@@ -584,6 +591,7 @@
   "presets": [
     {
       "name": "Collection list",
+      "category": "Collections",
       "blocks": [
         {
           "type": "featured_collection"

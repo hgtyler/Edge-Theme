@@ -7,6 +7,7 @@
     <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 {%- liquid
+    assign enable_border_card = settings.enable_border_card
     assign class_section = 'collection-tabs'
     assign section_width = section.settings.section_width
     assign columns_desktop =  section.settings.columns_desktop
@@ -49,7 +50,7 @@
                             class="splide-slider splide {{class_section}}__tab-slider" 
                             data-splide='{"direction":"{%- render 'direction' -%}", "type":"slide", "focusableNodes":false, "speed":800, "perPage":{{ columns_desktop }},"perMove": 1,"rewind":false,"updateOnMove":true,"pagination":false,"arrows":{{ arrows }},"autoplay":false,"pauseOnHover":true,"pauseOnFocus":true, "gap": "{{ column_gap }}", "destroy": {{ stack_products }},"trimSpace":"move","focus":"left", "breakpoints":{"640": {"destroy":{{ carousel_mobile }},"perPage":1, "arrows":false, "gap": "{{ column_gap_mobile }}","fixedWidth": "{{ fixed_width_mobile }}", "perMove": 1, "speed":400,"flickPower":200 }}}' 
                             aria-labelledby="{{class_section}}-{{ block.id }}">
-                                <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %}">
+                                <div class="splide__track mb:splide-right-overflow{% if enable_overflow_visible %} splide-right-overflow {% endif %}{% if enable_border_card %} splide-border-card {% endif %}">
                                     <div class="splide__list">
                                         {%- for product in block.settings.collection.products limit: products_to_show -%}
                                         
@@ -509,6 +510,7 @@
   "presets": [
     {
       "name": "Collection tabs",
+      "category": "Collections",
       "blocks": [
         {
           "type": "collection"

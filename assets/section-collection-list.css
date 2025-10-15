@@ -121,3 +121,11 @@
 .collection-card__link-italic{
   font-style: italic;
 }
+.collection-card-border{
+  border-radius: var(--media-radius);
+  outline: 1px solid rgb(var(--color-border));
+  background-color: rgb(var(--color-background));
+}
+.collection-card-border .collection-card__inner:not(.collection-card--overlay) .collection-card__info{
+  padding:1.5rem;
+}

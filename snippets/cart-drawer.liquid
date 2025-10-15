@@ -32,6 +32,9 @@
 </style>
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+{%- if settings.addons_display == 'accordion' -%}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
@@ -54,7 +57,7 @@
     {%- endif -%}
     <div class="drawer__header border-b">
       <div class="drawer__heading uppercase flex items-center gap-x-4">
-        <span class="h6">{{ 'sections.cart.title' | t }}</span>
+        <span class="h5">{{ 'sections.cart.title' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble !static">
             <span aria-hidden="true">{{ cart.item_count }}</span>
@@ -512,65 +515,21 @@
       {%- endif -%}
       </cart-drawer-items>
       <div class="drawer__footer border-t pb-8 lg:pb-10">
-        {%-liquid
-            assign show_cart_note = settings.show_cart_note
-            assign show_cart_calc_shipping = settings.show_cart_calc_shipping
-        -%}
         {% assign upsell_product = all_products[settings.cart_upsell_product] %}
         {% if settings.enable_cart_upsell and upsell_product != blank %}
           <div class="px-10 lg:px-14 pt-5 lg:pt-6 w-full flex gap-x-8">
           {% render 'cart-checkbox-upsell', upsell_product: upsell_product %}
           </div>
         {% endif %}
-        {%- if show_cart_note or show_cart_calc_shipping -%}
-        <div class="px-10 lg:px-14 py-5 lg:pt-6 w-full flex gap-x-8">
-          {%- if show_cart_note -%}
-            <modal-trigger class="cursor-pointer flex gap-x-4 items-center" data-target="note-modal">
-              {% render 'icon-doc' %}
-              {{ 'sections.cart.note' | t }}
-            </modal-trigger>
-          {%- endif -%}
-          {%- if show_cart_calc_shipping -%}
-            <modal-trigger class="cursor-pointer flex gap-x-4 items-center" data-target="calc-shipping-modal">
-              {% render 'icon-cube' %}
-              {{ 'sections.cart.shipping' | t }} 
-            </modal-trigger>
-          {%- endif -%}
-          {%- if settings.show_cart_note -%}
-            <modal-drawer id="note-modal" class="modal-drawer ">
-              <div class="modal-drawer__content">
-                <div class="modal-header flex justify-between pb-8 items-center">
-                  <label class="font-bold uppercase">{{ 'sections.cart.note_special' | t }}</label>
-                  <button class="close-modal-drawer focus-inset close-modal" type="button"  aria-label="{{ 'accessibility.close' | t }}" >{% render 'icon-close' %}</button>
-                </div>
-                <cart-note class="cart__note field">
-                  <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
-                  <textarea
-                    id="CartDrawer-Note"
-                    class="text-area text-area--resize-vertical field__input !mb-8"
-                    name="note"
-                    placeholder="{{ 'sections.cart.note' | t }}"
-                  >{{ cart.note }}</textarea>
-                </cart-note>
-                <button class="btn btn-primary w-full close-modal-drawer" type="button" aria-label="{{ 'sections.cart.save_note' | t }}">{{ 'sections.cart.save_note' | t }}</button>
-              </div>
-            </modal-drawer>
-          {%- endif -%}
-          {%- if show_cart_calc_shipping -%}
-            <modal-drawer id="calc-shipping-modal" class="modal-drawer" >
-            <div class="modal-drawer__content">
-              <div class="modal-header flex justify-between pb-8 items-center">
-                  <label class="font-bold uppercase">{{ 'sections.cart.shipping_estimate' | t }} </label>
-                  <button class="close-modal-drawer focus-inset close-modal" type="button"  aria-label="{{ 'accessibility.close' | t }}" >{% render 'icon-close' %}</button>
-              </div>
-              {% if settings.cart_type != 'page' and request.page_type != 'cart' %}
-              {%- render 'estimate-shipping' -%}
-              {% endif %}
-            </div>
-          </modal-drawer>
-          {%- endif -%}
-        </div>
-        {%- endif -%}
+        {%-liquid
+            assign addons_display = settings.addons_display
+        -%}
+        {% if addons_display == 'popup' %}
+          {% render 'cart-addons-popup' %}
+        {% else %}
+          {% render 'cart-addons-accordion' %}
+        {% endif %}
+        
         <!-- Start blocks -->
         <!-- Subtotals -->
 
@@ -611,6 +570,24 @@
         <!-- CTAs -->
 
         <div class="cart__ctas flex flex-row px-10 lg:px-14 items-center" {{ block.shopify_attributes }}>
+          {%- if settings.enable_terms_checkbox -%}
+            <cart-terms-check class="grid gap-y-4 w-full">
+          {% endif %}
+          {%- if settings.enable_terms_checkbox -%}
+            <div class="cart__terms-container text-start">
+              <label for="CartDrawer-Terms" class="cart__terms-label inline-flex flex-row items-center gap-x-1 cursor-pointer">
+                <input type="checkbox" class="cart__terms-checkbox custom-checkbox" id="CartDrawer-Terms" required>
+                {%- if settings.link_terms_checkbox != blank -%}
+                  <span class="cart__terms-text">{{ 'sections.cart.terms_checkbox_html' | t: link: settings.link_terms_checkbox }}</span>
+                {%- else -%}
+                  {{ 'sections.cart.terms_checkbox' | t }}
+                {%- endif -%}
+              </label>
+            </div>
+          {%- endif -%}
+          {%- if settings.enable_terms_checkbox -%}
+            <div class="flex flex-row items-center gap-x-12">
+          {% endif %}
           {%- if settings.show_button_view_cart -%}
             <div>
             <a href="{{ routes.cart_url }}" class="btn btn-underlined" title="{{ 'sections.cart.view_cart' | t | escape }}">{{ 'sections.cart.view_cart' | t }}</a>
@@ -619,7 +596,7 @@
           <button
             type="submit"
             id="CartDrawer-Checkout"
-            class="cart__checkout-button btn btn-primary"
+            class="cart__checkout-button btn btn-primary flex-1"
             name="checkout"
             form="CartDrawer-Form"
             {% if cart == empty %}
@@ -631,6 +608,12 @@
             {%- endif -%}
             {{ 'sections.cart.checkout' | t }}
           </button>
+          {%- if settings.enable_terms_checkbox -%}
+            </div>
+          {% endif %}
+          {%- if settings.enable_terms_checkbox -%}
+            </cart-terms-check>
+          {% endif %}
         </div>
       </div>
     </div>

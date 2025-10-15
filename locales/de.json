@@ -84,7 +84,9 @@
     "star_reviews_info": "{{ rating_value }} von {{ rating_max }} Sterne",
     "collapsible_content_title": "Zusammenklappbarer Inhalt",
     "complementary_products": "Ergänzende Produkte",
-    "scroll_to_top": "Scrollen Sie nach oben"
+    "scroll_to_top": "Scrollen Sie nach oben",
+    "show_more": "Mehr anzeigen",
+    "show_less": "Weniger anzeigen"
   },
   "blogs": {
     "general": {
@@ -324,6 +326,7 @@
       "we_accept": "Wir akzeptieren",
       "checkout": "Kasse",
       "empty": "Ihr Warenkorb ist leer",
+      "empty_collection": "Besuchen Sie unsere Sammlungen",
       "cart_error": "Beim Aktualisieren Ihres Warenkorbs ist ein Fehler aufgetreten. ",
       "cart_quantity_error_html": "Sie können nur hinzufügen {{ quantity }} dieses Artikels in Ihren Warenkorb.",
       "taxes_and_shipping_policy_at_checkout_html": "Steuern, Rabatte und <a href=\"{{ link }}\">Versand<\/a> wird an der Kasse berechnet",
@@ -346,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Sie haben Anspruch auf kostenlosen Versand."
-      }
+      },
+      "terms_checkbox": "Ich akzeptiere die Versandbedingungen",
+      "terms_checkbox_html": "Ich akzeptiere <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">Versandbedingungen<\/a>",
+      "terms_checkbox_notify": "Bitte lesen Sie und akzeptieren Sie die Versandbedingungen",
+      "discounts": "Rabatt",
+      "discount_code": "Rabattcode",
+      "discount_code_error": "Rabattcode kann nicht angewendet werden",
+      "shipping_discount_error": "Rabatt auf Versand wird an der Kasse berechnet",
+      "discount_apply": "Anwenden",
+      "discount_applied": "Rabattcode angewendet: {{ code }}",
+      "remove_discount": "Rabattcode entfernen: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Heim",

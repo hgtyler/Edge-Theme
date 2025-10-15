@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.14 | MIT License | https://tailwindcss.com */
 @layer properties;
 .page-width {
   max-width: var(--container-max-width);
@@ -518,7 +518,7 @@ deferred-media {
   height: 0.7rem;
   pointer-events: none;
   position: absolute;
-  top: calc(50% - 0.5rem);
+  top: calc(50% - 0.2rem);
   right: 1.5rem;
 }
 .select__select, .customer select {
@@ -677,7 +677,8 @@ input[type='checkbox'] {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-
+  font-weight: 500;
+  opacity: 0.85;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -1048,28 +1049,18 @@ product-info .loading__spinner:not(.hidden) ~ *, .quantity__rules-cart .loading_
   width: 100%;
   display: block;
   position: absolute;
-  background: rgba(var(--color-overlay) / 0.2);
-
+  background: rgba(var(--color-overlay) / 0.7);
+  backdrop-filter: blur(var(--backdrop-blur));
 }
 .header__icon--menu .header__icon--hamburger {
-  width: 2.6rem;
-  height: 1.2rem;
+  width: 2.2rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   flex-direction: column;
   position: relative;
-}
-
-.menu-drawer__menu-item {
-    padding: 1.2rem 2rem;
-    text-decoration: none;
-    font-size: calc(var(--text-size-base) * var(--navigation-scale-mobile));
-    font-weight: 400;
-    font-size: var(--text-size-h6);
-    letter-spacing: .8px;
-    font-family: var(--font-heading-family);
 }
 .header__icon--menu {
   display: flex;
@@ -1091,7 +1082,7 @@ product-info .loading__spinner:not(.hidden) ~ *, .quantity__rules-cart .loading_
 }
 .menu-opening .header__icon--hamburger-line:nth-of-type(3) {
   top: 50%;
-transform: translateY(-0.25rem) rotate(-45deg);
+  transform: translateY(-0.65rem) rotate(-45deg);
 }
 .header__icon--account shop-user-avatar {
   --shop-avatar-size: 2.8rem;
@@ -1212,7 +1203,7 @@ details[open] > .header__submenu {
   content: "";
   position: absolute;
   bottom: -5px;
-  height: 1px;
+  height: 2px;
   inset-inline-start: 0;
   width: 0;
   background-color: currentColor;
@@ -1309,6 +1300,15 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   text-align: center;
   word-break: break-word;
   text-transform: var(--badge-text-transform);
+}
+.badge-vertical {
+  writing-mode: vertical-rl;
+  padding: 1rem 0.4rem;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+.badge-rotate {
+  transform: rotate(-4deg);
 }
 .price__badge-sold-out {
   background-color: rgb(var(--color-sold-out-background));
@@ -1495,8 +1495,6 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     --font-weight-bold: 700;
     --tracking-wide: 0.025em;
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -1538,7 +1536,7 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     text-decoration: inherit;
   }
   b, strong {
-       font-family: Whyte Book;
+    font-family: Whyte Book;
     letter-spacing: .6px;
     font-size: var(--text-size-base);
         letter-spacing: .6px;
@@ -1550,8 +1548,7 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     font-size: 1em;
   }
   small {
-    font-size: 100%;
-        letter-spacing: .6px;
+    font-size: 80%;
   }
   sub, sup {
     font-size: 75%;
@@ -1639,6 +1636,9 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
     padding-block: 0;
   }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
   :-moz-ui-invalid {
     box-shadow: none;
   }
@@ -1666,7 +1666,7 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
     border-width: 0;
   }
@@ -1726,6 +1726,9 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   }
   .isolate {
     isolation: isolate;
+  }
+  .z-1 {
+    z-index: 1;
   }
   .z-10 {
     z-index: 10;
@@ -1886,6 +1889,24 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 2 !important;
   }
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
   .\!block {
     display: block !important;
   }
@@ -1956,9 +1977,6 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     width: 100%;
     height: 100%;
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
   .h-4\/6 {
     height: calc(4/6 * 100%);
   }
@@ -1973,9 +1991,6 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   }
   .h-full {
     height: 100%;
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
   }
   .w-3\/12 {
     width: calc(3/12 * 100%);
@@ -2037,6 +2052,9 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   .max-w-screen-md {
     max-width: var(--breakpoint-md);
   }
+  .min-w-full {
+    min-width: 100%;
+  }
   .flex-1 {
     flex: 1;
   }
@@ -2046,26 +2064,17 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   .flex-none {
     flex: none;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
   .shrink-\[2\] {
     flex-shrink: 2;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
   }
   .grow-0 {
     flex-grow: 0;
-  }
-  .basis-1 {
-    flex-basis: calc(var(--spacing) * 1);
   }
   .basis-1\/2 {
     flex-basis: calc(1/2 * 100%);
@@ -2082,14 +2091,8 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   .basis-1\/6 {
     flex-basis: calc(1/6 * 100%);
   }
-  .basis-2 {
-    flex-basis: calc(var(--spacing) * 2);
-  }
   .basis-2\/3 {
     flex-basis: calc(2/3 * 100%);
-  }
-  .basis-3 {
-    flex-basis: calc(var(--spacing) * 3);
   }
   .basis-3\/4 {
     flex-basis: calc(3/4 * 100%);
@@ -2097,14 +2100,8 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   .basis-3\/6 {
     flex-basis: calc(3/6 * 100%);
   }
-  .basis-4 {
-    flex-basis: calc(var(--spacing) * 4);
-  }
   .basis-4\/5 {
     flex-basis: calc(4/5 * 100%);
-  }
-  .basis-5 {
-    flex-basis: calc(var(--spacing) * 5);
   }
   .basis-5\/6 {
     flex-basis: calc(5/6 * 100%);
@@ -2124,23 +2121,14 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   .basis-\[90px\] {
     flex-basis: 90px;
   }
-
-  .testimonials__quote-avatar .size-34 {
-  width: 136px;
-  height: 136px;
-}
-img.size-48.rounded-full.object-cover {
-    width: 116px;
-    height: 116px;
-}
   .basis-full {
     flex-basis: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .table-auto {
+    table-layout: auto;
   }
   .origin-top-left {
-    transform-origin: top left;
+    transform-origin: 0 0;
   }
   .\!translate-y-0 {
     --tw-translate-y: calc(var(--spacing) * 0) !important;
@@ -2503,6 +2491,9 @@ img.size-48.rounded-full.object-cover {
   .pe-10 {
     padding-inline-end: calc(var(--spacing) * 10);
   }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
@@ -2708,17 +2699,9 @@ img.size-48.rounded-full.object-cover {
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-  }
-  .ease-out {
-    --tw-ease: var(--ease-out);
-    transition-timing-function: var(--ease-out);
   }
   .sm\:block {
     @media (width >= 40rem) {
@@ -3080,11 +3063,6 @@ img.size-48.rounded-full.object-cover {
   .lg\:mt-6 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 6);
-    }
-  }
-  .lg\:mt-20 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * 20);
     }
   }
   .lg\:block {
@@ -3462,6 +3440,11 @@ img.size-48.rounded-full.object-cover {
       padding-bottom: calc(var(--spacing) * 10);
     }
   }
+  .lg\:pb-20 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 20);
+    }
+  }
   .xl\:flex {
     @media (width >= 80rem) {
       display: flex;
@@ -3688,6 +3671,9 @@ img.size-48.rounded-full.object-cover {
   overflow: hidden;
   position: relative;
   z-index: 0;
+}
+.splide-border-card {
+  padding: 1px !important;
 }
 @keyframes splide-loading {
   0% {
@@ -4020,6 +4006,12 @@ h6,.h6 {
 .color-text-80 p {
   color: rgba(var(--color-foreground)/ 0.8);
 }
+.body-2,.body-1,.text-body {
+  letter-spacing: var(--font-body-spacing);
+  line-height: calc(1 + .7 / var(--font-body-scale));
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+}
 .text-size-medium,.body-2 {
   font-size: var(--text-size-base);
 }
@@ -4054,6 +4046,9 @@ h6,.h6 {
 .section-bg {
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
+}
+.section-bg__gradient {
+  background-image: var(--color-background-gradient);
 }
 .section-header-vertical {
   max-width: 55rem;
@@ -4136,11 +4131,12 @@ body.overflow-hidden {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(var(--color-overlay) / 0.2);
+  background: rgba(var(--color-overlay) / 0.7);
   opacity: 0;
   visibility: hidden;
   transition: all var(--duration-medium) ease;
-
+  -webkit-backdrop-filter: blur(var(--backdrop-blur));
+  backdrop-filter: blur(var(--backdrop-blur));
   display: block;
   z-index: 1000;
 }
@@ -4228,7 +4224,7 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   justify-content: center;
   align-items: center;
   -moz-column-gap: 0.5rem;
-  column-gap: 1.2rem;
+  column-gap: 0.5rem;
   text-align: center;
   padding: var(--btn-padding-vertical) var(--btn-padding-horizontal);
   font-family: "ABCWhyte-Book"; /* HERE  */
@@ -4390,7 +4386,7 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   border-radius: 0;
   padding-bottom: 2px;
   padding-top: 2px;
-  line-height: 18px;
+  line-height: 22px;
   height: auto;
 }
 .btn-underlined .path {
@@ -4403,27 +4399,24 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   height: var(--thickness-btn-underline);
   bottom: 0;
   pointer-events: none;
-  transition: transform var(--duration-medium) var(--ease-out-slow);
   background-color: rgb(var(--btn-underlined-bg));
   width: 100%;
 }
 .btn-underlined:before {
   transform-origin: 100% 50%;
   transform: scaleZ(1);
-  transition-delay: .1s;
 }
 .btn-underlined::after {
   transform-origin: 0% 50%;
   transform: scale3d(0, 1, 1);
-  transition-delay: 0s;
 }
 .btn-underlined:hover::before {
   transform: scale3d(0, 1, 1);
-  transition-delay: 0s;
+  transition: var(--duration-medium) transform var(--ease-out-slow);
 }
 .btn-underlined:hover::after {
   transform: scaleZ(1);
-  transition-delay: .1s;
+  transition: var(--duration-medium) transform var(--ease-out-slow) var(--duration-medium);
 }
 .btn-underlined-white {
   color: white;
@@ -4479,27 +4472,18 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   object-fit: cover;
   position: absolute;
 }
-
-h3.article-card__heading.h4.pb-6 {
-  font-size: calc(var(--text-size-h6) * 0.8);
-}
-
 .swatch-color {
-  --space-offset: 2px;
-  --swatch-size: 25px;
-  width: var(--swatch-size);
-  height: var(--swatch-size);
+  --space-offset: 4px;
+  --swacth-size: 28px;
+  width: var(--swacth-size);
+  height: var(--swacth-size);
   background: var(--swatch-color);
   display: block;
   cursor: pointer;
   margin: calc(var(--space-offset) * 2);
   position: relative;
   box-shadow: inset 0px 0px 0px 1px rgba(0 0 0 / 0.05);
-  background-size: contain;
-}
-
-.field__input, .select__select, .customer .field input, .customer select {
-  border: var(--inputs-thickness) solid rgb(98 33 40 / 59%);
+  background-size: cover;
 }
 .swatch-color:before {
   content: "";
@@ -4509,27 +4493,7 @@ h3.article-card__heading.h4.pb-6 {
   will-change: transform;
   transition: opacity .15s ease-in-out;
   position: absolute;
-  box-shadow: 0 0 0 1px;
-}
-p.copyright__content.text-size-small {
-    font-size: var(--text-size-body);
-}
-
-.spb-productoptionswatch {
-    width: 45px!Important;
-    height: 45px!Important;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px!Important;
-    border-radius: 100% !Important;
-    background-size: cover;
-    box-sizing: border-box;
-    cursor: pointer;
-    gap: calc(var(--spacing) * 1);
-}
-
-span.form__label-value {
-    font-family: 'Whyte Book';
+  box-shadow: 0 0 0 2px;
 }
 .swatch-color-rectangle {
   width: 2.8rem;
@@ -4549,6 +4513,9 @@ span.form__label-value {
   display: block;
   line-height: 1;
   box-sizing: content-box;
+}
+.variant-picker__color--siblings .swatch-image {
+  margin-inline-end: 0;
 }
 .swatch-image img {
   border-radius: inherit;
@@ -5054,7 +5021,7 @@ blockquote p {
 .gallery-grid__item-video {
   padding-top: var(--aspect-ratio);
 }
-.gallery-grid__item-video video, .gallery-grid__item-video .video-placeholder {
+.gallery-grid__item-video video, .gallery-grid__item-video .video-placeholder, .products-with-banner__item-video .video-placeholder {
   position: absolute;
   top: 0;
   left: 0;
@@ -5204,6 +5171,14 @@ blockquote p {
     grid-template-columns: repeat(auto-fill,minmax(var(--width-item),1fr));
     grid-auto-flow: column;
     grid-auto-columns: minmax(var(--width-item),1fr);
+  }
+  .flex-scroll-mobile {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    justify-content: flex-start;
   }
 }
 .top-header {
@@ -5440,13 +5415,21 @@ volume-pricing show-more-button {
 }
 .product-card-wrapper-bg {
   background-color: rgb(var(--color-background-card));
+  border-radius: var(--media-radius);
+}
+.product-card-wrapper-border {
+  border-radius: var(--media-radius);
+  outline: 1px solid rgb(var(--color-border));
+}
+.product-card-wrapper-border:not(.product-card-wrapper-bg) {
+  background-color: rgb(var(--color-background));
 }
 .product-card-wrapper-bg .responsive-image img, .product-card-wrapper-bg .card-product__media-inner {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 .card__content-bg {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .card-information .card__information-volume-pricing-note {
   margin-top: 0.6rem;
@@ -5542,6 +5525,10 @@ volume-pricing show-more-button {
   height: auto;
   box-shadow: none;
   border: none;
+}
+.variant-size-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 @media screen and (max-width: 767px) {
   .card-product__media-inner .quick-add .btn.product-card__variant-sizes-list {
@@ -5645,12 +5632,16 @@ volume-pricing show-more-button {
   letter-spacing: var(--font-card-title-spacing);
   text-transform: var(--font-card-title-transform);
   font-weight: var(--font-card-title-weight);
+  line-height: calc(1 + 0.35 / var(--font-card-title-scale));
 }
 .card__heading--rating {
   grid-template-columns: minmax(0, 1fr);
   align-items: baseline;
   display: grid;
   gap: 0.5rem;
+}
+.card__heading--rating .card__rating {
+  letter-spacing: 0;
 }
 .card__heading--rating.card__heading--center {
   grid-auto-flow: inherit;
@@ -5740,6 +5731,40 @@ volume-pricing show-more-button {
   z-index: 1;
   background: linear-gradient(to bottom right, transparent calc(50% - 1px), rgb(var(--color-border)) 50%, transparent calc(50% + 1px)) no-repeat;
   inset: 0;
+}
+.card-product-siblings__item .swatch-button-image {
+  position: relative;
+}
+.card-product-siblings__item .swatch-button-image.active {
+  border-color: rgb(var(--color-foreground));
+}
+.card-product-siblings__item .swatch-button-image.active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgb(var(--color-foreground));
+  inset: 0px;
+}
+.card-product-siblings__item .swatch-button-block {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgb(var(--color-border));
+  margin-inline-end: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.card-product-siblings__item .swatch-button-block:hover {
+  opacity: 1;
+}
+.card-product-siblings__item .swatch-button-block.active {
+  border-color: rgb(var(--color-foreground));
+  box-shadow: inset 0 0 0 1px rgb(var(--color-foreground));
+  opacity: 1;
 }
 .product-secondary-image {
   position: absolute;
@@ -5833,6 +5858,14 @@ volume-pricing show-more-button {
     transform: translate(-50%) scale(1);
   }
 }
+.article-card-border {
+  border-radius: var(--media-radius);
+  outline: 1px solid rgb(var(--color-border));
+  background-color: rgb(var(--color-background));
+}
+.article-card-border .article__content {
+  padding: 2rem 2rem 2.5rem 2rem;
+}
 .article-card__image {
   border-radius: var(--media-radius);
 }
@@ -5895,6 +5928,75 @@ volume-pricing show-more-button {
   height: 3.5rem;
   width: 100%;
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(var(--color-background)/ 1));
+}
+.cart-discount__pill .icon-tag {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cart-discount__pill .cart-discount__pill-remove .icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.cart-discount__pill {
+  background-color: rgba(var(--color-foreground)/0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--btn-border-radius);
+}
+.cart-discount__info + .cart-discount__error {
+  margin-top: -0.8rem;
+}
+.products-with-banner__item-border {
+  padding: 1px;
+}
+.table-striped th {
+  font-weight: inherit;
+}
+.table-striped tr:nth-child(odd) {
+  background-color: rgba(var(--color-foreground)/0.04);
+}
+.custom-checkbox {
+  --depth: 1;
+  --size-selector: .28rem;
+  cursor: pointer;
+  appearance: none;
+  vertical-align: middle;
+  color: rgb(var(--color-foreground));
+  box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * .1)) inset, 0 0 rgb(var(--color-foreground)) inset, 0 0 rgb(var(--color-foreground));
+  --size: calc(var(--size-selector, .25rem) * 6);
+  width: var(--size) !important;
+  height: var(--size) !important;
+  flex-shrink: 0;
+  padding: .25rem;
+  transition: background-color .2s, box-shadow .2s;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgb(var(--color-foreground));
+}
+.custom-checkbox:before {
+  --tw-content: "";
+  content: var(--tw-content);
+  opacity: 0;
+  clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px oklch(100% 0 0 / calc(var(--depth) * .1)) inset;
+  background-color: currentColor;
+  font-size: 1rem;
+  line-height: .75;
+  transition: clip-path .3s .1s, opacity .1s .1s, rotate .3s .1s, translate .3s .1s;
+  display: block;
+  rotate: 45deg;
+  transform: translateX(0px) translateY(-1px);
+}
+.custom-checkbox:checked, .custom-checkbox[aria-checked=true] {
+  box-shadow: 0 0 #0000 inset,0 8px 0 -9px oklch(100% 0 0/calc(var(--depth)*.1)) inset,0 1px oklch(0% 0 0/calc(var(--depth)*.1));
+}
+:is(.custom-checkbox:checked,.custom-checkbox[aria-checked=true]):before {
+  clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
+  opacity: 1;
+}
+.cart__terms-text > a {
+  display: inline;
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -6043,10 +6145,6 @@ volume-pricing show-more-button {
   syntax: "*";
   inherits: false;
 }
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -6090,647 +6188,9 @@ volume-pricing show-more-button {
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
-      --tw-ease: initial;
     }
   }
 }
-
-.hxl, .h0, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-
-    letter-spacing: 0.8px;}
-
-    .flex.items-center.gap-x-4.gap-y-2.justify-center.announcement-item.text-center {
-    font-family: 'Nantes';
-    font-style: italic;
-    letter-spacing: 0.3px !important;
-    text-transform: capitalize;
-}
-
-.header.hero-branding-active .header__logo {
-    opacity: 1;
-}
-.card__heading {
-    font-family: var(--font-card-title-family);
-    font-size: calc(var(--size-body) * var(--font-card-title-scale));
-    letter-spacing: var(--font-card-title-spacing);
-    text-transform: var(--font-card-title-transform);
-    font-weight: var(--font-card-title-weight);
-    line-height: 1.3;
-    text-transform: capitalize;
-    letter-spacing: 0.4px;
-}
-
-.price__regular .price-item--regular {
-    margin-inline-end: 0;
-    font-family: 'Whyte';
-    font-weight: normal;
-
-}
-
-.rte p {
-  
-    LETTER-SPACING: 0.6PX;
-}
-
-.block-content, p {
-
-    letter-spacing: 0.6px;
-}
-
-.header__menu-item>span.list-menu__item-text {
-    position: relative;
-    letter-spacing: 0.6px;
-    letter-spacing: 0.6px;
-    position: relative;
-    letter-spacing: .6px;
-    font-family: Whyte;
-    text-transform: var(--navigation_transform);
-    font-family: "Whyte";
-    letter-spacing: 0.6px;
-    font-size: var(--text-size-base);
-    letter-spacing: .6px;
-    font-weight: 300;
-}
-.header.header--transparent:not(:hover):not(.is-sticky) .header__heading-logo.header__heading-logo-light {
-    opacity: 1;
-    padding-left: 1.2rem;
-}
-tabs-component .indicator {
-    display: block !important;
-    position: absolute;
-    bottom: 9px!important;
-  height: 1px !important;
-}
-
-    .tab-scrollable__underline {
-    border-bottom: 0px solid rgba(var(--color-foreground) / .12)!important;
-}
-
-tabs-component .tab-button {
-LETTER-SPACING: .6PX;
-    font-size: var(--btn-font-size)!important;
-  }
-
-  a.header__icon.header__icon--account.link.focus-inset.small-hide {
-    display: none;
-}
-
-.header__icon .icon {
-    height: 2rem;
-    width: 2rem;}
-
-    a.full-unstyled-link.product-link {
-    font-family: 'Aman Medium Caption';
-}
-
-.price__regular .price-item--regular {
-    margin-inline-end: 0;
-      font-family: 'Whyte';
-    font-weight: 400;
-    font-size: calc(var(--size-body) * var(--font-card-title-scale));
-    LETTER-SPACING: 0.4PX;
-}
-
-.collection-list-tabs-text__item.active-tab .collection-list-tabs-text__heading {
-    transform: skew(-6deg) !important;
-    font-style: italic!important;
-}
-
-.sub-heading {
-    font-family: 'AubergeScriptBasicOne';
-    font-size: 3.2em;
-    letter-spacing: -0.2px;
-    text-transform: lowercase;
-    font-weight: var(--font-subheading-weight);
-    color: rgb(var(--color-heading));
-}
-
-.collection-hero__inner {
-
-    z-index: 2;
-  
-}
-
-@media (max-width: 1023px) {
-  .image-with-text__media-item.layer-image-1 {
-    padding-left: 12%;
-    position: relative;
-    padding-right: 12%;
-}}
-@media (max-width: 1023px) {
-    .image-with-text__text-item {
- 
-        max-width: 100%;
-    }}
-
-    .facets-container.facets-container-drawer {
-    padding-left: var(--fluid-offset, 24px);
-    padding-right: var(--fluid-offset, 24px);
-}
-
-.collection-hero__title+.collection-hero__description h2 {
-    margin-top: 2rem;
-    margin-bottom: 2.5rem;
-    font-size: var(--text-size-h5) !important;
-    font-style: italic;
-}
-
-.link {
-      font-family: 'Whyte Book';
-          letter-spacing: .6px;
-}
-
-.facets-container.facets-container-drawer {
-    padding-left: var(--fluid-offset, 24px);
-    padding-right: var(--fluid-offset, 24px);
-    letter-spacing: .6px !important;
-    font-family: 'Whyte Book'!important;
-        padding-left: var(--fluid-offset, 24px);
-    padding-right: var(--fluid-offset, 24px);
-    letter-spacing: .6px !important;
-    max-width: var(--container-max-width);
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-}
-
-.product-count__text {
-
-    line-height: calc(1 + .5 / var(--font-body-scale));
-    margin: 0;
-    font-size: var(--text-size-base)!important;
-        letter-spacing: .6px!important;
-    font-family: 'Whyte Book'!important;
-}
-
-.facet-filters__field .select__select, .mobile-facets__sort .select__select {
-     font-size: var(--text-size-base)!important;
-        letter-spacing: .6px!important;
-    font-family: 'Whyte Book'!important;
-}
-
-.facet-filters__field .select {
-       font-size: var(--text-size-base)!important;
-        letter-spacing: .6px!important;
-    font-family: 'Whyte Book'!important;
-}
-
-ul.list-unstyled.flex.gap-x-12.gap-y-4.flex-wrap.justify-start {
-    font-size: var(--text-size-base) !important;
-    letter-spacing: .6px !important;
-    /* font-family: 'Whyte Book' !important; */
-}
-
-
-a.full-unstyled-link.product-link {
-    font-family: 'Whyte';
-    font-weight: 300;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-        font-size: var(--text-size-base) !important;
-        margin-bottom: 10px;
-
-}
-.price__regular .price-item--regular {
-    margin-inline-end: 0;
-    /* font-family: Whyte; */
-    /* font-weight: 400; */
-    font-size: var(--text-size-base) !important;
-    /* LETTER-SPACING: .4PX; */
-    font-family: 'Whyte';
-    font-weight: 300;
-
-    text-transform: uppercase;
-}
-
-.card__heading {
-
-}
-
-h4.h5 {
-    font-family: 'Whyte';
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: var(--text-size-base) !important;
-    font-family: 'Whyte Book';
-}
-
-.facets__summary .facets__summary-label {
-    display: flex
-;
-    align-items: center;
-    column-gap: 1rem;
-    /* font-weight: var(--block-bold-heading); */
-    letter-spacing: 1px;
-    text-transform: capitalize !important;
-    font-size: var(--text-size-base) !important;
-    font-family: 'Whyte Book';
-}
-
-.facets__summary {
-    color: rgba(var(--color-foreground) / 1);
-    padding-block: 2.5rem;}
-
-    .price .price__from,
-.price__container .price-item {
-  text-transform: capitalize;
-}
-
-nav.flex.justify-start.product__breadcrumb {
-    LETTER-SPACING: .6PX;
-}
-
-#infiniteoptions-container div > label, #infiniteoptions-container .spb-label-tooltip {
-    margin-bottom: 3px;
-    font-size: 13px !important;
-    letter-spacing: 0.6px !important;
-}
-
-.btn-primary, .shopify-challenge__button {
-  text-transform: none;
-}
-
-@media screen and (min-width: 990px) {
-
-
-.section-product-information-tabs.section-padding.section-bg {
-    padding-left: 8rem;
-    padding-right: 12rem;
-
-  }}
-@media screen and (min-width: 990px) {
-  .tabs-component .tabs-content>.tab-content {
-   display: none;
-    padding: 2rem 0;
-    
-    animation: var(--animation-fade-in);
-}}
-
-
-.product__media-icon, .thumbnail__badge {
-  border: 0px !important;
-}
-
-span.inline-richtext em strong {
-    font-family: 'AubergeScriptBasicOne';
-    font-style: normal;
-       line-height: 1.2;
-    font-size: xx-large;
-}
-
-span.inline-richtext {
-    line-height: 1.2;
-}
-
-
-.product__info-container .product-form, .product__info-container .product__description, .product__info-container .icon-with-text {
-    margin: 2.5rem 0;
-    letter-spacing: 0.6px;
-}
-
-.text-body {
-  letter-spacing: 0.6px;
-}
-
-.mega-menu__link--level-2 {
-    /* font-weight: 400; */
-  font-size: 1em!important;
-    text-transform: capitalize!important;
-    text-decoration: none;
-    letter-spacing: 0.6px!important;
-    padding-top: 0;
-    padding-bottom: 1.2rem!important;
-    color: rgb(98 33 40)!important;
-    font-family: 'Whyte Book'!important;
-}
-
-.mega-menu__link {
-   letter-spacing: 0.6px!important;
-}
-
-h1.h1.text-center {
-    font-size: var(--text-size-h4);
-    text-transform: capitalize;
-}
-span.swatch-block__value {
-    letter-spacing: .6px;
-}
-
-.info-in-media {
-      font-size: var(--text-size-small);
-   letter-spacing: .3px;
-     font-family: 'Whyte Book';
-}
-@media screen and (max-width: 749px) {
-
-.announcement-wrapper.section-bg.overflow-hidden.scroll-trigger.animate--fade-in {
-  font-size: 9px;
-}}
-
-@media screen and (max-width: 768px) {
-    .w-full:not(.w-full_quickview) .thumbnail-carousel {
-        padding-inline-start: 0px;
-    }
-}
-h1.product__title.h4 {
-    font-size: var(--text-size-h5);
-}
-
-.header__icon span {
-    height: 100%;
-    margin-top: 2px;
-    font-family: none;
-}
-
-span.drawer-filter-mobile.inline-flex.gap-x-4.lg\:hidden .btn-outline {
-    border: 0px;
-}
-
-span.mobile-facets__heading {
-    font-size: 1.5rem;
-    letter-spacing: .6px !important;
-}
-
-.product-count__text {
-    font-size: 1.4rem;
-    line-height: calc(1 + .5 / var(--font-body-scale));
-    margin: 0;
-    margin-top: 10px;
-}
-
-.product-form__input .form__label {
-    padding-inline-start: 0;
-    letter-spacing: 0.6px;
-}
-
-header.header.header--middle-center.header--mobile-center.header--has-menu.header--has-social.header--has-account.header-wrapper--border-bottom.is-sticky {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-header.header.header--middle-center.header--mobile-center.header--has-menu.header--has-social.header--has-account.header-wrapper--border-bottom.is-sticky {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-    transition: all .5s ease;
-}
-
-.free-shipping__info-eligibility {
-    font-family: Whyte;
-    font-weight: 300;
-    letter-spacing: .5px;
-    /* text-transform: uppercase; */
-    font-size: var(--text-size-base) !important;
-}
-
-@media (min-width: 1024px) {
-    .collection-list-tabs-images__item .collection-list-tabs-images__image--background {
-        width: calc(37vw) !important;
-    }
-}
-
-.cart-drawer .cart-item__details .product-option {
-    /* font-size: var(--text-size-tiny); */
-    opacity: .7;
-    text-transform: capitalize;
-    font-family: Whyte;
-    font-weight: 300;
-    letter-spacing: .7px;
-    font-size: var(--text-size-base) !important;
-}
-
-.product-option.mt-1 {
-      text-transform: capitalize;
-    font-family: Whyte;
-    font-weight: 300;
-    letter-spacing: .7px;
-    font-size: var(--text-size-base) !important;
-}
-@media (min-width: 1024px) {
-.header__icons {
-
-    -moz-column-gap: .5rem;
-    column-gap: 2rem;
-}}
-
-.cart-drawer .cart-item__totals {
-      text-transform: capitalize;
-    font-family: 'Whyte';
-    font-weight: 300;
-    letter-spacing: .7px;
-    font-size: var(--text-size-base) !important;
-}
-
-.cart__ctas button {
-    width: 100%;
-    font-family: 'Whyte';
-    font-weight: 500;
-    text-transform: capitalize;
-}
-
-span.h6 {
-    font-size: 141%;
-}
-
-div#complementary-products--heading {
-      font-size: 141%;
-          text-transform: capitalize;
-}
-
-.cart-item__name {
-    font-family: 'Whyte'!important;
-    font-weight: 300!important;
-    letter-spacing: .7px!important;
-    font-size: var(--text-size-base) !important;
-}
-
-.totals__total-value {
-    font-size: 1.6rem !important;
-}
-
-#infiniteoptions-container div > label, #infiniteoptions-container .spb-label-tooltip {
-    margin-bottom: 3px;
-    /* font-size: 13px !important; */
-    font-size: var(--text-size-base) !important;
-    LETTER-SPACING: .6PX !important;
-}
-
-.link {
-    font-family: Whyte Book;
-    letter-spacing: .6px;
-    font-size: var(--text-size-base);
-}
-
-.testimonials__quote-text.body-1 {
-    font-family: 'Whyte Book';
-}
-
-@media screen and (min-width: 768px) {
-    .footer-block collapsible-details>details>summary {
-        cursor: none;
-        pointer-events: none;
-            letter-spacing: .6px;
-        font-family: 'Whyte Book';
-    }
-}
-
-.testimonials__quote-text.body-1 {
-    letter-spacing: .8px;
-    font-family: var(--font-heading-family);
-    font-style: var(--font-heading-style);
-    font-weight: var(--font-heading-weight);
-    /* letter-spacing: var(--font-heading-spacing); */
-    word-break: break-word;
-    text-transform: var(--font-heading-transform);
-    font-size: 1.4em;
-}
-
-.testimonials__quote-position.text-size-small {
-    font-style: italic;
-        letter-spacing: .8px;
-    font-family: var(--font-heading-family);
-   
-    font-weight: var(--font-heading-weight);
-    /* letter-spacing: var(--font-heading-spacing); */
-    word-break: break-word;
-    text-transform: var(--font-heading-transform);
-        font-size: var(--text-size-large);
-}
-
-.list-menu__has-mega:focus-within .mega-menu__content, h6 {
-    --text-size-h6: calc(var(--font-heading-scale) * var(--size-h6) * 0.8);
-    opacity: 1 !important;
-}
-
-
-.absolute.inset-0.flex.items-end.justify-end.text-end.p-12 .sub-heading {
-  --text-size-h6: calc(var(--font-heading-scale) * var(--size-h6) * 0.8);
-}
-
-.js .menu-drawer__menu-item {
-    transition: transform var(--duration-medium) var(--ease-out-slow), opacity var(--duration-medium) var(--ease-out-slow);
-    font-size: var(--text-size-h6);
-    font-family: var(--font-heading-family);
-    letter-spacing: .8px;
-}
-
-.menu-drawer__inner-submenu .menu-drawer__menu .menu-drawer__menu-item {
-    font-size: calc(var(--text-size-base) * var(--navigation-scale-sub-mobile));
-    font-size: var(--text-size-h6);
-    letter-spacing: .8px;
-    font-family: var(--font-heading-family);
-       font-size: var(--text-size-h6);
-    font-family: var(--font-heading-family);
-    letter-spacing: .8px;
-
-}
-@media screen and (min-width: 768px) {
-ul.mega-menu__list.gap-x-16.gap-y-10.grid.grid-cols-5.mega-menu__list--condensed {
-    display: none;
-}}
-@media screen and (max-width: 500px) {
-.section-text-with-icons.isolate.section-padding.section-bg.overflow-hidden.lg\:overflow-visible 
-
-.flex-row {
-    flex-direction: column;
-
-}}
-
-.price__regular .price-item--regular {
-    margin-inline-end: 0;
-    font-size: var(--text-size-base) !important;
-    font-family: 'Whyte Book';
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.announcement-wrapper.section-bg.overflow-hidden.scroll-trigger.animate--fade-in {
-    LETTER-SPACING: .6PX;
-}
-
-.badge {
-    border-radius: 0;
-    display: inline-block;
-    font-size: 3.4rem;
-    letter-spacing: 0;
-    line-height: normal;
-    background: transparent !important;
-    padding: .4rem 1rem;
-    text-align: center;
-    word-break: break-word;
-    text-transform: var(--badge-text-transform);
-    font-family: 'AubergeScriptBasicOne';
-    text-transform: lowercase;
-    color: #76232f !important;
-}
-
-.section-collection-products-grid.section-padding.section-bg span.price-item.price-item--regular {
-    font-family: 'Whyte';
-    font-weight: 300;
-}
-@media screen and (max-width: 749px) {
-.product-count {
-  display: none; 
-}
-}
-@media screen and (max-width: 749px) {
-.product__media-icon, .thumbnail__badge {
-display: none !important;
-}}
-
-@media screen and (min-width: 1070px) {
-    .header__heading-logo {
-        width: var(--logo-width_desktop);
-        padding-left: 1.2rem;
-    }
-}
-
-.list-menu__children .list-menu__item {
-    padding: 1rem 0rem;
-    color: rgb(var(--color-header-text));
-    transition: color var(--duration-medium) ease;
-    display: inline-block;
-    letter-spacing: .6px;
-}
-
-.accordion__title {
-
-    LETTER-SPACING: .6PX!important;
-
-    font-size: var(--btn-font-size)!important;
-}
-
-@media screen and (min-width: 768px) {
-    .footer-block collapsible-details>details>summary {
-        cursor: none;
-        pointer-events: none;
-        margin-bottom: 30px;
-    }
-}
-
-.footer-block__heading.h5 {
-    font-size: var(--text-size-h6);
-}
-
-a.ms-4.me-4.text-size-small.focus-inset {
-    margin-inline-start: 0px;
-}
-
-label.cl-upload--label {
-    color: #622128 !important;
-    font-size: 10px !important;
-    order: -1;
-    margin-bottom: .5rem;
-    width: 100%;
-    text-align: start;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-}
-
 @font-face {
   font-family: "ABCWhyte-Book";
   src: url("https://cdn.shopify.com/s/files/1/0021/7474/6681/files/ABCWhyte-Book.woff2?v=1725814600")

@@ -13,14 +13,20 @@
         },
         "separator_8PakT6": {
           "type": "separator",
-          "settings": { "show_border": false, "space": 4 }
+          "settings": {
+            "show_border": false,
+            "space": 4
+          }
         }
       },
-      "block_order": ["heading_kWRydM", "separator_8PakT6"],
+      "block_order": [
+        "heading_kWRydM",
+        "separator_8PakT6"
+      ],
       "name": "Image with text overlay",
       "settings": {
         "section_width": "w-full",
-        "image": "shopify://shop_images/bespoke-starling-rings.png",
+        "image": "shopify:\/\/shop_images\/bespoke-starling-rings.png",
         "link": "",
         "desktop_height_mode": "fixed",
         "desktop_fixed_height": 650,
@@ -80,7 +86,7 @@
         "image_nAQpp8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/face-wine_1_85f2bab1-5685-4e03-9db7-34bf7ef7018b.png",
+            "image": "shopify:\/\/shop_images\/face-wine_1_85f2bab1-5685-4e03-9db7-34bf7ef7018b.png",
             "image_width": 110,
             "image_width_mobile": 70,
             "url": ""
@@ -88,17 +94,26 @@
         },
         "separator_RC3VUh": {
           "type": "separator",
-          "settings": { "show_border": false, "space": 8 }
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
         },
         "heading_U9AXym": {
           "type": "heading",
           "disabled": true,
-          "settings": { "heading": "Founder's Note", "heading_size": "h5" }
+          "settings": {
+            "heading": "Founder's Note",
+            "heading_size": "h5"
+          }
         },
         "separator_EjEUpj": {
           "type": "separator",
           "disabled": true,
-          "settings": { "show_border": false, "space": 8 }
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
         },
         "button_Vij846": {
           "type": "button",
@@ -154,14 +169,14 @@
         "media_e998dD": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/STARLING-0113_9824cc14-3238-44f0-950d-b320c2d506cb.jpg",
+            "image": "shopify:\/\/shop_images\/STARLING-0113_9824cc14-3238-44f0-950d-b320c2d506cb.jpg",
             "active_video": false,
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
             "text": "",
             "button_label": "Bespoke Designs",
-            "button_link": "https://www.starlingjewelry.com/pages/bespoke",
+            "button_link": "https:\/\/www.starlingjewelry.com\/pages\/bespoke",
             "button_type": "underlined-white",
             "show_icon": false,
             "column": 1,
@@ -180,14 +195,14 @@
         "media_EYXdcF": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/STARLING-0451.jpg",
+            "image": "shopify:\/\/shop_images\/STARLING-0451.jpg",
             "active_video": false,
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
             "text": "",
             "button_label": "Heirloom Revival",
-            "button_link": "https://www.starlingjewelry.com/pages/heirloom-revival-inquiry",
+            "button_link": "https:\/\/www.starlingjewelry.com\/pages\/heirloom-revival-inquiry",
             "button_type": "underlined-white",
             "show_icon": false,
             "column": 1,
@@ -206,14 +221,14 @@
         "media_cXWit3": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/download_6.png",
+            "image": "shopify:\/\/shop_images\/download_6.png",
             "active_video": false,
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
             "text": "",
             "button_label": "Bespoke Gems",
-            "button_link": "https://www.starlingjewelry.com/collections/bespoke-gems",
+            "button_link": "https:\/\/www.starlingjewelry.com\/collections\/bespoke-gems",
             "button_type": "underlined",
             "show_icon": false,
             "column": 1,
@@ -232,14 +247,14 @@
         "media_pJLXAi": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/STARLING-9119.jpg",
+            "image": "shopify:\/\/shop_images\/STARLING-9119.jpg",
             "active_video": false,
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
             "text": "",
             "button_label": "Our Story",
-            "button_link": "https://www.starlingjewelry.com/pages/our-story",
+            "button_link": "https:\/\/www.starlingjewelry.com\/pages\/our-story",
             "button_type": "underlined-white",
             "show_icon": false,
             "column": 1,
@@ -258,14 +273,14 @@
         "media_yK9B6D": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/download_9.png",
+            "image": "shopify:\/\/shop_images\/download_9.png",
             "active_video": false,
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
             "text": "",
             "button_label": "Studio Appointments",
-            "button_link": "shopify://pages/studio-appointments",
+            "button_link": "shopify:\/\/pages\/studio-appointments",
             "button_type": "underlined-white",
             "show_icon": false,
             "column": 1,
@@ -324,7 +339,7 @@
             "subheading": "",
             "heading": "The Birth of the Brand",
             "heading_size": "h2",
-            "content": "<p>The fashion brand was founded with a mission to bring a fresh perspective to the industry, blending creativity with practicality. From the very beginning, we set out to define trends and craft designs that carry a unique identity.</p>",
+            "content": "<p>The fashion brand was founded with a mission to bring a fresh perspective to the industry, blending creativity with practicality. From the very beginning, we set out to define trends and craft designs that carry a unique identity.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -340,7 +355,7 @@
             "subheading": "",
             "heading": "Launch of the First Collection",
             "heading_size": "h2",
-            "content": "<p>After five years of development, the first collection was officially introduced, marking a significant milestone in the brand’s journey. With its distinctive style and premium materials, the collection quickly gained recognition and admiration from fashion enthusiasts.</p>",
+            "content": "<p>After five years of development, the first collection was officially introduced, marking a significant milestone in the brand’s journey. With its distinctive style and premium materials, the collection quickly gained recognition and admiration from fashion enthusiasts.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -356,7 +371,7 @@
             "subheading": "",
             "heading": "Opening of the First Flagship Store",
             "heading_size": "h2",
-            "content": "<p>To meet the growing demand from customers, the brand opened its first flagship store in [location]. More than just a retail space, the store became a destination for fashion lovers to explore the latest designs and immerse themselves in a modern lifestyle experience.</p>",
+            "content": "<p>To meet the growing demand from customers, the brand opened its first flagship store in [location]. More than just a retail space, the store became a destination for fashion lovers to explore the latest designs and immerse themselves in a modern lifestyle experience.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -372,7 +387,7 @@
             "subheading": "",
             "heading": "Strategic Collaborations & Market Expansion",
             "heading_size": "h2",
-            "content": "<p>Entering a phase of strong growth, the brand began collaborating with artists, influencers, and participating in major fashion events. At the same time, we expanded into international markets, bringing our designs to a global audience.</p>",
+            "content": "<p>Entering a phase of strong growth, the brand began collaborating with artists, influencers, and participating in major fashion events. At the same time, we expanded into international markets, bringing our designs to a global audience.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -388,7 +403,7 @@
             "subheading": "",
             "heading": "Sustainability & Innovation",
             "heading_size": "h2",
-            "content": "<p>Adapting to global trends, the brand embraced sustainability by utilizing eco-friendly materials and integrating advanced technology into the production process. This marked a crucial step in ensuring long-term growth and solidifying our position in the fashion industry.</p>",
+            "content": "<p>Adapting to global trends, the brand embraced sustainability by utilizing eco-friendly materials and integrating advanced technology into the production process. This marked a crucial step in ensuring long-term growth and solidifying our position in the fashion industry.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -471,7 +486,7 @@
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
-            "text": "<h4>Xstreet Brand</h4><p>We design and develop lifestyle apparel that empowers you to explore and interact with the world around you.<br/></p><h4>Personal Expression</h4><p>Quality: Uncompromising standards in material selection</p><p>Innovation: Continuous exploration of design possibilities</p><p>Authenticity: Transparent and genuine approach to jewelry creation<br/></p>",
+            "text": "<h4>Xstreet Brand<\/h4><p>We design and develop lifestyle apparel that empowers you to explore and interact with the world around you.<br\/><\/p><h4>Personal Expression<\/h4><p>Quality: Uncompromising standards in material selection<\/p><p>Innovation: Continuous exploration of design possibilities<\/p><p>Authenticity: Transparent and genuine approach to jewelry creation<br\/><\/p>",
             "vertical_alignment": "center",
             "text_alignment": "start",
             "button_label": "",
@@ -491,7 +506,11 @@
           }
         }
       },
-      "block_order": ["text_PriQJq", "image_7BCmDR", "text_9xeDXJ"],
+      "block_order": [
+        "text_PriQJq",
+        "image_7BCmDR",
+        "text_9xeDXJ"
+      ],
       "disabled": true,
       "settings": {
         "section_width": "container",
@@ -500,8 +519,6 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-        "column_gap": "24",
-        "row_gap": "24",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -526,7 +543,11 @@
         },
         "text_HeNfji": {
           "type": "text",
-          "settings": { "text": "✦", "link": "", "outline_text": true }
+          "settings": {
+            "text": "✦",
+            "link": "",
+            "outline_text": true
+          }
         },
         "text_7YTydW": {
           "type": "text",
@@ -538,7 +559,11 @@
         },
         "text_Pa9rUR": {
           "type": "text",
-          "settings": { "text": "✦", "link": "", "outline_text": true }
+          "settings": {
+            "text": "✦",
+            "link": "",
+            "outline_text": true
+          }
         },
         "text_KhQFeE": {
           "type": "text",
@@ -550,7 +575,11 @@
         },
         "text_rjH7F8": {
           "type": "text",
-          "settings": { "text": "✦", "link": "", "outline_text": true }
+          "settings": {
+            "text": "✦",
+            "link": "",
+            "outline_text": true
+          }
         }
       },
       "block_order": [
@@ -588,12 +617,18 @@
         "separator_wFdMC8": {
           "type": "separator",
           "disabled": true,
-          "settings": { "show_border": false, "space": 8 }
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
         },
         "separator_qtkf6B": {
           "type": "separator",
           "disabled": true,
-          "settings": { "show_border": false, "space": 8 }
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
         },
         "button_knerkt": {
           "type": "button",
@@ -606,7 +641,11 @@
           }
         }
       },
-      "block_order": ["separator_wFdMC8", "separator_qtkf6B", "button_knerkt"],
+      "block_order": [
+        "separator_wFdMC8",
+        "separator_qtkf6B",
+        "button_knerkt"
+      ],
       "name": "Rich text",
       "settings": {
         "section_width": "w-full",
@@ -629,7 +668,7 @@
         "gallery_NTknMj": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/download_10.png",
+            "image": "shopify:\/\/shop_images\/download_10.png",
             "text": "@Sam",
             "link": ""
           }
@@ -637,7 +676,7 @@
         "gallery_mEprQQ": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/IMG_3672.webp",
+            "image": "shopify:\/\/shop_images\/IMG_3672.webp",
             "text": "@Orange",
             "link": ""
           }
@@ -645,7 +684,7 @@
         "gallery_KJXpFa": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/STARLING-0113.jpg",
+            "image": "shopify:\/\/shop_images\/STARLING-0113.jpg",
             "text": "@pinklio",
             "link": ""
           }
@@ -653,7 +692,7 @@
         "gallery_yjVhcD": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/scattered-cloud-huggies-1.jpg",
+            "image": "shopify:\/\/shop_images\/scattered-cloud-huggies-1.jpg",
             "text": "@Splash",
             "link": ""
           }
@@ -661,7 +700,7 @@
         "gallery_aWy8dL": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/BEZEL_a047008d-f768-4ec7-93e3-ed8298c5c01d.jpg",
+            "image": "shopify:\/\/shop_images\/BEZEL_a047008d-f768-4ec7-93e3-ed8298c5c01d.jpg",
             "text": "@Paml",
             "link": ""
           }
@@ -669,7 +708,7 @@
         "gallery_qBwYNz": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/527532818_18516511225062086_4014960535908167766_n.jpg",
+            "image": "shopify:\/\/shop_images\/527532818_18516511225062086_4014960535908167766_n.jpg",
             "text": "@OneTi",
             "link": ""
           }
@@ -677,7 +716,7 @@
         "gallery_iefXFB": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/STARLING-0231.jpg",
+            "image": "shopify:\/\/shop_images\/STARLING-0231.jpg",
             "text": "@Blind",
             "link": ""
           }
@@ -685,7 +724,7 @@
         "gallery_iHbncm": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/Starling_03272025-8443_1.jpg",
+            "image": "shopify:\/\/shop_images\/Starling_03272025-8443_1.jpg",
             "text": "@Coco",
             "link": ""
           }
@@ -693,7 +732,7 @@
         "gallery_RwQr98": {
           "type": "gallery",
           "settings": {
-            "image": "shopify://shop_images/Toi_et_Moi_Round_and_Radiant_Diamond_Ring_1.webp",
+            "image": "shopify:\/\/shop_images\/Toi_et_Moi_Round_and_Radiant_Diamond_Ring_1.webp",
             "text": "@Ice",
             "link": ""
           }
@@ -748,7 +787,7 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/ribg.png",
+            "image": "shopify:\/\/shop_images\/ribg.png",
             "image_width": 60,
             "image_width_mobile": 60,
             "url": ""
@@ -779,18 +818,24 @@
         },
         "separator_bimCta": {
           "type": "separator",
-          "settings": { "show_border": false, "space": 20 }
+          "settings": {
+            "show_border": false,
+            "space": 20
+          }
         },
         "text_etRG8B": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether refining one of our signature designs or envisioning an entirely new creation, we guide you through each stage of the journey. From the first sketch to the careful sourcing of stones and the final hand-crafted details in our workshop, every step is overseen with artistry and expertise—ensuring your bespoke jewel becomes a treasured heirloom for generations to come.</p><p>Each piece is designed to be versatile, durable, and bold — made to layer, mix, and express who you are without saying a word. We don’t just make clothes — we create a canvas for your individuality.</p>",
+            "text": "<p>Whether refining one of our signature designs or envisioning an entirely new creation, we guide you through each stage of the journey. From the first sketch to the careful sourcing of stones and the final hand-crafted details in our workshop, every step is overseen with artistry and expertise—ensuring your bespoke jewel becomes a treasured heirloom for generations to come.<\/p><p>Each piece is designed to be versatile, durable, and bold — made to layer, mix, and express who you are without saying a word. We don’t just make clothes — we create a canvas for your individuality.<\/p>",
             "large_text": true
           }
         },
         "separator_Bf8KtB": {
           "type": "separator",
-          "settings": { "show_border": false, "space": 48 }
+          "settings": {
+            "show_border": false,
+            "space": 48
+          }
         },
         "button_RKpfWx": {
           "type": "button",
@@ -814,14 +859,14 @@
       ],
       "settings": {
         "section_width": "w-full",
-        "image": "shopify://shop_images/about-page-founder.jpg",
+        "image": "shopify:\/\/shop_images\/about-page-founder.jpg",
         "media_size": "adapt",
         "show_image_2": false,
         "position_image_2": "bottom-right",
         "media_size_2": "square",
         "desktop_image_width": "50",
         "active_video": false,
-        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
         "video_controls": true,
         "layout": "left",
@@ -848,7 +893,7 @@
           "settings": {
             "icon": "return",
             "title": "Thoughtful Returns",
-            "text": "<p>To thank you for embracing this circular practice, we’ll gift you 20% off your next purchase.</p>",
+            "text": "<p>To thank you for embracing this circular practice, we’ll gift you 20% off your next purchase.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -858,7 +903,7 @@
           "settings": {
             "icon": "check_circle",
             "title": "Repair Services",
-            "text": "<p>Online and in-store repair options. Re-Worn popup repair locations</p>",
+            "text": "<p>Online and in-store repair options. Re-Worn popup repair locations<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -868,7 +913,7 @@
           "settings": {
             "icon": "recycle",
             "title": "Recycle Program",
-            "text": "<p>Transforming Jewelry's Environmental Legacy. 100% traceable material sourcing</p>",
+            "text": "<p>Transforming Jewelry's Environmental Legacy. 100% traceable material sourcing<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -878,7 +923,7 @@
           "settings": {
             "icon": "box",
             "title": "Product Communication",
-            "text": "<p>Detailed product descriptions, Style and availability insights.</p>",
+            "text": "<p>Detailed product descriptions, Style and availability insights.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -926,19 +971,35 @@
       "blocks": {
         "featured_collection_xNDwmL": {
           "type": "featured_collection",
-          "settings": { "collection": "tees", "title": "", "url": "" }
+          "settings": {
+            "collection": "tees",
+            "title": "",
+            "url": ""
+          }
         },
         "featured_collection_tqraMf": {
           "type": "featured_collection",
-          "settings": { "collection": "shorts", "title": "", "url": "" }
+          "settings": {
+            "collection": "shorts",
+            "title": "",
+            "url": ""
+          }
         },
         "featured_collection_pq87q7": {
           "type": "featured_collection",
-          "settings": { "collection": "footwear", "title": "", "url": "" }
+          "settings": {
+            "collection": "footwear",
+            "title": "",
+            "url": ""
+          }
         },
         "featured_collection_mjK8La": {
           "type": "featured_collection",
-          "settings": { "collection": "accessories", "title": "", "url": "" }
+          "settings": {
+            "collection": "accessories",
+            "title": "",
+            "url": ""
+          }
         }
       },
       "block_order": [
@@ -953,7 +1014,7 @@
         "subheading": "",
         "heading": "Our Collection",
         "heading_size_section": "h2",
-        "description": "<p>Shine with sophisticated, luxurious, and captivating designs — perfect for every moment.</p>",
+        "description": "<p>Shine with sophisticated, luxurious, and captivating designs — perfect for every moment.<\/p>",
         "layout": "horizontal",
         "link_url": "",
         "link_text": "View all",
@@ -1016,7 +1077,7 @@
             "subheading": "",
             "heading": "Mixed Metal Jewellery",
             "heading_size": "h2",
-            "text": "<p>Discover our collection of mixed metal jewellery, made by combining 18ct recycled gold plated and gold plated vermeil and sterling silver.</p>",
+            "text": "<p>Discover our collection of mixed metal jewellery, made by combining 18ct recycled gold plated and gold plated vermeil and sterling silver.<\/p>",
             "vertical_alignment": "end",
             "text_alignment": "start",
             "button_label": "",
@@ -1042,7 +1103,7 @@
             "subheading": "",
             "heading": "Mixed Textures",
             "heading_size": "h3",
-            "text": "<p>Discover our collection of urban essentials made by blending contrasting fabrics, bold silhouettes, and unexpected details — where street meets statement.</p>",
+            "text": "<p>Discover our collection of urban essentials made by blending contrasting fabrics, bold silhouettes, and unexpected details — where street meets statement.<\/p>",
             "vertical_alignment": "end",
             "text_alignment": "start",
             "button_label": "Shop now",
@@ -1097,8 +1158,6 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-        "column_gap": "24",
-        "row_gap": "32",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -1123,10 +1182,13 @@
         "paragraph_bgEXNE": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers. Subscribe to receive all our updates and offers, and get 10% off your first purchase.</p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers. Subscribe to receive all our updates and offers, and get 10% off your first purchase.<\/p>"
           }
         },
-        "email_form_aCBEq3": { "type": "email_form", "settings": {} }
+        "email_form_aCBEq3": {
+          "type": "email_form",
+          "settings": {}
+        }
       },
       "block_order": [
         "heading_V6EfXH",

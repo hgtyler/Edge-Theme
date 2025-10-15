@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Máte nárok na bezplatnú dopravu."
-      }
+      },
+      "terms_checkbox": "Súhlasím s podmienkami dopravy",
+      "terms_checkbox_html": "Súhlasím s <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">podmienkami dopravy<\/a>",
+      "terms_checkbox_notify": "Súhlasím s podmienkami dopravy",
+      "discounts": "Zľavy",
+      "discount_code": "Kód zľavy",
+      "discount_code_error": "Kód zľavy nie je možné použiť",
+      "shipping_discount_error": "Zľavy na dopravu sú zobrazené po pridaní adresy",
+      "discount_apply": "Použiť",
+      "discount_applied": "Použitý kód zľavy: {{ code }}",
+      "remove_discount": "Odstrániť kód zľavy: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Domov",

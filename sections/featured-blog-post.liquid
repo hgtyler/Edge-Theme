@@ -13,7 +13,9 @@
   assign show_excerpt = section.settings.show_excerpt
   assign show_category = section.settings.show_category
   assign post_button_type = section.settings.post_button_type
+  assign post_button_icon = section.settings.post_button_icon
   assign read_more = 'blogs.article.read_more' | t
+  assign badge_style = settings.badge_style
 
   assign media_width = 'basis-1/2'
   
@@ -78,7 +80,7 @@
             {%- if article and article != empty -%}
             <div class="featured-blog-post-card">
               {%- if show_category and article.tags.size > 0 -%}
-                <span class="badge badge-article badge-article__spotlight">{{ article.tags | first }}</span>
+                <span class="badge badge-article badge-article__spotlight {% if badge_style == 'rotate' %} badge-rotate {% endif %}">{{ article.tags | first }}</span>
               {%- endif -%}
               <div class="featured-blog-post-card__info light text-size-small pt-6 pb-6">
                 {%- if show_date -%}
@@ -105,13 +107,13 @@
                 {%- endif -%}
               {%- endif -%}
               {%- if show_read_more -%}
-                {%- render 'button', button_style: post_button_type , button_text: read_more, button_url:  article.url  , button_type: 'link' -%}
+                {%- render 'button', button_style: post_button_type , button_text: read_more, button_url:  article.url  , button_type: 'link', show_icon: post_button_icon -%}
               {%- endif -%}
             </div>
             {%- else -%}
               <div class="featured-blog-post-card">
                 {%- if show_category -%}
-                  <span class="badge badge-article badge-article__spotlight">First tag</span>
+                  <span class="badge badge-article badge-article__spotlight {% if badge_style == 'rotate' %} badge-rotate {% endif %}">First tag</span>
                 {%- endif -%}
                 <div class="featured-blog-post-card__info light text-size-small pt-6 pb-6">
                   {%- if show_date -%}
@@ -293,6 +295,12 @@
         { "group": "Accent color","value": "secondary","label": "Secondary" }
       ],
       "default": "outline"
+    },
+    {
+      "type": "checkbox",
+      "id": "post_button_icon",
+      "label": "Show arrow icon",
+      "default": false
     },
     {
       "type": "select",
@@ -584,7 +592,8 @@
   ],
   "presets": [
     {
-      "name": "Featured blog post"
+      "name": "Featured blog post",
+      "category": "Blog"
     }
   ]
 }

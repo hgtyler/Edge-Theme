@@ -48,22 +48,18 @@ class HeroBranding extends HTMLElement {
     return parseFloat(value);
   }
 
-calculateAutoScaleStart() {
-  const viewportWidth = window.innerWidth;
-  const logoWidth = this.logo.offsetWidth || 100;
-
-  const isMobile = viewportWidth <= 768;
-  const maxRatio = isMobile ? 0.8 : 0.5;
-  const maxAllowedWidth = viewportWidth * maxRatio;
-
-  let scale = maxAllowedWidth / logoWidth;
-
-  // reduce scale by 50%
-  scale = scale * 0.5;
-
-  return Math.round(scale * 1000) / 1000; 
-}
-
+  calculateAutoScaleStart() {
+    const viewportWidth = window.innerWidth;
+    const logoWidth = this.logo.offsetWidth || 100;
+  
+    const isMobile = viewportWidth <= 768;
+    const maxRatio = isMobile ? 0.8 : 0.5;
+    const maxAllowedWidth = viewportWidth * maxRatio;
+  
+    const scale = maxAllowedWidth / logoWidth;
+    return Math.round(scale * 1000) / 1000; 
+  }
+  
   
 
   handleResize() {

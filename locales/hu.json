@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Ön jogosult az ingyenes szállításra."
-      }
+      },
+      "terms_checkbox": "Elfogadom a szállítási feltételeket",
+      "terms_checkbox_html": "Elfogadom <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">a szállítási feltételeket<\/a>",
+      "terms_checkbox_notify": "Kérjük, olvassa el és fogadja el a szállítási feltételeket",
+      "discounts": "Kedvezmények",
+      "discount_code": "Kedvezmény kód",
+      "discount_code_error": "A kedvezmény kódja nem alkalmazható",
+      "shipping_discount_error": "A kedvezmények a szállítás után jelennek meg",
+      "discount_apply": "Alkalmaz",
+      "discount_applied": "Alkalmazott kedvezmény kód: {{ code }}",
+      "remove_discount": "Kedvezmény kód eltávolítása: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Otthon",

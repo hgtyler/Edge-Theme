@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Ücretsiz kargo avantajından yararlanabilirsiniz."
-      }
+      },
+      "terms_checkbox": "Gönderim koşullarını kabul ediyorum",
+      "terms_checkbox_html": "Gönderim koşullarını kabul ediyorum <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">gönderim koşulları<\/a>",
+      "terms_checkbox_notify": "Gönderim koşullarını kabul ediyorum",
+      "discounts": "İndirimler",
+      "discount_code": "İndirim kodu",
+      "discount_code_error": "İndirim kodu uygulanamaz",
+      "shipping_discount_error": "İndirimler gönderim için adres eklendikten sonra görünür",
+      "discount_apply": "Uygula",
+      "discount_applied": "Uygulanan indirim kodu: {{ code }}",
+      "remove_discount": "İndirim kodunu kaldır: {{ code }}"
     },
     "breadcrumbs": {
       "home": "Ev",

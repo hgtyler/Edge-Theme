@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "Upravičeni ste do brezplačne dostave."
-      }
+      },
+      "terms_checkbox": "Sprejemam pogoje dostave",
+      "terms_checkbox_html": "Sprejemam <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">pogoje dostave<\/a>",
+      "terms_checkbox_notify": "Sprejemam pogoje dostave",
+      "discounts": "Popusti",
+      "discount_code": "Kod popusta",
+      "discount_code_error": "Kod popusta ne je možen",
+      "shipping_discount_error": "Popusti za dostavo so prikazani po dodanju naslova",
+      "discount_apply": "Primeni",
+      "discount_applied": "Primenjen kod popusta: {{ code }}",
+      "remove_discount": "Odstrani kod popusta: {{ code }}"
     },
     "breadcrumbs": {
       "home": "domov",

@@ -222,7 +222,7 @@
   <div class="{{ section_width }}">
     <div class="image-with-text {{ scroll_animation }}">
       <div class=" image-with-text__grid flex flex-col lg:flex-row gap-x-{{ column_gap }} gap-y-{{ column_gap }} flex-nowrap {% if section.settings.layout == 'right' %} lg:flex-row-reverse{% endif %} {% if column_gap == '0' and section_width != 'w-full' %} global-radius {% endif %}">
-        <div class="image-with-text__media-item basis-full {{ media_width }} {{ scroll_animation }} {% if show_image_2 != blank %} layer-image-1 {% endif %}" 
+        <div class="image-with-text__media-item basis-full {{ media_width }} {{ scroll_animation }} {% if show_image_2 != blank %} relative layer-image-1 {% endif %}" 
           {% if show_image_2 != blank %} style="--padding:{{ padding_space }};--padding-mobile:{{ padding_space_mobile }};" {% endif %}>
           <div class="image-with-text__media {{ media_radius }} h-full" style="--aspect-ratio:{% if image != blank or active_video %}{{ aspect_ratio_percent }}{% else %}100%;{% endif %};" >
             <div class="layer-image__group h-full">
@@ -508,7 +508,8 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "Second image",
-      "info": "600x600 recommended."
+      "info": "600x600 recommended.",
+      "visible_if": "{{ section.settings.show_image_2 == true }}"
     },
     {
       "type": "select",
@@ -525,7 +526,8 @@
         {"value": "bottom-center","label": "Bottom center"},
         {"value": "bottom-right","label": "Bottom right"}
       ],
-      "default": "middle-right"
+      "default": "middle-right",
+      "visible_if": "{{ section.settings.show_image_2 == true }}"
     },
     {
       "type": "select",
@@ -557,7 +559,8 @@
         }
       ],
       "default": "adapt",
-      "label": "Second image size "
+      "label": "Second image size ",
+      "visible_if": "{{ section.settings.show_image_2 == true }}"
     },
     {
 				"type": "header",
@@ -623,32 +626,37 @@
           "vimeo"
         ],
 				"default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-				"info": "Accepts Vimeo or YouTube links"
+				"info": "Accepts Vimeo or YouTube links",
+        "visible_if": "{{ section.settings.active_video == true }}"
       },
 			{
 			  "type": "video",
 			  "id": "video_hosted",
 			  "label": "Shopify-hosted video",
-				"info": "Overrides the Video URL"
+				"info": "Overrides the Video URL",
+        "visible_if": "{{ section.settings.active_video == true }}"
 			},
       {
         "type": "image_picker",
         "id": "poster_image",
         "label": "Poster image",
-        "info": "1340x1340 recommended. If image blank, Shopify video will use the preview image."
+        "info": "1340x1340 recommended. If image blank, Shopify video will use the preview image.",
+        "visible_if": "{{ section.settings.active_video == true }}"
       },
 			{
 				"type": "checkbox",
 				"id": "video_autoplay",
 				"default": true,
 				"label": "Autoplay",
-				"info": "Video will be muted"
+				"info": "Video will be muted",
+        "visible_if": "{{ section.settings.active_video == true }}"
 			},
 			{
 				"type": "checkbox",
 				"id": "video_controls",
 				"default": true,
-				"label": "Display video controls"
+				"label": "Display video controls",
+        "visible_if": "{{ section.settings.active_video == true }}"
 			},
       
     {
@@ -1442,6 +1450,7 @@
   "presets": [
     {
       "name": "Image with text",
+      "category": "Storytelling",
       "blocks": [
         {
           "type": "heading"

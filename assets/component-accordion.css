@@ -27,6 +27,9 @@
   border-top: 1px solid rgb(var(--color-border));
   border-bottom: 1px solid rgb(var(--color-border));
 }
+.addons-accordion .accordion {
+  border-top: none;
+}
 
 .accordion__title {
   display: inline-block;

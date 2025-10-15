@@ -7,8 +7,8 @@
   assign columns_mobile = section.settings.columns_mobile
   assign swipe_on_mobile = section.settings.swipe_on_mobile
   assign enable_overflow_visible = section.settings.enable_overflow_visible
-  assign column_gap = '4rem'
-  assign column_gap_mobile = '2rem'
+  assign column_gap = section.settings.column_gap | append: 'rem'
+  assign column_gap_mobile = section.settings.column_gap_mobile | append: 'rem'
   assign icon_width = section.settings.icon_width
   assign item_type = section.settings.item_type
 
@@ -27,18 +27,18 @@
   assign icon_bg_color = section.settings.icon_bg_color
   assign icon_color = section.settings.icon_color
   assign has_bg = false
-  if icon_bg_color != 'rgba(0,0,0,0)'
+  unless icon_bg_color == 'rgba(0,0,0,0)' or icon_bg_color == blank
     assign has_bg = true
-  endif
+  endunless
 -%}
 {%- capture animate_slide_in -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{%- endcapture -%}
 {%- capture carousel_mobile -%}{%- if swipe_on_mobile -%} false {%- else -%} true {%- endif -%}{%- endcapture -%}
 {%- capture data_splide -%}
-  {"direction":"{%- render 'direction' -%}", "type":"slide", "speed":800, "perPage":{{ columns_desktop }},"rewind":false,"pagination":false,"arrows": false ,"autoplay":false,"pauseOnHover":true,"pauseOnFocus":true, "gap": "3rem", "drag":false, "destroy": true,"breakpoints":{"640": {"destroy":{{ carousel_mobile }},"perPage":1, "arrows":false, "gap": "{{ column_gap_mobile }}", "perMove": 1, "speed":400, "drag":true, "fixedWidth": "85%"}}}
+  {"direction":"{%- render 'direction' -%}", "type":"slide", "speed":800, "perPage":{{ columns_desktop }},"rewind":false,"pagination":false,"arrows": false ,"autoplay":false,"pauseOnHover":true,"pauseOnFocus":true, "gap": "var(--column-gap)", "drag":false, "destroy": true,"breakpoints":{"640": {"destroy":{{ carousel_mobile }},"perPage":1, "arrows":false, "gap": "var(--column-gap-mobile)", "perMove": 1, "speed":400, "drag":true, "fixedWidth": "85%"}}}
 {%- endcapture -%}
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
 <div class="section-{{ class_section }} isolate section-padding section-bg {% if enable_overflow_visible %} overflow-hidden {% else %} overflow-hidden lg:overflow-visible {% endif %}" {% render 'section-attributes' %}>
-  <div class="{{ section.settings.section_width }}" style="--column-item:{{ columns_desktop }};--column-item-mobile:{{ columns_mobile }};--column-gap:{{ column_gap }};--icon-size:{{ icon_width }}px;">
+  <div class="{{ section.settings.section_width }}" style="--column-item:{{ columns_desktop }};--column-item-mobile:{{ columns_mobile }};--column-gap:{{ column_gap }};--column-gap-mobile:{{ column_gap_mobile }};--icon-size:{{ icon_width }}px;">
   {% render 'section-header', layout_header: section.settings.layout, subheading: section.settings.subheading, heading: section.settings.heading, description: section.settings.description, class:"header-multicolumn", heading_size: section.settings.heading_size_section %}
   <splide-carousel>
     <div id="{{ class_section }}-{{ section.id }}"
@@ -83,7 +83,7 @@
                       </div>
                   {%- else -%}
                       <div class="{{ class_section }}-card__media">
-                      <div class="rte text-with-icons__icon inline-block {{ icon_background }} {% if section.settings.icon_background != 'none' %}{% if has_bg %} bg-custom {% else %} background-secondary {% endif %}{% endif %}" style="--bg-custom:{{ icon_bg_color.rgb }};--color-foreground:{{ icon_color.rgb }}">
+                      <div class="rte text-with-icons__icon inline-block {{ icon_background }} {% if section.settings.icon_background != 'none' %}{% if has_bg %} bg-custom {% else %} background-secondary {% endif %}{% endif %}" {% if has_bg %} style="--bg-custom:{{ icon_bg_color.rgb }};--color-foreground:{{ icon_color.rgb }}"{% endif %}>
                           {%- if block.settings.custom_icon != blank -%}
                           {%- capture widths -%}{{ icon_width }}, {{ icon_width | times: 2 }}{%- endcapture -%}
                           {%- capture sizes -%}{{ icon_width }}px{%- endcapture -%}
@@ -108,20 +108,6 @@
                           button_type: 'link',
                           show_icon: section.settings.show_icon
                       -%}
-                      {%- endif -%}
-                      {%- if block.settings.caption != blank or block.settings.avatar != blank -%}
-                        <div class="testimonials__quote-bio flex flex-row items-center justify-center mt-10 gap-x-2">
-                          {%- if block.settings.avatar != blank -%}
-                            <div class="testimonials__quote-avatar basis-72">
-                              {{- block.settings.avatar | image_url: width:320 | image_tag: sizes: '160px', widths: '160,320', loading: 'lazy', class:'size-48 rounded-full object-cover' -}}
-                            </div>
-                          {%- endif -%}
-                          {%- if block.settings.caption != blank -%}
-                            <div class="testimonials__quote-info text-start ">
-                              <div class="testimonials__quote-position text-size-small">{{ block.settings.caption }}</div>
-                            </div>
-                          {%- endif -%}
-                        </div>
                       {%- endif -%}
                       </div>
                   {%- endif -%}
@@ -374,6 +360,16 @@
         "default": false
     },
     {
+      "type": "range",
+      "id": "column_gap",
+      "min": 0,
+      "max": 8,
+      "step": 0.1,
+      "default": 4,
+      "unit": "rem",
+      "label": "Gap (desktop)"
+    },
+    {
       "type": "header",
       "content": "Mobile grid settings"
     },
@@ -393,6 +389,16 @@
           "label": "2 columns"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "column_gap_mobile",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 3,
+      "unit": "rem",
+      "label": "Gap (mobile)"
     },
     {
       "type": "checkbox",
@@ -757,18 +763,6 @@
         },
         {
           "type": "text",
-          "id": "caption",
-          "label": "Caption",
-          "info": "Optional caption with text."
-        },
-        {
-          "type": "image_picker",
-          "id": "avatar",
-          "label": "Caption Image",
-          "info": "Optional image for the caption. It will be displayed as a small, rounded avatar. Best at 48x48px."
-        },
-        {
-          "type": "text",
           "id": "button_label",
           "label": "Button",
           "info": "Leave the label blank to hide the button."
@@ -784,6 +778,7 @@
   "presets": [
     {
       "name": "Text with icons",
+      "category": "Content",
       "blocks": [
         {
           "type": "icon"

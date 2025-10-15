@@ -56,12 +56,14 @@
         <a class="block" href="{{ block.settings.url }}">
       {% endif %}
         <hover-image class="collection-spotlight__item collection-showcase-item relative border-b py-12 flex items-center justify-{{ section.settings.text_align }} text-{{ section.settings.text_align }} {% if section.settings.heading_outlined %} text-outline {% endif %} {{ section.settings.text_size }} {{ animate_slide_in }}"  data-src="{% if image != blank %}{{ image | image_url: width: 600 }}{% endif %}" {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order:{{ forloop.index }};" {% endif %}>
+            <div class="collection-spotlight__item-text flex items-center">
               {{ text | replace: '[img]', '' }}
               {% if section.settings.show_icon %}
                 <span class="ms-8 collection-showcase-item__icon">
                 {% render 'icon-arrow-up-right' %}
                 </span>
               {% endif %}
+            </div>
               {% if image != blank %}
                 {%- assign widths = '300,600' -%}
                 {{ image | image_url: width: 600 | image_tag: sizes: '300px', widths: widths, fetchpriority: 'auto', class: 'hover-image', loading:'lazy' }}
@@ -352,6 +354,7 @@
   "presets": [
     {
       "name": "Collection showcase",
+      "category": "Collections",
       "blocks": [
         {
           "type": "collection"

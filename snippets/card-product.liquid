@@ -16,9 +16,11 @@
   assign columns = columns | default: 4
   assign first_media = card_product.media.first.media_type
   assign enable_box_card = settings.enable_box_card
+  assign enable_border_card = settings.enable_border_card
   assign button_quick_buy_type = settings.button_quick_buy_type
   assign card_rating_position = settings.card_rating_position
   assign card_rating_type = settings.card_rating_type
+  assign card_title_line_clamp = settings.card_title_line_clamp
 
   assign style_class = 'btn btn-primary-white' 
   case button_quick_buy_type
@@ -37,14 +39,9 @@
         when 'secondary'
             assign style_class = 'btn btn-secondary' 
     endcase
-  if filter_type == 'vertical'
-    assign columns = columns | plus : 1
-  else 
-    assign columns = columns
-  endif
 -%}
 {%- if card_product and card_product != empty -%}
-  <div class="card-wrapper product-card-wrapper {% if enable_box_card %} product-card-wrapper-bg global-radius{% endif %}">
+  <div class="card-wrapper product-card-wrapper {% if enable_box_card %} product-card-wrapper-bg {% endif %} {% if enable_border_card %} product-card-wrapper-border {% endif %}">
     <div class="card-product">
       <div class="card-product__media relative media-fit-{{ settings.card_image_fit }}">
         <div class="card-product__media-inner {% if card_product.images[1] != null and show_secondary_image %} card-product__media-secondary-image {% endif %}">
@@ -200,7 +197,7 @@
         {% render 'card-product-badge', card_product: card_product, card_sale_badge_type: card_sale_badge_type %}
         </div>
       </div>
-      <div class="card__content pt-6 {% if enable_box_card %} card__content-bg {% endif %}">
+      <div class="card__content pt-6 {% if enable_box_card or enable_border_card %} card__content-bg {% endif %}">
         <div class="card__information text-{{ text_alignment }}">
           {%- if show_vendor -%}
             <div class="card__vendor mb-2">
@@ -208,7 +205,7 @@
               {{ card_product.vendor | link_to_vendor: class: 'caption-with-letter-spacing light' }}
             </div>
           {%- endif -%}
-          <div class="card__heading mb-2 {% if card_rating_position == 'next_to_title' %} card__heading--rating {% if text_alignment == 'center' %} card__heading--center {% endif %} {% endif %}">
+          <div class="card__heading mb-2 {% if card_title_line_clamp != 'none' %} {{ card_title_line_clamp }} {% endif %} {% if card_rating_position == 'next_to_title' %} card__heading--rating {% if text_alignment == 'center' %} card__heading--center {% endif %} {% endif %}">
             <a
               href="{{ card_product.url }}"
               title="{{ card_product.title | escape }}"
@@ -229,8 +226,13 @@
             {% if card_rating_position == 'under_title' %}
               {% render 'card-product-rating', card_product: card_product, show_rating: show_rating, card_rating_type: card_rating_type %}
             {% endif %}
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% if settings.price_variant_type == 'min_price' %}
+              {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% else %}
+              {% render 'price-max', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% endif %}
             {% render 'card-product-swatch', product: card_product, card_color_type: card_color_type , color_swatch_style : settings.color_swatch_style, text_alignment : text_alignment %}
+            {% render 'card-product-siblings', product: card_product, text_alignment : text_alignment %}
             {% render 'product-card-label', product: card_product %}
             
           </div>
@@ -239,12 +241,12 @@
     </div>
   </div>
 {%- else -%}
-<div class="card-wrapper product-card-wrapper {% if enable_box_card %} product-card-wrapper-bg global-radius{% endif %}">
+<div class="card-wrapper product-card-wrapper {% if enable_box_card %} product-card-wrapper-bg global-radius{% endif %} {% if enable_border_card %} product-card-wrapper-border {% endif %}">
   <div class="card-product">
     <div class="card-product__media">
       {% render 'placeholder-image', product_placeholder : product_placeholder, image_aspect_ratio: image_aspect_ratio %}
     </div>
-    <div class="card__content pt-6 {% if enable_box_card %} card__content-bg {% endif %}">
+    <div class="card__content pt-6 {% if enable_box_card or enable_border_card %} card__content-bg {% endif %}">
         <div class="card__information text-{{ text_alignment }}">
           {%- if show_vendor -%}
             <div class="card__vendor mb-2">
@@ -252,7 +254,7 @@
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             </div>
           {%- endif -%}
-          <h3 class="card__heading card__heading--placeholder mb-2">
+          <h3 class="card__heading card__heading--placeholder mb-2 {% if card_title_line_clamp != 'none' %} {{ card_title_line_clamp }} {% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
             </a>

@@ -349,7 +349,17 @@
       },
       "free_shipping": {
         "eligibility_notice": "您有资格享受免费送货。"
-      }
+      },
+      "terms_checkbox": "我同意运输条件",
+      "terms_checkbox_html": "我同意 <a href=\"{{ link }}\" target=\"_blank\" class=\"link\">运输条件<\/a>",
+      "terms_checkbox_notify": "我同意运输条件",
+      "discounts": "折扣",
+      "discount_code": "折扣代码",
+      "discount_code_error": "折扣代码不能应用",
+      "shipping_discount_error": "折扣代码在添加地址后显示",
+      "discount_apply": "应用",
+      "discount_applied": "应用的折扣代码: {{ code }}",
+      "remove_discount": "删除折扣代码: {{ code }}"
     },
     "breadcrumbs": {
       "home": "家",
