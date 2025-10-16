@@ -58,7 +58,9 @@
   margin-top: 1.5rem;
 }
 
-.collection-hero__description{
+.collection-hero__description {
   max-width: 65rem;
+  font-size: 15px !important;
+  font-family: "ABCWhyte-Book";
 }
 

@@ -1,12 +1,19 @@
 
 
 {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}
-<div class="section-breadcrumb section-padding section-bg " {% render 'section-attributes' %}>
+<div class="section-breadcrumb section-padding section-bg " 
+   {% render 'section-attributes' %}>
   <div class="{{ section.settings.section_width }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in {% endif %}">
-   {% render 'breadcrumb' , section: section, text_size: section.settings.text_size , alignment: section.settings.alignment , type_breadcrumb: section.settings.type_breadcrumb %}
+   {% render 'breadcrumb' , 
+      section: section, 
+      text_size: section.settings.text_size , 
+      alignment: section.settings.alignment , 
+      type_breadcrumb: section.settings.type_breadcrumb %}
   </div>
 </div>
-{%- render 'bottom-divider', show_bottom_divider: section.settings.show_bottom_divider, divider_bottom_width: section.settings.divider_bottom_width -%}
+{%- render 'bottom-divider', 
+   show_bottom_divider: section.settings.show_bottom_divider, 
+   divider_bottom_width: section.settings.divider_bottom_width -%}
 {% schema %}
     {
    "name": "Breadcrumbs",

@@ -43,10 +43,6 @@
             "sale_badge_type": "fixed"
           }
         },
-        "infinite_options_app_block_9mya8m": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -57,6 +53,10 @@
             "option_name": "Size",
             "size_chart_page": "size-chart"
           }
+        },
+        "infinite_options_app_block_9mya8m": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -71,9 +71,16 @@
             "text_back_in_stock": "Notify me"
           }
         },
-        "rich_text_Htb99K": {
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "show_more_toggle": false,
+            "max_height": 20
+          }
+        },
+        "rich_text_UmKhzB": {
           "type": "rich-text",
-          "name": "Description",
           "settings": {
             "align": "start",
             "icon": "none",
@@ -109,13 +116,6 @@
             "open_by_default": false
           }
         },
-        "separator_CgCj4T": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "divider_space": 1
-          }
-        },
         "icon_with_text_UW7wKB": {
           "type": "icon-with-text",
           "settings": {
@@ -132,20 +132,46 @@
             "icon_4": "none",
             "heading_4": ""
           }
+        },
+        "separator_M3LBtz": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 3
+          }
+        },
+        "complementary_dmerd3": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Add a Chain",
+            "column_width": 65,
+            "product_list_limit": 10,
+            "enable_quick_add": true
+          }
+        },
+        "separator_GkGKiT": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 3
+          }
         }
       },
       "block_order": [
         "breadcrumbs_exXzaX",
         "title",
         "price",
-        "infinite_options_app_block_9mya8m",
         "variant_picker",
+        "infinite_options_app_block_9mya8m",
         "buy_buttons",
-        "rich_text_Htb99K",
+        "description",
+        "rich_text_UmKhzB",
         "collapsible_tab_bVRE3V",
         "collapsible_tab_AEkqTf",
-        "separator_CgCj4T",
-        "icon_with_text_UW7wKB"
+        "icon_with_text_UW7wKB",
+        "separator_M3LBtz",
+        "complementary_dmerd3",
+        "separator_GkGKiT"
       ],
       "custom_css": [],
       "settings": {

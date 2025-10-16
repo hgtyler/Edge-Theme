@@ -35,15 +35,14 @@
 
  <nav class="flex justify-{{ alignment }} {{ class }}" role="navigation" aria-label="Breadcrumbs" {% if block %} {{ block.shopify_attributes }} {% endif %}>
     <ol role="list" class="flex items-center truncate">
-        <li class="inline-flex">
+        {% comment %} <li class="inline-flex">
             <a href="{{ routes.root_url }}" title="{{ 'sections.breadcrumbs.home' | t | escape }}" class="{{ text_size }} me-4 focus-inset">
                 {{ 'sections.breadcrumbs.home' | t }}
             </a>
-        </li>
+        </li> {% endcomment %}
         {% if collection.url %}
             <li>
                 <div class="flex items-center">
-                    {{ icon }}
                     <a href="{{ routes.all_products_collection_url }}" title="{{ 'sections.breadcrumbs.shop' | t | escape }}" class="me-4 ms-4 {{ text_size }} focus-inset" aria-current="page" >{{ 'sections.breadcrumbs.shop' | t }}</a>
                     {{ icon }}
                     <a href="{{ collection.url }}" title="{{ collection.title | escape }}" class="ms-4 {{ text_size }} focus-inset">{{ collection.title }}</a>
@@ -68,7 +67,6 @@
             {% if product.collections.first %}
             <li>
                 <div class="flex items-center">
-                    {{ icon }}
                     <a href="{{ product.collections.first.url }}" title="{{ product.collections.first.title | escape }}" class="ms-4 me-4 {{ text_size }} focus-inset"> {{ product.collections.first.title }}</a>
                 </div>
             </li>

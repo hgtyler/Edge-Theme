@@ -1,5 +1,5 @@
 {% comment %}
-  Renders facets (filtering and sorting)
+  Renders facets (filtering and sorting) FOR DRAWER STYLE FACETS
 
   Accepts:
   - results: {Object} Collection or Search object
@@ -11,7 +11,13 @@
   Usage:
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
 {% endcomment %}
-
+<style>
+  .mobile-facets__heading {
+      text-decoration: underline;
+      text-underline-offset: 1.5px;
+      font-size: 15px;
+  }
+</style>
 {%- liquid
 
 assign sort_by = results.sort_by | default: results.default_sort_by
@@ -52,11 +58,11 @@ assign matching_block_names = matching_block_names | split:","
     tabindex="0">
       <span id="ProductCountActive" class="block"> 
         <span class="drawer-filter-desktop gap-x-4 hidden lg:inline-flex">
-          {% render 'icon-filter' %}
+          {% comment %} {% render 'icon-filter' %} {% endcomment %}
           <span class="mobile-facets__heading">
             {{ 'products.facets.filter_button' | t }}
           </span>
-          {{ active_filters }}
+          {% comment %} {{ active_filters }} {% endcomment %}
         </span>
         <span class="drawer-filter-mobile inline-flex gap-x-4 lg:hidden">
           <span class="drawer-filter-mobile-btn btn">

@@ -122,6 +122,7 @@
         "show_icon": false,
         "card_type": "standard",
         "image_ratio": "portrait",
+        "show_border_card": false,
         "show_collection_count": false,
         "show_button_arrow": false,
         "show_zoom_on_hover": true,
@@ -285,7 +286,7 @@
             "content": "",
             "url": "",
             "image": "shopify:\/\/shop_images\/gq-red.png",
-            "image_width": 82
+            "image_width": 80
           }
         }
       },
@@ -302,7 +303,7 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
-        "content_size": "h4",
+        "content_size": "body-1",
         "image_opacity": 24,
         "auto_rotate": true,
         "change_slides_speed": 5,
@@ -466,7 +467,7 @@
         "column_gap": 3,
         "columns_mobile": "2",
         "column_gap_mobile": 2,
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -561,6 +562,9 @@
         "layout": "horizontal",
         "blog": "jewelbox",
         "image_ratio": "square",
+        "title_size": "h4",
+        "align_content_card": "start",
+        "show_border_card": false,
         "show_image": true,
         "show_date": false,
         "show_author": false,
@@ -568,6 +572,7 @@
         "show_category": false,
         "show_read_more": true,
         "enable_button_underlined_white": false,
+        "show_icon_read_more": false,
         "enable_stack_columns": false,
         "show_progress_bar": true,
         "enable_overflow_visible": false,

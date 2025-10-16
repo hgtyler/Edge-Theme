@@ -56,7 +56,7 @@
         "column_gap": 1,
         "row_gap": 2,
         "pagination_type": "load-more-button",
-        "filter_type": "vertical",
+        "filter_type": "drawer",
         "enable_filtering": true,
         "enable_sorting": true,
         "show_filter_values_count": false,

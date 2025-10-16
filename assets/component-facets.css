@@ -1193,10 +1193,10 @@ input.mobile-facets__checkbox {
   --space-offset:0px;
 }
 .layout-color-list .facets__item.list-color .facets__label .swatch-color{
-  --swacth-size: 20px;
+  --swatch-size: 20px;
 }
 .facets-layout-list--swatch:not(.layout-color-inline) .facets__item .facets__label .swatch-color{
-  --swacth-size: 20px;
+  --swatch-size: 20px;
 }
 .layout-color-inline .facets__item.list-color .facets__label .swatch-color:before, .layout-color-list .facets__item.list-color .facets__label .swatch-color:before, .metafields-swatch .swatch-color:before, .facets-layout-list--swatch:not(.layout-color-inline) .facets__item .facets__label .swatch-color:before{
   --space-offset:3px;

@@ -1311,8 +1311,10 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   transform: rotate(-4deg);
 }
 .price__badge-sold-out {
-  background-color: rgb(var(--color-sold-out-background));
-  color: rgb(var(--color-sold-out));
+  color: #D50032;
+  font-family: "Auberge-Script-Basic-One";
+  text-transform: lowercase;
+  font-size: 30px;
 }
 .gradient {
   background: rgb(var(--color-background));
@@ -3940,13 +3942,21 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
     padding-right: calc(var(--fluid-offset, 24px) * 2);
   }
 }
-.hxl,.h0, h1,.h1, h2, .h2, h3, .h3, h4, .h4, {
+.hxl,.h0, h1,.h1, h2, .h2  {
   font-family: "Auberge-Script-Basic-One"; /* HERE  */
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: var(--font-heading-spacing);
   word-break: break-word;
-  text-transform: lowercase;
+}
+
+.h3, .h3, h4, .h4 {
+  font-family: "ABCWhyte-Book"; /* HERE  */
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: var(--font-heading-spacing);
+  word-break: break-word;
+
 }
 .hxl, h5, .h5, h6, .h6 {
   font-family:  "Beirut-Display-Trial-Book" !important ; /* HERE  */
@@ -4473,10 +4483,10 @@ input[type=submit],.button,.btn, .shopify-payment-button__button--unbranded, .sh
   position: absolute;
 }
 .swatch-color {
-  --space-offset: 4px;
-  --swacth-size: 28px;
-  width: var(--swacth-size);
-  height: var(--swacth-size);
+  --space-offset: 2px;
+  --swatch-size: 28px;
+  width: var(--swatch-size);
+  height: var(--swatch-size);
   background: var(--swatch-color);
   display: block;
   cursor: pointer;
@@ -5656,9 +5666,9 @@ volume-pricing show-more-button {
 }
 .card-product__swatch-item .swatch-button-color {
   --space-offset: 3px;
-  --swacth-size: 14px;
-  width: var(--swacth-size);
-  height: var(--swacth-size);
+  --swatch-size: 14px;
+  width: var(--swatch-size);
+  height: var(--swatch-size);
   background: var(--swatch-color);
   display: block;
   cursor: pointer;

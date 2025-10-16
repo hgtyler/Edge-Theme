@@ -67,11 +67,13 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "button_type": "primary",
+            "show_price_in_button": false,
             "show_two_columns": false,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
-            "show_pickup_availability": true,
-            "show_back_in_stock": true,
+            "show_pickup_availability": false,
+            "show_back_in_stock": false,
             "text_back_in_stock": "Notify me"
           }
         },
@@ -81,10 +83,6 @@
             "show_more_toggle": false,
             "max_height": 20
           }
-        },
-        "siblings_j3h7Cg": {
-          "type": "siblings",
-          "settings": {}
         },
         "collapsible_tab_jHUPM9": {
           "type": "collapsible_tab",
@@ -137,7 +135,6 @@
         "custom_liquid_ErCJbJ",
         "buy_buttons",
         "description",
-        "siblings_j3h7Cg",
         "collapsible_tab_jHUPM9",
         "collapsible_tab_bVRE3V",
         "icon_with_text_CqGeaM"
@@ -152,8 +149,11 @@
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
         "gallery_layout": "thumbnail",
+        "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",
+        "show_badge_in_media": false,
+        "enable_border_media": false,
         "show_lightbox": true,
         "enable_video_autoplay": true,
         "enable_video_looping": true,
@@ -445,6 +445,7 @@
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
@@ -657,6 +658,8 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
+        "column_gap": 3,
+        "row_gap": 3,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
