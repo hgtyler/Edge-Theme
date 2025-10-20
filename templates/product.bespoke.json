@@ -32,7 +32,7 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_size": "h6"
+            "heading_size": "h4"
           }
         },
         "price": {
@@ -148,11 +148,11 @@
         "media_width": 50,
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "thumbnail_left",
         "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",
-        "show_badge_in_media": false,
+        "show_badge_in_media": true,
         "enable_border_media": false,
         "show_lightbox": true,
         "enable_video_autoplay": true,
@@ -163,7 +163,7 @@
         "text_color": "rgba(0,0,0,0)",
         "border_color": "rgba(0,0,0,0)",
         "padding_top": 24,
-        "padding_bottom": 0,
+        "padding_bottom": 28,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -178,7 +178,7 @@
           "name": "Care",
           "settings": {
             "tab_heading": "Care",
-            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }} <\/p>",
             "page": ""
           }
         },
@@ -236,6 +236,9 @@
         "custom_content_qc4j6x",
         "custom_content_4K49dM"
       ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.tabs-component .tabs-content .tab-content.active {text-align: center; padding-left: 100px; padding-right: 100px; }}"
+      ],
       "settings": {
         "section_width": "container",
         "type_tabs": "underline",
@@ -243,13 +246,82 @@
         "tabs_font_family": "body_font",
         "tab_heading_size": "body-1",
         "tabs_gap": 3,
-        "align": "start",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "#622128",
+        "align": "center",
+        "bg_color": "#76232f",
+        "text_color": "#fff9ef",
+        "border_color": "#4f0e0d",
         "padding_top": 52,
         "padding_bottom": 28,
         "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "custom_content_zBRYE6": {
+      "type": "custom-content",
+      "blocks": {
+        "custom_liquid_dfUVmm": {
+          "type": "custom_liquid",
+          "settings": {
+            "block_width": "33",
+            "custom_liquid": "<style> \nh3 {\nfont-size: 10px; \npadding-bottom: 0px; \nmargin-bottom: 0px; }\nh2 {\n } <\/style>\n\n<div id=\"settings\"> \n<h3> GET TO KNOW <\/h3>\n<h2> our settings <h2> <\/div>",
+            "vertical_alignment": "center",
+            "text_alignment": "start",
+            "bg_color": "#76232f",
+            "text_color": "#fff9ef"
+          }
+        },
+        "custom_liquid_VPApWj": {
+          "type": "custom_liquid",
+          "settings": {
+            "block_width": "50",
+            "custom_liquid": "SETTINGS GO HERE",
+            "vertical_alignment": "center",
+            "text_alignment": "center",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_dfUVmm",
+        "custom_liquid_VPApWj"
+      ],
+      "disabled": true,
+      "name": "Advanced content",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "horizontal",
+        "column_gap": 3,
+        "row_gap": 3,
+        "bg_color": "#76232f",
+        "text_color": "#fff9ef",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "custom_liquid_8Nci3C": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "section_width": "container",
+        "custom_liquid": "<style> \nh3 {\ntext-align: center;\nfont-size: 10px; \npadding-bottom: 0px; \nmargin-bottom: 0px; }\nh2 {\ntext-align: center; } \n<\/style>\n\n<div id=\"settings\"> \n<h3> GET TO KNOW <\/h3>\n<h2> our settings <h2> <\/div>",
+        "bg_color": "#76232f",
+        "text_color": "#fff9ef",
+        "border_color": "",
+        "padding_top": 40,
+        "padding_bottom": 12,
+        "show_top_divider": true,
         "divider_top_width": "container",
         "show_bottom_divider": false,
         "divider_bottom_width": "container"
@@ -260,55 +332,61 @@
       "blocks": {
         "press_cPBn7V": {
           "type": "press",
+          "name": "Prong",
           "settings": {
-            "content": "<p><strong>Prong Setting<\/strong><\/p>",
+            "content": "<p><strong>The Prong Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/Prong-Set.png",
+            "image": "shopify:\/\/shop_images\/cream-prong.png",
             "image_width": 120
           }
         },
         "press_7bYcme": {
           "type": "press",
+          "name": "Bezel",
           "settings": {
-            "content": "<p><strong>Bezel Setting<\/strong><\/p>",
+            "content": "<p><strong>The Bezel Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/Bezel-set.png",
+            "image": "shopify:\/\/shop_images\/cream-bezel.png",
             "image_width": 120
           }
         },
         "press_tRbwGJ": {
           "type": "press",
+          "name": "Ripple",
           "settings": {
-            "content": "<p><strong>Ripple Setting<\/strong><\/p>",
+            "content": "<p><strong>The Ripple Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/ripple_c36f97b6-46fb-4933-a760-26b39714134b.png",
+            "image": "shopify:\/\/shop_images\/cream-ripple.png",
             "image_width": 120
           }
         },
         "press_p6Mn7k": {
           "type": "press",
+          "name": "Cloud",
           "settings": {
-            "content": "<p><strong>Cloud Setting<\/strong><\/p>",
+            "content": "<p><strong>The Cloud Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/Cloud-set.png",
+            "image": "shopify:\/\/shop_images\/cream-cloud.png",
             "image_width": 120
           }
         },
         "press_XJatkE": {
           "type": "press",
+          "name": "Basket",
           "settings": {
-            "content": "<p><strong>Basket Setting<\/strong><\/p>",
+            "content": "<p><strong>The Basket Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/Basket-set_637aa5c4-015a-42c9-b6a2-cd0b6b91f8f2.png",
+            "image": "shopify:\/\/shop_images\/cream-basket.png",
             "image_width": 120
           }
         },
         "press_Xp9AzN": {
           "type": "press",
+          "name": "Dove",
           "settings": {
-            "content": "<p><strong>Dove Setting<\/strong><\/p>",
+            "content": "<p><strong>The Dove Ring<\/strong><\/p>",
             "url": "",
-            "image": "shopify:\/\/shop_images\/Dove-set.png",
+            "image": "shopify:\/\/shop_images\/cream-dove.png",
             "image_width": 120
           }
         }
@@ -321,207 +399,47 @@
         "press_XJatkE",
         "press_Xp9AzN"
       ],
-      "name": "Press",
+      "name": "Settings",
       "settings": {
         "subheading": "",
-        "heading": "Our Setting Styles",
+        "heading": "",
         "heading_size_section": "h5",
         "description": "",
-        "layout": "vertical",
+        "layout": "horizontal",
         "content_size": "h5",
         "image_opacity": 35,
         "auto_rotate": true,
         "change_slides_speed": 5,
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "",
-        "border_color": "#4f0e0d",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "show_top_divider": true,
+        "bg_color": "#76232f",
+        "text_color": "#fff9ef",
+        "border_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 56,
+        "show_top_divider": false,
         "divider_top_width": "container",
-        "show_bottom_divider": true,
+        "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
     },
-    "testimonials_NmwCVP": {
-      "type": "testimonials",
-      "blocks": {
-        "quote_zccD9p": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 5,
-            "text": "Prong Setting",
-            "image": "shopify:\/\/shop_images\/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
-            "media_size": "square",
-            "avatar": "shopify:\/\/shop_images\/8_a02.jpg",
-            "name": "",
-            "position": "Prong Setting  on a Gold Ring"
-          }
-        },
-        "quote_mQf3LU": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 5,
-            "text": "Dove Setting",
-            "image": "shopify:\/\/shop_images\/Dove-set_570a2510-03d3-4da4-9310-f828adc38310.png",
-            "media_size": "adapt",
-            "avatar": "shopify:\/\/shop_images\/2.64ct-ruby-basket-ring-1.jpg",
-            "name": "",
-            "position": "Prong Setting on a Gold Ring"
-          }
-        },
-        "quote_peXzRw": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 5,
-            "text": "Ripple Setting",
-            "image": "shopify:\/\/shop_images\/ripple_f4801f66-9960-4775-a627-17f635531e7c.png",
-            "media_size": "adapt",
-            "avatar": "shopify:\/\/shop_images\/6.58ctGreenTourmalineBezelRing1.jpg",
-            "name": "",
-            "position": "Prong Setting on a Gold Ring"
-          }
-        }
-      },
-      "block_order": [
-        "quote_zccD9p",
-        "quote_mQf3LU",
-        "quote_peXzRw"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".rating-star {display: none;}"
-      ],
-      "name": "Testimonials",
+    "divider_TcbdpL": {
+      "type": "divider",
+      "name": "Divider",
       "settings": {
         "section_width": "container",
-        "subheading": "",
-        "heading": "Our Bespoke Gems Are Available with the Following Setting Styles",
-        "heading_size_section": "h6",
-        "description": "<p>Choose between a ring or charm in either a prong, bezel, or cloud setting style, and your preferred gold color.<\/p>",
-        "layout": "horizontal",
-        "testimonial_type": "focused",
-        "content_alignment": "center",
-        "content_size": "body-1",
-        "show_rating": true,
-        "show_arrows": true,
-        "enable_loop": true,
-        "auto_rotate": true,
-        "change_slides_speed": 8,
-        "vertical_alignment": "start",
+        "spacer_mobile": 50,
+        "spacer_desktop": 28,
         "show_border": false,
-        "per_page": 4,
-        "bg_color": "#fffdfa",
-        "text_color": "",
-        "border_color": "#f2dee1",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "rich_text_pTJdFa": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_QkjgfM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Reviews",
-            "heading_size": "h5"
-          }
-        }
-      },
-      "block_order": [
-        "heading_QkjgfM"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
         "bg_color": "",
-        "bg_color_gradient": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "apps_EfaDmG": {
-      "type": "apps",
-      "blocks": {
-        "stamped_reviews_main_widget_6yMq3q": {
-          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "animation": false,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "stamped_reviews_main_widget_6yMq3q"
-      ],
-      "settings": {
-        "section_width": "container",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 36,
-        "padding_bottom": 0,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "section_width": "container",
-        "subheading": "Find what you love",
-        "heading": "",
-        "heading_size_section": "h5",
-        "description": "<p>We seek out the rare and extraordinary to represent the loves, commitments and major moments of your story.<\/p>",
-        "layout": "vertical",
-        "enable_stack_products": false,
-        "show_progress_bar": true,
-        "enable_overflow_visible": false,
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "column_gap": 3,
-        "columns_mobile": "2",
-        "column_gap_mobile": 1.5,
-        "swipe_on_mobile": false,
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 28,
-        "padding_bottom": 52,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
+        "color": "",
+        "style": "solid",
+        "thickness": 1
       }
     },
     "video_with_text_overlay_7VRPGz": {
       "type": "video-with-text-overlay",
       "name": "Video with text overlay",
       "settings": {
-        "section_width": "w-full",
+        "section_width": "container",
         "video_hosted": "shopify:\/\/files\/videos\/Making of_Overview_60sec_4k_Master.mp4",
         "video_url": "",
         "description_video": "",
@@ -537,6 +455,170 @@
         "overlay_color": "rgba(0,0,0,0)",
         "overlay_gradient": "",
         "overlay_opacity": 0
+      }
+    },
+    "gallery_grid_7CznEJ": {
+      "type": "gallery-grid",
+      "blocks": {
+        "image_CiLjKh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_TxBNrh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_UX7izr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_8dMFAi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_Q6Uqzd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        },
+        "image_pURmxL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "active_video": false,
+            "media_size": "adapt",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "block_width": "basis-1\/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_CiLjKh",
+        "image_TxBNrh",
+        "image_UX7izr",
+        "image_8dMFAi",
+        "image_Q6Uqzd",
+        "image_pURmxL"
+      ],
+      "name": "Bespoke Projects",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "bespoke projects",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "column_gap": 3,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
       }
     },
     "stacking_card_m9d8hG": {
@@ -588,155 +670,28 @@
         "divider_bottom_width": "w-full"
       }
     },
-    "custom_content_gdgxD7": {
-      "type": "custom-content",
-      "blocks": {
-        "image_L8F3ay": {
-          "type": "image",
-          "settings": {
-            "block_width": "33",
-            "image": "shopify:\/\/shop_images\/download_4.png",
-            "image_size": "portrait",
-            "link": "",
-            "vertical_alignment": "center"
-          }
-        },
-        "text_xUmgYC": {
-          "type": "text",
-          "settings": {
-            "block_width": "33",
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h2",
-            "text": "<h6><em>\"As a house of fine jewelry, <br\/>We illuminate    all that endures. <br\/>And what we've learned through<br\/>the years is that<br\/>Timeless is not a static thing,<br\/>Because timeless is always becoming.\"<\/em><\/h6>",
-            "vertical_alignment": "center",
-            "text_alignment": "center",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "bg_color": "#ece6da",
-            "text_color": "#dc0032",
-            "padding_top": 22,
-            "padding_bottom": 24,
-            "padding_left": 46,
-            "padding_right": 46,
-            "padding_top_mobile": 45,
-            "padding_bottom_mobile": 45,
-            "padding_left_mobile": 24,
-            "padding_right_mobile": 24
-          }
-        },
-        "image_NbVLhx": {
-          "type": "image",
-          "settings": {
-            "block_width": "33",
-            "image": "shopify:\/\/shop_images\/download_8.png",
-            "image_size": "portrait",
-            "link": "",
-            "vertical_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "image_L8F3ay",
-        "text_xUmgYC",
-        "image_NbVLhx"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".rte {white-space: nowrap; line-height: 1.6; font-size: 90%;}",
-        "h6,.h6 {letter-spacing: 0.4px !important; font-size: 1.4em; line-height: 2.3 !important;}",
-        ".rte {white-space: nowrap; line-height: 1.6; font-size: 90%;}",
-        "h6,.h6 {letter-spacing: 0.4px !important; font-size: 1.4em; line-height: 2.3 !important;}",
-        "@media screen and (max-width: 749px) {div#custom-block-image_NbVLhx {display: none; }}"
-      ],
+    "related-products": {
+      "type": "related-products",
       "settings": {
         "section_width": "container",
         "subheading": "",
-        "heading": "",
-        "heading_size_section": "h2",
+        "heading": "You may also like...",
+        "heading_size_section": "h4",
         "description": "",
         "layout": "vertical",
+        "enable_stack_products": false,
+        "show_progress_bar": true,
+        "enable_overflow_visible": false,
+        "products_to_show": 10,
+        "columns_desktop": 4,
         "column_gap": 3,
-        "row_gap": 3,
-        "bg_color": "",
+        "columns_mobile": "2",
+        "column_gap_mobile": 1.5,
+        "swipe_on_mobile": true,
+        "bg_color": "rgba(0,0,0,0)",
         "text_color": "",
         "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 52,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "banner_with_product_Pzzhqi": {
-      "type": "banner-with-product",
-      "blocks": {
-        "image_MxdWXY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/download_6.png",
-            "active_video": false,
-            "media_size": "portrait",
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "middle-center",
-            "text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": ""
-          }
-        },
-        "product_im6g9n": {
-          "type": "product",
-          "settings": {
-            "product": [
-              "20-75ct-kunzite-montage-charm",
-              "2-64ct-ruby-basket-ring",
-              "4-67ct-smoky-quartz-prong-set-charm",
-              "6-58ct-green-tourmaline-bezel-ring"
-            ],
-            "columns_desktop": "2",
-            "column_gap": 1.4,
-            "row_gap": 1.5,
-            "columns_mobile": "2",
-            "column_gap_mobile": 1.5,
-            "row_gap_mobile": 1.5,
-            "swipe_on_mobile": false
-          }
-        }
-      },
-      "block_order": [
-        "image_MxdWXY",
-        "product_im6g9n"
-      ],
-      "disabled": true,
-      "name": "Products with banner",
-      "settings": {
-        "section_width": "container",
-        "subheading": "One of a Kind",
-        "heading": "",
-        "heading_size_section": "h5",
-        "description": "<p>A year in the making, this new era of one-of-a kind jewels brings forward the vibrant spirit we've always embodied.<\/p>",
-        "layout": "vertical",
-        "link_url": "",
-        "link_text": "View all",
-        "button_type": "underlined",
-        "show_icon": false,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "column_gap": 6,
-        "column_gap_mobile": 4,
-        "padding_top": 0,
+        "padding_top": 44,
         "padding_bottom": 52,
         "show_top_divider": false,
         "divider_top_width": "container",
@@ -749,14 +704,13 @@
     "breadcrumbs_ka3wVn",
     "main",
     "information-products",
+    "custom_content_zBRYE6",
+    "custom_liquid_8Nci3C",
     "press_tgBaHV",
-    "testimonials_NmwCVP",
-    "rich_text_pTJdFa",
-    "apps_EfaDmG",
-    "related-products",
+    "divider_TcbdpL",
     "video_with_text_overlay_7VRPGz",
+    "gallery_grid_7CznEJ",
     "stacking_card_m9d8hG",
-    "custom_content_gdgxD7",
-    "banner_with_product_Pzzhqi"
+    "related-products"
   ]
 }

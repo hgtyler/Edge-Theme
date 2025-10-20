@@ -35,7 +35,7 @@
     "footer_text_color": "#ece6da",
     "footer_link_color_hover": "#dc0032",
     "type_header_font": "gilda_display_n4",
-    "heading_scale": 150,
+    "heading_scale": 100,
     "heading_letter_spacing": 1,
     "heading_transform": "none",
     "type_body_font": "system_ui_n4",

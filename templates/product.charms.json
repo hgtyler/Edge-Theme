@@ -32,7 +32,7 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_size": "h6"
+            "heading_size": "h4"
           }
         },
         "price": {
@@ -353,13 +353,22 @@
             "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
             "page": ""
           }
+        },
+        "custom_content_RxiwUp": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Holiday 2025",
+            "content": "<h6><strong>For all Bespoke Gems, Heirloom Revival and Custom pieces:<\/strong><\/h6><p>Order by October 14th<\/p><h6><strong>For all Main Collection Made to Order pieces:<\/strong><\/h6><p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx 2Day<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "custom_content_Nic9fy",
         "custom_content_73AKnk",
         "custom_content_4bDa3X",
-        "custom_content_WdbcGA"
+        "custom_content_WdbcGA",
+        "custom_content_RxiwUp"
       ],
       "settings": {
         "section_width": "container",
@@ -386,8 +395,8 @@
         "heading_ht4NkQ": {
           "type": "heading",
           "settings": {
-            "heading": "Reviews",
-            "heading_size": "h5"
+            "heading": "reviews",
+            "heading_size": "h2"
           }
         }
       },
@@ -403,7 +412,7 @@
         "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 32,
+        "padding_top": 44,
         "padding_bottom": 0,
         "show_top_divider": false,
         "divider_top_width": "container",
@@ -528,7 +537,7 @@
       "type": "video-with-text-overlay",
       "name": "Video with text overlay",
       "settings": {
-        "section_width": "w-full",
+        "section_width": "container-fluid",
         "video_hosted": "shopify:\/\/files\/videos\/Making of_Overview_60sec_4k_Master.mp4",
         "video_url": "",
         "description_video": "",
@@ -550,25 +559,25 @@
       "type": "related-products",
       "settings": {
         "section_width": "container",
-        "subheading": "Find what you love",
-        "heading": "",
-        "heading_size_section": "h5",
+        "subheading": "",
+        "heading": "Find what you love",
+        "heading_size_section": "h4",
         "description": "<p>We seek out the rare and extraordinary to represent the loves, commitments and major moments of your story.<\/p>",
         "layout": "vertical",
         "enable_stack_products": false,
         "show_progress_bar": true,
         "enable_overflow_visible": false,
-        "products_to_show": 10,
+        "products_to_show": 6,
         "columns_desktop": 4,
         "column_gap": 3,
         "columns_mobile": "2",
         "column_gap_mobile": 1.5,
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "bg_color": "rgba(0,0,0,0)",
         "text_color": "",
         "border_color": "",
-        "padding_top": 20,
-        "padding_bottom": 0,
+        "padding_top": 32,
+        "padding_bottom": 32,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -696,6 +705,96 @@
         "show_bottom_divider": false,
         "divider_bottom_width": "w-full"
       }
+    },
+    "collection_list_NHnjgy": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_CfPaAj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ever-yours",
+            "image": "shopify:\/\/shop_images\/3.78ct-Zircon-Flat-Tapered-Ring3.png",
+            "title": "Ever Yours",
+            "url": ""
+          }
+        },
+        "featured_collection_ignwaF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifting-season",
+            "image": "shopify:\/\/shop_images\/packaging2_1_62d77688-99d6-4615-9264-efaebb8e08f0.png",
+            "title": "Holiday Gifts",
+            "url": ""
+          }
+        },
+        "featured_collection_tpHHRR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "one-of-a-kind",
+            "image": "shopify:\/\/shop_images\/2.36ctMoonstoneDouble-ProngCloudRing2.png",
+            "title": "One of a Kind",
+            "url": ""
+          }
+        },
+        "featured_collection_U9ic3G": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "birth-flowers",
+            "image": "shopify:\/\/shop_images\/aster_september_birth_flower_1.png",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_CfPaAj",
+        "featured_collection_ignwaF",
+        "featured_collection_tpHHRR",
+        "featured_collection_U9ic3G"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h6",
+        "description": "",
+        "layout": "vertical",
+        "link_url": "",
+        "link_text": "",
+        "button_type": "primary",
+        "show_icon": false,
+        "card_type": "standard",
+        "image_ratio": "square",
+        "show_border_card": false,
+        "show_collection_count": false,
+        "show_button_arrow": false,
+        "show_zoom_on_hover": true,
+        "use_title_italic": true,
+        "heading_size": "body-1",
+        "content_alignment": "start",
+        "title_color": "",
+        "overlay_color": "#000000",
+        "enable_gradient": false,
+        "overlay_opacity": 0,
+        "enable_stack_collections": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "columns_desktop": 4,
+        "column_gap": 3,
+        "columns_mobile": "2",
+        "column_gap_mobile": 2,
+        "swipe_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
     }
   },
   "order": [
@@ -709,6 +808,7 @@
     "video_with_text_overlay_bJYX9f",
     "related-products",
     "banner_with_product_Pzzhqi",
-    "stacking_card_9J4mC4"
+    "stacking_card_9J4mC4",
+    "collection_list_NHnjgy"
   ]
 }

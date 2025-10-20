@@ -38,7 +38,7 @@
                 "button_text": "Explore",
                 "button_link": "shopify:\/\/collections\/one-of-a-kind",
                 "button_type": "underlined-white",
-                "show_icon": true
+                "show_icon": false
               },
               "blocks": {}
             }
