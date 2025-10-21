@@ -244,6 +244,7 @@ a.product__text {
   word-break: break-word;
   margin-bottom: 1.2rem;
   margin-block-start: 1.2rem;
+  text-align: left;
 }
 
 .product__title > * {

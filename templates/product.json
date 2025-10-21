@@ -2,12 +2,12 @@
   "sections": {
     "breadcrumbs_ka3wVn": {
       "type": "breadcrumbs",
-      "disabled": true,
       "settings": {
         "section_width": "container-fluid",
         "alignment": "start",
         "text_size": "text-size-small",
         "type_breadcrumb": "line-vertical",
+        "show_on_mobile": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -24,6 +24,7 @@
       "blocks": {
         "breadcrumbs_exXzaX": {
           "type": "breadcrumbs",
+          "disabled": true,
           "settings": {
             "text_size": "text-size-small",
             "type_breadcrumb": "line-horizontal"
@@ -157,7 +158,7 @@
         "media_width": 50,
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "thumbnail_left",
         "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",

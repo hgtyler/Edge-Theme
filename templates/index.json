@@ -298,9 +298,9 @@
       ],
       "name": "Press",
       "settings": {
-        "subheading": "as seen in",
-        "heading": "",
-        "heading_size_section": "h2",
+        "subheading": "",
+        "heading": "as seen in",
+        "heading_size_section": "h1",
         "description": "",
         "layout": "vertical",
         "content_size": "body-1",

@@ -8,7 +8,9 @@
       section: section, 
       text_size: section.settings.text_size , 
       alignment: section.settings.alignment , 
-      type_breadcrumb: section.settings.type_breadcrumb %}
+      type_breadcrumb: section.settings.type_breadcrumb,
+      show_on_mobile: section.settings.show_on_mobile
+   %}
   </div>
 </div>
 {%- render 'bottom-divider', 
@@ -118,6 +120,12 @@
           }
         ],
         "default": "line-vertical"
+      },
+      {
+         "type": "checkbox",
+         "id": "show_on_mobile",
+         "label": "Show breadcrumbs on mobile",
+         "default": false
       },
       {
          "type": "header",

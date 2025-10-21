@@ -2,12 +2,12 @@
   "sections": {
     "breadcrumbs_ka3wVn": {
       "type": "breadcrumbs",
-      "disabled": true,
       "settings": {
         "section_width": "container-fluid",
         "alignment": "start",
         "text_size": "text-size-small",
         "type_breadcrumb": "line-vertical",
+        "show_on_mobile": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -22,13 +22,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "breadcrumbs_exXzaX": {
-          "type": "breadcrumbs",
-          "settings": {
-            "text_size": "text-size-small",
-            "type_breadcrumb": "line-horizontal"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -127,7 +120,6 @@
         }
       },
       "block_order": [
-        "breadcrumbs_exXzaX",
         "title",
         "price",
         "infinite_options_app_block_9mya8m",

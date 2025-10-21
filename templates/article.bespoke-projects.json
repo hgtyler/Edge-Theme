@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "rich_text_GTfMWc": {
+      "type": "rich-text",
+      "blocks": {
+        "image_3KgaRi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bespoke-Designs-Burgundy.png",
+            "image_width": 230,
+            "image_width_mobile": 150,
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_3KgaRi"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "content_width": "max-w-7xl",
+            "heading_size": "h4",
+            "blog_show_date": false,
+            "blog_show_author": false,
+            "blog_show_comments": false,
+            "content_alignment": "center"
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "content_width": "max-w-7xl",
+            "image_ratio": "wide"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "content"
+      ],
+      "settings": {
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": true,
+        "divider_bottom_width": "w-full"
+      }
+    }
+  },
+  "order": [
+    "rich_text_GTfMWc",
+    "main"
+  ]
+}

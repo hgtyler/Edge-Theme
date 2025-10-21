@@ -6,8 +6,8 @@
     assign alignment = alignment | default: 'start'
     assign class = class | default: nil
     assign type_breadcrumb = type_breadcrumb | default: 'vertical-line'
+    assign show_on_mobile = show_on_mobile | default: false
 %}
-
 {%- capture icon -%}
     {%- case type_breadcrumb -%}
         {%- when 'dot' -%}

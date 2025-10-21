@@ -21,7 +21,7 @@ assign divider_type = block.settings.divider_type
                         {%- for childlink in link.links -%}
                         <li class="menu__animation">
                             <a  href="{{ childlink.url }}" class="mega-menu__link {% if has_child %} mega-menu__link--level-2 {% endif %} {% if childlink.current %} mega-menu__link--active{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
-                                {{ childlink.title | escape }}
+                                {{ childlink.title | escape }} 
                             </a>
                             {%- if childlink.links != blank -%}
                             <ul class="list-unstyled" role="list">
@@ -40,7 +40,7 @@ assign divider_type = block.settings.divider_type
                                         endif
                                     endfor
                                 %}
-                                <li >
+                                <li > 
                                     <a  href="{{ grandchildlink.url }}" class="mega-menu__link {% if image_custom != blank %} mega-menu__link--image {% endif %} {% if grandchildlink.current %} mega-menu__link--active{% endif %}" {% if grandchildlink.current %} aria-current="page" {% endif %}>
                                       {%- if image_custom != blank -%}
                                         <span class="mega-menu__link--image-custom">
