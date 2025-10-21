@@ -1,23 +1,5 @@
 {
   "sections": {
-    "breadcrumbs_jGkqQn": {
-      "type": "breadcrumbs",
-      "settings": {
-        "section_width": "container-fluid",
-        "alignment": "center",
-        "text_size": "text-size-small",
-        "type_breadcrumb": "arrow",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 12,
-        "padding_bottom": 12,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
     "cart-items": {
       "type": "main-cart-items",
       "blocks": {
@@ -57,7 +39,7 @@
       "settings": {
         "section_width": "container",
         "subheading": "",
-        "heading": "You may also like",
+        "heading": "you may also like",
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
@@ -73,33 +55,8 @@
         "bg_color": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 80,
+        "padding_top": 32,
         "padding_bottom": 40,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "recently_viewed_products_inX6qE": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "Recently viewed products",
-        "heading_size_section": "h2",
-        "description": "",
-        "layout": "vertical",
-        "products_limit": 4,
-        "columns_desktop": 4,
-        "column_gap": 2,
-        "columns_mobile": "2",
-        "column_gap_mobile": 1,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 36,
-        "padding_bottom": 68,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -108,9 +65,7 @@
     }
   },
   "order": [
-    "breadcrumbs_jGkqQn",
     "cart-items",
-    "related-products",
-    "recently_viewed_products_inX6qE"
+    "related-products"
   ]
 }

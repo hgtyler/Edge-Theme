@@ -168,7 +168,6 @@ data-id="{{ section.id }}">
                             <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                               {%- for discount in item.line_level_discount_allocations -%}
                                 <li class="discounts__discount">
-                                  {%- render 'icon-discount' -%}
                                   {{ discount.discount_application.title }}
                                 </li>
                               {%- endfor -%}
@@ -509,8 +508,7 @@ data-id="{{ section.id }}">
                             <details {% if accordion_show_discount_code %} open class="is-open" {% endif %} >
                               <summary>
                                 <div class="summary__title">
-                                  {% render 'icon-tag' %}
-                                  <div class="accordion__title ps-4">{{ 'sections.cart.discounts' | t }}</div>
+                                  <div class="accordion__title ps-4 h2">{{ 'sections.cart.discounts' | t }}</div>
                                 </div>
                                 {% render 'icon-caret' %}
                               </summary>
@@ -533,7 +531,6 @@ data-id="{{ section.id }}">
                             <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                               {%- for discount in cart.cart_level_discount_applications -%}
                                 <li class="discounts__discount discounts__discount--position">
-                                  {%- render 'icon-discount' -%}
                                   {{ discount.title }}
                                   (-{{ discount.total_allocated_amount | money }})
                                 </li>

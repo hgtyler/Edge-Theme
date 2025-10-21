@@ -10,12 +10,12 @@
 }
 
 .totals > h2 {
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  font-size: 20px;
 }
 
-.totals * {
+/* .totals * {
   line-height: 1;
-}
+} */
 
 .totals > * + * {
   margin-inline-start: 2rem;
@@ -27,6 +27,7 @@
 
 .totals__total-value {
   font-size: 2rem;
+  font-family: "ABCWhyte-Book";
 }
 
 .cart__ctas + .totals {

@@ -17,167 +17,123 @@
         "divider_bottom_width": "container"
       }
     },
-    "image_with_text_overlay_44kDbk": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "heading_JMt8xw": {
-          "type": "heading",
-          "settings": {
-            "heading": "Customer Help",
-            "highlighted_word_type": "single_line",
-            "heading_size": "h1"
-          }
-        },
-        "text_Xpcwz3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If talking to a real-life human is more your thing, you can reach our Customer Happiness Team via email (below).<\/p>",
-            "large_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_JMt8xw",
-        "text_Xpcwz3"
-      ],
-      "settings": {
-        "section_width": "w-full",
-        "link": "",
-        "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 480,
-        "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 400,
-        "desktop_content_position": "middle-center",
-        "mobile_content_position": "middle-center",
-        "content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "content_width": "max-w-4xl",
-        "enable_parallax": false,
-        "enable_scroll_reveal": false,
-        "enable_scroll_reveal_top": false,
-        "direction_scroll_reveal": "0",
-        "threshold_down": 1.5,
-        "color_text": "#ffffff",
-        "color_text_highlighted": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.4) 90%)"
-      }
-    },
-    "breadcrumbs_nXLr6x": {
-      "type": "breadcrumbs",
-      "settings": {
-        "section_width": "container",
-        "alignment": "center",
-        "text_size": "text-size-small",
-        "type_breadcrumb": "arrow",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 12,
-        "padding_bottom": 0,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
     "faq_gkrwUi": {
       "type": "faq",
       "blocks": {
         "category_caa7w9": {
           "type": "category",
           "settings": {
-            "heading_row": "Orders"
+            "heading_row": "Care"
           }
         },
         "question_tcdrMe": {
           "type": "question",
           "settings": {
-            "heading": "Can I change or cancel my order?",
+            "heading": "General Jewelry Care",
             "icon": "none",
-            "row_content": "<p>Unfortunately we cannot change your order after you have placed it. If you want to change or cancel your order, please contact us <a href=\"\/pages\/contact\" title=\"Contact\">here.<\/a><\/p>",
+            "row_content": "<p>We promote #wearalways, but there are times when you may want to be more careful and remove your jewelry before doing certain activities.<\/p><p>These times include:<\/p><p>Strenuous activity that involves rubbing against metal such as exercise classes or weight lifting. Cleaning with harsh chemicals such as bleach, especially anything with Chlorine... and make sure to avoid swimming pools and hot tubs with Chlorine, which can cause discoloring and damage to fine jewelry. Also, you may want to avoid activities where your hands get extra dirty, as they can cause build-up on the jewelry (although it can usually be removed easily). This may include activities such as gardening, working with clay, cooking, or using lotion\/oils. Please use extra caution with softer stones such as pearls, turquoise, and opals.<\/p><p>In order to avoid tarnishing, it is important to remove any item that is Gold-Dipped Silver before getting it wet or using lotions and perfumes.<\/p>",
             "page": ""
           }
         },
         "question_araiGw": {
           "type": "question",
           "settings": {
-            "heading": "Can you exchange items?",
+            "heading": "Cleaning",
             "icon": "none",
-            "row_content": "<p>Unfortunately, we cannot offer exchanges. If you need a different size or color of an item, you will need to place a new order and return the item that does not fit. If you order the same model again in a different color or size, we can ensure that you can keep any discount that may have been granted on the original order. The returned item will be refunded as soon as it arrives at our warehouse.<\/p>",
+            "row_content": "<p>If your jewelry becomes dull or dirty, we recommend using a soft brush (a make-up brush or soft toothbrush) and an organic cleaning spray or non-detergent soap. Rinse with warm water and air dry. <\/p><p>You can also use a lint-free jewelry polishing cloth. If your jewelry needs a deep cleaning, please take it to your local jeweler or email us.<\/p>",
+            "page": ""
+          }
+        },
+        "question_7nVQj8": {
+          "type": "question",
+          "settings": {
+            "heading": "Storage",
+            "icon": "none",
+            "row_content": "<p>The best way to store your Starling jewelry is in the box you received the piece in. <\/p><p>Any soft fabric bag or box will also do, as long as it is clean and dry.<\/p>",
             "page": ""
           }
         },
         "category_RkAMn9": {
           "type": "category",
           "settings": {
-            "heading_row": "Shipping & Returns"
+            "heading_row": "Repairs"
           }
         },
         "question_wCttGc": {
           "type": "question",
           "settings": {
-            "heading": "Which countries are the products delivered to?",
+            "heading": "What if there's a quality issue and it's not my fault?",
             "icon": "none",
-            "row_content": "<p>Orders placed on this shop can be sent to Europe and North America. For shipping to other countries, please contact us.<\/p>",
+            "row_content": "<p>We stand by the quality of our items. If an item breaks after our 10-day return policy, please send an image of the item to hello@starlingjewelry.com. We can then determine the next steps, whether it’s exchanging the item or repairing.<\/p>",
             "page": ""
           }
         },
         "question_x7TPhe": {
           "type": "question",
           "settings": {
-            "heading": "How much does the shipping cost?",
+            "heading": "I need a repair and ugh - it's my fault!",
             "icon": "none",
-            "row_content": "<p>Delivery is free in US for purchases over $70. Otherwise, delivery is $8.<\/p>",
+            "row_content": "<p>That's okay, it can be fixed! Send an image of the piece to hello@starlingjewelry.com, and we can determine our repair\/replacement charges. Shipping charges will be the customer’s responsibility.<\/p>",
             "page": ""
           }
         },
         "question_p4cAyj": {
           "type": "question",
           "settings": {
-            "heading": "Which shipping methods do you offer?",
+            "heading": "My ring is too big\/small. Can you resize it?",
             "icon": "none",
-            "row_content": "<p>The dispatch takes place via the parcel service GLS. We offer delivery to your home address.<\/p>",
+            "row_content": "<p>Yes! First figure out what size you would like. We offer <a href=\"https:\/\/www.starlingjewelry.com\/products\/ring-sizer?_pos=1&_psq=ring+sizer&_ss=e&_v=1.0\" target=\"_blank\" title=\"https:\/\/www.starlingjewelry.com\/products\/ring-sizer?_pos=1&_psq=ring+sizer&_ss=e&_v=1.0\">ring-sizers<\/a> for purchase if you're unsure! <br\/>Then email hello@starlingjewelry.com with your information. We will get back to you within 24 hours with a quote and timeline.<\/p>",
             "page": ""
           }
         },
         "category_DQFDdJ": {
           "type": "category",
           "settings": {
-            "heading_row": "Account"
+            "heading_row": "Shipping & Returns"
           }
         },
         "question_eGfYaj": {
           "type": "question",
           "settings": {
-            "heading": "Do I necessarily have to create an account to order?",
+            "heading": "Do you ship worldwide?",
             "icon": "none",
-            "row_content": "<p>No it's not mandatory. But it is highly recommended. Indeed, it will allow you to find your history, edit your addresses and track your parcel online faster. You will also be notified of new products and special events.<\/p>",
+            "row_content": "<p>We ship to select international countries with DHL. We are not responsible for tax and duty fees.<\/p>",
             "page": ""
           }
         },
         "question_NTXTgb": {
           "type": "question",
           "settings": {
-            "heading": "Do you save my bank details?",
+            "heading": "What are your shipping methods within the USA?",
             "icon": "none",
-            "row_content": "<p>Absolutely not. We never have access to this information. It is the company Stripe that deals with it. Your data is completely safe.<\/p>",
+            "row_content": "<p>USPS 2 to 5 business day and UPS 2 Day. We offer free USPS shipping on orders over $500.<\/p><p>We are not responsible for delayed delivery caused by carrier.<\/p>",
             "page": ""
           }
         },
-        "category_TUJH7q": {
-          "type": "category",
-          "settings": {
-            "heading_row": "Payment"
-          }
-        },
-        "question_FYFecm": {
+        "question_btjfqE": {
           "type": "question",
           "settings": {
-            "heading": "What types of credit cards do you accept?",
+            "heading": "How long do your orders take to process?",
             "icon": "none",
-            "row_content": "<p>We accept Visa, MasterCard and American Express cards. Alternatively, you can finalize your order with PayPal payment service.<\/p>",
+            "row_content": "<p>As our company grows, please be patient with us. <\/p><p>Our items are made to order, and most items take 7-10 days to make and ship out as soon as they are finished. <\/p><p>Any order with engraving or personalized stone arrangements usually take 2-3 weeks to make. <\/p><p>Bespoke and custom items take an estimate of 6-8 weeks to make before shipping.<\/p><p>If your order is a rush item please email us and we will do everything we can to get it to you on time!<\/p>",
+            "page": ""
+          }
+        },
+        "question_7ELxcf": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I track my order?",
+            "icon": "none",
+            "row_content": "<p>Yes! We will send you a tracking number as soon as the items ships.<\/p>",
+            "page": ""
+          }
+        },
+        "question_E7mXgy": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I return or exchange a product?",
+            "icon": "none",
+            "row_content": "<p>If you are not entirely pleased with a product you purchased, Starling will accept non-personalized items for exchange or return within 10 days of your delivery date. Item(s) must be returned in new and re-sellable condition with original jewelry box. Returns after the 10-day period are only eligible for a store credit and at the discretion of Starling Jewelry. If you would like to make a return please email us at hello@starlingjewelry.com for a return authorization.<\/p><p>No refund will be granted without return authorization. Returns will be credited minus a return shipping cost. All shipping charges are non refundable. You’ll receive the refund within 5-7 business days depending on your bank.<\/p><p>For your protection, please pack your returns in the original box with the return authorization form. Return your order with an insured courier (e.g., FedEx, UPS) and retain your receipt. Once your return is processed, the purchasing card will be credited for the merchandise amount only. We cannot refund shipping charges on return items.<\/p><p><strong>Personalized items, bespoke gems, one-of-a-kind items and special orders cannot be returned. Personalized pieces include any item that is engraved, custom name necklaces, compass charms, and any special order. <\/strong><\/p><p>Starling is not responsible for items damaged or lost in transit. For questions about shipping or repairs please email us at hello@starlingjewelry.com<\/p>",
             "page": ""
           }
         }
@@ -186,6 +142,7 @@
         "category_caa7w9",
         "question_tcdrMe",
         "question_araiGw",
+        "question_7nVQj8",
         "category_RkAMn9",
         "question_wCttGc",
         "question_x7TPhe",
@@ -193,14 +150,15 @@
         "category_DQFDdJ",
         "question_eGfYaj",
         "question_NTXTgb",
-        "category_TUJH7q",
-        "question_FYFecm"
+        "question_btjfqE",
+        "question_7ELxcf",
+        "question_E7mXgy"
       ],
       "settings": {
-        "subheading": "All articles",
-        "heading": "Frequently asked question!",
-        "heading_size_section": "h3",
-        "description": "<p>Hi, How can I help you? Search for your answer in these categories<\/p>",
+        "subheading": "",
+        "heading": "frequently asked questions",
+        "heading_size_section": "h1",
+        "description": "",
         "layout": "vertical",
         "show_sidebar": true,
         "use_header_sidebar": true,
@@ -208,6 +166,7 @@
         "type_content": "background",
         "heading_size_category": "h4",
         "heading_size_question": "body-1",
+        "link_url": "",
         "link_text": "Contact us",
         "button_type": "primary",
         "show_icon": true,
@@ -259,6 +218,7 @@
           "type": "button",
           "settings": {
             "button_label": "Contact us",
+            "button_link": "",
             "button_type": "primary",
             "show_icon": false
           }
@@ -276,6 +236,7 @@
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "#f7f1f0",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 80,
@@ -289,8 +250,6 @@
   },
   "order": [
     "main",
-    "image_with_text_overlay_44kDbk",
-    "breadcrumbs_nXLr6x",
     "faq_gkrwUi",
     "rich_text_arEzcN"
   ]
