@@ -138,6 +138,13 @@
       },
       {
         "type": "color",
+        "id": "color_upon_request",
+        "label": "Price upon request",
+        "default": "#999999",
+        "info": "Used for price upon request badge"
+      },
+      {
+        "type": "color",
         "id": "color_inventory_in_stock",
         "label": "In stock",
         "default": "#279A4B"
@@ -1426,6 +1433,12 @@
         "type": "checkbox",
         "id": "card_show_sold_out_badge",
         "label": "Show sold out badge",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "card_show_upon_request_badge",
+        "label": "Show price upon request badge",
         "default": true
       },
       {

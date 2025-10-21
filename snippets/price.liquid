@@ -19,6 +19,7 @@
     assign target = product
   endif
 
+
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
   assign price_min = product.price_min
@@ -43,7 +44,7 @@
   class="
     price
     {%- if price_class %} {{ price_class }}{% endif -%}
-    {%- if available == false %} price--sold-out{% endif -%}
+    {%- if available == false and upon_request == false %} price--sold-out{% endif -%}
     {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
     {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
@@ -81,14 +82,14 @@
       {%- else -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
-          {{ money_price }}
+          {{ money_price }} 
         </span>
       {%- endif -%}
     </div>
     <div class="price__sale">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
+        {{ money_price }} 
       </span>
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
@@ -140,6 +141,10 @@
   
     <span class="badge price__badge-sold-out {{ style_badge }}">
       {{ 'products.product.sold_out' | t }}
+    </span>
+
+    <span class="badge price__badge-upon-request {{ style_badge }}">
+      {{ 'products.product.upon_request' | t }}
     </span>
   {%- endif -%}
 </div>

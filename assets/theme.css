@@ -1316,6 +1316,12 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   text-transform: lowercase;
   font-size: 30px;
 }
+.price__badge-upon-request {
+  color: #D50032;
+  font-family: "Auberge-Script-Basic-One";
+  font-size: 30px;
+  transform: rotate(-20deg);
+}
 .gradient {
   background: rgb(var(--color-background));
   background-attachment: fixed;
@@ -5272,6 +5278,18 @@ blockquote p {
 .price--sold-out .price__availability, .price__regular {
   display: block;
 }
+.price--upon-request {
+  display: none;
+}
+.price-request {
+  color: rgb(var(--color-price-upon-request-text));
+  font-size: 12px;
+}
+.price__request {
+  display: inline-block;
+}
+
+
 .price__sale, .price__availability, .price .price__badge-sale, .price .price__badge-sold-out, .price--on-sale .price__regular, .price--on-sale .price__availability {
   display: none;
 }

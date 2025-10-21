@@ -22,6 +22,10 @@
   assign card_rating_type = settings.card_rating_type
   assign card_title_line_clamp = settings.card_title_line_clamp
 
+  if card_product.tags contains "price-upon-request"
+  assign show_price = false
+  endif
+
   assign style_class = 'btn btn-primary-white' 
   case button_quick_buy_type
        when 'primary'
@@ -226,7 +230,9 @@
             {% if card_rating_position == 'under_title' %}
               {% render 'card-product-rating', card_product: card_product, show_rating: show_rating, card_rating_type: card_rating_type %}
             {% endif %}
-            {% if settings.price_variant_type == 'min_price' %}
+            {% if card_product.tags contains "price-upon-request" %}
+              {{ 'products.product.upon_request' | t }}
+            {% elsif settings.price_variant_type == 'min_price' %}
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {% else %}
               {% render 'price-max', product: card_product, price_class: '', show_compare_at_price: true %}

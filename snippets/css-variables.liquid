@@ -130,6 +130,7 @@
         {%- assign color_sold_out = settings.color_sold_out | color_brightness -%}
         --color-sold-out:{%- if color_sold_out   >= 150 -%} 0 0 0 {%- else -%}  255 255 255  {%- endif -%};
         --color-stars: {{ settings.color_stars.rgb }};
+        --color-upon-request: {{ settings.color_price_upon_request_text.rgb }};
         --color-background-card:{{ settings.color_product_card.rgb }};
         --color-filter:{% if settings.enable_gray_background %} 0.97{%  else %} none{% endif %};
         --color-card-label:{{ settings.card_label_color.rgb }};

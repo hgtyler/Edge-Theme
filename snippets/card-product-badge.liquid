@@ -28,6 +28,12 @@
 {%- endcase -%}
 
 <div class="card__badge {{ card_badge_position }}">
+    {%- if card_product.tags contains "price-upon-request" -%}
+        <span class="badge price__badge-upon-request badge-{{ badge_style }}" >
+            Custom!
+        </span>
+    {%- endif -%}
+{% comment %} <div class="card__badge {{ card_badge_position }}">
     {%- if card_product.available == false and show_sold_out_badge -%}
         <span class="badge price__badge-sold-out badge-{{ badge_style }}" >
           {{- 'products.product.sold_out' | t -}}
@@ -40,7 +46,7 @@
               {{- 'products.product.save_html' | t: save_amount: discount_value -}}
             {%- endif -%}
         </span>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
     {% if use_tags and settings.card_label_position == 'inner' %}
         {% for tag in card_product.tags %}
             {%- assign tag_label = tag | handle |  downcase |  escape -%}
