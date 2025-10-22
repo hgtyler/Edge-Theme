@@ -40,7 +40,7 @@
           "type": "price",
           "settings": {
             "show_tax_note": false,
-            "show_sale_badge": true,
+            "show_sale_badge": false,
             "sale_badge_type": "fixed"
           }
         },
