@@ -15,6 +15,15 @@
     assign padding_bottom =  section.settings.padding_bottom
     assign divider_type = section.settings.divider_type
   -%}
+  <style>
+    .collapsible__content-wrapper {
+      font-family: "ABCWhyte-Book";
+    }
+
+    .footer-block-newsletter {
+      font-family: "ABCWhyte-Book";
+    }
+  </style>
 {%- capture animate_slide_in -%}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{%- endcapture -%}
 <footer class="footer footer__section footer__section--{{ divider_type }}" >
   {%- render 'top-divider', show_top_divider: section.settings.show_top_divider, divider_top_width: section.settings.divider_top_width -%}

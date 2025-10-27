@@ -57,7 +57,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/BESPOKE-GEM-LOGO.png",
-            "image_width": 460,
+            "image_width": 400,
             "image_width_mobile": 200,
             "url": ""
           }
@@ -145,7 +145,7 @@
         "columns_desktop": 4,
         "column_gap": 1,
         "row_gap": 2,
-        "pagination_type": "load-more-button",
+        "pagination_type": "page-numbers",
         "filter_type": "drawer",
         "enable_filtering": true,
         "enable_sorting": true,

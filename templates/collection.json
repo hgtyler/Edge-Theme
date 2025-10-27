@@ -8,6 +8,7 @@
         "alignment": "start",
         "text_size": "text-size-small",
         "type_breadcrumb": "arrow",
+        "show_on_mobile": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -52,7 +53,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "section_width": "container-fluid",
-        "products_per_page": 20,
+        "products_per_page": 30,
         "columns_desktop": 4,
         "column_gap": 1.4,
         "row_gap": 2,

@@ -2,11 +2,13 @@
   "sections": {
     "breadcrumbs_FYp3jd": {
       "type": "breadcrumbs",
+      "disabled": true,
       "settings": {
         "section_width": "container-fluid",
         "alignment": "start",
         "text_size": "text-size-small",
         "type_breadcrumb": "arrow",
+        "show_on_mobile": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -21,9 +23,9 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_breadcrumb": false,
+        "show_breadcrumb": true,
         "text_size": "text-size-tiny",
-        "type_breadcrumb": "dot",
+        "type_breadcrumb": "line-vertical",
         "show_collection_title": true,
         "show_collection_image": false,
         "section_width": "container-fluid",
@@ -228,11 +230,11 @@
       ],
       "settings": {
         "section_width": "container-fluid",
-        "products_per_page": 20,
+        "products_per_page": 32,
         "columns_desktop": 4,
         "column_gap": 1,
         "row_gap": 2,
-        "pagination_type": "load-more-button",
+        "pagination_type": "page-numbers",
         "filter_type": "drawer",
         "enable_filtering": true,
         "enable_sorting": true,

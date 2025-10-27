@@ -74,7 +74,7 @@
           "type": "button",
           "settings": {
             "button_label": "Get Started",
-            "button_link": "",
+            "button_link": "mailto:hello@starlingjewelry.com?subject=Bespoke%20Project%20Inquiry",
             "button_type": "underlined",
             "show_icon": true
           }
@@ -259,7 +259,7 @@
           "type": "button",
           "settings": {
             "button_label": "Get Started",
-            "button_link": "",
+            "button_link": "mailto:hello@starlingjewelry.com?subject=Bespoke%20Project%20Inquiry",
             "button_type": "outline",
             "show_icon": true
           }
@@ -292,10 +292,21 @@
         "icon_WW6pXn": {
           "type": "icon",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/eyewing_c117e35c-5516-4c37-a9cb-e5bb51ef5dc2.png",
-            "title": "Initial Consult & Stone Sourcing",
-            "text": "<p>  We offer in studio or complimentary virtual consultations. <\/p><p>After your initial deposit is collected, we'll begin sourcing stone options for your project.<\/p>",
+            "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/head_1.png",
+            "title": "Initial Consult",
+            "text": "<p>We offer in studio or complimentary virtual consultations. <\/p><p><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_XTqK6G": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/time-to-revive_1.png",
+            "title": "Stone Sourcing",
+            "text": "<p>After your initial deposit is collected, we'll begin sourcing stone options for your project.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -303,8 +314,8 @@
         "icon_LnV8KC": {
           "type": "icon",
           "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_2_5062dc92-00a1-4407-97b3-4039651e626e.png",
+            "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/mystery-eye_1.png",
             "title": "Design",
             "text": "<p>Once we find your perfect stone, we work together on the design process, complete with custom CAD renderings.<\/p>",
             "button_label": "",
@@ -314,7 +325,8 @@
         "icon_GfkwKc": {
           "type": "icon",
           "settings": {
-            "icon": "check_mark",
+            "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/gem-hand_1.png",
             "title": "Production",
             "text": "<p>After designs are approved, we begin making your piece in the metal of your choice. All metalsmithing is done by our master goldsmiths in Los Angeles, California. <\/p>",
             "button_label": "",
@@ -324,7 +336,8 @@
         "icon_mtfqxm": {
           "type": "icon",
           "settings": {
-            "icon": "check_mark",
+            "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/bird_1.png",
             "title": "Finished & Delivery",
             "text": "<p>Once your Bespoke piece is complete we will coordinate the best complimentary delivery date for you to receive your future heirloom. <\/p>",
             "button_label": "",
@@ -334,6 +347,7 @@
       },
       "block_order": [
         "icon_WW6pXn",
+        "icon_XTqK6G",
         "icon_LnV8KC",
         "icon_GfkwKc",
         "icon_mtfqxm"
@@ -347,10 +361,10 @@
         "description": "<p>Each <em>Bespoke Design<\/em> begins with collaboration and care. From your first consultation to the final delivery, every detail is handled with artistry and intention to ensure your piece feels uniquely Starling.<\/p>",
         "layout": "vertical",
         "item_type": "vertical",
-        "heading_size": "h6",
+        "heading_size": "body-1",
         "column_alignment": "center",
         "icon_background": "none",
-        "icon_width": 24,
+        "icon_width": 60,
         "button_type": "outline",
         "show_icon": false,
         "column_gap": 4,
@@ -378,7 +392,7 @@
           "type": "button",
           "settings": {
             "button_label": "Get Started",
-            "button_link": "",
+            "button_link": "mailto:hello@starlingjewelry.com?subject=Bespoke%20Project%20Inquiry",
             "button_type": "outline",
             "show_icon": true
           }

@@ -130,7 +130,9 @@
         "collapsible_tab_bVRE3V",
         "icon_with_text_CqGeaM"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h1 {text-transform: Capitalize;}"
+      ],
       "settings": {
         "section_width": "container",
         "enable_sticky_info": true,

@@ -236,13 +236,6 @@
     "rich_text_wcX4iH": {
       "type": "rich-text",
       "blocks": {
-        "separator_GDUJVB": {
-          "type": "separator",
-          "settings": {
-            "show_border": true,
-            "space": 24
-          }
-        },
         "text_wVnpNw": {
           "type": "text",
           "settings": {
@@ -251,29 +244,10 @@
             "show_more_toggle": false,
             "max_height": 8
           }
-        },
-        "separator_pFJwWV": {
-          "type": "separator",
-          "settings": {
-            "show_border": true,
-            "space": 24
-          }
-        },
-        "text_VKxkqz": {
-          "type": "text",
-          "settings": {
-            "text": "<p><em><strong>If you have questions about our business practices, materials, or specific products - contact us at hello@starlingjewelry.com<\/strong><\/em><\/p>",
-            "large_text": false,
-            "show_more_toggle": false,
-            "max_height": 3
-          }
         }
       },
       "block_order": [
-        "separator_GDUJVB",
-        "text_wVnpNw",
-        "separator_pFJwWV",
-        "text_VKxkqz"
+        "text_wVnpNw"
       ],
       "name": "Rich text",
       "settings": {

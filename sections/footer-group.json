@@ -170,7 +170,7 @@
       "settings": {
         "section_width": "container",
         "divider_type": "none",
-        "heading_size": "body-1",
+        "heading_size": "h2",
         "enable_follow_on_shop": false,
         "enable_country_selector": false,
         "enable_country_flag": false,
