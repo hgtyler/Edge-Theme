@@ -39,6 +39,7 @@
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
@@ -63,7 +64,7 @@
         "text_LMbFfe": {
           "type": "text",
           "settings": {
-            "text": "<p>At Starling, we love doing custom designs for engagement rings, important milestones or just because. Look through our site or socials for inspiration and reach out with your project below! We can't wait to make something magical together.<\/p>",
+            "text": "<p>At Starling, we love creating one-of-a-kind pieces that mark life’s meaningful moments both big and small. Whether you’re envisioning a custom engagement ring, a milestone piece, or something just because, our bespoke design process transforms your idea into a true Starling creation.<\/p><p>From sourcing the perfect stone to refining every element of the design, we’ll collaborate with you to craft a piece that reflects both your story and our signature style. To begin, email us with your dream stone, setting, budget, timeline, and any Starling inspiration you have. We can’t wait to create something magical together.<\/p>",
             "large_text": false,
             "show_more_toggle": false,
             "max_height": 8
@@ -95,13 +96,60 @@
       "name": "Intro",
       "settings": {
         "section_width": "w-full",
-        "content_width": "max-w-4xl",
+        "content_width": "max-w-7xl",
         "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "linear-gradient(270deg, rgba(NaN, NaN, NaN, 0), rgba(249, 208, 163, 1) 100%)",
+        "text_color": "",
+        "border_color": "#4f0e0d",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "featured_blog_XNipwC": {
+      "type": "featured-blog",
+      "name": "Blog posts",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "blog": "bespoke-projects",
+        "image_ratio": "portrait",
+        "title_size": "h4",
+        "align_content_card": "start",
+        "show_border_card": false,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_category": false,
+        "show_read_more": true,
+        "enable_button_underlined_white": false,
+        "show_icon_read_more": false,
+        "enable_stack_columns": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "column_gap": 3,
+        "column_gap_mobile": 2,
+        "swipe_on_mobile": false,
+        "link_url": "",
+        "link_text": "",
+        "button_type": "primary",
+        "show_icon": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -183,6 +231,7 @@
         "image_MEAY4X",
         "image_hMACkP"
       ],
+      "disabled": true,
       "name": "Past Projects",
       "settings": {
         "section_width": "container-fluid",
@@ -191,6 +240,7 @@
         "heading_size_section": "h6",
         "description": "",
         "layout": "vertical",
+        "column_gap": 3,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -218,12 +268,14 @@
       "block_order": [
         "button_AJy7Na"
       ],
-      "name": "Rich text",
+      "disabled": true,
+      "name": "GET STARTED BUTTON",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 0,
@@ -231,6 +283,124 @@
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": true,
+        "divider_bottom_width": "container"
+      }
+    },
+    "text_with_icons_wX8Mqx": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_WW6pXn": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "custom_icon": "shopify:\/\/shop_images\/eyewing_c117e35c-5516-4c37-a9cb-e5bb51ef5dc2.png",
+            "title": "Initial Consult & Stone Sourcing",
+            "text": "<p>  We offer in studio or complimentary virtual consultations. <\/p><p>After your initial deposit is collected, we'll begin sourcing stone options for your project.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_LnV8KC": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "custom_icon": "shopify:\/\/shop_images\/Asset_2_5062dc92-00a1-4407-97b3-4039651e626e.png",
+            "title": "Design",
+            "text": "<p>Once we find your perfect stone, we work together on the design process, complete with custom CAD renderings.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_GfkwKc": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Production",
+            "text": "<p>After designs are approved, we begin making your piece in the metal of your choice. All metalsmithing is done by our master goldsmiths in Los Angeles, California. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "icon_mtfqxm": {
+          "type": "icon",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Finished & Delivery",
+            "text": "<p>Once your Bespoke piece is complete we will coordinate the best complimentary delivery date for you to receive your future heirloom. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_WW6pXn",
+        "icon_LnV8KC",
+        "icon_GfkwKc",
+        "icon_mtfqxm"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "the bespoke design process",
+        "heading_size_section": "h2",
+        "description": "<p>Each <em>Bespoke Design<\/em> begins with collaboration and care. From your first consultation to the final delivery, every detail is handled with artistry and intention to ensure your piece feels uniquely Starling.<\/p>",
+        "layout": "vertical",
+        "item_type": "vertical",
+        "heading_size": "h6",
+        "column_alignment": "center",
+        "icon_background": "none",
+        "icon_width": 24,
+        "button_type": "outline",
+        "show_icon": false,
+        "column_gap": 4,
+        "columns_mobile": "1",
+        "column_gap_mobile": 3,
+        "swipe_on_mobile": true,
+        "show_progress_bar": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "icon_bg_color": "",
+        "icon_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_KXziFU": {
+      "type": "rich-text",
+      "blocks": {
+        "button_ArKept": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "outline",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "button_ArKept"
+      ],
+      "name": "GET STARTED BUTTON",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
     },
@@ -294,7 +464,8 @@
         "tab_qdBatA",
         "tab_ckGGEA"
       ],
-      "name": "Content Tabs",
+      "disabled": true,
+      "name": "Client Stories",
       "settings": {
         "section_width": "container",
         "type_tabs": "underline",
@@ -333,12 +504,14 @@
       "block_order": [
         "button_HQNPc9"
       ],
-      "name": "Rich text",
+      "disabled": true,
+      "name": "GET STARTED BUTTON",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 0,
@@ -346,121 +519,6 @@
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": true,
-        "divider_bottom_width": "container"
-      }
-    },
-    "rich_text_KXziFU": {
-      "type": "rich-text",
-      "blocks": {
-        "button_ArKept": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get Started",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "button_ArKept"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": true,
-        "divider_bottom_width": "container"
-      }
-    },
-    "text_with_icons_wX8Mqx": {
-      "type": "text-with-icons",
-      "blocks": {
-        "icon_WW6pXn": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/eyewing_c117e35c-5516-4c37-a9cb-e5bb51ef5dc2.png",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_LnV8KC": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_2_5062dc92-00a1-4407-97b3-4039651e626e.png",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_GfkwKc": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "icon_mtfqxm": {
-          "type": "icon",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "icon_WW6pXn",
-        "icon_LnV8KC",
-        "icon_GfkwKc",
-        "icon_mtfqxm"
-      ],
-      "name": "Text with icons",
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "",
-        "heading_size_section": "h2",
-        "description": "<p>How It Works<\/p>",
-        "layout": "vertical",
-        "item_type": "vertical",
-        "heading_size": "h6",
-        "column_alignment": "center",
-        "icon_background": "none",
-        "icon_width": 24,
-        "button_type": "outline",
-        "show_icon": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "show_progress_bar": false,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "icon_bg_color": "",
-        "icon_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
     }
@@ -469,11 +527,12 @@
     "main",
     "rich_text_wQ7Pyy",
     "rich_text_D3EwF8",
+    "featured_blog_XNipwC",
     "gallery_grid_x7CEUg",
     "rich_text_4Ead8T",
-    "content_tabs_nq7tBW",
-    "rich_text_9DVg9U",
     "text_with_icons_wX8Mqx",
-    "rich_text_KXziFU"
+    "rich_text_KXziFU",
+    "content_tabs_nq7tBW",
+    "rich_text_9DVg9U"
   ]
 }

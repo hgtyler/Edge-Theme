@@ -1,6 +1,7 @@
 .discounts {
   font-size: 1.2rem;
   font-family: "Auberge-Script-Basic-One";
+  text-transform: lowercase;
 }
 
 .discounts__discount {
@@ -8,6 +9,7 @@
   align-items: center;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   font-family: "Auberge-Script-Basic-One";
+  text-transform: lowercase;
 }
 
 .discounts__discount svg {

@@ -32,7 +32,7 @@
           "type": "price",
           "settings": {
             "show_tax_note": false,
-            "show_sale_badge": true,
+            "show_sale_badge": false,
             "sale_badge_type": "fixed"
           }
         },
@@ -115,11 +115,11 @@
             "layout": "stacked",
             "icon_size": 36,
             "icon_1": "heart",
-            "image_1": "shopify:\/\/shop_images\/wine-question-mark.png",
-            "heading_1": "Questions?<a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\"> <strong>Ask Away.<\/strong><\/a>",
+            "image_1": "shopify:\/\/shop_images\/wine-bird.png",
+            "heading_1": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
             "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/wine-bird.png",
-            "heading_2": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
+            "image_2": "shopify:\/\/shop_images\/stars-burgundy3.png",
+            "heading_2": "<a href=\"#reviews\" title=\"#reviews\">Reviews<\/a>",
             "icon_3": "none",
             "heading_3": "",
             "icon_4": "none",
@@ -381,31 +381,17 @@
         "divider_bottom_width": "container"
       }
     },
-    "rich_text_jnfbVw": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ht4NkQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "reviews",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ht4NkQ"
-      ],
-      "name": "Rich text",
+    "custom_liquid_pXCQFG": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
       "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
+        "section_width": "container",
+        "custom_liquid": "<style> \nh3 {\ntext-align: center;\nfont-size: 10px; \npadding-bottom: 0px; \nmargin-bottom: 0px; }\nh1 {\ntext-align: center; } \n<\/style>\n\n<div id=\"reviews\"> \n<h3> CUSTOMER <\/h3>\n<h1> reviews <h1> <\/div>",
         "bg_color": "",
-        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 44,
-        "padding_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -794,7 +780,7 @@
     "main",
     "testimonials_NmwCVP",
     "information-products",
-    "rich_text_jnfbVw",
+    "custom_liquid_pXCQFG",
     "1758934419fc009d58",
     "custom_content_6MRLyg",
     "video_with_text_overlay_bJYX9f",

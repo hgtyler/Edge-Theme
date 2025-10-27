@@ -9,7 +9,7 @@
                 <search-form class="search-modal__form flex flex-col h-full ">
             {%- endif -%}
             <div class="drawer-header pt-6 pb-4 flex justify-between items-center flex-none px-10 lg:px-14">
-                <h5>{{ 'general.search.search' | t }}</h5>
+                <h2>{{ 'general.search.search' | t }}</h2>
                 <button class="close-drawer-btn focus-inset" type="button"  aria-label="{{ 'accessibility.close' | t }}" >{% render 'icon-close' %}</button>
             </div>
             <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form flex flex-col gap-y-12 grow overflow-y-auto overflow-x-hidden">

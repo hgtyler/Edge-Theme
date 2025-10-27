@@ -16,6 +16,7 @@
 
 .collection-hero__title {
   margin: 2rem 0;
+  text-transform:capitalize;
 }
 .collection-hero__title + .collection-hero__description {
   margin-top: 2rem;

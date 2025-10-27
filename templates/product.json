@@ -123,14 +123,13 @@
             "layout": "stacked",
             "icon_size": 36,
             "icon_1": "heart",
-            "image_1": "shopify:\/\/shop_images\/wine-question-mark.png",
-            "heading_1": "Questions?<a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\"> <strong>Ask Away.<\/strong><\/a>",
+            "image_1": "shopify:\/\/shop_images\/wine-bird.png",
+            "heading_1": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
             "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/wine-bird.png",
-            "heading_2": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
+            "image_2": "shopify:\/\/shop_images\/stars-burgundy3.png",
+            "heading_2": "<a href=\"#reviews\" title=\"#reviews\">Reviews<\/a>",
             "icon_3": "none",
-            "image_3": "shopify:\/\/shop_images\/stars-burgundy3.png",
-            "heading_3": "<a href=\"#reviews\" title=\"#reviews\">Reviews<\/a>",
+            "heading_3": "",
             "icon_4": "none",
             "heading_4": ""
           }
@@ -158,7 +157,7 @@
         "media_width": 50,
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail_left",
+        "gallery_layout": "thumbnail",
         "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",
@@ -294,21 +293,21 @@
     "information-products": {
       "type": "information-tabs-products",
       "blocks": {
-        "custom_content_Nic9fy": {
-          "type": "custom-content",
-          "name": "Happiness Guarantee",
-          "settings": {
-            "tab_heading": "Happiness Guarantee",
-            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee\/Warranty on all handmade jewelry purchased through us directly or our website. <\/p><p>We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery.<\/p><p>Please note that shipping costs are not included in our Warranty\/Happiness Guarantee after 90 days.<\/p>",
-            "page": ""
-          }
-        },
         "custom_content_73AKnk": {
           "type": "custom-content",
           "name": "Shipping & Returns",
           "settings": {
             "tab_heading": "Shipping & Returns",
             "content": "<p>Orders above $500 are automatically upgraded to USPS Priority Mail Signature required, with orders underneath this not requiring a signature at delivery. <\/p><p>Orders above $1k are complimentary upgraded to FedEx 2day Shipping Signature Required<br\/><br\/>Personalized items, Bespoke Gems, One-of-a-Kind items and Bespoke or Heirloom Revival Projects cannot be returned. Personalized pieces include any item that is engraved, custom stone arrangement (ie our Compass Charm, Family Stone Charm) or any special order.<\/p><p>If you are not entirely pleased with a product you purchased, Starling will accept limited items for exchange or return within 10 days of your delivery date.<\/p><p><a href=\"\/pages\/happiness-guarantee\" target=\"_blank\" title=\"Happiness Guarantee\"><strong>Read More<\/strong><\/a><\/p>",
+            "page": ""
+          }
+        },
+        "custom_content_Nic9fy": {
+          "type": "custom-content",
+          "name": "Happiness Guarantee",
+          "settings": {
+            "tab_heading": "Happiness Guarantee",
+            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee\/Warranty on all handmade jewelry purchased through us directly or our website. <\/p><p>We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery.<\/p><p>Please note that shipping costs are not included in our Warranty\/Happiness Guarantee after 90 days.<\/p>",
             "page": ""
           }
         },
@@ -341,8 +340,8 @@
         }
       },
       "block_order": [
-        "custom_content_Nic9fy",
         "custom_content_73AKnk",
+        "custom_content_Nic9fy",
         "custom_content_4bDa3X",
         "custom_content_WdbcGA",
         "custom_content_8t3qBG"

@@ -2,11 +2,13 @@
   "sections": {
     "breadcrumbs_FYp3jd": {
       "type": "breadcrumbs",
+      "disabled": true,
       "settings": {
         "section_width": "container-fluid",
         "alignment": "start",
         "text_size": "text-size-small",
         "type_breadcrumb": "arrow",
+        "show_on_mobile": false,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -20,25 +22,26 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_breadcrumb": false,
         "text_size": "text-size-small",
         "type_breadcrumb": "dot",
-        "show_collection_title": true,
-        "show_collection_image": false,
+        "show_collection_title": false,
+        "show_collection_image": true,
         "section_width": "container-fluid",
-        "heading_size": "h4",
-        "image_size": "350px",
-        "image": "{{ collection.image }}",
-        "align_content": "start",
+        "heading_size": "h1",
+        "image_size": "auto",
+        "image": "shopify:\/\/shop_images\/BESPOKE-GEM-LOGO.png",
+        "align_content": "center",
         "show_collection_description": false,
         "show_more_toggle": false,
         "max_height": 2,
         "navigation": "",
         "text_color": "#ffffff",
         "border_color": "",
-        "overlay_color": "#000000",
-        "overlay_opacity": 100,
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
         "padding_top": 0,
         "padding_bottom": 0,
         "show_top_divider": false,
@@ -46,6 +49,93 @@
         "show_bottom_divider": false,
         "divider_bottom_width": "w-full"
       }
+    },
+    "rich_text_RxCP4j": {
+      "type": "rich-text",
+      "blocks": {
+        "image_XyTpxi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BESPOKE-GEM-LOGO.png",
+            "image_width": 460,
+            "image_width_mobile": 200,
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_XyTpxi"
+      ],
+      "name": "Header",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "17611558913f921cfe": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_97e0861_VEYqyz": {
+          "type": "ai_gen_block_97e0861",
+          "settings": {
+            "section_width": "container-fluid",
+            "content_alignment": "center",
+            "show_trigger_button": true,
+            "trigger_button_text": "How it Works",
+            "trigger_button_style": "underlined",
+            "auto_open": false,
+            "auto_open_delay": 3,
+            "show_once": false,
+            "content_type": "text",
+            "heading": "how it works",
+            "text": "<p>Choose between a ring or charm in either a prong, bezel, or cloud setting style, and your preferred gold color.<\/p><p>Ring is made to fit you - if you don’t know your ring size, select “I Don’t Know” as a size option and we will ship you a free ring sizer. If you would like to add side stones, let us know.<\/p><p>After ordering, you will receive a 3D CAD design of your selections within 5-10 days, before we make the final ring.<\/p><p>Bespoke rings and charms take 6-8 weeks to make.<\/p><p>Due to the custom nature of these pieces, they are final sale!<\/p>",
+            "button_text": "Shop now",
+            "button_link": "",
+            "button_style": "primary",
+            "image_border_radius": 8,
+            "product": "",
+            "product_button_text": "View product",
+            "form_button_text": "Submit",
+            "form_success_message": "Thank you for your message",
+            "modal_width": 600,
+            "border_radius": 0,
+            "content_padding": 40,
+            "background_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.5,
+            "close_button_spacing": 20,
+            "close_button_bg": "#f4f4f4",
+            "close_button_hover_bg": "#e0e0e0",
+            "close_button_color": "#000000",
+            "text_alignment": "left",
+            "heading_size": 40,
+            "heading_color": "#4f0e0d",
+            "text_size": 13,
+            "text_color": "#4f0e0d",
+            "button_text_size": 12,
+            "button_border_radius": 4,
+            "success_color": "#4f0e0d",
+            "error_color": "#dc0032"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_97e0861_VEYqyz"
+      ],
+      "disabled": true,
+      "settings": {}
     },
     "product-grid": {
       "type": "main-collection-product-grid",
@@ -85,6 +175,8 @@
   "order": [
     "breadcrumbs_FYp3jd",
     "banner",
+    "rich_text_RxCP4j",
+    "17611558913f921cfe",
     "product-grid"
   ]
 }

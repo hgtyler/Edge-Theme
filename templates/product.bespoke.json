@@ -107,11 +107,10 @@
             "layout": "stacked",
             "icon_size": 34,
             "icon_1": "question_mark",
-            "image_1": "shopify:\/\/shop_images\/wine-question-mark.png",
-            "heading_1": "<strong>Questions?<\/strong><a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\"><strong> Ask Away.<\/strong><\/a>",
+            "image_1": "shopify:\/\/shop_images\/wine-bird.png",
+            "heading_1": "<strong>{{ product.metafields.checkoutblocks.trigger.value }}<\/strong>",
             "icon_2": "none",
-            "image_2": "shopify:\/\/shop_images\/wine-bird.png",
-            "heading_2": "<strong>{{ product.metafields.checkoutblocks.trigger.value }}<\/strong>",
+            "heading_2": "",
             "icon_3": "none",
             "heading_3": "",
             "icon_4": "none",
@@ -140,7 +139,7 @@
         "media_width": 50,
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail_left",
+        "gallery_layout": "thumbnail",
         "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",
@@ -455,7 +454,7 @@
         "image_CiLjKh": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "image": "shopify:\/\/shop_images\/IMG_5769.heic",
             "active_video": false,
             "media_size": "adapt",
             "subheading": "",
@@ -467,17 +466,17 @@
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
+            "block_width": "basis-1\/4",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+            "overlay_gradient": ""
           }
         },
         "image_TxBNrh": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "image": "shopify:\/\/shop_images\/IMG_3011.heic",
             "active_video": false,
             "media_size": "adapt",
             "subheading": "",
@@ -489,19 +488,19 @@
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
+            "block_width": "basis-1\/4",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+            "overlay_gradient": ""
           }
         },
         "image_UX7izr": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "image": "shopify:\/\/shop_images\/IMG_3057.heic",
             "active_video": false,
-            "media_size": "adapt",
+            "media_size": "square",
             "subheading": "",
             "heading": "",
             "heading_size": "h4",
@@ -511,17 +510,17 @@
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
+            "block_width": "basis-1\/4",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+            "overlay_gradient": ""
           }
         },
         "image_8dMFAi": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
+            "image": "shopify:\/\/shop_images\/IMG_2995_89544623-0a87-4990-b36f-77307bba9f08.heic",
             "active_video": false,
             "media_size": "adapt",
             "subheading": "",
@@ -533,55 +532,11 @@
             "button_type": "primary-white",
             "show_icon": false,
             "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
+            "block_width": "basis-1\/4",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
-          }
-        },
-        "image_Q6Uqzd": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
-            "active_video": false,
-            "media_size": "adapt",
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
-          }
-        },
-        "image_pURmxL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Tanzanite3StoneOvalBezelRing3.png",
-            "active_video": false,
-            "media_size": "adapt",
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "middle-center",
-            "block_width": "basis-1\/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+            "overlay_gradient": ""
           }
         }
       },
@@ -589,23 +544,21 @@
         "image_CiLjKh",
         "image_TxBNrh",
         "image_UX7izr",
-        "image_8dMFAi",
-        "image_Q6Uqzd",
-        "image_pURmxL"
+        "image_8dMFAi"
       ],
       "name": "Bespoke Projects",
       "settings": {
-        "section_width": "container",
+        "section_width": "container-fluid",
         "subheading": "",
-        "heading": "bespoke projects",
+        "heading": "finished bespoke projects",
         "heading_size_section": "h2",
-        "description": "",
+        "description": "<p><a href=\"\/pages\/finished-bespoke-gems\" target=\"_blank\" title=\"Finished Bespoke Gems\">View More<\/a><\/p>",
         "layout": "vertical",
         "column_gap": 3,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 36,
+        "padding_top": 56,
         "padding_bottom": 36,
         "show_top_divider": false,
         "divider_top_width": "container",

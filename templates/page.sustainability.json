@@ -17,137 +17,48 @@
         "divider_bottom_width": "container"
       }
     },
-    "breadcrumbs_QeTbRq": {
-      "type": "breadcrumbs",
-      "settings": {
-        "section_width": "container-fluid",
-        "alignment": "center",
-        "text_size": "text-size-small",
-        "type_breadcrumb": "arrow",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 12,
-        "padding_bottom": 12,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "rich_text_ri3Cfw": {
-      "type": "rich-text",
-      "blocks": {
-        "image_ERxTgq": {
-          "type": "image",
-          "settings": {
-            "image_width": 200,
-            "image_width_mobile": 150,
-            "url": ""
-          }
-        },
-        "heading_NYNciy": {
-          "type": "heading",
-          "settings": {
-            "heading": "Sustainability Report",
-            "heading_size": "hxl"
-          }
-        },
-        "text_z4w9yj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We continue to believe that luxury can be synonymous with sustainability and that bold targets will move us closer to our goals. We're excited to share our 2023 Sustainability Report as we work towards our 2030 Commitments across four key areas: product, planet, people, and philanthropy.<\/p>",
-            "large_text": false,
-            "show_more_toggle": false,
-            "max_height": 8
-          }
-        },
-        "separator_kG8rd8": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "button_k6gPeY": {
-          "type": "button",
-          "settings": {
-            "button_label": "Download Full",
-            "button_link": "#",
-            "button_type": "primary",
-            "show_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "image_ERxTgq",
-        "heading_NYNciy",
-        "text_z4w9yj",
-        "separator_kG8rd8",
-        "button_k6gPeY"
-      ],
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-7xl",
-        "content_alignment": "center",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 100,
-        "padding_bottom": 80,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "image_with_text_overlay_p9GhbL": {
+    "image_with_text_overlay_dP3Gm8": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "subheading_MKBtGa": {
+        "subheading_6Geh6p": {
           "type": "subheading",
           "settings": {
-            "subheading": "Raw Style"
+            "subheading": "IMPACT"
           }
         },
-        "heading_zjiGDN": {
+        "heading_RmzHzK": {
           "type": "heading",
           "settings": {
-            "heading": "Designed for Impact",
+            "heading": "Starling is built to be respectful and responsible to our materials, our community and our collective future.",
             "highlighted_word_type": "single_line",
-            "heading_size": "h0"
-          }
-        },
-        "text_gQjqhe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We believe that streetwear is more than a look — it's a statement. Every detail in our process reflects our commitment to authenticity and responsible production. <\/p>",
-            "large_text": false
+            "heading_size": "h5"
           }
         }
       },
       "block_order": [
-        "subheading_MKBtGa",
-        "heading_zjiGDN",
-        "text_gQjqhe"
+        "subheading_6Geh6p",
+        "heading_RmzHzK"
       ],
+      "disabled": true,
+      "name": "Heading Banner",
       "settings": {
         "section_width": "w-full",
+        "image": "shopify:\/\/shop_images\/CH002050_copy_1.png",
         "link": "",
         "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 650,
-        "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 550,
+        "desktop_fixed_height": 500,
+        "mobile_height_mode": "adapt",
+        "mobile_fixed_height": 300,
         "desktop_content_position": "middle-center",
         "mobile_content_position": "middle-center",
         "content_alignment": "center",
         "mobile_content_alignment": "center",
         "content_width": "max-w-4xl",
         "enable_parallax": false,
-        "enable_scroll_reveal": true,
-        "enable_scroll_reveal_top": true,
-        "direction_scroll_reveal": "1",
-        "threshold_down": 1.2,
+        "enable_scroll_reveal": false,
+        "enable_scroll_reveal_top": false,
+        "direction_scroll_reveal": "0",
+        "threshold_down": 1.5,
         "color_text": "#ffffff",
         "color_text_highlighted": "#ffffff",
         "overlay_color": "#000000",
@@ -155,46 +66,24 @@
         "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
       }
     },
-    "image_with_text_iU4z8W": {
+    "image_with_text_Xx76E7": {
       "type": "image-with-text",
       "blocks": {
-        "circular_text_hrTy9z": {
-          "type": "circular_text",
-          "settings": {
-            "text": "focused on strengthening *",
-            "size": 72,
-            "font_size": 4,
-            "show_icon": true,
-            "show_border": true,
-            "show_background": true,
-            "show_animation": true,
-            "background_color": "rgba(0,0,0,0)",
-            "text_color": "#59432d",
-            "border_color": "#59432d"
-          }
-        },
-        "heading_LGbym7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Community Inclusion & Social Impact",
-            "heading_size": "h2"
-          }
-        },
-        "text_aBrbH6": {
+        "text_rWQiC6": {
           "type": "text",
           "settings": {
-            "text": "<p>We strive to create an authentic, connected community where every member influences our culture while emphasizing personal and professional development.<\/p>",
+            "text": "<p>In the heart of Downtown Los Angeles, Starling's mission is to be a beacon of sustainability in the world of fine jewelry design. Guided by the principles of ethical craftsmanship and environmental responsibility, we stand out by embracing a commitment to sustainability that can be found in every facet of our production and design process.<\/p>",
             "large_text": false
           }
         }
       },
       "block_order": [
-        "circular_text_hrTy9z",
-        "heading_LGbym7",
-        "text_aBrbH6"
+        "text_rWQiC6"
       ],
+      "name": "Our Mission",
       "settings": {
         "section_width": "container",
+        "image": "shopify:\/\/shop_images\/Starling_CH_Holiday_10.jpg",
         "media_size": "square",
         "show_image_2": false,
         "position_image_2": "middle-right",
@@ -203,16 +92,16 @@
         "active_video": false,
         "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
-        "video_controls": false,
+        "video_controls": true,
         "layout": "left",
-        "column_gap": "0",
+        "column_gap": "4",
         "vertical_alignment": "center",
-        "content_alignment": "center",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
+        "content_alignment": "start",
+        "bg_color": "",
+        "text_color": "",
         "border_color": "",
         "bg_column": "",
-        "padding_top": 80,
+        "padding_top": 36,
         "padding_bottom": 0,
         "show_top_divider": false,
         "divider_top_width": "container",
@@ -220,352 +109,123 @@
         "divider_bottom_width": "container"
       }
     },
-    "featured_collection_3pdjM8": {
-      "type": "featured-collection",
+    "video_BUExNx": {
+      "type": "video",
+      "name": "Video",
       "settings": {
         "section_width": "container",
-        "subheading": "",
-        "heading": "Featured collection",
-        "heading_size_section": "h2",
-        "description": "<p>Highlight a special range with imagery, perfect for showcasing new or featured items.<\/p>",
-        "layout": "vertical",
-        "collection": "new-arrivals",
-        "products": [],
-        "link_url": "",
-        "link_text": "",
-        "button_type": "primary",
-        "show_icon": false,
-        "enable_stack_products": false,
-        "show_progress_bar": true,
-        "enable_overflow_visible": true,
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "column_gap": 2,
-        "columns_mobile": "2",
-        "column_gap_mobile": 1,
-        "swipe_on_mobile": true,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "testimonials_frKwQF": {
-      "type": "testimonials",
-      "blocks": {
-        "quote_TxGTzK": {
-          "type": "quote",
-          "settings": {
-            "product": "m-10oz-hickoree-stripe-painter-port-baggy-pants",
-            "rating": 5,
-            "text": "Personally love the fade into the shirt color. Others agree as well so far. Probably getting more…soon. Anyways.",
-            "media_size": "landscape-v2",
-            "name": "— Purple medic13",
-            "position": "11 days ago"
-          }
-        },
-        "quote_6qUnXr": {
-          "type": "quote",
-          "settings": {
-            "product": "m-12oz-denim-cactus-coverall-midtone",
-            "rating": 5,
-            "text": "Ordered two items. Both of them arrived as described and in a timely fashion. An email query I made was answered quickly and honestly.",
-            "media_size": "landscape-v2",
-            "name": "— JoanaL",
-            "position": "17 days ago  "
-          }
-        },
-        "quote_Gypmw6": {
-          "type": "quote",
-          "settings": {
-            "product": "cotton-linen-beanie-green",
-            "rating": 5,
-            "text": "I ordered size small white tribe Stussy tshirt for my nephews xmas 2019. Great service great garment p&p is a bit steep trusted seller",
-            "media_size": "landscape-v2",
-            "name": "— Ronald M.",
-            "position": "20 days ago"
-          }
-        },
-        "quote_ei4Gab": {
-          "type": "quote",
-          "settings": {
-            "product": "double-layer-jersey-short-red",
-            "rating": 5,
-            "text": "Well when you a longtime fan there isn't much to say. I am always happy with their products and the site is doing fine.",
-            "media_size": "landscape-v2",
-            "name": "— Felicia S.",
-            "position": "20 days ago"
-          }
-        },
-        "quote_WkiB7x": {
-          "type": "quote",
-          "settings": {
-            "product": "boy-t-shirt-racing-blue",
-            "rating": 5,
-            "text": "Carhartt clothing is a little more expensive than other brands, however, the quality is exceptional and well worth the price.",
-            "media_size": "landscape-v2",
-            "name": "— Barbara M.",
-            "position": "20 days ago"
-          }
-        },
-        "quote_CKQGpr": {
-          "type": "quote",
-          "settings": {
-            "product": "german-military-trainers-1700l-light-beige",
-            "rating": 5,
-            "text": "The customer service here is very good. One of my hoodies from them came under damage, fortunately it was a drawstring so easily replacable.",
-            "media_size": "landscape-v2",
-            "name": "— Barbara M.",
-            "position": "20 days ago"
-          }
-        }
-      },
-      "block_order": [
-        "quote_TxGTzK",
-        "quote_6qUnXr",
-        "quote_Gypmw6",
-        "quote_ei4Gab",
-        "quote_WkiB7x",
-        "quote_CKQGpr"
-      ],
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "Customer Reviews",
-        "heading_size_section": "h2",
-        "description": "<p>At the heart of our brand are the voices of our valued customers.<\/p>",
-        "layout": "vertical",
-        "testimonial_type": "focused",
-        "content_alignment": "center",
-        "content_size": "body-1",
-        "show_rating": true,
-        "show_arrows": true,
-        "enable_loop": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "vertical_alignment": "start",
-        "show_border": false,
-        "per_page": 3,
-        "bg_color": "#f7f1f0",
-        "text_color": "rgba(0,0,0,0)",
-        "border_color": "",
-        "padding_top": 100,
-        "padding_bottom": 100,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "multicolumn_3KFDP8": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_7bVni8": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Silk",
-            "text": "<p>Delicate, natural, biodegradable and breathable. Silk is light and comfortable to wear, ideal for sensitive skin.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        },
-        "column_JAjkkW": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Cotton",
-            "text": "<p>Natural, durable, biodegradable and breathable.<br\/><br\/><\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        },
-        "column_LkbXBz": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Denim",
-            "text": "<p>Made from durable 100% cotton, denim is designed to last for years.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        },
-        "column_GfQEbj": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Wool",
-            "text": "<p>Natural, biodegradable, breathable, warm and renewable.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        },
-        "column_xNDzcp": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Cashmere",
-            "text": "<p>Lightweight and wrinkle-resistant with a luxurious feel. A strong, fine yarn that’s super soft on the skin.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        },
-        "column_nJYLYV": {
-          "type": "column",
-          "settings": {
-            "link": "",
-            "title": "Linen",
-            "text": "<p>Natural, biodegradable and breathable, linen gets softer with every wash.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_type": "outline",
-            "show_icon": false,
-            "desktop_image_placement": "top"
-          }
-        }
-      },
-      "block_order": [
-        "column_7bVni8",
-        "column_JAjkkW",
-        "column_LkbXBz",
-        "column_GfQEbj",
-        "column_xNDzcp",
-        "column_nJYLYV"
-      ],
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "Materials we use",
-        "heading_size_section": "h2",
-        "description": "<p>We design with circularity in mind,considering a garment’s lifecycle.<\/p>",
-        "layout": "vertical",
-        "image_width": "full",
-        "image_ratio": "landscape",
-        "heading_size": "h5",
-        "column_alignment": "left",
-        "link_url": "",
-        "link_text": "",
-        "button_type": "primary",
-        "show_icon": false,
-        "enable_stack_columns": false,
-        "show_progress_bar": true,
-        "enable_overflow_visible": true,
-        "columns_desktop": 3,
-        "column_gap": 3,
-        "column_gap_mobile": 2,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 80,
-        "padding_bottom": 88,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "gallery_grid_QTJqMi": {
-      "type": "gallery-grid",
-      "blocks": {
-        "image_aqhc8A": {
-          "type": "image",
-          "settings": {
-            "active_video": false,
-            "media_size": "portrait",
-            "subheading": "New in",
-            "heading": "Latest Arrivals",
-            "heading_size": "h2",
-            "text": "<p>Genuine nature glow.<br\/><\/p><p><\/p>",
-            "button_label": "Shop now",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1\/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
-          }
-        },
-        "image_QjNPWx": {
-          "type": "image",
-          "settings": {
-            "active_video": true,
-            "media_size": "portrait",
-            "subheading": "Inspired",
-            "heading": "The Present",
-            "heading_size": "h2",
-            "text": "<p>Simply put, headwear is inspired by the past<br\/><\/p>",
-            "button_label": "Shop now",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1\/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 87%)"
-          }
-        },
-        "image_XXwbkh": {
-          "type": "image",
-          "settings": {
-            "active_video": false,
-            "media_size": "portrait",
-            "subheading": "MINIMUM",
-            "heading": "Bridging Urban",
-            "heading_size": "h2",
-            "text": "<p>That defines our lifestyle.<\/p>",
-            "button_label": "Shop now",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1\/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 90%)"
-          }
-        }
-      },
-      "block_order": [
-        "image_aqhc8A",
-        "image_QjNPWx",
-        "image_XXwbkh"
-      ],
-      "settings": {
-        "section_width": "w-full",
         "subheading": "",
         "heading": "",
         "heading_size_section": "h2",
         "description": "",
         "layout": "vertical",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/Making of_Overview_60sec_4k_Master.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_ratio": "wide",
+        "description_video": "",
         "bg_color": "",
         "text_color": "",
         "border_color": "",
-        "padding_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "divider_zwAQLW": {
+      "type": "divider",
+      "disabled": true,
+      "name": "Divider",
+      "settings": {
+        "section_width": "container",
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "show_border": true,
+        "bg_color": "",
+        "color": "",
+        "style": "solid",
+        "thickness": 1
+      }
+    },
+    "content_tabs_jRdKdg": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_P7RQxw": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_18D3FF72EF9E-1.jpg",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Metals",
+            "subheading": "",
+            "heading": "metals",
+            "heading_size": "h2",
+            "content": "<p>A fundamental pillar of Starling's approach is our use of post-consumer recycled gold. <\/p><p>We use 100% post-consumer recycled 24 karat gold, which is alloyed into 14k yellow, rose and white gold in Los Angeles CA. Our sterling silver is also 100% post-consumer recycled.<\/p><p>We are also able to recycle client metals and refine the metals for trade or use them in new designs for the client. Allowing us to preserve precious resources but also reduce the environmental footprint associated with traditional mining. <\/p><p><em>*Excluding chain and findings.<\/em><\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_jTN9fi": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MKSADLER-9458.jpg",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Gemstones",
+            "subheading": "",
+            "heading": "gemstones",
+            "heading_size": "h2",
+            "content": "<p>All stones are responsibly sourced, recycled or traceable mine-to-market when available.<\/p><p>Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds.<\/p><p>Mine-to-market gems are marked in the gemstone description. This means we have purchased these stones directly from the mine and have full traceability on the exact origins. If mine-to-market or post-consumer recycled stones are important to you, please let us know so we can help guide your journey to the perfect gemstone.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_EKHKfy": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_3793.heic",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Practices",
+            "subheading": "",
+            "heading": "practices",
+            "heading_size": "h2",
+            "content": "<p>We prioritize ethical practices across our supply chain. From responsibly sourced materials with mine traceability, to only working with local manufacturers and goldsmiths in Los Angeles’s renowned Jewelry District. We ensure that each piece not only tells a story but also upholds the highest standards of ethical production.<\/p><p>This dedication to quality craftsmanship and sustainable practices enhances the longevity and uniqueness of each creation and aligns with the values of mindful consumption and customer satisfaction.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_P7RQxw",
+        "tab_jTN9fi",
+        "tab_EKHKfy"
+      ],
+      "name": "Content tabs",
+      "settings": {
+        "section_width": "container",
+        "type_tabs": "underline",
+        "enable_uppercase": false,
+        "tabs_font_family": "headings_font",
+        "tab_heading_size": "body-2",
+        "tabs_gap": 4,
+        "align": "center",
+        "header_position": "top",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
         "padding_bottom": 0,
         "show_top_divider": false,
         "divider_top_width": "container",
@@ -573,103 +233,59 @@
         "divider_bottom_width": "container"
       }
     },
-    "media_grid_yxcWLM": {
-      "type": "media-grid",
+    "rich_text_wcX4iH": {
+      "type": "rich-text",
       "blocks": {
-        "media_RaHaay": {
-          "type": "media",
+        "separator_GDUJVB": {
+          "type": "separator",
           "settings": {
-            "active_video": false,
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h2",
-            "text": "",
-            "button_label": "Holiday lookbook",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "column": 8,
-            "row": 2,
-            "desktop_content_position": "bottom-left",
-            "column_mobile": "2",
-            "row_mobile": "2",
-            "bg_color": "#f1f1f1",
-            "bg_gradient": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "overlay_gradient": ""
+            "show_border": true,
+            "space": 24
           }
         },
-        "media_nemJQc": {
-          "type": "media",
+        "text_wVnpNw": {
+          "type": "text",
           "settings": {
-            "active_video": false,
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "text": "",
-            "button_label": "Accessories",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "column": 4,
-            "row": 1,
-            "desktop_content_position": "bottom-left",
-            "column_mobile": "2",
-            "row_mobile": "1",
-            "bg_color": "#f1f1f1",
-            "bg_gradient": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 21,
-            "overlay_gradient": ""
+            "text": "<p>As a small business, Starling embodies the spirit of innovation and responsibility in the jewelry industry. <\/p><p>By offering bespoke, made-to-order pieces that are crafted to last generations, we empower customers to create their own narratives through heirloom-quality jewelry while continuing to minimize waste and maximize the efficient use of resources. <\/p><p>Choosing Starling isn’t just about acquiring jewelry; it’s about investing in a future where beauty, craftsmanship, and sustainability intertwine seamlessly.<\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
           }
         },
-        "media_W6CmWb": {
-          "type": "media",
+        "separator_pFJwWV": {
+          "type": "separator",
           "settings": {
-            "active_video": false,
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "text": "",
-            "button_label": "Appointments",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "column": 4,
-            "row": 1,
-            "desktop_content_position": "bottom-left",
-            "column_mobile": "2",
-            "row_mobile": "1",
-            "bg_color": "#f1f1f1",
-            "bg_gradient": "",
-            "text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": ""
+            "show_border": true,
+            "space": 24
+          }
+        },
+        "text_VKxkqz": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>If you have questions about our business practices, materials, or specific products - contact us at hello@starlingjewelry.com<\/strong><\/em><\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 3
           }
         }
       },
       "block_order": [
-        "media_RaHaay",
-        "media_nemJQc",
-        "media_W6CmWb"
+        "separator_GDUJVB",
+        "text_wVnpNw",
+        "separator_pFJwWV",
+        "text_VKxkqz"
       ],
+      "name": "Rich text",
       "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "More to Explore",
-        "heading_size_section": "h2",
-        "description": "<p>We believe that the highest levels of accountability and transparency are the future of modern luxury.<\/p>",
-        "layout": "vertical",
-        "desktop_row_height": 300,
-        "mobile_row_height": 200,
-        "column_count": 12,
-        "column_gap": 2,
+        "section_width": "container-fluid",
+        "content_width": "max-w-screen-lg",
+        "content_alignment": "center",
         "bg_color": "",
-        "text_color": "",
+        "bg_color_gradient": "",
+        "text_color": "#4f0e0d",
         "border_color": "",
-        "padding_top": 92,
-        "padding_bottom": 100,
+        "padding_top": 0,
+        "padding_bottom": 32,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -679,14 +295,11 @@
   },
   "order": [
     "main",
-    "breadcrumbs_QeTbRq",
-    "rich_text_ri3Cfw",
-    "image_with_text_overlay_p9GhbL",
-    "image_with_text_iU4z8W",
-    "featured_collection_3pdjM8",
-    "testimonials_frKwQF",
-    "multicolumn_3KFDP8",
-    "gallery_grid_QTJqMi",
-    "media_grid_yxcWLM"
+    "image_with_text_overlay_dP3Gm8",
+    "image_with_text_Xx76E7",
+    "video_BUExNx",
+    "divider_zwAQLW",
+    "content_tabs_jRdKdg",
+    "rich_text_wcX4iH"
   ]
 }

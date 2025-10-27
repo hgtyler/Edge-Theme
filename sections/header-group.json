@@ -8,12 +8,12 @@
         "announcement_DMqDEM": {
           "type": "announcement",
           "settings": {
-            "text": "Free shipping on orders over $500+",
+            "text": "Holiday Shipping Information",
             "icon": "none",
-            "button_label": "",
-            "button_type": "secondary",
+            "button_label": "See More",
+            "button_type": "underlined",
             "show_icon": true,
-            "link": "",
+            "link": "shopify:\/\/pages\/faq",
             "show_countdown": false,
             "end_time": "2025\/12\/31 23:59:59"
           }
@@ -26,15 +26,15 @@
         ".btn-tiny:not(.btn-underlined) {border-radius: 24px; height: 23px;}"
       ],
       "settings": {
-        "announcement_width": "stretched",
+        "announcement_width": "normal",
         "announcement_height": "large",
-        "show_arrows": false,
+        "show_arrows": true,
         "auto_rotate": true,
         "change_slides_speed": 4,
-        "animation_slides": "fade",
-        "bg_color": "#4f0e0d",
-        "text_color": "#ffffff",
-        "border_color": "",
+        "animation_slides": "loop",
+        "bg_color": "#ffffff",
+        "text_color": "#4f0e0d",
+        "border_color": "#4f0e0d",
         "show_bottom_divider": false,
         "divider_bottom_width": "w-full"
       }
@@ -75,7 +75,7 @@
             "overlay_color_1": "#ff0000",
             "overlay_opacity_1": 0,
             "overlay_gradient_1": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
-            "image_2": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
+            "image_2": "shopify:\/\/shop_images\/BENE-FRANK_1.png",
             "image_ratio_2": "portrait",
             "url_2": "shopify:\/\/pages\/bespoke",
             "align_text_2": "bottom-center",
@@ -90,7 +90,7 @@
             "overlay_color_2": "#000000",
             "overlay_opacity_2": 0,
             "overlay_gradient_2": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
-            "image_3": "shopify:\/\/shop_images\/Starling_03272025-8960.jpg",
+            "image_3": "shopify:\/\/shop_images\/KEVIN-GRACE_1.png",
             "image_ratio_3": "portrait",
             "url_3": "",
             "align_text_3": "bottom-center",
@@ -488,7 +488,7 @@
             "postion_banner": "right",
             "columns_banner": 65,
             "columns_banner_per_row": 3,
-            "image_1": "shopify:\/\/shop_images\/Emerald-Diamond-Threetier-Drops2.jpg",
+            "image_1": "shopify:\/\/shop_images\/Sapphire-Diamond-Coral-Drops3.png",
             "image_ratio_1": "portrait",
             "url_1": "",
             "align_text_1": "bottom-center",
@@ -503,7 +503,7 @@
             "overlay_color_1": "#000000",
             "overlay_opacity_1": 0,
             "overlay_gradient_1": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
-            "image_2": "shopify:\/\/shop_images\/MKSADLER-9216_1.png",
+            "image_2": "shopify:\/\/shop_images\/scattered-cloud-huggies-1.jpg",
             "image_ratio_2": "portrait",
             "url_2": "",
             "align_text_2": "bottom-center",
@@ -518,7 +518,7 @@
             "overlay_color_2": "#000000",
             "overlay_opacity_2": 0,
             "overlay_gradient_2": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)",
-            "image_3": "shopify:\/\/shop_images\/Starling_Holiday_2024_Ecommerce-4661_1.png",
+            "image_3": "shopify:\/\/shop_images\/aqua-chalcedony-drops3.png",
             "image_ratio_3": "portrait",
             "url_3": "",
             "align_text_3": "bottom-center",
@@ -824,7 +824,7 @@
             "overlay_color_1": "#000000",
             "overlay_opacity_1": 0,
             "overlay_gradient_1": "linear-gradient(0deg, rgba(94, 94, 94, 0.29), rgba(244, 245, 245, 0.11) 100%)",
-            "image_2": "shopify:\/\/shop_images\/Starling_Holiday_2024_Ecommerce-4491_copy_1.png",
+            "image_2": "shopify:\/\/shop_images\/4ct-georgia-1.jpg",
             "image_ratio_2": "portrait",
             "url_2": "",
             "align_text_2": "bottom-center",
@@ -1019,7 +1019,7 @@
         "section_width": "container-fluid",
         "logo_position": "top-center",
         "logo": "shopify:\/\/shop_images\/Starling_logo_newburg.png",
-        "logo_width": 160,
+        "logo_width": 220,
         "logo_width_mobile": 150,
         "menu": "shop-2025-v2",
         "sticky_header_type": "always",
@@ -1039,8 +1039,8 @@
         "enable_country_selector_mobile": false,
         "enable_language_selector_mobile": false,
         "margin_bottom": 0,
-        "padding_top": 8,
-        "padding_bottom": 8
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     }
   },

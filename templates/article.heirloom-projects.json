@@ -40,7 +40,7 @@
           "type": "title",
           "settings": {
             "content_width": "max-w-7xl",
-            "heading_size": "h4",
+            "heading_size": "h3",
             "blog_show_date": false,
             "blog_show_author": false,
             "blog_show_comments": false,
@@ -49,6 +49,7 @@
         },
         "featured_image": {
           "type": "featured_image",
+          "disabled": true,
           "settings": {
             "content_width": "max-w-7xl",
             "image_ratio": "wide"

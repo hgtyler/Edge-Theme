@@ -1,0 +1,1077 @@
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% comment %} TO RENAME LATER  - ai_gen_block_97e0861 {% endcomment %}
+
+<style>
+  .popup-modal-{{ ai_gen_id }} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .popup-modal-{{ ai_gen_id }}.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .popup-modal-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity }};
+  }
+
+  .popup-modal-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 90%;
+    max-width: {{ block.settings.modal_width }}px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  .popup-modal-{{ ai_gen_id }}.active .popup-modal-container-{{ ai_gen_id }} {
+    transform: scale(1);
+  }
+
+  .popup-modal-close-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.close_button_spacing }}px;
+    right: {{ block.settings.close_button_spacing }}px;
+    width: 40px;
+    height: 40px;
+    background-color: {{ block.settings.close_button_bg }};
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+
+  .popup-modal-close-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.close_button_hover_bg }};
+  }
+
+  .popup-modal-close-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    stroke: {{ block.settings.close_button_color }};
+  }
+
+  .popup-modal-content-{{ ai_gen_id }} {
+    padding: {{ block.settings.content_padding }}px;
+  }
+
+  .popup-modal-content-text-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .popup-modal-heading-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 16px;
+  }
+
+  .popup-modal-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+  }
+
+  .popup-modal-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--primary {
+    background-color: {{ settings.button_solid_bg }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--primary:hover {
+    background-color: {{ settings.button_solid_bg_hover }};
+    color: {{ settings.button_solid_text_color_hover }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--secondary {
+    background-color: {{ settings.button_secondary_solid_bg }};
+    color: {{ settings.button_secondary_solid_text_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--secondary:hover {
+    background-color: {{ settings.button_secondary_solid_bg_hover }};
+    color: {{ settings.button_secondary_solid_text_color_hover }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--outline {
+    background-color: transparent;
+    color: {{ settings.button_outline_text_color }};
+    border: {{ settings.thickness_button_outline }}px solid {{ settings.button_outline_border_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--outline:hover {
+    background-color: {{ settings.button_outline_border_color }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--white {
+    background-color: #ffffff;
+    color: {{ settings.button_solid_white_text_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--white:hover {
+    background-color: {{ settings.button_solid_bg }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--underline {
+    background-color: transparent;
+    color: {{ block.settings.text_color }};
+    text-decoration: underline;
+  }
+
+  .popup-modal-button-{{ ai_gen_id }}--underline:hover {
+    background-color: transparent;
+    color: {{ block.settings.text_color }};
+    text-decoration:underline;
+  }
+
+  .popup-modal-content-image-{{ ai_gen_id }} {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .popup-modal-image-wrapper-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .popup-modal-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: block;
+  }
+
+  .popup-modal-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popup-modal-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .popup-modal-text-wrapper-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .popup-modal-content-product-{{ ai_gen_id }} {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .popup-modal-product-image-{{ ai_gen_id }} {
+    width: 150px;
+    flex-shrink: 0;
+  }
+
+  .popup-modal-product-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .popup-modal-product-info-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .popup-modal-product-title-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 8px;
+  }
+
+  .popup-modal-product-price-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    margin-bottom: 12px;
+  }
+
+  .popup-modal-product-description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .popup-modal-empty-product-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-style: italic;
+  }
+
+  .popup-modal-content-form-{{ ai_gen_id }} {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .popup-modal-form-field-{{ ai_gen_id }} {
+    margin-bottom: 16px;
+  }
+
+  .popup-modal-form-label-{{ ai_gen_id }} {
+    display: block;
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .popup-modal-form-input-{{ ai_gen_id }},
+  .popup-modal-form-textarea-{{ ai_gen_id }} {
+    width: 100%;
+    padding: 12px 16px;
+    border: {{ settings.inputs_thickness }}px solid {{ settings.border_input_color }};
+    border-radius: {{ settings.inputs_radius }}px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .popup-modal-form-textarea-{{ ai_gen_id }} {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .popup-modal-form-success-{{ ai_gen_id }} {
+    color: {{ block.settings.success_color }};
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .popup-modal-form-error-{{ ai_gen_id }} {
+    color: {{ block.settings.error_color }};
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: {{ settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--primary {
+    background-color: {{ settings.button_solid_bg }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--primary:hover {
+    background-color: {{ settings.button_solid_bg_hover }};
+    color: {{ settings.button_solid_text_color_hover }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--secondary {
+    background-color: {{ settings.button_secondary_solid_bg }};
+    color: {{ settings.button_secondary_solid_text_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--secondary:hover {
+    background-color: {{ settings.button_secondary_solid_bg_hover }};
+    color: {{ settings.button_secondary_solid_text_color_hover }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--outline {
+    background-color: transparent;
+    color: {{ settings.button_outline_text_color }};
+    border: {{ settings.thickness_button_outline }}px solid {{ settings.button_outline_border_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--outline:hover {
+    background-color: {{ settings.button_outline_border_color }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--white {
+    background-color: #ffffff;
+    color: {{ settings.button_solid_white_text_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--white:hover {
+    background-color: {{ settings.button_solid_bg }};
+    color: {{ settings.button_solid_text_color }};
+  }
+
+  .popup-modal-trigger-{{ ai_gen_id }}--underlined {
+    background-color: transparent;
+    color: #4F0E0D;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 749px) {
+    .popup-modal-container-{{ ai_gen_id }} {
+      max-width: 95%;
+    }
+
+    .popup-modal-content-{{ ai_gen_id }} {
+      padding: {{ block.settings.content_padding | times: 0.7 }}px;
+    }
+
+    .popup-modal-content-image-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .popup-modal-content-product-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .popup-modal-product-image-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .popup-modal-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+  }
+</style>
+<div class="{{ block.settings.section_width }} text-{{ block.settings.content_alignment }}">
+<popup-modal-{{ ai_gen_id }} {{ block.shopify_attributes }}>
+  {% if block.settings.show_trigger_button %}
+    <button class="popup-modal-trigger-{{ ai_gen_id }} popup-modal-trigger-{{ ai_gen_id }}--{{ block.settings.trigger_button_style }}" data-modal-trigger>
+      {{ block.settings.trigger_button_text }}
+    </button>
+  {% endif %}
+
+  <div class="popup-modal-{{ ai_gen_id }}" data-modal>
+    <div class="popup-modal-overlay-{{ ai_gen_id }}" data-modal-overlay></div>
+    <div class="popup-modal-container-{{ ai_gen_id }}">
+      <button class="popup-modal-close-{{ ai_gen_id }}" data-modal-close aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="popup-modal-content-{{ ai_gen_id }}">
+        {% if block.settings.content_type == 'text' %}
+          <div class="popup-modal-content-text-{{ ai_gen_id }}">
+            {% if block.settings.heading != blank %}
+              <h2 class="popup-modal-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <div class="popup-modal-text-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+            {% endif %}
+            {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+              <a href="{{ block.settings.button_link }}" class="popup-modal-button-{{ ai_gen_id }} popup-modal-button-{{ ai_gen_id }}--{{ block.settings.button_style }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+
+        {% elsif block.settings.content_type == 'image_text' %}
+          <div class="popup-modal-content-image-{{ ai_gen_id }}">
+            <div class="popup-modal-image-wrapper-{{ ai_gen_id }}">
+              {% if block.settings.image %}
+                <img
+                  src="{{ block.settings.image | image_url: width: 800 }}"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  class="popup-modal-image-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              {% else %}
+                <div class="popup-modal-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="popup-modal-text-wrapper-{{ ai_gen_id }}">
+              {% if block.settings.heading != blank %}
+                <h2 class="popup-modal-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <div class="popup-modal-text-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+              {% endif %}
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="popup-modal-button-{{ ai_gen_id }} popup-modal-button-{{ ai_gen_id }}--{{ block.settings.button_style }}">
+                  {{ block.settings.button_text }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+        {% elsif block.settings.content_type == 'product' %}
+          {% if block.settings.product != blank %}
+            <div class="popup-modal-content-product-{{ ai_gen_id }}">
+              <div class="popup-modal-product-image-{{ ai_gen_id }}">
+                {% if block.settings.product.featured_image %}
+                  <img
+                    src="{{ block.settings.product.featured_image | image_url: width: 300 }}"
+                    alt="{{ block.settings.product.featured_image.alt | escape }}"
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                  >
+                {% endif %}
+              </div>
+              <div class="popup-modal-product-info-{{ ai_gen_id }}">
+                <h2 class="popup-modal-product-title-{{ ai_gen_id }}">{{ block.settings.product.title }}</h2>
+                <div class="popup-modal-product-price-{{ ai_gen_id }}">{{ block.settings.product.price | money }}</div>
+                {% if block.settings.product.description != blank %}
+                  <div class="popup-modal-product-description-{{ ai_gen_id }}">
+                    {{ block.settings.product.description | strip_html | truncate: 200 }}
+                  </div>
+                {% endif %}
+                <a href="{{ block.settings.product.url }}" class="popup-modal-button-{{ ai_gen_id }} popup-modal-button-{{ ai_gen_id }}--{{ block.settings.button_style }}">
+                  {{ block.settings.product_button_text }}
+                </a>
+              </div>
+            </div>
+          {% else %}
+            <div class="popup-modal-empty-product-{{ ai_gen_id }}">
+              Next, select a product to display
+            </div>
+          {% endif %}
+
+        {% elsif block.settings.content_type == 'form' %}
+          <div class="popup-modal-content-form-{{ ai_gen_id }}">
+            {% if block.settings.heading != blank %}
+              <h2 class="popup-modal-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <div class="popup-modal-text-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+            {% endif %}
+
+            {%- form 'contact' -%}
+              <input type="hidden" name="contact[modal_form]" value="true">
+              
+              <div class="popup-modal-form-field-{{ ai_gen_id }}">
+                <label for="ai-modal-name-{{ ai_gen_id }}" class="popup-modal-form-label-{{ ai_gen_id }}">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="ai-modal-name-{{ ai_gen_id }}"
+                  name="contact[name]"
+                  class="popup-modal-form-input-{{ ai_gen_id }}"
+                  value="{{ form.name }}"
+                  required
+                >
+              </div>
+
+              <div class="popup-modal-form-field-{{ ai_gen_id }}">
+                <label for="ai-modal-email-{{ ai_gen_id }}" class="popup-modal-form-label-{{ ai_gen_id }}">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="ai-modal-email-{{ ai_gen_id }}"
+                  name="contact[email]"
+                  class="popup-modal-form-input-{{ ai_gen_id }}"
+                  value="{{ form.email }}"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email"
+                  {% if form.errors %}
+                    aria-invalid="true"
+                    aria-describedby="ai-modal-form-error-{{ ai_gen_id }}"
+                  {% endif %}
+                  {% if form.posted_successfully? %}
+                    aria-describedby="ai-modal-form-success-{{ ai_gen_id }}"
+                  {% endif %}
+                  required
+                >
+                {%- if form.errors -%}
+                  <div id="ai-modal-form-error-{{ ai_gen_id }}" class="popup-modal-form-error-{{ ai_gen_id }}">
+                    {{ form.errors.messages.email }}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <div class="popup-modal-form-field-{{ ai_gen_id }}">
+                <label for="ai-modal-message-{{ ai_gen_id }}" class="popup-modal-form-label-{{ ai_gen_id }}">
+                  Message
+                </label>
+                <textarea
+                  id="ai-modal-message-{{ ai_gen_id }}"
+                  name="contact[body]"
+                  class="popup-modal-form-textarea-{{ ai_gen_id }}"
+                  required
+                >{{ form.body }}</textarea>
+              </div>
+
+              <button type="submit" class="popup-modal-button-{{ ai_gen_id }} popup-modal-button-{{ ai_gen_id }}--{{ block.settings.button_style }}">
+                {{ block.settings.form_button_text }}
+              </button>
+
+              {%- if form.posted_successfully? -%}
+                <div id="ai-modal-form-success-{{ ai_gen_id }}" class="popup-modal-form-success-{{ ai_gen_id }}">
+                  {{ block.settings.form_success_message }}
+                </div>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</popup-modal-{{ ai_gen_id }}>
+</div>
+
+<script>
+  (function() {
+    class PopupModal{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.modal = this.querySelector('[data-modal]');
+        this.trigger = this.querySelector('[data-modal-trigger]');
+        this.closeButton = this.querySelector('[data-modal-close]');
+        this.overlay = this.querySelector('[data-modal-overlay]');
+        this.autoOpen = {{ block.settings.auto_open | json }};
+        this.autoOpenDelay = {{ block.settings.auto_open_delay }};
+        this.showOnce = {{ block.settings.show_once | json }};
+        this.storageKey = 'popup-modal-{{ ai_gen_id }}-shown';
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+        this.handleAutoOpen();
+      }
+
+      setupEventListeners() {
+        if (this.trigger) {
+          this.trigger.addEventListener('click', () => this.openModal());
+        }
+
+        if (this.closeButton) {
+          this.closeButton.addEventListener('click', () => this.closeModal());
+        }
+
+        if (this.overlay) {
+          this.overlay.addEventListener('click', () => this.closeModal());
+        }
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+            this.closeModal();
+          }
+        });
+      }
+
+      handleAutoOpen() {
+        if (!this.autoOpen) return;
+
+        if (this.showOnce) {
+          const hasShown = localStorage.getItem(this.storageKey);
+          if (hasShown) return;
+        }
+
+        setTimeout(() => {
+          this.openModal();
+          if (this.showOnce) {
+            localStorage.setItem(this.storageKey, 'true');
+          }
+        }, this.autoOpenDelay * 1000);
+      }
+
+      openModal() {
+        this.modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      closeModal() {
+        this.modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    customElements.define('popup-modal-{{ ai_gen_id }}', PopupModal{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Pop-up modal",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+          {
+          "value": "container",
+          "label": "Boxed"
+          },
+          {
+          "value": "container-fluid",
+          "label": "Wide"
+          },
+          {
+          "value": "w-full",
+          "label": "Full"
+          }
+      ],
+      "default": "container-fluid"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Content alignment"
+    },
+    {
+      "type": "header",
+      "content": "Trigger"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trigger_button",
+      "label": "Show trigger button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "trigger_button_text",
+      "label": "Trigger button text",
+      "default": "Open modal"
+    },
+    {
+      "type": "select",
+      "id": "trigger_button_style",
+      "label": "Trigger button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "underlined",
+          "label": "Underline"
+        }
+      ],
+      "default": "underlined"
+    },
+    {
+      "type": "header",
+      "content": "Auto open"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_open",
+      "label": "Auto open modal",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_open_delay",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto open delay",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "show_once",
+      "label": "Show only once per visitor",
+      "default": false,
+      "info": "Uses browser storage to remember if modal was shown"
+    },
+    {
+      "type": "header",
+      "content": "Content type"
+    },
+    {
+      "type": "select",
+      "id": "content_type",
+      "label": "Content type",
+      "options": [
+        {
+          "value": "text",
+          "label": "Text"
+        },
+        {
+          "value": "image_text",
+          "label": "Image with text"
+        },
+        {
+          "value": "product",
+          "label": "Product"
+        },
+        {
+          "value": "form",
+          "label": "Contact form"
+        }
+      ],
+      "default": "text"
+    },
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Subscribe to our newsletter and get 10% off your first order.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "underlined",
+          "label": "Underline"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Product"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "product_button_text",
+      "label": "Product button text",
+      "default": "View product"
+    },
+    {
+      "type": "header",
+      "content": "Form"
+    },
+    {
+      "type": "text",
+      "id": "form_button_text",
+      "label": "Form button text",
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "form_success_message",
+      "label": "Success message",
+      "default": "Thank you for your message"
+    },
+    {
+      "type": "header",
+      "content": "Modal style"
+    },
+    {
+      "type": "range",
+      "id": "modal_width",
+      "min": 400,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "Modal width",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Content padding",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Overlay opacity",
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Close button"
+    },
+    {
+      "type": "range",
+      "id": "close_button_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Close button spacing",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "close_button_bg",
+      "label": "Close button background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "close_button_hover_bg",
+      "label": "Close button hover background",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "close_button_color",
+      "label": "Close button icon",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 28
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#4f0e0d"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#4f0e0d"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Form"
+    },
+    {
+      "type": "color",
+      "id": "success_color",
+      "label": "Success message",
+      "default": "#4f0e0d"
+    },
+    {
+      "type": "color",
+      "id": "error_color",
+      "label": "Error message",
+      "default": "#dc0032"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pop-up modal"
+    }
+  ]
+}
+{% endschema %}

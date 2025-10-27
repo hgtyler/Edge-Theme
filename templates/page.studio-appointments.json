@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "container-narrow",
+        "show_default_heading": true,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_XyLrAF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tFrfdF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Studio Appointments",
+            "heading_size": "h1"
+          }
+        },
+        "text_ARaPF7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer private consultation from our studio in Downtown Los Angeles, CA or virtually.<\/p><p>Our in person consultations are secured with a $50 non-refundable deposit that can be applied to any future purchase. Once you have secured your time, we will send over an invoice + location details via email for a studio consultation.<\/p><p>For virtual clients, please use the Google Meet link in your email confirmation.<\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "separator_H3zMEF": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_tFrfdF",
+        "text_ARaPF7",
+        "separator_H3zMEF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-7xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "custom_liquid_GNbWpz": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "section_width": "container",
+        "custom_liquid": "<!-- Calendly inline widget begin -->\n<div class=\"calendly-inline-widget\" data-url=\"https:\/\/calendly.com\/hello-starlingjewelry\/starling-studio-consultations?text_color=561c24&primary_color=561c24\" style=\"min-width:320px;height:700px;\"><\/div>\n<script type=\"text\/javascript\" src=\"https:\/\/assets.calendly.com\/assets\/external\/widget.js\" async><\/script>\n<!-- Calendly inline widget end -->",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_XyLrAF",
+    "custom_liquid_GNbWpz"
+  ]
+}

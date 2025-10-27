@@ -17,116 +17,9 @@
         "divider_bottom_width": "container"
       }
     },
-    "divider_ctQ6Pz": {
-      "type": "divider",
-      "name": "Divider",
-      "settings": {
-        "section_width": "container",
-        "spacer_mobile": 50,
-        "spacer_desktop": 50,
-        "show_border": false,
-        "bg_color": "",
-        "color": "",
-        "style": "solid",
-        "thickness": 1
-      }
-    },
-    "rich_text_D3EwF8": {
-      "type": "rich-text",
-      "blocks": {
-        "image_nAQpp8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Starling_submark_red_80526461-0a1d-47b3-9251-c5e329b7c899.png",
-            "image_width": 110,
-            "image_width_mobile": 70,
-            "url": ""
-          }
-        },
-        "separator_RC3VUh": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "heading_U9AXym": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Founder's Note",
-            "heading_size": "h5"
-          }
-        },
-        "separator_EjEUpj": {
-          "type": "separator",
-          "disabled": true,
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "button_Vij846": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "explore chelsey's picks",
-            "button_link": "",
-            "button_type": "underlined",
-            "show_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "image_nAQpp8",
-        "separator_RC3VUh",
-        "heading_U9AXym",
-        "separator_EjEUpj",
-        "button_Vij846"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-3xl",
-        "content_alignment": "center",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
     "rich_text_bYhGgn": {
       "type": "rich-text",
       "blocks": {
-        "heading_nFE4WA": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Founder's Note",
-            "heading_size": "h5"
-          }
-        },
-        "separator_6eF9Md": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "text_6HN8xC": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We are moved by the light and color of gemstones. Inspired by every color-kissed gemstone that is as individual as the person who chooses to twine their life with that of the stone. And in awe of how gemstones flaunt their beauty in naturally occurring inclusions that catch light to singularly striking results. <br\/><br\/>We find beauty in the inclusions, the unique fingerprints inside gems. Some consider these flaws but we design jewelry to accentuate these galaxies that live inside crystals, bring it out and complement it in every way with timeless settings.<\/p>",
-            "large_text": true,
-            "show_more_toggle": false,
-            "max_height": 16
-          }
-        },
         "separator_YygBj9": {
           "type": "separator",
           "settings": {
@@ -134,30 +27,26 @@
             "space": 8
           }
         },
-        "button_QEzkWx": {
-          "type": "button",
-          "disabled": true,
+        "heading_jgG8VJ": {
+          "type": "heading",
           "settings": {
-            "button_label": "explore chelsey's picks",
-            "button_link": "",
-            "button_type": "underlined",
-            "show_icon": true
+            "heading": "our story",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_nFE4WA",
-        "separator_6eF9Md",
-        "text_6HN8xC",
         "separator_YygBj9",
-        "button_QEzkWx"
+        "heading_jgG8VJ"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 0,
@@ -168,32 +57,38 @@
         "divider_bottom_width": "container"
       }
     },
-    "image_with_text_overlay_rG4ViQ": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
+    "video_with_text_overlay_Gh3QAQ": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "text_rph9QM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We find beauty in the inclusions, the unique fingerprints inside gems. Some consider these flaws but we design jewelry to accentuate these galaxies that live inside crystals, bring it out and complement it in every way with timeless settings.<\/p>",
+            "large_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_rph9QM"
+      ],
+      "name": "Video with text overlay",
       "settings": {
-        "section_width": "container",
-        "image": "shopify:\/\/shop_images\/CH001992_copy.jpg",
-        "link": "",
+        "section_width": "w-full",
+        "video_hosted": "shopify:\/\/files\/videos\/GEMS-BANNER.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description_video": "",
         "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 500,
+        "desktop_fixed_height": 530,
         "mobile_height_mode": "fixed",
         "mobile_fixed_height": 300,
+        "content_width": "max-w-4xl",
         "desktop_content_position": "middle-center",
         "mobile_content_position": "middle-center",
-        "content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "content_width": "max-w-4xl",
-        "enable_parallax": false,
-        "enable_scroll_reveal": false,
-        "enable_scroll_reveal_top": false,
-        "direction_scroll_reveal": "0",
-        "threshold_down": 1.5,
         "color_text": "#ffffff",
         "color_text_highlighted": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 70,
-        "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
+        "overlay_color": "#4f0e0d",
+        "overlay_gradient": "",
+        "overlay_opacity": 26
       }
     },
     "content_tabs_3Ujw4X": {
@@ -201,14 +96,15 @@
       "blocks": {
         "tab_HMxjw4": {
           "type": "tab",
+          "name": "Story",
           "settings": {
             "image": "shopify:\/\/shop_images\/STARLING-9119.jpg",
             "image_size": "square",
             "image_placement": "left",
-            "nav_label": "Our Story",
+            "nav_label": "Story",
             "subheading": "",
             "heading": "",
-            "heading_size": "h2",
+            "heading_size": "h6",
             "content": "<p><\/p><p>Designing in conversation with the customer and the materials, we seek out the rare and extraordinary to represent the loves, commitments and major moments of your story—the twinkly points on the timeline—in thoughtfully unexpected ways. <\/p><p>We believe the best pieces are the ones that are well-worn and well-loved. They’re made with devotion to exquisite materials, design and craftsmanship that tell your story and connect with you deeply. They are simply made to be — ever yours.<\/p>",
             "button_label": "",
             "button_link": "",
@@ -218,11 +114,12 @@
         },
         "tab_jdygke": {
           "type": "tab",
+          "name": "Mission",
           "settings": {
             "image": "shopify:\/\/shop_images\/STARLING-9565.jpg",
             "image_size": "adapt",
             "image_placement": "left",
-            "nav_label": "Our Mission",
+            "nav_label": "Mission",
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
@@ -235,15 +132,34 @@
         },
         "tab_gQhpfc": {
           "type": "tab",
+          "name": "Team",
           "settings": {
-            "image": "shopify:\/\/shop_images\/starling-team.jpg",
+            "image": "shopify:\/\/shop_images\/CH002134.jpg",
             "image_size": "portrait",
             "image_placement": "left",
-            "nav_label": "Our Team",
+            "nav_label": "Team",
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
             "content": "<p>All Starling jewelry is entirely made by hand in Los Angeles, California by a close-knit family of creative collaborators and craftspeople. Our team is composed of the best skilled artisans in the city, with many of our metalsmiths, stone setters and casters 3rd and 4th generation jewelers. <\/p><p>Our founder, Chelsey Bartrum, a jeweler and graduate gemologist from the Gemological Institute of America, sources only the highest quality stones and metals, at the fairest price. Bartrum also personally inspects each and every stone, allowing for unparalleled quality control.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        },
+        "tab_zLFQ9Y": {
+          "type": "tab",
+          "name": "Founder",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chelseyheadshot.png",
+            "image_size": "portrait",
+            "image_placement": "left",
+            "nav_label": "Founder",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>As far as Chelsey can remember, it was Queen Cleopatra that has held creative significance in the evolution of how she interprets beauty. Among many proclivities, Cleopatra loved jewelry, particularly emeralds, which were once believed to hold all manner of mystical properties. Much like what we do today, Cleopatra made a habit of melting down existing gold jewelry and remaking it into its next incarnation. However the stone—and all the energy and magic within—remained. So it’s no wonder at all that Chelsey's curiosity and eventual choice to work with precious stones via Starling became both passion and livelihood. <\/p>",
             "button_label": "",
             "button_link": "",
             "button_type": "primary",
@@ -254,7 +170,8 @@
       "block_order": [
         "tab_HMxjw4",
         "tab_jdygke",
-        "tab_gQhpfc"
+        "tab_gQhpfc",
+        "tab_zLFQ9Y"
       ],
       "name": "Content Tabs",
       "settings": {
@@ -262,7 +179,7 @@
         "type_tabs": "underline",
         "enable_uppercase": false,
         "tabs_font_family": "headings_font",
-        "tab_heading_size": "body-2",
+        "tab_heading_size": "body-1",
         "tabs_gap": 4,
         "align": "center",
         "header_position": "top",
@@ -279,20 +196,6 @@
         "divider_bottom_width": "container"
       }
     },
-    "divider_ARtepb": {
-      "type": "divider",
-      "name": "Divider",
-      "settings": {
-        "section_width": "container",
-        "spacer_mobile": 50,
-        "spacer_desktop": 50,
-        "show_border": false,
-        "bg_color": "",
-        "color": "",
-        "style": "solid",
-        "thickness": 1
-      }
-    },
     "image_with_text_overlay_ntMfc6": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -307,6 +210,7 @@
       "block_order": [
         "text_XTWEDE"
       ],
+      "disabled": true,
       "name": "Image with text overlay",
       "settings": {
         "section_width": "w-full",
@@ -332,67 +236,13 @@
         "overlay_opacity": 70,
         "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 90%)"
       }
-    },
-    "image_with_text_iwf4gW": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_TPx6gC": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our founder, Chelsey",
-            "heading_size": "h5"
-          }
-        },
-        "text_7MGwUw": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As far as Chelsey can remember, it was Queen Cleopatra that has held creative significance in the evolution of how she interprets beauty. Among many proclivities, Cleopatra loved jewelry, particularly emeralds, which were once believed to hold all manner of mystical properties. Much like what we do today, Cleopatra made a habit of melting down existing gold jewelry and remaking it into its next incarnation. However the stone—and all the energy and magic within—remained. So it’s no wonder at all that Chelsey's curiosity and eventual choice to work with precious stones via Starling became both passion and livelihood. <\/p>",
-            "large_text": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_TPx6gC",
-        "text_7MGwUw"
-      ],
-      "settings": {
-        "section_width": "container",
-        "image": "shopify:\/\/shop_images\/chelseyheadshot_077f9bf3-7546-4f6d-b5eb-6f69d826ea64.webp",
-        "media_size": "portrait",
-        "show_image_2": false,
-        "position_image_2": "bottom-right",
-        "media_size_2": "square",
-        "desktop_image_width": "33",
-        "active_video": false,
-        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "video_autoplay": true,
-        "video_controls": true,
-        "layout": "left",
-        "column_gap": "8",
-        "vertical_alignment": "center",
-        "content_alignment": "start",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "bg_column": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
     }
   },
   "order": [
     "main",
-    "divider_ctQ6Pz",
-    "rich_text_D3EwF8",
     "rich_text_bYhGgn",
-    "image_with_text_overlay_rG4ViQ",
+    "video_with_text_overlay_Gh3QAQ",
     "content_tabs_3Ujw4X",
-    "divider_ARtepb",
-    "image_with_text_overlay_ntMfc6",
-    "image_with_text_iwf4gW"
+    "image_with_text_overlay_ntMfc6"
   ]
 }

@@ -33,12 +33,13 @@
       "block_order": [
         "image_7nHxqM"
       ],
-      "name": "Rich text",
+      "name": "Header Image",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
@@ -55,7 +56,7 @@
         "text_XWCJKJ": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe jewelry is meant to be worn and are here to help you revive your jewelry box. The Heirloom Revival mission is: wear more, buy less. The largest diamond mine is in our homes. Let's start putting those stones to use. It's our responsibility as citizens of earth, the future of fine jewelry and so sentimental. Heirloom Revival is here to help you recycle and remake your most precious objects. Heirloom Revival projects typically start at $2000 depending on the design, stone size and metal.<\/p>",
+            "text": "<p><strong>The Heirloom Revival mission:<\/strong> wear more, buy less.<br\/><br\/>At Starling Jewelry, we believe jewelry is forever. Through our <em>Heirloom Revival<\/em> service, we transform your unworn or inherited pieces into something new to love and wear again. Each piece is reimagined with care, crafting a bridge between past and future, sentiment and sustainability.<\/p>",
             "large_text": false,
             "show_more_toggle": false,
             "max_height": 8
@@ -65,16 +66,51 @@
       "block_order": [
         "text_XWCJKJ"
       ],
-      "name": "Rich text",
+      "name": "Intro Copy",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-7xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
         "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_KGDeGW": {
+      "type": "rich-text",
+      "blocks": {
+        "button_dANRem": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Started",
+            "button_link": "",
+            "button_type": "underlined",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "button_dANRem"
+      ],
+      "disabled": true,
+      "name": "GET STARTED BUTTON",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -156,7 +192,8 @@
         "image_LDAWnL",
         "image_N4Kri9"
       ],
-      "name": "Gallery grid",
+      "disabled": true,
+      "name": "Past Projects 1",
       "settings": {
         "section_width": "container",
         "subheading": "",
@@ -164,43 +201,12 @@
         "heading_size_section": "h2",
         "description": "",
         "layout": "horizontal",
+        "column_gap": 3,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
         "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "rich_text_KGDeGW": {
-      "type": "rich-text",
-      "blocks": {
-        "button_dANRem": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get Started",
-            "button_link": "",
-            "button_type": "underlined",
-            "show_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "button_dANRem"
-      ],
-      "name": "GET STARTED BUTTON",
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 0,
-        "padding_bottom": 32,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -267,6 +273,7 @@
         "tab_r7jYP8",
         "tab_Bg3aiq"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Engagement Projects",
       "settings": {
@@ -307,12 +314,14 @@
       "block_order": [
         "button_RVHCpe"
       ],
+      "disabled": true,
       "name": "GET STARTED BUTTON",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 36,
@@ -323,91 +332,75 @@
         "divider_bottom_width": "container"
       }
     },
-    "scrolling_content_6cn4bc": {
-      "type": "scrolling-content",
+    "17611703994c34fc8d": {
+      "type": "_blocks",
       "blocks": {
-        "content_pkGHEP": {
-          "type": "content",
+        "ai_gen_block_702bacb_bYkHtB": {
+          "type": "ai_gen_block_702bacb",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PICKYOURJEWELRY.png",
-            "subheading": "",
-            "heading": "1. Pick Your Revival",
-            "text": "<p>Select a piece(s) from your jewelry collection that holds sentimental value but doesn't suit your style. We recommend only picking 1-3 pieces to start with, otherwise it can get overwhelming. And if you are having any hesitation on if you want to take apart your piece or not, it’s best to not.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "content_Wgg4Ra": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
-            "subheading": "",
-            "heading": "2. Get an Estimate & Reserve Your Spot",
-            "text": "<p>To get a price estimate email us with any questions:<a href=\"mailto:heirloomerevival@starlingjewelry.com\"><span style=\"text-decoration:underline\">heirloomrevival@starlingjewelry.com <\/span><\/a>OR fill out the contact form below. <\/p><p>Once we've chatted via email and\/or you are feeling comfortable reserve your Heirloom Revival spot in an upcoming month <a href=\"\/products\/heirloom-revival-deposit\" title=\"Heirloom Revival Deposit\">here<\/a>. <\/p><p>We limit our Heirloom Revival projects to 10 a month so we can provide the best experience for everyone. The $200 deposit is non-refundable and goes towards your heirloom revival project. <\/p><p>For planning purposes the process generally takes 8-10 weeks. <\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "content_iR9Lqd": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
-            "subheading": "",
-            "heading": "4. Send In Your Jewelry",
-            "text": "<p>During the first week of the month you have selected we will automatically mail you a shipping kit. It will include instructions on how to safely ship us your jewelry, jewelry bags for securing your pieces and a prepaid shipping label affixed to a shipping box. We understand that your jewels require the utmost care, please follow the shipping safety practices and reach out with any questions.<\/p><p>You will be notified once your heirlooms safely arrive at the Starling studio. After receiving your jewelry in Los Angeles, we carefully inspect and confirm the design direction you are loving and offer a final estimate based on your exact stone specifications. Pricing includes insured shipping both ways, custom renderings and settings, metalsmithing, design and new materials. To start reviving your pieces we send a 50% deposit. This takes about 2 weeks.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "content_hwe4RD": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
-            "subheading": "",
-            "heading": "5. Time to Revive! Removing Stones, 3D Drawings & Metalsmithing.",
-            "text": "<p>Your project has begun! Depending on your revival this process can include removing stones, taking apart findings and weighing the metals. <\/p><p>During this step, we will also share a sketch and\/or 3D CAD drawing so you can see a rendering of your design and give final approval before we move to metalsmithing. Each project includes up to two edits of the rendering. <\/p><p>This takes about 2 weeks. <\/p><p>The metalsmithing begins! Your 3D design is cast in gold and\/or your metal is melted down. Our skilled team of goldsmiths start drawing down, sawing, sanding, setting, and polishing your new heirloom piece. <\/p><p>This takes about 3-4 weeks.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "content_YhtiiG": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CH001992_copy_2_1.png",
-            "subheading": "",
-            "heading": "6. Fin!",
-            "text": "<p>Your Heirloom Revival is finished! We will email the final balance invoice and confirm the return shipping address and coordinate delivery time with you. All finished Heirloom Revival pieces are mailed overnight or 2-day, fully insured with signature required. *We prefer that the first time you see the revival is in person and for that reason do not send sneak peek images before mailing.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
+            "title": "<p>how it works: click the icons for more details<\/p>",
+            "description": "",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "max_width": 1200,
+            "background_color": "#ffffff",
+            "title_size": 36,
+            "title_color": "#4f0e0d",
+            "description_size": 16,
+            "description_color": "#4f0e0d",
+            "line_thickness": 1,
+            "line_color": "#76232f",
+            "icon_size": 68,
+            "icon_background": "#ffffff",
+            "icon_color": "#4f0e0d",
+            "icon_border_color": "#ece6da",
+            "icon_border_width": 1,
+            "icon_hover_background": "#4f0e0d",
+            "icon_hover_color": "#ffffff",
+            "icon_hover_border_color": "#4f0e0d",
+            "label_size": 14,
+            "label_color": "#4f0e0d",
+            "modal_max_width": 700,
+            "modal_border_radius": 8,
+            "modal_background": "#ffffff",
+            "overlay_color": "#00000099",
+            "modal_title_size": 28,
+            "modal_title_color": "#4f0e0d",
+            "modal_text_size": 16,
+            "modal_text_color": "#4f0e0d",
+            "item_1_enabled": true,
+            "item_1_label": "Step 1: Connect for Estimate & Timing",
+            "item_1_icon": "gem-hand",
+            "item_1_modal_title": "Pick Your Revival & Reserve Your Spot",
+            "item_1_modal_text": "<p>Begin by selecting one to three pieces from your jewelry collection that hold sentimental value but no longer suit your style. Fewer is better. Starting small helps keep the process intentional and focused. If you feel any hesitation about taking a piece apart, we recommend waiting until you’re sure.<\/p><p>To receive an estimate or ask questions, email us at hello@starlingjewelry.com<\/p><p> or fill out the contact form below. Once we’ve connected and you’re ready to move forward, you can reserve your Heirloom Revival spot for an upcoming month [here].<\/p><p>We accept ten Heirloom Revival projects each month to ensure a thoughtful and personal experience for every client. A $200 non-refundable deposit secures your place and is applied toward your final project. <\/p><p>For planning purposes, the full process typically takes <strong>8–10 weeks<\/strong> from start to finish.<\/p><p><\/p><p><\/p>",
+            "item_2_enabled": true,
+            "item_2_label": "Step 2: Receive Shipping Kit & Mail Us Jewelry",
+            "item_2_icon": "dove",
+            "item_2_modal_title": "Send In Your Jewelry",
+            "item_2_modal_text": "<p>During the first week of the month you’ve reserved, we’ll mail you a <em>Heirloom Revival<\/em> shipping kit. Inside, you’ll find detailed instructions on how to safely package your jewelry, protective bags for each piece, and a prepaid, insured shipping label affixed to your box.<\/p><p>We understand how precious your pieces are and handle every shipment with care. Please follow the included safety guidelines and reach out with any questions. You’ll receive a notification as soon as your heirlooms arrive safely at the Starling studio.<\/p>",
+            "item_3_enabled": true,
+            "item_3_label": "Step 3: Confirm Design, Inspect, Remove Stones",
+            "item_3_icon": "magic-eye",
+            "item_3_modal_title": "We Inspect & Confirm Your Design",
+            "item_3_modal_text": "<p>Once your heirlooms arrive safely at the Starling studio, we confirm the design direction you’ve chosen and provide a final estimate based on your exact stones and materials.<\/p><p>Pricing includes insured shipping both ways, custom renderings, metalsmithing, design, and any new materials required for your piece.<\/p><p>To begin the transformation, we require a <strong>50% deposit<\/strong> toward your project. Once received our team carefully removes each stone and inspects it for quality and durability. <\/p><p>This stage typically takes about <strong>two weeks<\/strong>, allowing us to finalize every detail before moving into production.<\/p>",
+            "item_4_enabled": true,
+            "item_4_label": "Step 4: Revive & Metalsmithing",
+            "item_4_icon": "revival",
+            "item_4_modal_title": "Time to Revive!",
+            "item_4_modal_text": "<p>Your Heirloom Revival project has begun. Depending on your design, this stage may include removing additional stones, disassembling settings, and weighing metals. During this phase, we’ll share a sketch and\/or 3D CAD rendering of your new design for your review and approval before moving into metalsmithing. Each project includes up to three edits of the rendering. This portion typically takes about two weeks.<\/p><p>Once your design is approved, the metalsmithing begins. Your 3D model is cast in gold, or your existing metal is melted down and used. Our skilled goldsmiths then shape, saw, sand, set, and polish every detail to create your revived heirloom. This process usually takes three to four weeks.<\/p>",
+            "item_5_enabled": true,
+            "item_5_label": "Step 5: Fin! Ship Back",
+            "item_5_icon": "head",
+            "item_5_modal_title": "Finish and Delivery",
+            "item_5_modal_text": "<p>Your Heirloom Revival is complete! We’ll email your final balance invoice, confirm your return shipping address, and coordinate a delivery time that works best for you.<\/p><p>All finished Heirloom Revival pieces are shipped overnight or two-day, fully insured, and require a signature upon delivery. We prefer that your first glimpse of the finished piece be in person, so we prefer not to send preview images, but if you'd like them let us know.<\/p><p>The moment has arrived — you receive your Heirloom Revival! Mail day has truly never been better. We love seeing your reactions, so please tag us in your unboxing and reveal videos.<\/p>"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "content_pkGHEP",
-        "content_Wgg4Ra",
-        "content_iR9Lqd",
-        "content_hwe4RD",
-        "content_YhtiiG"
+        "ai_gen_block_702bacb_bYkHtB"
       ],
-      "name": "Scrolling content",
-      "settings": {
-        "section_width": "container",
-        "layout": "left",
-        "heading_size": "h3",
-        "content_alignment": "start",
-        "vertical_alignment": "center",
-        "button_type": "outline",
-        "show_icon": false,
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
+      "settings": {}
     },
     "rich_text_3fFy7P": {
       "type": "rich-text",
@@ -417,7 +410,7 @@
           "settings": {
             "button_label": "Get Started",
             "button_link": "",
-            "button_type": "underlined",
+            "button_type": "outline",
             "show_icon": true
           }
         }
@@ -425,12 +418,14 @@
       "block_order": [
         "button_8fRRVB"
       ],
+      "disabled": true,
       "name": "GET STARTED BUTTON",
       "settings": {
         "section_width": "w-full",
         "content_width": "max-w-4xl",
         "content_alignment": "center",
         "bg_color": "",
+        "bg_color_gradient": "",
         "text_color": "",
         "border_color": "",
         "padding_top": 0,
@@ -520,12 +515,12 @@
       ],
       "name": "Contact form",
       "settings": {
-        "subheading": "",
-        "heading": "",
+        "subheading": "Get Started",
+        "heading": "Step 1: Connect for Estimate & Timing",
         "heading_size_section": "h5",
-        "description": "<p>We limit our Heirloom Revival Projects to 10 a month, you can reserve a spot here:<a href=\"https:\/\/www.starlingjewelry.com\/products\/heirloom-revival-deposit?_pos=1&_psq=heirloom+re&_ss=e&_v=1.0\"> <span style=\"text-decoration:underline\">Heirloom Revival Deposit<\/span><\/a>. Before you leave a deposit, we would love to send a closer estimate tailored to your project design. Can you answer the questions below? I will be able to send a closer estimate with these answers and we can go from there.<\/p>",
+        "description": "<p> To begin an Heirloom Revival project, please complete the form below so we may accurately provide an estimate tailored to your design project. Projects typically start at $2,000 depending on the design, stone size, and material. We have limited availability for projects on a monthly basis. To secure your spot, please purchase an <a href=\"https:\/\/www.starlingjewelry.com\/products\/heirloom-revival-deposit?_pos=1&_psq=heirloom+re&_ss=e&_v=1.0\"><span style=\"text-decoration:underline\">Heirloom Revival Deposit<\/span><\/a> after submitting the form below.<\/p>",
         "layout": "vertical",
-        "content_width": "narrow",
+        "content_width": "max-full",
         "show_phone_number": true,
         "button_type": "primary",
         "show_icon": false,
@@ -535,6 +530,52 @@
         "input_bg_color": "",
         "input_text_color": "",
         "input_border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "featured_blog_KUEpz3": {
+      "type": "featured-blog",
+      "name": "Blog posts",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "blog": "heirloom-projects",
+        "image_ratio": "portrait",
+        "title_size": "h4",
+        "align_content_card": "start",
+        "show_border_card": false,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_category": false,
+        "show_read_more": true,
+        "enable_button_underlined_white": false,
+        "show_icon_read_more": false,
+        "enable_stack_columns": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "column_gap": 3,
+        "column_gap_mobile": 2,
+        "swipe_on_mobile": true,
+        "link_url": "",
+        "link_text": "",
+        "button_type": "primary",
+        "show_icon": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
         "padding_top": 36,
         "padding_bottom": 36,
         "show_top_divider": false,
@@ -630,7 +671,6 @@
         "gallery_iHbncm",
         "gallery_RwQr98"
       ],
-      "disabled": true,
       "settings": {
         "section_width": "container-fluid",
         "subheading": "",
@@ -667,14 +707,15 @@
     "main",
     "rich_text_7jzYgp",
     "rich_text_BRLDyn",
-    "gallery_grid_pDQGrt",
     "rich_text_KGDeGW",
+    "gallery_grid_pDQGrt",
     "content_tabs_Pik6nD",
     "rich_text_j4nmBF",
-    "scrolling_content_6cn4bc",
+    "17611703994c34fc8d",
     "rich_text_3fFy7P",
     "custom_liquid_7wVUPr",
     "contact_form_Px8dm9",
+    "featured_blog_KUEpz3",
     "gallery_socical_aEBBwF"
   ]
 }

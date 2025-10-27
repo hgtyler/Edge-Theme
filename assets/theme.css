@@ -1320,6 +1320,7 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   color: #D50032;
   font-family: "Auberge-Script-Basic-One";
   font-size: 30px;
+  text-transform: lowercase;
   transform: rotate(-20deg);
 }
 .gradient {
@@ -3954,6 +3955,7 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   font-weight: var(--font-heading-weight);
   letter-spacing: var(--font-heading-spacing);
   word-break: break-word;
+  text-transform: lowercase;
 }
 
 .h3, .h3, h4, .h4 {
@@ -5232,6 +5234,7 @@ blockquote p {
   inset: 0;
 }
 .price {
+  font-family: "ABCWhyte-Book";
   font-size: var(--text-size-base);
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
@@ -5655,7 +5658,7 @@ volume-pricing show-more-button {
   object-fit: contain;
 }
 .card__heading {
-  font-family: var(--font-card-title-family);
+  font-family: "ABCWhyte-Book";
   font-size: calc(var(--size-body)*var(--font-card-title-scale));
   letter-spacing: var(--font-card-title-spacing);
   text-transform: var(--font-card-title-transform);

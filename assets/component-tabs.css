@@ -13,6 +13,7 @@ tabs-component .tab-button {
     color: rgba(var(--color-foreground)/0.7);
     white-space: nowrap;
     cursor: pointer;
+    font-family: 'ABCWhyte-Book';
 }
 tabs-component .tab-button.active{
     color: rgb(var(--color-foreground));

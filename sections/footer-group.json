@@ -112,7 +112,7 @@
         "text_color": "",
         "border_color": "",
         "padding_top": 52,
-        "padding_bottom": 0,
+        "padding_bottom": 44,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -126,9 +126,9 @@
           "type": "newsletter",
           "settings": {
             "heading": "",
-            "content": "<h5>Join our newsletter and get 10% off!<\/h5>",
+            "content": "<p>Join our newsletter and get 10% off!<\/p>",
             "term_policy": "",
-            "show_social": true,
+            "show_social": false,
             "order_first": true
           }
         },
@@ -164,13 +164,13 @@
         "link_list_Nx4gLF"
       ],
       "custom_css": [
-        ".footer-block__heading.body-2.md\\:mb-8 {font-family: Whyte Book; letter-spacing: 0.6px; font-size: var(--text-size-base);}",
-        "a.link.no-underline {font-family: \"Whyte\"; letter-spacing: 0.6px; font-size: var(--text-size-base);}"
+        ".footer-block__heading.body-2.md\\:mb-8 {letter-spacing: 0.6px; font-size: var(--text-size-base);}",
+        "a.link.no-underline {letter-spacing: 0.6px; font-size: var(--text-size-base);}"
       ],
       "settings": {
         "section_width": "container",
         "divider_type": "none",
-        "heading_size": "h5",
+        "heading_size": "body-1",
         "enable_follow_on_shop": false,
         "enable_country_selector": false,
         "enable_country_flag": false,
@@ -180,8 +180,8 @@
         "show_policy": true,
         "show_powered_by": false,
         "border_color_newsletter": "#ffffff",
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 40,
+        "padding_bottom": 8,
         "show_top_divider": false,
         "divider_top_width": "w-full",
         "show_bottom_divider": false,
