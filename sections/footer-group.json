@@ -179,7 +179,7 @@
         "payment_enable": false,
         "show_policy": true,
         "show_powered_by": false,
-        "border_color_newsletter": "#ffffff",
+        "border_color_newsletter": "#b18988",
         "padding_top": 40,
         "padding_bottom": 8,
         "show_top_divider": false,

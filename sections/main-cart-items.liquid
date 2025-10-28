@@ -154,7 +154,7 @@ data-id="{{ section.id }}">
                                             {{ property.last | split: '/' | last }}
                                           </a>
                                         {%- else -%}
-                                          {{ property.last }}
+                                          {{ property.last }} 
                                         {%- endif -%}
                                       </dd>
                                     </div>
@@ -162,7 +162,9 @@ data-id="{{ section.id }}">
                                 {%- endfor -%}
                               </dl>
 
-                              <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                              <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p> 
+                              {% comment %} SHIPPING METAFIELDS HERE {% endcomment %}
+                              <p class="product-option">{{ item.product.metafields.checkoutblocks.trigger }}</p>
                             {%- endif -%}
 
                             <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
