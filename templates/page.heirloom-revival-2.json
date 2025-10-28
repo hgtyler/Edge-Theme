@@ -520,8 +520,8 @@
         "layout": "vertical",
         "content_width": "max-full",
         "show_phone_number": true,
-        "button_type": "primary",
-        "show_icon": false,
+        "button_type": "outline",
+        "show_icon": true,
         "bg_color": "",
         "text_color": "",
         "border_color": "",
@@ -530,127 +530,6 @@
         "input_border_color": "",
         "padding_top": 36,
         "padding_bottom": 36,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
-    "gallery_socical_aEBBwF": {
-      "type": "gallery-socical",
-      "blocks": {
-        "gallery_NTknMj": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/download_10.png",
-            "text": "@Sam",
-            "link": ""
-          }
-        },
-        "gallery_mEprQQ": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_3672.webp",
-            "text": "@Orange",
-            "link": ""
-          }
-        },
-        "gallery_KJXpFa": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/STARLING-0113.jpg",
-            "text": "@pinklio",
-            "link": ""
-          }
-        },
-        "gallery_yjVhcD": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/scattered-cloud-huggies-1.jpg",
-            "text": "@Splash",
-            "link": ""
-          }
-        },
-        "gallery_aWy8dL": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BEZEL_a047008d-f768-4ec7-93e3-ed8298c5c01d.jpg",
-            "text": "@Paml",
-            "link": ""
-          }
-        },
-        "gallery_qBwYNz": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/527532818_18516511225062086_4014960535908167766_n.jpg",
-            "text": "@OneTi",
-            "link": ""
-          }
-        },
-        "gallery_iefXFB": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/STARLING-0231.jpg",
-            "text": "@Blind",
-            "link": ""
-          }
-        },
-        "gallery_iHbncm": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Starling_03272025-8443_1.jpg",
-            "text": "@Coco",
-            "link": ""
-          }
-        },
-        "gallery_RwQr98": {
-          "type": "gallery",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Toi_et_Moi_Round_and_Radiant_Diamond_Ring_1.webp",
-            "text": "@Ice",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "gallery_NTknMj",
-        "gallery_mEprQQ",
-        "gallery_KJXpFa",
-        "gallery_yjVhcD",
-        "gallery_aWy8dL",
-        "gallery_qBwYNz",
-        "gallery_iefXFB",
-        "gallery_iHbncm",
-        "gallery_RwQr98"
-      ],
-      "custom_css": [
-        "h2 {text-transform: Capitalize;}"
-      ],
-      "settings": {
-        "section_width": "container-fluid",
-        "subheading": "",
-        "heading": "Heirloom Revival Gallery",
-        "heading_size_section": "h2",
-        "description": "",
-        "layout": "vertical",
-        "link_url": "",
-        "link_text": "Revive Your own",
-        "button_type": "underlined",
-        "show_icon": false,
-        "layout_gallery": "metro",
-        "image_size": "portrait",
-        "icon": "none",
-        "text_type": "hover",
-        "images_per_row": 6,
-        "gap": 0.1,
-        "columns_mobile": "1",
-        "gap_mobile": 0.1,
-        "swipe_on_mobile": true,
-        "bg_color": "#ffffff",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 84,
-        "padding_bottom": 84,
         "show_top_divider": false,
         "divider_top_width": "container",
         "show_bottom_divider": false,
@@ -668,7 +547,6 @@
     "rich_text_j4nmBF",
     "17611703994c34fc8d",
     "featured_blog_KUEpz3",
-    "contact_form_Px8dm9",
-    "gallery_socical_aEBBwF"
+    "contact_form_Px8dm9"
   ]
 }

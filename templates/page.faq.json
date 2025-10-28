@@ -17,6 +17,61 @@
         "divider_bottom_width": "container"
       }
     },
+    "rich_text_eDttpc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BmbdpU": {
+          "type": "heading",
+          "settings": {
+            "heading": "holiday shipping info",
+            "heading_size": "h2"
+          }
+        },
+        "text_48R8wF": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>For all Main Collection, Made to Order pieces:<\/h4><h5><\/h5>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "text_T9NtAe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx<\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_BmbdpU",
+        "text_48R8wF",
+        "text_T9NtAe"
+      ],
+      "custom_css": [
+        "h4 {font-size: 15px; padding-top: 15px;}",
+        "@media screen and (max-width: 750px) {h4 {font-size: 12px; padding-top: 15px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-7xl",
+        "content_alignment": "center",
+        "bg_color": "#4f0e0d",
+        "bg_color_gradient": "",
+        "text_color": "#ece6da",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
     "faq_gkrwUi": {
       "type": "faq",
       "blocks": {
@@ -180,77 +235,11 @@
         "show_bottom_divider": false,
         "divider_bottom_width": "container"
       }
-    },
-    "rich_text_arEzcN": {
-      "type": "rich-text",
-      "blocks": {
-        "icon_CXUfg9": {
-          "type": "icon",
-          "settings": {
-            "icon": "question_mark",
-            "icon_size": 3
-          }
-        },
-        "heading_MwCUQC": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get in touch",
-            "heading_size": "h3"
-          }
-        },
-        "text_z3HkTV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Have questions about your order, or a general enquiry?<\/p>",
-            "large_text": false,
-            "show_more_toggle": false,
-            "max_height": 8
-          }
-        },
-        "separator_jbA7xj": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 2
-          }
-        },
-        "button_CP8wcf": {
-          "type": "button",
-          "settings": {
-            "button_label": "Contact us",
-            "button_link": "",
-            "button_type": "primary",
-            "show_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "icon_CXUfg9",
-        "heading_MwCUQC",
-        "text_z3HkTV",
-        "separator_jbA7xj",
-        "button_CP8wcf"
-      ],
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
-        "bg_color": "#f7f1f0",
-        "bg_color_gradient": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
     }
   },
   "order": [
     "main",
-    "faq_gkrwUi",
-    "rich_text_arEzcN"
+    "rich_text_eDttpc",
+    "faq_gkrwUi"
   ]
 }

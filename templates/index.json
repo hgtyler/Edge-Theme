@@ -6,12 +6,12 @@
         "slide_XDjCkC": {
           "type": "_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-1.png",
+            "image": "shopify:\/\/shop_images\/BANNER.png",
             "slide_link": "",
             "video_background": true,
-            "video_hosted": "shopify:\/\/files\/videos\/Oct_OOAK_Banner_Master.mp4",
+            "video_hosted": "shopify:\/\/files\/videos\/EVER YOURS.mp4",
             "content_width": 920,
-            "content_position": "bottom-left",
+            "content_position": "middle-left",
             "mobile_content_position": "bottom-center",
             "content_space": 1,
             "color_text": "#ffffff",
@@ -24,9 +24,9 @@
               "type": "_slide_heading",
               "name": "Heading",
               "settings": {
-                "heading": "The le Fay Collection",
+                "heading": "Ever Yours",
                 "highlighted_word_type": "single_line",
-                "heading_size": "h6",
+                "heading_size": "h1",
                 "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
@@ -35,8 +35,8 @@
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Explore",
-                "button_link": "shopify:\/\/collections\/one-of-a-kind",
+                "button_text": "Shop The Collection",
+                "button_link": "shopify:\/\/collections\/ever-yours",
                 "button_type": "underlined-white",
                 "show_icon": false
               },
