@@ -3955,7 +3955,6 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   font-weight: var(--font-heading-weight);
   letter-spacing: var(--font-heading-spacing);
   word-break: break-word;
-  text-transform: lowercase;
 }
 
 .h3, .h3, h4, .h4 {

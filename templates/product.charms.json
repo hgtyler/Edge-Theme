@@ -36,6 +36,17 @@
             "sale_badge_type": "fixed"
           }
         },
+        "siblings_8zgW6A": {
+          "type": "siblings",
+          "settings": {
+            "siblings_picker_type": "color-swatch",
+            "block_type": "outline",
+            "show_siblings_sale_dot": true,
+            "title_siblings": "Stone:",
+            "option_siblings_value": "{{ product.metafields.shopify[\"color-pattern\"] | metafield_text: field: 'label' }}",
+            "siblings_products_value": "custom.combined_listing_products"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -153,6 +164,7 @@
       "block_order": [
         "title",
         "price",
+        "siblings_8zgW6A",
         "variant_picker",
         "infinite_options_app_block_9mya8m",
         "buy_buttons",

@@ -165,7 +165,8 @@
       ],
       "custom_css": [
         ".footer-block__heading.body-2.md\\:mb-8 {letter-spacing: 0.6px; font-size: var(--text-size-base);}",
-        "a.link.no-underline {letter-spacing: 0.6px; font-size: var(--text-size-base);}"
+        "a.link.no-underline {letter-spacing: 0.6px; font-size: var(--text-size-base);}",
+        ".h2 {text-transform: lowercase;}"
       ],
       "settings": {
         "section_width": "container",
