@@ -150,7 +150,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 }
 
 .predictive-search__item-query-result mark {
-  background-color: yellow;
+  background-color: #BCA4A7;
 }
 
 .predictive-search__item-vendor + .predictive-search__item-heading,

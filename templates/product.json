@@ -47,10 +47,10 @@
         "siblings_jr4VBe": {
           "type": "siblings",
           "settings": {
-            "siblings_picker_type": "color-swatch",
+            "siblings_picker_type": "product-image",
             "block_type": "outline",
-            "show_siblings_sale_dot": true,
-            "title_siblings": "Stone:",
+            "show_siblings_sale_dot": false,
+            "title_siblings": "Stone: {{ product.metafields.shopify[\"color-pattern\"] | metafield_text: field: 'label' }}",
             "option_siblings_value": "{{ product.metafields.custom.stone | metafield_text: field: 'name' }}",
             "siblings_products_value": "custom.combined_listing_products"
           }

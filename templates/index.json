@@ -6,10 +6,9 @@
         "slide_XDjCkC": {
           "type": "_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BANNER.png",
+            "image": "shopify:\/\/shop_images\/banner-1.png",
             "slide_link": "",
-            "video_background": true,
-            "video_hosted": "shopify:\/\/files\/videos\/EVER YOURS.mp4",
+            "video_background": false,
             "content_width": 920,
             "content_position": "middle-left",
             "mobile_content_position": "bottom-center",
@@ -20,11 +19,20 @@
             "overlay_gradient": ""
           },
           "blocks": {
+            "slide_text_PNTQkk": {
+              "type": "_slide_text",
+              "name": "Text",
+              "settings": {
+                "content": "INTRODUCING THE",
+                "description_size": "small"
+              },
+              "blocks": {}
+            },
             "slide_heading_7tmCyF": {
               "type": "_slide_heading",
               "name": "Heading",
               "settings": {
-                "heading": "ever yours",
+                "heading": "le Fay Collection",
                 "highlighted_word_type": "single_line",
                 "heading_size": "h1",
                 "color_text_highlighted": "#ffffff"
@@ -35,8 +43,8 @@
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Shop The Collection",
-                "button_link": "shopify:\/\/collections\/ever-yours",
+                "button_text": "Shop Now",
+                "button_link": "shopify:\/\/collections\/le-fay-collection",
                 "button_type": "underlined-white",
                 "show_icon": false
               },
@@ -44,6 +52,7 @@
             }
           },
           "block_order": [
+            "slide_text_PNTQkk",
             "slide_heading_7tmCyF",
             "slide_button_yYGzQT"
           ]

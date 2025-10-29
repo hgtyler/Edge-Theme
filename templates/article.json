@@ -1,23 +1,5 @@
 {
   "sections": {
-    "breadcrumbs_gqAxDD": {
-      "type": "breadcrumbs",
-      "settings": {
-        "section_width": "container-fluid",
-        "alignment": "center",
-        "text_size": "text-size-small",
-        "type_breadcrumb": "diamond",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 12,
-        "padding_bottom": 12,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
-    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -42,30 +24,12 @@
         "content": {
           "type": "content",
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "show_border": true
-          }
-        },
-        "tag_ktrDfi": {
-          "type": "tag",
-          "settings": {}
-        },
-        "next_article_jeJBHJ": {
-          "type": "next_article",
-          "settings": {}
         }
       },
       "block_order": [
         "title",
         "featured_image",
-        "content",
-        "share",
-        "tag_ktrDfi",
-        "next_article_jeJBHJ"
+        "content"
       ],
       "settings": {
         "bg_color": "rgba(0,0,0,0)",
@@ -78,52 +42,9 @@
         "show_bottom_divider": true,
         "divider_bottom_width": "w-full"
       }
-    },
-    "featured_blog_Bi7pBm": {
-      "type": "featured-blog",
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "You may also like",
-        "heading_size_section": "h2",
-        "description": "",
-        "layout": "vertical",
-        "blog": "news",
-        "image_ratio": "landscape-v2",
-        "show_image": true,
-        "show_date": true,
-        "show_author": true,
-        "show_excerpt": false,
-        "show_category": true,
-        "show_read_more": true,
-        "enable_button_underlined_white": false,
-        "enable_stack_columns": true,
-        "show_progress_bar": false,
-        "enable_overflow_visible": false,
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "column_gap": 5,
-        "column_gap_mobile": 2,
-        "swipe_on_mobile": true,
-        "link_url": "",
-        "link_text": "",
-        "button_type": "primary",
-        "show_icon": false,
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "",
-        "border_color": "",
-        "padding_top": 56,
-        "padding_bottom": 80,
-        "show_top_divider": false,
-        "divider_top_width": "container",
-        "show_bottom_divider": false,
-        "divider_bottom_width": "container"
-      }
     }
   },
   "order": [
-    "breadcrumbs_gqAxDD",
-    "main",
-    "featured_blog_Bi7pBm"
+    "main"
   ]
 }
