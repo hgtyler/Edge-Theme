@@ -38,11 +38,36 @@
         <div class="form__label"> {{ block.settings.title_siblings | escape }} <span class="form__label-value">{{ title_siblings_select | escape }}</span></div>
         <div class="variant-picker variant-picker__color variant-picker__color--siblings flex gap-4 flex-wrap variant-picker__solid">
           {%- for sibling in siblings_products_select limit: 20 -%}
+            {%- liquid
+              assign sibling_color_metafield = sibling.metafields[namespace_option_siblings][key_option_siblings]
+              assign sibling_color_label = sibling_color_metafield | metafield_text
+              assign sibling_swatch_media = nil
+
+              if sibling_color_metafield != blank
+                case sibling_color_metafield.type
+                  when 'file_reference'
+                    assign sibling_swatch_media = sibling_color_metafield.value
+                  when 'metaobject_reference'
+                    assign sibling_color_metaobject = sibling_color_metafield.value
+                    if sibling_color_metaobject['swatch'] != blank and sibling_color_metaobject['swatch'].value != blank
+                      assign sibling_swatch_media = sibling_color_metaobject['swatch'].value
+                    elsif sibling_color_metaobject['image'] != blank and sibling_color_metaobject['image'].value != blank
+                      assign sibling_swatch_media = sibling_color_metaobject['image'].value
+                    elsif sibling_color_metaobject['pattern'] != blank and sibling_color_metaobject['pattern'].value != blank
+                      assign sibling_swatch_media = sibling_color_metaobject['pattern'].value
+                    endif
+                endcase
+              endif
+
+              if sibling_swatch_media == nil or sibling_swatch_media == blank
+                assign sibling_swatch_media = sibling.featured_media
+              endif
+            -%}
+
             <a href="{{ sibling.url }}" class="swatch-image {% if sibling.id == product.id %} active {% endif %}">
-              <span class="sr-only">{{ sibling.metafields[namespace_option_siblings][key_option_siblings] | escape }}</span>
-              {%- assign media = sibling.featured_media -%}
-              {%- if media %}
-                {{- media | image_url: width: media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
+              <span class="sr-only">{{ sibling_color_label | default: sibling.metafields[namespace_option_siblings][key_option_siblings] | escape }}</span>
+              {%- if sibling_swatch_media != blank -%}
+                {{- sibling_swatch_media | image_url: width: 60 | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}}
               {%- endif -%}
               {% if sibling.compare_at_price > sibling.price and show_siblings_sale_dot %}
                 <span class="dot-sale" aria-label="{{ 'products.product.on_sale' | t }}">
