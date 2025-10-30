@@ -39,18 +39,43 @@
                       assign sibling_swatch_media = sibling_color_metafield.value
                     when 'metaobject_reference'
                       assign sibling_color_metaobject = sibling_color_metafield.value
-                      if sibling_color_metaobject['swatch'] != blank and sibling_color_metaobject['swatch'].value != blank
-                        assign sibling_swatch_media = sibling_color_metaobject['swatch'].value
-                      elsif sibling_color_metaobject['image'] != blank and sibling_color_metaobject['image'].value != blank
-                        assign sibling_swatch_media = sibling_color_metaobject['image'].value
-                      elsif sibling_color_metaobject['pattern'] != blank and sibling_color_metaobject['pattern'].value != blank
-                        assign sibling_swatch_media = sibling_color_metaobject['pattern'].value
+
+                      if sibling_color_metaobject['swatch'] != blank
+                        if sibling_color_metaobject['swatch'].image != blank
+                          assign sibling_swatch_media = sibling_color_metaobject['swatch'].image
+                        elsif sibling_color_metaobject['swatch'].value != blank
+                          assign sibling_swatch_media = sibling_color_metaobject['swatch'].value
+                        endif
+                      endif
+
+                      if sibling_swatch_media == nil or sibling_swatch_media == blank
+                        if sibling_color_metaobject['image'] != blank
+                          if sibling_color_metaobject['image'].image != blank
+                            assign sibling_swatch_media = sibling_color_metaobject['image'].image
+                          elsif sibling_color_metaobject['image'].value != blank
+                            assign sibling_swatch_media = sibling_color_metaobject['image'].value
+                          endif
+                        endif
+                      endif
+
+                      if sibling_swatch_media == nil or sibling_swatch_media == blank
+                        if sibling_color_metaobject['pattern'] != blank
+                          if sibling_color_metaobject['pattern'].image != blank
+                            assign sibling_swatch_media = sibling_color_metaobject['pattern'].image
+                          elsif sibling_color_metaobject['pattern'].value != blank
+                            assign sibling_swatch_media = sibling_color_metaobject['pattern'].value
+                          endif
+                        endif
                       endif
                   endcase
                 endif
 
                 if sibling_swatch_media == nil or sibling_swatch_media == blank
                   assign sibling_swatch_media = sibling.featured_media
+                endif
+
+                if sibling_swatch_media != blank and sibling_swatch_media.preview_image != blank
+                  assign sibling_swatch_media = sibling_swatch_media.preview_image
                 endif
               -%}
 
