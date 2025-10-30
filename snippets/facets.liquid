@@ -17,6 +17,10 @@
       text-underline-offset: 1.5px;
       font-size: 15px;
   }
+  .h2 {
+    text-transform: lowercase;
+    font-family: "Auberge-Script-Basic-One";
+  }
 </style>
 {%- liquid
 
@@ -105,7 +109,7 @@ assign matching_block_names = matching_block_names | split:","
   <div class="drawer-content flex flex-col">
     <div class="drawer-header py-6 flex justify-between items-center flex-none px-10 lg:px-14 border-b">
       <div class="flex flex-row gap-4 items-end flex-wrap">
-        <h4 class="h5">
+        <h2 class="h2">
           {%- if enable_filtering and enable_sorting -%}
           {{ 'products.facets.filter_and_sort' | t }}
         {%- elsif enable_filtering -%}
@@ -113,9 +117,9 @@ assign matching_block_names = matching_block_names | split:","
         {%- elsif enable_sorting -%}
           {{ 'products.facets.sort_button' | t }}
         {%- endif -%}
-        </h4>
+        </h2>
         <div class="product-count-mobile relative" role="status">
-          <div class="product-count__text text-body opacity-70">
+          {% comment %} <div class="product-count__text text-body opacity-70">
             <span id="ProductCountMobile">
               {%- if results.results_count -%}
                 {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -128,7 +132,7 @@ assign matching_block_names = matching_block_names | split:","
                 }}
               {%- endif -%}
             </span>
-          </div>
+          </div> {% endcomment %}
         {%- render 'loading-spinner' -%}
       </div>
       </div>
@@ -605,4 +609,3 @@ assign matching_block_names = matching_block_names | split:","
       </form>
     </facet-filters-form>
   {%- endif -%}
-

@@ -172,7 +172,7 @@
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
-            "text": "<h6>Made with devotion to exquisite materials.<\/h6>",
+            "text": "<h6>MADE WITH DEVOTION TO EXQUISITE MATERIALS<\/h6>",
             "button_label": "",
             "button_link": "",
             "button_type": "underlined-white",
@@ -199,7 +199,7 @@
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
-            "text": "<h6>They are simply made to be — ever yours.<\/h6>",
+            "text": "<h6>THEY ARE SIMPLY MADE TO BE - EVER YOURS<\/h6>",
             "button_label": "",
             "button_link": "",
             "button_type": "underlined-white",
@@ -363,9 +363,9 @@
             "slide_heading_KdVMGf": {
               "type": "_slide_heading",
               "settings": {
-                "heading": "Fine Jewelry Moved by Light & Color, Made to be - Ever Yours",
+                "heading": "fine jewelry moved by light and color",
                 "highlighted_word_type": "single_line",
-                "heading_size": "h6",
+                "heading_size": "h2",
                 "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
@@ -446,7 +446,7 @@
         "collection_iehTbi": {
           "type": "collection",
           "settings": {
-            "collection": "one-of-a-kind",
+            "collection": "one-of-a-kind-collection",
             "tab_heading": "One Of A Kind"
           }
         }
@@ -510,9 +510,9 @@
             "slide_heading_bYEf3Y": {
               "type": "_slide_heading",
               "settings": {
-                "heading": "Ever Yours",
+                "heading": "ever yours",
                 "highlighted_word_type": "single_line",
-                "heading_size": "h6",
+                "heading_size": "h2",
                 "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
