@@ -28,62 +28,12 @@
         <div class="flex gap-x-4 items-center justify-{{ text_alignment }}">
           <ul class="list-unstyled card-product__swatch-list flex flex-row flex-wrap justify-{{ text_alignment }} gap-y-4">
             {%- for sibling in siblings_products_select limit: 20 -%}
-              {%- liquid
-                assign sibling_color_metafield = sibling.metafields[namespace_option_siblings][key_option_siblings]
-                assign sibling_color_label = sibling_color_metafield | metafield_text
-                assign sibling_swatch_media = nil
-
-                if sibling_color_metafield != blank
-                  case sibling_color_metafield.type
-                    when 'file_reference'
-                      assign sibling_swatch_media = sibling_color_metafield.value
-                    when 'metaobject_reference'
-                      assign sibling_color_metaobject = sibling_color_metafield.value
-
-                      if sibling_color_metaobject['swatch'] != blank
-                        if sibling_color_metaobject['swatch'].image != blank
-                          assign sibling_swatch_media = sibling_color_metaobject['swatch'].image
-                        elsif sibling_color_metaobject['swatch'].value != blank
-                          assign sibling_swatch_media = sibling_color_metaobject['swatch'].value
-                        endif
-                      endif
-
-                      if sibling_swatch_media == nil or sibling_swatch_media == blank
-                        if sibling_color_metaobject['image'] != blank
-                          if sibling_color_metaobject['image'].image != blank
-                            assign sibling_swatch_media = sibling_color_metaobject['image'].image
-                          elsif sibling_color_metaobject['image'].value != blank
-                            assign sibling_swatch_media = sibling_color_metaobject['image'].value
-                          endif
-                        endif
-                      endif
-
-                      if sibling_swatch_media == nil or sibling_swatch_media == blank
-                        if sibling_color_metaobject['pattern'] != blank
-                          if sibling_color_metaobject['pattern'].image != blank
-                            assign sibling_swatch_media = sibling_color_metaobject['pattern'].image
-                          elsif sibling_color_metaobject['pattern'].value != blank
-                            assign sibling_swatch_media = sibling_color_metaobject['pattern'].value
-                          endif
-                        endif
-                      endif
-                  endcase
-                endif
-
-                if sibling_swatch_media == nil or sibling_swatch_media == blank
-                  assign sibling_swatch_media = sibling.featured_media
-                endif
-
-                if sibling_swatch_media != blank and sibling_swatch_media.preview_image != blank
-                  assign sibling_swatch_media = sibling_swatch_media.preview_image
-                endif
-              -%}
-
               <li class="card-product__swatch-item card-product-siblings__item">
                 <a href="{{ sibling.url }}" class="swatch-button swatch-button-image {% if sibling.id == product.id %} active {% endif %}">
-                  <span class="sr-only">{{ sibling_color_label | default: sibling.metafields[namespace_option_siblings][key_option_siblings] | escape }}</span>
-                  {%- if sibling_swatch_media != blank -%}
-                    {{- sibling_swatch_media | image_url: width: 60 | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}}
+                  <span class="sr-only">{{ sibling.metafields[namespace_option_siblings][key_option_siblings] | escape }}</span>
+                  {%- assign media = sibling.featured_media -%}
+                  {%- if media %}
+                    {{- media | image_url: width: media.width | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'object-cover absolute inset-0 size-full' -}} 
                   {%- endif -%}
                 </a>
               </li>
