@@ -16,9 +16,10 @@
 
   if siblings_products.type == 'collection_reference'
     assign siblings_products_select = collections[siblings_products].products
-  elsif siblings_products.type == 'list.product_reference'
+  elsif siblings_products.type == 'list.product_reference' 
     assign siblings_products_select = siblings_products.value
   endif
+
 
   assign block_type = block.settings.block_type
   assign block_type_class = ''
@@ -70,18 +71,104 @@
         </div>
       </fieldset>
       {%- endif -%}
-  {%- when 'color-swatch' -%}
-    {% assign color_swatch_style = settings.color_swatch_style %}
-    {%- if siblings_products != blank -%}
-    <fieldset class="product__siblings product__siblings--color" {{ block.shopify_attributes }} >
-      <div class="form__label"> {{ block.settings.title_siblings | escape }} <span class="form__label-value">{{ title_siblings_select | escape }}</span></div>
-      <div class="variant-picker variant-picker__color flex gap-1 flex-wrap  {{ block_type_class }}">
-        {%- for sibling in siblings_products_select limit: 20 -%}
-          {% liquid
-            assign sibling_value = sibling.metafields[namespace_option_siblings][key_option_siblings] | downcase
-            assign css_property = '--swatch-color: ' | append: sibling_value
+    {%- when 'color-swatch' -%}
+      {% assign color_swatch_style = settings.color_swatch_style %}
+      {% liquid
+        assign title_mf = product.metafields[namespace_option_siblings][key_option_siblings]
+        assign title_siblings_select = ''
+        if title_mf
+          if title_mf.type == 'list.metaobject_reference'
+            assign title_mo = title_mf.value | first
+            if title_mo
+              assign title_siblings_select = title_mo.label
+            endif
+          elsif title_mf.type == 'metaobject_reference'
+            assign title_siblings_select = title_mf.value.label
+          else
+            assign title_siblings_select = title_mf | metafield_text: field: 'label'
+          endif
+        endif
+      %}
+      {%- if siblings_products_select != blank -%}
+      <fieldset class="product__siblings product__siblings--color" {{ block.shopify_attributes }} >
+        <div class="form__label">
+          {{ block.settings.title_siblings | escape }}
+          <span class="form__label-value">{{ title_siblings_select | escape }}</span>
+        </div>
+        <div class="variant-picker variant-picker__color flex gap-1 flex-wrap {{ block_type_class }}">
+          {%- for sibling in siblings_products_select limit: 20 -%}
+            {% liquid
+              assign mf = sibling.metafields[namespace_option_siblings][key_option_siblings]
+              assign sibling_label = ''
+              assign css_property = ''
+            
+              if mf
+                if mf.type == 'list.metaobject_reference'
+                  assign mo = mf.value | first
+                elsif mf.type == 'metaobject_reference'
+                  assign mo = mf.value
+                endif
+            
+                if mo
+                  # handles in your metaobject: label, color, image, base_color, base_pattern
+                  assign sibling_label = mo.label | default: '' | downcase | strip
+            
+                  # 1) Prefer the swatch image
+                  if mo.image
+                    assign img_url = mo.image | image_url: width: 56
+                    assign css_property = '--swatch-color: url(' | append: img_url | append: ')'
+                  # 2) Fallback to the color picker value
+                  elsif mo.color
+                    assign css_property = '--swatch-color: ' | append: mo.color
+                  endif
+                endif
+              endif
+            
+              # 3) Fallback to theme mapping (settings.color_swatch_config) e.g. "amethyst: #9966cc" or "amethyst: amethyst.png"
+              if css_property == '' and sibling_label != ''
+                for item in config
+                  assign parts = item | split: ':'
+                  assign name = parts.first  | downcase | strip
+                  assign swatch_value = parts.last | strip
+                  if sibling_label == name
+                    if swatch_value contains '#'
+                      assign css_property = '--swatch-color: ' | append: swatch_value
+                    elsif images[swatch_value] != blank
+                      assign img = images[swatch_value] | image_url: width: 56
+                      assign css_property = '--swatch-color: url(' | append: img | append: ')'
+                    else
+                      assign css_property = '--swatch-color: ' | append: swatch_value
+                    endif
+                    break
+                  endif
+                endfor
+              endif
+            
+              # 4) Last resort: use the label as a CSS color name (only works if it's a valid CSS color)
+              if css_property == '' and sibling_label != ''
+                assign css_property = '--swatch-color: ' | append: sibling_label
+              endif
+            %}
+            
+            <a href="{{ sibling.url }}"
+              class="swatch-color {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif %} {% if sibling.id == product.id %} active {% endif %}"
+              style="{{ css_property }}">
+              <span class="sr-only">{{ sibling_label }}</span>
+              {% if sibling.compare_at_price > sibling.price and show_siblings_sale_dot %}
+                <span class="dot-sale" aria-label="{{ 'products.product.on_sale' | t }}"></span>
+              {% endif %}
+            </a>
+            
+            <!-- DEBUG (remove later) -->
+            <!-- sibling_label: {{ sibling_label | json }} -->
+            <!-- css_property: {{ css_property | escape }} -->
+          {%- endfor -%}
+        </div>
+      </fieldset>
+      {%- endif -%}
+{%- endcase -%}
 
-            for item in config
+            {% comment %} for item in config
               assign parts = item | split: ':'
               assign name = parts.first | downcase | strip
               if sibling_value == name
@@ -93,20 +180,4 @@
                   assign css_property = '--swatch-color: url(' | append: image_url | append: ')'
                 endif
               endif
-            endfor
-          %}
-
-          <a href="{{ sibling.url }}" 
-            class="swatch-color {% if color_swatch_style == 'round' %} rounded-full {% elsif color_swatch_style == 'rectangle' %} swatch-color-rectangle {% endif -%} {% if sibling.id == product.id %} active {% endif %}" 
-            style="{{ css_property }}">
-            <span class="sr-only">{{ sibling_value }}</span>
-
-            {% if sibling.compare_at_price > sibling.price and show_siblings_sale_dot %}
-              <span class="dot-sale" aria-label="{{ 'products.product.on_sale' | t }}"></span>
-            {% endif %}
-          </a>
-        {%- endfor -%}
-      </div>
-    </fieldset>
-    {%- endif -%}
-{%- endcase -%}
+            endfor {% endcomment %}

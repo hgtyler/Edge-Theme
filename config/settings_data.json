@@ -146,7 +146,7 @@
     "recommendations_limit": 6,
     "enable_cart_upsell": false,
     "color_swatch_style": "round",
-    "matching_option_names": "Metal,Stone,",
+    "matching_option_names": "Metal,Stone,Color,",
     "color_swatch_config": "14k Yellow Gold:metal-18k-yellow-gold.jpg\n14k White Gold:metal-18k-white-gold.jpg\n14k Rose Gold:metal-18k-rose-gold.jpg\n18k White Gold:metal-18k-white-gold.jpg\n18k Rose Gold:metal-18k-rose-gold.jpg\n18k Yellow Gold:metal-18k-yellow-gold.jpg\n22k Yellow Gold:metal-18k-yellow-gold.jpg\nDiamond:stone-diamond.jpg\nEmerald:stone-emerald.jpg\nAquamarine:stone-aquamarine.jpg\nAmethyst:stone-amethyst.jpg\nGarnet:stone-garnet.jpg\nTanzanite:stone-tanzanite.jpg\nRuby:stone-ruby.jpg\nMoonstone:stone-moonstone.jpg\nPink Tourmaline:stone-pink-tourmaline.jpg\nCitrine:stone-citrine.jpg\nPeridot:stone-peridot.jpg\nSapphire:stone-sapphire.jpg",
     "share_twitter": false,
     "social_instagram_link": "https:\/\/www.instagram.com\/starling",
