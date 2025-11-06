@@ -171,7 +171,7 @@
           "name": "Care",
           "settings": {
             "tab_heading": "Care",
-            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }} <\/p>",
+            "content": "<p>Gemstones originate from a wide variety of raw materials with different hardness and durability. Despite the wide range of raw materials, there are some basic rules that apply to the majority of gemstone jewelry items. The biggest rule for gemstone jewelry is to avoid hot water and chemicals like chlorine, bleach, ammonia and hair spray. Many colored stones are sensitive to high heats and\/or can be unknowingly treated which will react with heat and chemicals. Learn more about caring for your jewelry <a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\"><em>here.<\/em><\/a><\/p>",
             "page": ""
           }
         },
