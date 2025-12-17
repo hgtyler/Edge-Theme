@@ -1569,13 +1569,13 @@ a.product__text {
     width:var(--inventory-percent);
   }
 }
-.product__inventory-icon{
+ .product__inventory-icon{
   position: relative;
   width: 8px;
   height: 8px;
   display: inline-flex;
   border-radius: 50%;
-  background-color: rgb(var(--color-status));
+  background-color: #4F0E0D;
 }
 .product__inventory-icon:before{
   position: absolute;
@@ -1586,16 +1586,17 @@ a.product__text {
   content: "";
   border-radius: 50%;
   animation: inventory_spin 2s linear infinite;
-  background-color: rgb(var(--color-status));
-}
+  background-color: #4F0E0D;
+} 
+
 .product__inventory-message-low-stock{
-  --color-status:251 146 60;
+  --color-status:#4F0E0D;
 }
 .product__inventory-message-in-stock, .product__inventory-message-continue{
-  --color-status:34 197 94;
+  --color-status:#4F0E0D;
 }
 .product__inventory-message-out-of-stock{
-  --color-status:168 162 158;
+  --color-status:#4F0E0D;
 }
 .product__inventory-message{
   color:rgb(var(--color-status));

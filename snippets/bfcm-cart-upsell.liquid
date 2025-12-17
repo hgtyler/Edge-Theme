@@ -1,0 +1,52 @@
+{%- comment -%}
+  Snippet: cart-main-promo.liquid
+{%- endcomment -%}
+
+<style>
+    .cart-main-promo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-width: 1px;
+    border-color: #4F0E0D;
+    }
+    .cart-main-promo-header {
+    font-family: "Beirut-Display-Trial-Book";
+    color: #4F0E0D;
+    font-size: 18px;
+    }
+
+</style>
+
+{%- assign tag = tag | default: 'main' -%}
+{%- assign threshold = threshold | default: 3 -%}
+{%- assign tag_lc = tag | downcase -%}
+
+{%- assign main_qty = 0 -%}
+{%- for item in cart.items -%}
+  {%- assign has_tag = false -%}
+  {%- for t in item.product.tags -%}
+    {%- assign t_lc = t | downcase -%}
+    {%- if t_lc == tag_lc -%}
+      {%- assign has_tag = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if has_tag -%}
+    {%- assign main_qty = main_qty | plus: item.quantity -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign remaining = threshold | minus: main_qty -%}
+
+{%- if remaining > 0 -%}
+  <div class="cart-main-promo">
+    <h6 class="cart-main-promo-header">
+        BLACK FRIDAY SALE
+    </h6>
+    <p class="cart-main-promo__text">
+      You're {{ remaining }} {{ remaining | pluralize: 'item', 'items' }} away from getting 20% off!
+    </p>
+  </div>
+{%- endif -%}

@@ -1,3 +1,12 @@
+<style>
+  .bfcm-sale-info {
+  font-size: 10px;
+  color: #4F0E0D;
+  text-transform: uppercase;
+  opacity: 70%;
+  }
+</style>
+
 {%-liquid
   assign show_rating =  settings.card_show_rating
   assign show_vendor = settings.card_show_vendor
@@ -235,6 +244,15 @@
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {% else %}
               {% render 'price-max', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% endif %}
+            {% comment %} {% if card_product.tags contains "ooak-ring" %}
+              <p class="bfcm-sale-info">One-of-a-Kind</p>
+            {% endif %}  {% endcomment %}
+            {% if card_product.tags contains "mto" %}
+              <p class="bfcm-sale-info">Made to Order</p>
+            {% endif %}
+            {% if card_product.tags contains "ready-ship" %}
+              <p class="bfcm-sale-info">Ready to Ship</p>
             {% endif %}
             {% render 'card-product-swatch', product: card_product, card_color_type: card_color_type , color_swatch_style : settings.color_swatch_style, text_alignment : text_alignment %}
             {% render 'card-product-siblings', product: card_product, text_alignment : text_alignment %}

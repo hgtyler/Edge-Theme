@@ -44,6 +44,12 @@
             "sale_badge_type": "fixed"
           }
         },
+        "custom_liquid_wxWt3G": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style> \n.final-sale-pdp {\nfont-family: \"ABCWhyte-Book\";\nfont-size:13px;\ntext-align:left;\ntext-transform: uppercase;\n<\/style> \n{% if product.tags contains \"ooak\" %} <h4 class=\"final-sale-pdp\">One-of-a-kind piece<\/h4> {% endif %}"
+          }
+        },
         "siblings_jr4VBe": {
           "type": "siblings",
           "settings": {
@@ -68,6 +74,16 @@
             "style": "outline",
             "option_name": "Size",
             "size_chart_page": "size-chart"
+          }
+        },
+        "inventory_DzF7aL": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_base_quantity": 100,
+            "show_inventory_ping": true,
+            "show_inventory_quantity": true,
+            "show_progress_bar": false
           }
         },
         "buy_buttons": {
@@ -115,7 +131,7 @@
             "heading": "Care",
             "heading_size": "body-1",
             "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }} <\/p>",
             "content_liquid": "",
             "page": "",
             "open_by_default": false
@@ -150,9 +166,11 @@
         "breadcrumbs_exXzaX",
         "title",
         "price",
+        "custom_liquid_wxWt3G",
         "siblings_jr4VBe",
         "infinite_options_app_block_9mya8m",
         "variant_picker",
+        "inventory_DzF7aL",
         "buy_buttons",
         "rich_text_Htb99K",
         "collapsible_tab_bVRE3V",
@@ -305,12 +323,21 @@
     "information-products": {
       "type": "information-tabs-products",
       "blocks": {
+        "custom_content_8t3qBG": {
+          "type": "custom-content",
+          "name": "Holiday 2025",
+          "settings": {
+            "tab_heading": "Holiday 2025",
+            "content": "<p><strong>To receive by Christmas, please note the following order cut off dates:<\/strong><br\/>Order by <strong>12\/15 <\/strong>for One-of-a-Kind rings which may require resizing, with FedEx 2-day shipping.<br\/>Order by <strong>12\/18 <\/strong>for Ready to Ship and One-of-a-Kind pieces including charms, necklaces, and earrings with FedEx 2-day shipping.<\/p><p>The order deadline for Made to Order, Bespoke Gems, Heirloom Revival, and custom pieces has passed.<\/p><p>Enjoy extended returns on eligible items on orders placed between 11\/13 and 12\/25 through December 29th, 2025.<\/p><p><\/p><p><\/p>",
+            "page": ""
+          }
+        },
         "custom_content_73AKnk": {
           "type": "custom-content",
           "name": "Shipping & Returns",
           "settings": {
             "tab_heading": "Shipping & Returns",
-            "content": "<p>Orders above $500 are automatically upgraded to USPS Priority Mail Signature required, with orders underneath this not requiring a signature at delivery. <\/p><p>Orders above $1k are complimentary upgraded to FedEx 2day Shipping Signature Required<br\/><br\/>Personalized items, Bespoke Gems, One-of-a-Kind items and Bespoke or Heirloom Revival Projects cannot be returned. Personalized pieces include any item that is engraved, custom stone arrangement (ie our Compass Charm, Family Stone Charm) or any special order.<\/p><p>If you are not entirely pleased with a product you purchased, Starling will accept limited items for exchange or return within 10 days of your delivery date.<\/p><p><a href=\"\/pages\/happiness-guarantee\" target=\"_blank\" title=\"Happiness Guarantee\"><strong>Read More<\/strong><\/a><\/p>",
+            "content": "<p>Orders above $500 are automatically upgraded to USPS Priority Mail Signature required, with orders underneath this not requiring a signature at delivery. <\/p><p>Orders above $1k are complimentary upgraded to FedEx 2day Shipping Signature Required<br\/><br\/>Personalized items, Bespoke Gems, One-of-a-Kind items and Bespoke or Heirloom Revival Projects cannot be returned. Personalized pieces include any item that is engraved, custom stone arrangement (ie our Compass Charm, Family Stone Charm) or any special order.<\/p><p>If you are not entirely pleased with a product you purchased, Starling will accept limited items for exchange or return within 10 days of your delivery date.<\/p><p><a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">Read More<\/a><\/p>",
             "page": ""
           }
         },
@@ -340,23 +367,14 @@
             "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
             "page": ""
           }
-        },
-        "custom_content_8t3qBG": {
-          "type": "custom-content",
-          "name": "Holiday 2025",
-          "settings": {
-            "tab_heading": "Holiday 2025",
-            "content": "<h6><strong>For all Bespoke Gems, Heirloom Revival and Custom pieces:<\/strong><\/h6><p>Order by October 14th<\/p><h6><strong>For all Main Collection Made to Order pieces:<\/strong><\/h6><p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx 2Day<\/p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
+        "custom_content_8t3qBG",
         "custom_content_73AKnk",
         "custom_content_Nic9fy",
         "custom_content_4bDa3X",
-        "custom_content_WdbcGA",
-        "custom_content_8t3qBG"
+        "custom_content_WdbcGA"
       ],
       "settings": {
         "section_width": "container",

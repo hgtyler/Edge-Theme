@@ -166,6 +166,15 @@
     "information-products": {
       "type": "information-tabs-products",
       "blocks": {
+        "custom_content_4K49dM": {
+          "type": "custom-content",
+          "name": "Holiday 2025",
+          "settings": {
+            "tab_heading": "Holiday 2025",
+            "content": "<p><strong>To receive by Christmas, please note the following order cut off dates:<\/strong><br\/>Order by <strong>12\/15 <\/strong>for One-of-a-Kind rings which may require resizing, with FedEx 2-day shipping.<br\/>Order by <strong>12\/18 <\/strong>for Ready to Ship and One-of-a-Kind pieces including charms, necklaces, and earrings with FedEx 2-day shipping.<\/p><p>The order deadline for Made to Order, Bespoke Gems, Heirloom Revival, and custom pieces has passed.<\/p><p>Enjoy extended returns on eligible items on orders placed between 11\/13 and 12\/25 through December 29th, 2025.<\/p><p><\/p><p><\/p>",
+            "page": ""
+          }
+        },
         "custom_content_UVpUnP": {
           "type": "custom-content",
           "name": "Care",
@@ -210,24 +219,15 @@
             "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. <\/p><p>Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. <\/p><p>Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. <\/p><p>Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
             "page": ""
           }
-        },
-        "custom_content_4K49dM": {
-          "type": "custom-content",
-          "name": "Holiday 2025",
-          "settings": {
-            "tab_heading": "Holiday 2025",
-            "content": "<h6>For all Bespoke Gems, Heirloom Revival and Custom pieces:<\/h6><p>Order by October 14th<\/p><h6>For all Main Collection Made to Order pieces:<\/h6><p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx 2Day<\/p><p><\/p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
+        "custom_content_4K49dM",
         "custom_content_UVpUnP",
         "custom_content_73AKnk",
         "custom_content_hFfTT3",
         "custom_content_4bDa3X",
-        "custom_content_qc4j6x",
-        "custom_content_4K49dM"
+        "custom_content_qc4j6x"
       ],
       "custom_css": [
         "@media screen and (min-width: 750px) {.tabs-component .tabs-content .tab-content.active {text-align: center; padding-left: 100px; padding-right: 100px; }}"

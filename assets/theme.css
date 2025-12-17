@@ -1323,6 +1323,14 @@ body.overflow-hidden-tablet .product-add-to-cart-sticky.show {
   text-transform: lowercase;
   transform: rotate(-20deg);
 }
+
+.price__badge-bfcm {
+  color: #D50032;
+  font-family: "Beirut-Display-Trial-Book";
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 .gradient {
   background: rgb(var(--color-background));
   background-attachment: fixed;

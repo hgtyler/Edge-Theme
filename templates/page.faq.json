@@ -30,16 +30,7 @@
         "text_48R8wF": {
           "type": "text",
           "settings": {
-            "text": "<h4>For all Main Collection, Made to Order pieces:<\/h4><h5><\/h5>",
-            "large_text": false,
-            "show_more_toggle": false,
-            "max_height": 8
-          }
-        },
-        "text_T9NtAe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx<\/p>",
+            "text": "<p>Order by <strong>12\/15 <\/strong>for One-of-a-Kind rings which may require resizing, with FedEx 2-day shipping.<\/p><p>Order by <strong>12\/18 <\/strong>for Ready to Ship and One-of-a-Kind pieces including charms, necklaces, and earrings with FedEx 2-day shipping. <\/p><h5><\/h5>",
             "large_text": false,
             "show_more_toggle": false,
             "max_height": 8
@@ -48,8 +39,7 @@
       },
       "block_order": [
         "heading_BmbdpU",
-        "text_48R8wF",
-        "text_T9NtAe"
+        "text_48R8wF"
       ],
       "custom_css": [
         "h4 {font-size: 15px; padding-top: 15px;}",
@@ -75,6 +65,21 @@
     "faq_gkrwUi": {
       "type": "faq",
       "blocks": {
+        "category_TwcQwX": {
+          "type": "category",
+          "settings": {
+            "heading_row": "Holiday 2025"
+          }
+        },
+        "question_tYM7UX": {
+          "type": "question",
+          "settings": {
+            "heading": "What is the holiday shipping and returns window?",
+            "icon": "none",
+            "row_content": "<h4>Enjoy extended returns on eligible items on orders placed between 11\/13 and 12\/25 through December 29th, 2025.<\/h4><p><strong>To receive by Christmas, please note the following order cut off dates:<\/strong><\/p><p>Order by 12\/2 for Main Collection, made-to-order pieces with USPS standard shipping.<br\/>Order by 12\/7 for Main Collection, made-to-order pieces with FedEx 2-day shipping.<br\/>Order by <strong>12\/15 <\/strong>for One-of-a-Kind rings which may require resizing, with FedEx 2-day shipping.<br\/>Order by <strong>12\/18 <\/strong>for Ready to Ship and One-of-a-Kind pieces including charms, necklaces, and earrings with FedEx 2-day shipping.<\/p><p>The order deadline for Bespoke Gems, Heirloom Revival, and custom pieces has passed.<\/p>",
+            "page": ""
+          }
+        },
         "category_caa7w9": {
           "type": "category",
           "settings": {
@@ -105,6 +110,21 @@
             "heading": "Storage",
             "icon": "none",
             "row_content": "<p>The best way to store your Starling jewelry is in the box you received the piece in. <\/p><p>Any soft fabric bag or box will also do, as long as it is clean and dry.<\/p>",
+            "page": ""
+          }
+        },
+        "category_gG6pQm": {
+          "type": "category",
+          "settings": {
+            "heading_row": "Pricing"
+          }
+        },
+        "question_9QRE4H": {
+          "type": "question",
+          "settings": {
+            "heading": "Do you offer price adjustments?",
+            "icon": "none",
+            "row_content": "<p>We offer a one-time price adjustment on full-priced items purchased within 7 days before the start of a promotion, if the request is made within the duration of the promotional period. <\/p><p>Purchases made after the end of the promotional period will not be eligible. Proof of purchase, with no other offers applied, must be presented. Offers include site-wide offers and promotional discounts. <\/p><p>Please note we cannot allow adjustments on previously discounted or final sale merchandise, and that additional promotional offers may not be combined.<\/p>",
             "page": ""
           }
         },
@@ -194,10 +214,14 @@
         }
       },
       "block_order": [
+        "category_TwcQwX",
+        "question_tYM7UX",
         "category_caa7w9",
         "question_tcdrMe",
         "question_araiGw",
         "question_7nVQj8",
+        "category_gG6pQm",
+        "question_9QRE4H",
         "category_RkAMn9",
         "question_wCttGc",
         "question_x7TPhe",

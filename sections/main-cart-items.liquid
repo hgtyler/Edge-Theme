@@ -165,6 +165,9 @@ data-id="{{ section.id }}">
                               <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p> 
                               {% comment %} SHIPPING METAFIELDS HERE {% endcomment %}
                               <p class="product-option">{{ item.product.metafields.checkoutblocks.trigger }}</p>
+                {% if item.product.tags contains "ooak" %}
+                  <p class="product-option"> Note: This Piece is Final Sale! </p>
+                {% endif %}
                             {%- endif -%}
 
                             <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
@@ -468,6 +471,8 @@ data-id="{{ section.id }}">
       <div class="cart__footer {% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" >
         <div class="cart__blocks">
           <div class="background-secondary p-10 lg:p-12 global-radius grid gap-y-6">
+            {% comment %} BFCM UPSELL HERE {% endcomment %}
+            {% comment %} {% render 'bfcm-cart-upsell' %}  {% endcomment %}
             {% for block in section.blocks %}
               {%- case block.type -%}
                 {%- when '@app' -%}

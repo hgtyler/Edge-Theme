@@ -31,6 +31,10 @@
         <span class="badge price__badge-upon-request badge-{{ badge_style }}" >
             sold out!
         </span>
+    {%- elsif card_product.tags contains "vip-soldout" -%}
+        <span class="badge price__badge-upon-request badge-{{ badge_style }}" >
+            sold out!
+        </span>
     {%- endif -%}
 {% comment %} <div class="card__badge {{ card_badge_position }}">
     {%- if card_product.available == false and show_sold_out_badge -%}

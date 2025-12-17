@@ -36,6 +36,12 @@
             "sale_badge_type": "fixed"
           }
         },
+        "custom_liquid_gCahFT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style> \n.final-sale-pdp {\nfont-family: \"ABCWhyte-Book\";\nfont-size:13px;\ntext-align:left;\ntext-transform: uppercase;\n<\/style> \n{% if product.tags contains \"ooak\" %} <h4 class=\"final-sale-pdp\">One-of-a-kind piece<\/h4> {% endif %}"
+          }
+        },
         "siblings_8zgW6A": {
           "type": "siblings",
           "settings": {
@@ -61,6 +67,16 @@
         "infinite_options_app_block_9mya8m": {
           "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
+        },
+        "inventory_NEXQa8": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_base_quantity": 100,
+            "show_inventory_ping": false,
+            "show_inventory_quantity": true,
+            "show_progress_bar": false
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -127,7 +143,7 @@
             "icon_size": 36,
             "icon_1": "heart",
             "image_1": "shopify:\/\/shop_images\/wine-bird.png",
-            "heading_1": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
+            "heading_1": "{{ product.metafields.checkoutblocks.trigger.value }}",
             "icon_2": "none",
             "image_2": "shopify:\/\/shop_images\/stars-burgundy3.png",
             "heading_2": "<a href=\"#reviews\" title=\"#reviews\">Reviews<\/a>",
@@ -164,9 +180,11 @@
       "block_order": [
         "title",
         "price",
+        "custom_liquid_gCahFT",
         "siblings_8zgW6A",
         "variant_picker",
         "infinite_options_app_block_9mya8m",
+        "inventory_NEXQa8",
         "buy_buttons",
         "description",
         "rich_text_UmKhzB",
@@ -186,7 +204,7 @@
         "media_width": 50,
         "media_aspect_ratio": "square",
         "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail_left",
+        "gallery_layout": "thumbnail",
         "column_gap_media": 0.5,
         "media_position": "left",
         "info_in_media": "",
@@ -322,6 +340,15 @@
     "information-products": {
       "type": "information-tabs-products",
       "blocks": {
+        "custom_content_RxiwUp": {
+          "type": "custom-content",
+          "name": "Holiday 2025",
+          "settings": {
+            "tab_heading": "Holiday 2025",
+            "content": "<p><strong>To receive by Christmas, please note the following order cut off dates:<\/strong><br\/>Order by <strong>12\/15 <\/strong>for One-of-a-Kind rings which may require resizing, with FedEx 2-day shipping.<br\/>Order by <strong>12\/18 <\/strong>for Ready to Ship and One-of-a-Kind pieces including charms, necklaces, and earrings with FedEx 2-day shipping.<\/p><p>The order deadline for Made to Order, Bespoke Gems, Heirloom Revival, and custom pieces has passed.<\/p><p>Enjoy extended returns on eligible items on orders placed between 11\/13 and 12\/25 through December 29th, 2025.<\/p><p><\/p><p><\/p>",
+            "page": ""
+          }
+        },
         "custom_content_Nic9fy": {
           "type": "custom-content",
           "name": "Happiness Guarantee",
@@ -357,22 +384,14 @@
             "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
             "page": ""
           }
-        },
-        "custom_content_RxiwUp": {
-          "type": "custom-content",
-          "settings": {
-            "tab_heading": "Holiday 2025",
-            "content": "<h6><strong>For all Bespoke Gems, Heirloom Revival and Custom pieces:<\/strong><\/h6><p>Order by October 14th<\/p><h6><strong>For all Main Collection Made to Order pieces:<\/strong><\/h6><p>Order by December 2nd for USPS<br\/>Order by December 7th for FedEx 2Day<\/p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
+        "custom_content_RxiwUp",
         "custom_content_Nic9fy",
         "custom_content_73AKnk",
         "custom_content_4bDa3X",
-        "custom_content_WdbcGA",
-        "custom_content_RxiwUp"
+        "custom_content_WdbcGA"
       ],
       "settings": {
         "section_width": "container",
@@ -656,10 +675,10 @@
             "image": "shopify:\/\/shop_images\/STARLING-9096-2_1.jpg",
             "media_size": "square",
             "media_placement": "left",
-            "subheading": "the concierge",
-            "heading": "",
+            "subheading": "",
+            "heading": "the concierge",
             "heading_size": "h2",
-            "text": "<p>Need help? Interested in a particular shape, stone, or need this piece by a certain date? Contact us at <a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\">hello@starlingjewelry.com<\/a><a href=\"https:\/\/www.starlingjewelry.com\/policies\/contact-information\" title=\"https:\/\/www.starlingjewelry.com\/policies\/contact-information\"> or learn more below.<br\/><br\/>Contact Us<\/a><br\/><a href=\"https:\/\/www.starlingjewelry.com\/pages\/studio-appointments\" target=\"_blank\" title=\"https:\/\/www.starlingjewelry.com\/pages\/studio-appointments\">Studio Appointments<\/a><br\/><a href=\"https:\/\/www.starlingjewelry.com\/pages\/bespoke\" title=\"https:\/\/www.starlingjewelry.com\/pages\/bespoke\">Custom Orders<\/a><\/p>",
+            "text": "<p>Need help? Interested in a particular shape, stone, or need this piece by a certain date? Contact us at <a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\">hello@starlingjewelry.com<\/a> or learn more below.<br\/><br\/><a href=\"\/pages\/contact-us\" title=\"Contact Us\">Contact Us<\/a><br\/><a href=\"https:\/\/www.starlingjewelry.com\/pages\/studio-appointments\" target=\"_blank\" title=\"https:\/\/www.starlingjewelry.com\/pages\/studio-appointments\">Studio Appointments<\/a><br\/><a href=\"https:\/\/www.starlingjewelry.com\/pages\/bespoke\" title=\"https:\/\/www.starlingjewelry.com\/pages\/bespoke\">Custom Orders<\/a><\/p>",
             "vertical_alignment": "center",
             "text_alignment": "start",
             "button_label": "",
@@ -705,7 +724,7 @@
             "collection": "ever-yours",
             "image": "shopify:\/\/shop_images\/3.78ct-Zircon-Flat-Tapered-Ring3.png",
             "title": "Ever Yours",
-            "url": ""
+            "url": "shopify:\/\/collections\/ever-yours"
           }
         },
         "featured_collection_ignwaF": {
@@ -714,7 +733,7 @@
             "collection": "gifting-season",
             "image": "shopify:\/\/shop_images\/packaging2_1_62d77688-99d6-4615-9264-efaebb8e08f0.png",
             "title": "Holiday Gifts",
-            "url": ""
+            "url": "shopify:\/\/collections\/gifts"
           }
         },
         "featured_collection_tpHHRR": {
@@ -722,8 +741,8 @@
           "settings": {
             "collection": "one-of-a-kind",
             "image": "shopify:\/\/shop_images\/2.36ctMoonstoneDouble-ProngCloudRing2.png",
-            "title": "One of a Kind",
-            "url": ""
+            "title": "One of a Kind Jewelry",
+            "url": "shopify:\/\/collections\/one-of-a-kind-collection"
           }
         },
         "featured_collection_U9ic3G": {

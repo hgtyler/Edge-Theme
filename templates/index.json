@@ -6,12 +6,12 @@
         "slide_XDjCkC": {
           "type": "_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-1.png",
+            "image": "shopify:\/\/shop_images\/MKSADLER_starling_august_2025-8858.png",
             "slide_link": "",
             "video_background": false,
-            "content_width": 920,
-            "content_position": "middle-left",
-            "mobile_content_position": "bottom-center",
+            "content_width": 800,
+            "content_position": "middle-center",
+            "mobile_content_position": "middle-center",
             "content_space": 1,
             "color_text": "#ffffff",
             "overlay_color": "#000000",
@@ -19,23 +19,23 @@
             "overlay_gradient": ""
           },
           "blocks": {
-            "slide_text_PNTQkk": {
-              "type": "_slide_text",
-              "name": "Text",
-              "settings": {
-                "content": "INTRODUCING THE",
-                "description_size": "small"
-              },
-              "blocks": {}
-            },
-            "slide_heading_7tmCyF": {
+            "slide_heading_LiMJtf": {
               "type": "_slide_heading",
               "name": "Heading",
               "settings": {
-                "heading": "le Fay Collection",
-                "highlighted_word_type": "single_line",
+                "heading": "ready to ship holiday gifts",
+                "highlighted_word_type": "multiple_lines",
                 "heading_size": "h1",
                 "color_text_highlighted": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "slide_text_F4QWW9": {
+              "type": "_slide_text",
+              "name": "Text",
+              "settings": {
+                "content": "",
+                "description_size": "medium"
               },
               "blocks": {}
             },
@@ -44,7 +44,7 @@
               "name": "Button",
               "settings": {
                 "button_text": "Shop Now",
-                "button_link": "shopify:\/\/collections\/le-fay-collection",
+                "button_link": "shopify:\/\/collections\/ready-to-ship-gifts",
                 "button_type": "underlined-white",
                 "show_icon": false
               },
@@ -52,8 +52,8 @@
             }
           },
           "block_order": [
-            "slide_text_PNTQkk",
-            "slide_heading_7tmCyF",
+            "slide_heading_LiMJtf",
+            "slide_text_F4QWW9",
             "slide_button_yYGzQT"
           ]
         }
@@ -61,13 +61,14 @@
       "block_order": [
         "slide_XDjCkC"
       ],
+      "custom_css": [],
       "name": "Slideshow",
       "settings": {
         "slide_width": "w-full",
         "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 600,
+        "desktop_fixed_height": 640,
         "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 300,
+        "mobile_fixed_height": 330,
         "auto_rotate": true,
         "pause_on_hover": false,
         "change_slides_speed": 5,
@@ -87,10 +88,10 @@
         "featured_collection_tpcjiE": {
           "type": "featured_collection",
           "settings": {
-            "collection": "gifts",
-            "image": "shopify:\/\/shop_images\/packaging2_1.png",
-            "title": "Shop Holiday Gifts",
-            "url": "shopify:\/\/collections\/gifts"
+            "collection": "birthstone",
+            "image": "shopify:\/\/shop_images\/MKSADLER_starling_august_2025-8594_1.jpg",
+            "title": "Shop Birthstone Jewelry",
+            "url": "shopify:\/\/collections\/birthstone"
           }
         },
         "featured_collection_JFxPUL": {
@@ -98,7 +99,7 @@
           "settings": {
             "collection": "one-of-a-kind",
             "image": "shopify:\/\/shop_images\/Starling_01282025-1000_1_1.png",
-            "title": "Shop One Of A Kind",
+            "title": "Shop One-of-a-Kind Jewelry",
             "url": "shopify:\/\/collections\/one-of-a-kind"
           }
         },
@@ -327,6 +328,78 @@
         "divider_bottom_width": "container"
       }
     },
+    "slideshow_new_drq8aj": {
+      "type": "slideshow-new",
+      "blocks": {
+        "slide_7twyyX": {
+          "type": "_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group28_425b9b9e-8834-4fe9-8151-75a64078aee2.png",
+            "slide_link": "",
+            "video_background": false,
+            "content_width": 920,
+            "content_position": "middle-center",
+            "mobile_content_position": "middle-center",
+            "content_space": 1,
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 16,
+            "overlay_gradient": ""
+          },
+          "blocks": {
+            "slide_heading_4V8jEt": {
+              "type": "_slide_heading",
+              "name": "Heading",
+              "settings": {
+                "heading": "december bespoke gems",
+                "highlighted_word_type": "single_line",
+                "heading_size": "h1",
+                "color_text_highlighted": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "slide_button_kd6pW4": {
+              "type": "_slide_button",
+              "name": "Button",
+              "settings": {
+                "button_text": "Shop The Last Drop of the Year",
+                "button_link": "shopify:\/\/collections\/bespoke-gems",
+                "button_type": "underlined-white",
+                "show_icon": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_heading_4V8jEt",
+            "slide_button_kd6pW4"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_7twyyX"
+      ],
+      "custom_css": [],
+      "name": "Slideshow",
+      "settings": {
+        "slide_width": "w-full",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 600,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 300,
+        "auto_rotate": true,
+        "pause_on_hover": false,
+        "change_slides_speed": 5,
+        "transition": "fade",
+        "show_moving_cursor": false,
+        "controls": "none",
+        "accessibility_info": "",
+        "bg_color": "",
+        "controls_color": "#ffffff",
+        "controls_color_text": "#ffffff",
+        "controls_color_arrows": "#000000"
+      }
+    },
     "divider_dC4bMX": {
       "type": "divider",
       "name": "Divider",
@@ -339,98 +412,6 @@
         "color": "",
         "style": "solid",
         "thickness": 1
-      }
-    },
-    "slideshow_new_xDeXKH": {
-      "type": "slideshow-new",
-      "blocks": {
-        "slide_Uje8F7": {
-          "type": "_slide",
-          "settings": {
-            "slide_link": "",
-            "video_background": true,
-            "video_hosted": "shopify:\/\/files\/videos\/ColorEngagement_16x9_HP.mp4",
-            "content_width": 660,
-            "content_position": "bottom-left",
-            "mobile_content_position": "bottom-left",
-            "content_space": 1,
-            "color_text": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": ""
-          },
-          "blocks": {
-            "slide_heading_KdVMGf": {
-              "type": "_slide_heading",
-              "settings": {
-                "heading": "fine jewelry moved by light and color",
-                "highlighted_word_type": "single_line",
-                "heading_size": "h2",
-                "color_text_highlighted": "#ffffff"
-              },
-              "blocks": {}
-            },
-            "slide_subheading_eixmnk": {
-              "type": "_slide_subheading",
-              "name": "Subheading",
-              "settings": {
-                "subheading": ""
-              },
-              "blocks": {}
-            },
-            "slide_text_gJXPm6": {
-              "type": "_slide_text",
-              "disabled": true,
-              "settings": {
-                "content": "Named after the delicate ripples of gold in the signet style setting.",
-                "description_size": "small"
-              },
-              "blocks": {}
-            },
-            "slide_button_xed4t7": {
-              "type": "_slide_button",
-              "name": "Button",
-              "settings": {
-                "button_text": "Explore Starling",
-                "button_link": "shopify:\/\/collections\/all",
-                "button_type": "underlined-white",
-                "show_icon": true
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "slide_heading_KdVMGf",
-            "slide_subheading_eixmnk",
-            "slide_text_gJXPm6",
-            "slide_button_xed4t7"
-          ]
-        }
-      },
-      "block_order": [
-        "slide_Uje8F7"
-      ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.container {padding-left: 15%; padding-right: 15%; }}"
-      ],
-      "name": "Slideshow",
-      "settings": {
-        "slide_width": "w-full",
-        "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 730,
-        "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 520,
-        "auto_rotate": false,
-        "pause_on_hover": false,
-        "change_slides_speed": 5,
-        "transition": "zoom",
-        "show_moving_cursor": false,
-        "controls": "filled-arrows",
-        "accessibility_info": "Slideshow about our brand",
-        "bg_color": "",
-        "controls_color": "#ffffff",
-        "controls_color_text": "#ffffff",
-        "controls_color_arrows": "#000000"
       }
     },
     "collection_tabs_EW3W7b": {
@@ -488,6 +469,98 @@
         "divider_bottom_width": "container"
       }
     },
+    "slideshow_new_xDeXKH": {
+      "type": "slideshow-new",
+      "blocks": {
+        "slide_Uje8F7": {
+          "type": "_slide",
+          "settings": {
+            "slide_link": "",
+            "video_background": true,
+            "video_hosted": "shopify:\/\/files\/videos\/emerald-lark-ring.mp4",
+            "content_width": 1200,
+            "content_position": "middle-center",
+            "mobile_content_position": "middle-center",
+            "content_space": 1,
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": ""
+          },
+          "blocks": {
+            "slide_heading_KdVMGf": {
+              "type": "_slide_heading",
+              "settings": {
+                "heading": "colorful engagement rings",
+                "highlighted_word_type": "single_line",
+                "heading_size": "h2",
+                "color_text_highlighted": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "slide_subheading_eixmnk": {
+              "type": "_slide_subheading",
+              "name": "Subheading",
+              "settings": {
+                "subheading": ""
+              },
+              "blocks": {}
+            },
+            "slide_text_gJXPm6": {
+              "type": "_slide_text",
+              "disabled": true,
+              "settings": {
+                "content": "Named after the delicate ripples of gold in the signet style setting.",
+                "description_size": "small"
+              },
+              "blocks": {}
+            },
+            "slide_button_xed4t7": {
+              "type": "_slide_button",
+              "name": "Button",
+              "settings": {
+                "button_text": "Shop the Collection",
+                "button_link": "shopify:\/\/collections\/engagement-rings",
+                "button_type": "underlined-white",
+                "show_icon": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_heading_KdVMGf",
+            "slide_subheading_eixmnk",
+            "slide_text_gJXPm6",
+            "slide_button_xed4t7"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_Uje8F7"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.container {padding-left: 15%; padding-right: 15%; }}"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "slide_width": "w-full",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 730,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 520,
+        "auto_rotate": false,
+        "pause_on_hover": false,
+        "change_slides_speed": 5,
+        "transition": "zoom",
+        "show_moving_cursor": false,
+        "controls": "filled-arrows",
+        "accessibility_info": "Slideshow about our brand",
+        "bg_color": "",
+        "controls_color": "#ffffff",
+        "controls_color_text": "#ffffff",
+        "controls_color_arrows": "#000000"
+      }
+    },
     "slideshow_new_pY9JyE": {
       "type": "slideshow-new",
       "blocks": {
@@ -538,6 +611,7 @@
       "block_order": [
         "slide_UXN8Ww"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "slide_width": "w-full",
@@ -612,9 +686,10 @@
     "media_grid_UUgHWF",
     "divider_jV4WLm",
     "press_Vih8kQ",
+    "slideshow_new_drq8aj",
     "divider_dC4bMX",
-    "slideshow_new_xDeXKH",
     "collection_tabs_EW3W7b",
+    "slideshow_new_xDeXKH",
     "slideshow_new_pY9JyE",
     "featured_blog_frpdTr"
   ]

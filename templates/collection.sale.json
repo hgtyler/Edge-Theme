@@ -23,17 +23,17 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_breadcrumb": true,
+        "show_breadcrumb": false,
         "text_size": "text-size-small",
         "type_breadcrumb": "line-vertical",
-        "show_collection_title": true,
+        "show_collection_title": false,
         "show_collection_image": false,
         "section_width": "container-fluid",
         "heading_size": "h4",
         "image_size": "350px",
         "image": "{{ collection.image }}",
         "align_content": "start",
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_more_toggle": false,
         "max_height": 1,
         "navigation": "",
@@ -47,6 +47,49 @@
         "divider_top_width": "container",
         "show_bottom_divider": false,
         "divider_bottom_width": "w-full"
+      }
+    },
+    "rich_text_3rG4QF": {
+      "type": "rich-text",
+      "blocks": {
+        "image_n34eDR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bfcm_1d986b72-5226-472e-a301-d540cf93f570.png",
+            "image_width": 450,
+            "image_width_mobile": 310,
+            "url": ""
+          }
+        },
+        "text_mk7ca9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get 15% off all Main Collection pieces, and 20% off when you purchase 3 or more items.<\/p><p>No code needed! Discount automatically applies at checkout. <\/p><p><\/p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "image_n34eDR",
+        "text_mk7ca9"
+      ],
+      "name": "Header",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-3xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
       }
     },
     "product-grid": {
@@ -87,6 +130,7 @@
   "order": [
     "breadcrumbs_FYp3jd",
     "banner",
+    "rich_text_3rG4QF",
     "product-grid"
   ]
 }
