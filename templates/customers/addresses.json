@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-addresses",
+      "settings": {
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

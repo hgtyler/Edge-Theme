@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "settings": {
+        "enable_shop_login_button": false,
+        "bg_color": "",
+        "text_color": "",
+        "padding_top": 44,
+        "padding_bottom": 76
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

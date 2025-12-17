@@ -1,0 +1,36 @@
+{% assign valid_size_names = settings.size_swatch_config | downcase | split: ',' %}
+{% assign option_name_downcase = product.options_with_values[0].name | downcase %}
+
+{% if product.options_with_values.size == 1 and valid_size_names contains option_name_downcase and settings.card_show_size_selector %}
+
+  {%- assign size_values = '' -%}
+  {% for variant in product.variants %}
+    {%- assign size = variant.options[0] -%}
+    {%- unless size_values contains size -%}
+      {%- assign size_values = size_values | append: size | append: ',' -%}
+    {%- endunless -%}
+  {% endfor %}
+
+  {% assign size_array = size_values | split: ',' %}
+  {% assign size_count = size_array.size %}
+
+  {% if size_count > 1 %}
+    <div class="product-card__variant-sizes quick-add no-js-hidden" data-product-id="{{ product.id }}">
+      <card-variant-size class="product-card__variant-sizes-list flex flex-wrap flex-row align-center justify-center {{ style_class }} quick-add__submit">
+      {% for variant in product.variants %}
+        {% assign size = variant.options[0] %}
+            <button 
+              data-variant-id="{{ variant.id }}"
+              class="variant-size-button btn{% unless variant.available %} is-soldout{% endunless %}"
+              {% unless variant.available %}disabled aria-disabled="true"{% endunless %}>
+              <span class="variant-size-button__text">
+                {{ size }}
+              </span>
+              {%- render 'loading-spinner' -%}
+            </button>
+      {% endfor %}
+      </card-variant-size>
+    </div>
+  {% endif %}
+
+{% endif %}
