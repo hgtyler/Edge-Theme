@@ -1,0 +1,131 @@
+{%- liquid 
+  assign current_variant = product.selected_or_first_available_variant
+  assign inventory_quantity = current_variant.inventory_quantity
+  assign inventory_base_quantity = block.settings.inventory_base_quantity
+  assign inventory_threshold = block.settings.inventory_threshold
+  assign show_inventory_quantity = block.settings.show_inventory_quantity
+
+  assign ring_sizes_in_stock = ''
+  assign is_ring_product = false
+  assign size_option_index = nil
+
+  comment
+    Detect ring products by tag "rings" (avoids matching "earrings", etc.)
+  endcomment
+  assign tags_string = product.tags | join: ',' | downcase
+  assign tags_string = tags_string | prepend: ',' | append: ','
+
+  if tags_string contains ',rings,'
+    assign is_ring_product = true
+
+    comment
+      Find which option is the size option (e.g. "Size" or "Ring Size")
+    endcomment
+    for option in product.options_with_values
+      assign option_name_downcase = option.name | downcase
+      if option_name_downcase contains 'size'
+        assign size_option_index = forloop.index0
+      endif
+    endfor
+
+    if size_option_index != nil
+      comment
+        Build a comma-separated list of all unique sizes with REAL inventory
+        (inventory_quantity > 0), even if other sizes are available via "continue"
+      endcomment
+      for v in product.variants
+        if v.inventory_management == 'shopify' and v.inventory_quantity > 0
+          assign size_value = v.options[size_option_index]
+          unless ring_sizes_in_stock contains size_value
+            if ring_sizes_in_stock != ''
+              assign ring_sizes_in_stock = ring_sizes_in_stock | append: ', '
+            endif
+            assign ring_sizes_in_stock = ring_sizes_in_stock | append: size_value
+          endunless
+        endif
+      endfor
+    endif
+  endif
+-%}
+
+<div class="product__inventory"
+  {{ block.shopify_attributes }}
+  id="Inventory-{{ section.id }}"
+  role="status"
+>
+  {%- liquid
+    assign raw_progress_percent = 0
+    if inventory_base_quantity > 0
+      assign raw_progress_percent = inventory_quantity | times: 100.0 | divided_by: inventory_base_quantity
+    endif
+    assign progress_percent = raw_progress_percent | at_most: 100 | append: '%'
+
+    assign message_default = ''
+    assign status = ''
+
+    if current_variant.inventory_management == 'shopify'
+      comment
+        Normal Shopify inventory logic when tracking is enabled
+      endcomment
+      if current_variant.inventory_quantity > 0
+        if current_variant.inventory_quantity <= inventory_threshold
+          if show_inventory_quantity
+            assign message_default = 'products.product.inventory_in_stock_show_count' | t: quantity: current_variant.inventory_quantity
+          else
+            assign message_default = 'products.product.inventory_in_stock' | t
+          endif
+          assign status = 'in-stock'
+        else
+          if show_inventory_quantity
+            assign message_default = 'products.product.inventory_in_stock_show_count' | t: quantity: current_variant.inventory_quantity
+          else
+            assign message_default = 'products.product.inventory_in_stock' | t
+          endif
+          assign status = 'in-stock'
+        endif
+      else
+        if current_variant.inventory_policy == 'continue'
+          assign message_default = 'products.product.inventory_out_of_stock_continue_selling' | t
+          assign status = 'continue'
+        else
+          assign message_default = 'products.product.inventory_out_of_stock' | t
+          assign status = 'out-of-stock'
+        endif
+      endif
+    else
+      comment
+        Fallback for products with no inventory tracking
+      endcomment
+      if current_variant.available
+        assign message_default = 'products.product.inventory_in_stock' | t
+        assign status = 'in-stock'
+      else
+        assign message_default = 'products.product.inventory_out_of_stock' | t
+        assign status = 'out-of-stock'
+      endif
+    endif
+  -%}
+
+  <div class="product__inventory-message flex flex-row gap-x-6 items-center product__inventory-message-{{ status }}">
+    {%- if block.settings.show_inventory_ping -%}
+      <span class="product__inventory-icon"></span>
+    {%- endif -%}
+
+    {%- if is_ring_product and ring_sizes_in_stock != '' -%}
+      {%- assign sample_label = 'Size in stock: ' -%}
+      {%- if ring_sizes_in_stock contains ',' -%}
+        {%- assign sample_label = 'Sizes in stock: ' -%}
+      {%- endif -%}
+      {{ sample_label }}{{ ring_sizes_in_stock }}
+    {%- else -%}
+      {{ message_default }}
+    {%- endif -%}
+  </div>
+
+  {%- if block.settings.show_progress_bar and current_variant.inventory_management == 'shopify' -%}
+    <div
+      class="product__inventory-progress--bar product__inventory-message-{{ status }} {% if inventory_quantity <= 0 %} visibility-hidden {% endif %}"
+      style="--inventory-percent:{{ progress_percent }}"
+    ></div>
+  {%- endif -%}
+</div>

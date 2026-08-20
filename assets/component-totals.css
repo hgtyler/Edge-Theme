@@ -1,0 +1,36 @@
+.totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.totals > * {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.totals > h2 {
+  font-size: 20px;
+}
+
+/* .totals * {
+  line-height: 1;
+} */
+
+.totals > * + * {
+  margin-inline-start: 2rem;
+}
+
+.totals__total {
+  margin-top: .5rem;
+}
+
+.totals__total-value {
+  font-size: 2rem;
+  font-family: "ABCWhyte-Book";
+}
+
+.cart__ctas + .totals {
+  margin-top: 2rem;
+}
+

@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "container-narrow",
+        "show_default_heading": true,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_BAdf3J": {
+      "type": "rich-text",
+      "blocks": {
+        "text_4KcraN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to Starling! </p><p>Your jewelry was made with devotion to exquisite materials, design and craftsmanship in California. While Starling Jewelry is designed to endure everyday wear, all precious metals and stones do require care. </p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "text_4KcraN"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-7xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "content_tabs_GycifR": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_tTnFxQ": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/Starling020262026-6245.jpg",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Care",
+            "subheading": "",
+            "heading": "caring for your jewelry",
+            "heading_size": "h2",
+            "content": "<p>We promote #wearalways, but there are times when you may want to be more careful and remove your jewelry before doing certain activities.</p><p>These times include:</p><p>Strenuous activity that involves rubbing against metal such as exercise classes or weight lifting. Cleaning with harsh chemicals such as bleach, especially anything with Chlorine... and make sure to avoid swimming pools and hot tubs with Chlorine, which can cause discoloring and damage to fine jewelry. Also, you may want to avoid activities where your hands get extra dirty, as they can cause build-up on the jewelry (although it can usually be removed easily). This may include activities such as gardening, working with clay, cooking, or using lotion/oils. Please use extra caution with softer stones such as pearls, turquoise, and opals.</p><p>In order to avoid tarnishing, it is important to remove any item that is Gold-Dipped Silver before getting it wet or using lotions and perfumes.</p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/faq",
+            "button_type": "underlined",
+            "show_icon": false
+          }
+        },
+        "tab_EQ4tgw": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/moonstones1_df85865a-847b-4fba-938a-11ef1b31f13e.png",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Returns & Exchanges",
+            "subheading": "",
+            "heading": "returns & exchanges",
+            "heading_size": "h2",
+            "content": "<p>If you are not entirely pleased with a product you purchased, Starling will accept non-personalized items for exchange or return within 10 days of your delivery date. Item(s) must be returned in new and re-sellable condition with original jewelry box. Returns after the 10-day period are only eligible for a store credit and at the discretion of Starling Jewelry. If you would like to make a return please email us at hello@starlingjewelry.com for a return authorization.</p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/faq",
+            "button_type": "underlined",
+            "show_icon": false
+          }
+        },
+        "tab_K8JU76": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/MKSADLER_starling_august_2025-7874.png",
+            "image_size": "square",
+            "image_placement": "left",
+            "nav_label": "Repairs",
+            "subheading": "",
+            "heading": "repairs",
+            "heading_size": "h2",
+            "content": "<p>We stand by the quality of our items. If an item breaks after our 10-day return policy, please send an image of the item to hello@starlingjewelry.com. We can then determine the next steps, whether it’s exchanging the item or repairing.</p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/faq",
+            "button_type": "underlined",
+            "show_icon": false
+          }
+        },
+        "tab_kcMp96": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/16.09ct-citrine-charm-1.png",
+            "image_size": "adapt",
+            "image_placement": "left",
+            "nav_label": "Contact",
+            "subheading": "",
+            "heading": "contact us",
+            "heading_size": "h2",
+            "content": "<p>Feel free to email us at <a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\"><strong>hello@starlingjewelry.com</strong></a></p><p>Or reach us during business hours (9am-4pm PST) at</p><p><strong>Phone: (213) 278-0348</strong></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary",
+            "show_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_tTnFxQ",
+        "tab_EQ4tgw",
+        "tab_K8JU76",
+        "tab_kcMp96"
+      ],
+      "name": "Content tabs",
+      "settings": {
+        "section_width": "container",
+        "type_tabs": "underline",
+        "enable_uppercase": false,
+        "tabs_font_family": "headings_font",
+        "tab_heading_size": "body-2",
+        "tabs_gap": 4,
+        "align": "center",
+        "header_position": "top",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BAdf3J",
+    "content_tabs_GycifR"
+  ]
+}

@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_ka3wVn": {
+      "type": "breadcrumbs",
+      "settings": {
+        "section_width": "container-fluid",
+        "alignment": "start",
+        "text_size": "text-size-small",
+        "type_breadcrumb": "line-vertical",
+        "show_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 16,
+        "padding_bottom": 12,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_note": false,
+            "show_sale_badge": false,
+            "sale_badge_type": "fixed"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "hide_sold_out_variants": false,
+            "color_picker_type": "native_color_swatch",
+            "style": "solid",
+            "option_name": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "button_type": "primary",
+            "show_price_in_button": false,
+            "show_two_columns": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "show_pickup_availability": true,
+            "show_back_in_stock": false,
+            "text_back_in_stock": "Notify me"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "settings": {
+        "section_width": "container-fluid",
+        "enable_sticky_info": true,
+        "enable_max_width_content": true,
+        "show_sticky_add_to_cart_bar": false,
+        "media_width": 60,
+        "media_aspect_ratio": "adapt",
+        "thumbnail_aspect_ratio": "adapt",
+        "gallery_layout": "thumbnail_left",
+        "column_gap_media": 0.5,
+        "media_position": "left",
+        "info_in_media": "",
+        "show_badge_in_media": false,
+        "enable_border_media": false,
+        "show_lightbox": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_thumbnails": "show",
+        "enable_media_grouping": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 12,
+        "padding_bottom": 88,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": true,
+        "divider_bottom_width": "container-fluid"
+      }
+    },
+    "information-products": {
+      "type": "information-tabs-products",
+      "blocks": {
+        "description_6CNYAh": {
+          "type": "description",
+          "settings": {
+            "tab_heading": "Description"
+          }
+        },
+        "custom_content_qnMhGh": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Size guide",
+            "content": "",
+            "page": "size-guide"
+          }
+        },
+        "custom_content_73AKnk": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Product care",
+            "content": "<p>Hand or machine wash on a cool, gentle cycle with similar colours. Avoid harsh chemicals or stain removers, which can affect the colour. </p>",
+            "page": ""
+          }
+        },
+        "custom_content_4bDa3X": {
+          "type": "custom-content",
+          "settings": {
+            "tab_heading": "Shipping & returns",
+            "content": "<p>We aim to dispatch Standard and Express orders on the next business day.</p><p>Free shipping on all orders above $99 and over within Australia. $10 flat rate for all orders under $99.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description_6CNYAh",
+        "custom_content_qnMhGh",
+        "custom_content_73AKnk",
+        "custom_content_4bDa3X"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "container",
+        "type_tabs": "underline",
+        "enable_uppercase": true,
+        "tabs_font_family": "headings_font",
+        "tab_heading_size": "body-2",
+        "tabs_gap": 4,
+        "align": "center",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "section_width": "container-fluid",
+        "subheading": "",
+        "heading": "you may also like",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "enable_stack_products": false,
+        "show_progress_bar": true,
+        "enable_overflow_visible": false,
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "column_gap": 3,
+        "columns_mobile": "2",
+        "column_gap_mobile": 2,
+        "swipe_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 80,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_ka3wVn",
+    "main",
+    "information-products",
+    "related-products"
+  ]
+}

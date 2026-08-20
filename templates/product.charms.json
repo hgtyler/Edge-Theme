@@ -1,0 +1,823 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_ka3wVn": {
+      "type": "breadcrumbs",
+      "settings": {
+        "section_width": "container-fluid",
+        "alignment": "start",
+        "text_size": "text-size-small",
+        "type_breadcrumb": "line-vertical",
+        "show_on_mobile": true,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 12,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h4"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_note": false,
+            "show_sale_badge": false,
+            "sale_badge_type": "fixed"
+          }
+        },
+        "custom_liquid_gCahFT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style> \n.final-sale-pdp {\nfont-family: \"ABCWhyte-Book\";\nfont-size:13px;\ntext-align:left;\ntext-transform: uppercase;\n</style> \n{% if product.tags contains \"ooak\" %} <h4 class=\"final-sale-pdp\">One-of-a-kind piece</h4> {% endif %}"
+          }
+        },
+        "siblings_8zgW6A": {
+          "type": "siblings",
+          "settings": {
+            "siblings_picker_type": "color-swatch",
+            "block_type": "outline",
+            "show_siblings_sale_dot": false,
+            "title_siblings": "Stone:",
+            "option_siblings_value": "shopify.color-pattern",
+            "siblings_products_value": "custom.combined_listing_products"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "hide_sold_out_variants": false,
+            "color_picker_type": "color_swatch",
+            "style": "outline",
+            "option_name": "Size",
+            "size_chart_page": "size-chart"
+          }
+        },
+        "infinite_options_app_block_9mya8m": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
+        "inventory_NEXQa8": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_base_quantity": 100,
+            "show_inventory_ping": false,
+            "show_inventory_quantity": true,
+            "show_progress_bar": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "button_type": "primary",
+            "show_price_in_button": false,
+            "show_two_columns": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "show_pickup_availability": false,
+            "show_back_in_stock": false,
+            "text_back_in_stock": "Notify me"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "show_more_toggle": false,
+            "max_height": 20
+          }
+        },
+        "rich_text_UmKhzB": {
+          "type": "rich-text",
+          "settings": {
+            "align": "start",
+            "icon": "none",
+            "width": 20,
+            "heading": "",
+            "heading_size": "h6",
+            "content": "<p>{{ product.metafields.my_fields.description | metafield_tag }}</p>",
+            "background": "#ffffff",
+            "color": "#4f0e0d"
+          }
+        },
+        "collapsible_tab_bVRE3V": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "heading_size": "body-1",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}</p><p>{{ product.metafields.my_fields.metal | metafield_tag }}</p><p>{{ product.metafields.my_fields.dimensions | metafield_tag }}</p>",
+            "content_liquid": "",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_AEkqTf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care",
+            "heading_size": "body-1",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.my_fields.care | metafield_tag }}</p>",
+            "content_liquid": "",
+            "page": "",
+            "open_by_default": false
+          }
+        },
+        "icon_with_text_UW7wKB": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "stacked",
+            "icon_size": 36,
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/wine-bird.png",
+            "heading_1": "{{ product.metafields.checkoutblocks.trigger.value }}",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/stars-burgundy3.png",
+            "heading_2": "<a href=\"#reviews\" title=\"#reviews\">Reviews</a>",
+            "icon_3": "none",
+            "heading_3": "",
+            "icon_4": "none",
+            "heading_4": ""
+          }
+        },
+        "separator_M3LBtz": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 3
+          }
+        },
+        "complementary_dmerd3": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Add a Chain",
+            "column_width": 65,
+            "product_list_limit": 10,
+            "enable_quick_add": true
+          }
+        },
+        "separator_GkGKiT": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "divider_space": 3
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "custom_liquid_gCahFT",
+        "siblings_8zgW6A",
+        "variant_picker",
+        "infinite_options_app_block_9mya8m",
+        "inventory_NEXQa8",
+        "buy_buttons",
+        "description",
+        "rich_text_UmKhzB",
+        "collapsible_tab_bVRE3V",
+        "collapsible_tab_AEkqTf",
+        "icon_with_text_UW7wKB",
+        "separator_M3LBtz",
+        "complementary_dmerd3",
+        "separator_GkGKiT"
+      ],
+      "custom_css": [],
+      "settings": {
+        "section_width": "container",
+        "enable_sticky_info": true,
+        "enable_max_width_content": true,
+        "show_sticky_add_to_cart_bar": false,
+        "media_width": 50,
+        "media_aspect_ratio": "square",
+        "thumbnail_aspect_ratio": "square",
+        "gallery_layout": "thumbnail",
+        "column_gap_media": 0.5,
+        "media_position": "left",
+        "info_in_media": "",
+        "show_badge_in_media": false,
+        "enable_border_media": false,
+        "show_lightbox": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_thumbnails": "show",
+        "enable_media_grouping": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "testimonials_NmwCVP": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_zccD9p": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Prong Setting\n<i><small>Below you will find a real prong setting on a different stone.</small></i>",
+            "image": "shopify://shop_images/Prong-Set_92f16a9b-f080-4b55-a3da-9f6d32cb76ff.png",
+            "media_size": "adapt",
+            "avatar": "shopify://shop_images/8_a02.jpg",
+            "name": "",
+            "position": ""
+          }
+        },
+        "quote_VnQHxt": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Add your customer or client quote here to showcase them.",
+            "media_size": "adapt",
+            "name": "Author name",
+            "position": "Position"
+          }
+        },
+        "quote_LcwjBC": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Add your customer or client quote here to showcase them.",
+            "media_size": "adapt",
+            "name": "Author name",
+            "position": "Position"
+          }
+        },
+        "quote_8Jp6J3": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Add your customer or client quote here to showcase them.",
+            "media_size": "adapt",
+            "name": "Author name",
+            "position": "Position"
+          }
+        },
+        "quote_XJCxkb": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Add your customer or client quote here to showcase them.",
+            "media_size": "adapt",
+            "name": "Author name",
+            "position": "Position"
+          }
+        },
+        "quote_MzBG4q": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Add your customer or client quote here to showcase them.",
+            "media_size": "adapt",
+            "name": "Author name",
+            "position": "Position"
+          }
+        }
+      },
+      "block_order": [
+        "quote_zccD9p",
+        "quote_VnQHxt",
+        "quote_LcwjBC",
+        "quote_8Jp6J3",
+        "quote_XJCxkb",
+        "quote_MzBG4q"
+      ],
+      "disabled": true,
+      "name": "Testimonials",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "Choose Your Setting",
+        "heading_size_section": "h6",
+        "description": "<p>Choose between a ring or charm in either a prong, bezel, or cloud setting style, and your preferred gold color.</p>",
+        "layout": "vertical",
+        "testimonial_type": "focused",
+        "content_alignment": "start",
+        "content_size": "body-1",
+        "show_rating": true,
+        "show_arrows": true,
+        "enable_loop": true,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "vertical_alignment": "end",
+        "show_border": true,
+        "per_page": 6,
+        "bg_color": "#fcfbf9",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 28,
+        "padding_bottom": 60,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "information-products": {
+      "type": "information-tabs-products",
+      "blocks": {
+        "custom_content_Nic9fy": {
+          "type": "custom-content",
+          "name": "Happiness Guarantee",
+          "settings": {
+            "tab_heading": "Happiness Guarantee",
+            "content": "<p>At Starling Jewelry, we stand behind the quality of our products and offer a complimentary 2 year Happiness Guarantee/Warranty on all handmade jewelry purchased through us directly or our website. </p><p>We offer benefits like polishing, prong tightening, chain repairs, steam cleaning, and stone replacement on stones under 3mm - all 100% covered for 2 years from the date of order delivery.</p><p>Please note that shipping costs are not included in our Warranty/Happiness Guarantee after 90 days.</p>",
+            "page": ""
+          }
+        },
+        "custom_content_73AKnk": {
+          "type": "custom-content",
+          "name": "Shipping & Returns",
+          "settings": {
+            "tab_heading": "Shipping & Returns",
+            "content": "<p>Orders above $500 are automatically upgraded to USPS Priority Mail Signature required, with orders underneath this not requiring a signature at delivery. </p><p>Orders above $1k are complimentary upgraded to FedEx 2day Shipping Signature Required<br/><br/>Personalized items, Bespoke Gems, One-of-a-Kind items and Bespoke or Heirloom Revival Projects cannot be returned. Personalized pieces include any item that is engraved, custom stone arrangement (ie our Compass Charm, Family Stone Charm) or any special order.</p><p>If you are not entirely pleased with a product you purchased, Starling will accept limited items for exchange or return within 10 days of your delivery date.</p><p><a href=\"/pages/happiness-guarantee\" target=\"_blank\" title=\"Happiness Guarantee\"><strong>Read More</strong></a></p>",
+            "page": ""
+          }
+        },
+        "custom_content_4bDa3X": {
+          "type": "custom-content",
+          "name": "Packaging",
+          "settings": {
+            "tab_heading": "Packaging",
+            "content": "<p>Lush burgundy velvet oval shaped box with velvet interior. </p><p>Included with every piece valued at $800 or more. </p><p>Option to add to cart for $60 for pieces less than $800.</p>",
+            "page": ""
+          }
+        },
+        "custom_content_WdbcGA": {
+          "type": "custom-content",
+          "name": "Sustainability",
+          "settings": {
+            "tab_heading": "Sustainability",
+            "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. </p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_content_Nic9fy",
+        "custom_content_73AKnk",
+        "custom_content_4bDa3X",
+        "custom_content_WdbcGA"
+      ],
+      "settings": {
+        "section_width": "container",
+        "type_tabs": "underline",
+        "enable_uppercase": false,
+        "tabs_font_family": "body_font",
+        "tab_heading_size": "body-1",
+        "tabs_gap": 3,
+        "align": "start",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "custom_liquid_pXCQFG": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "section_width": "container",
+        "custom_liquid": "<style> \nh3 {\ntext-align: center;\nfont-size: 10px; \npadding-bottom: 0px; \nmargin-bottom: 0px; }\nh1 {\ntext-align: center; } \n</style>\n\n<div id=\"reviews\"> \n<h3> CUSTOMER </h3>\n<h1> reviews <h1> </div>",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "1758934419fc009d58": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_FF9XFp": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_FF9XFp"
+      ],
+      "settings": {
+        "section_width": "container",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "custom_content_6MRLyg": {
+      "type": "custom-content",
+      "blocks": {
+        "image_eKhVTf": {
+          "type": "image",
+          "settings": {
+            "block_width": "33",
+            "image": "shopify://shop_images/download_4.png",
+            "image_size": "portrait",
+            "link": "",
+            "vertical_alignment": "center"
+          }
+        },
+        "text_eVJhBy": {
+          "type": "text",
+          "settings": {
+            "block_width": "33",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<h6><em>\"As a house of fine jewelry, <br/>We illuminate    all that endures. <br/>And what we've learned through<br/>the years is that<br/>Timeless is not a static thing,<br/>Because timeless is always becoming.\"</em></h6>",
+            "vertical_alignment": "center",
+            "text_alignment": "center",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "bg_color": "#ece6da",
+            "text_color": "#dc0032",
+            "padding_top": 22,
+            "padding_bottom": 24,
+            "padding_left": 46,
+            "padding_right": 46,
+            "padding_top_mobile": 45,
+            "padding_bottom_mobile": 45,
+            "padding_left_mobile": 24,
+            "padding_right_mobile": 24
+          }
+        },
+        "image_QhM7gc": {
+          "type": "image",
+          "settings": {
+            "block_width": "33",
+            "image": "shopify://shop_images/download_8.png",
+            "image_size": "portrait",
+            "link": "",
+            "vertical_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_eKhVTf",
+        "text_eVJhBy",
+        "image_QhM7gc"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rte {white-space: nowrap; line-height: 1.6; font-size: 90%;}",
+        "h6,.h6 {letter-spacing: 0.4px !important; font-size: 1.4em; line-height: 2.3 !important;}",
+        "@media screen and (max-width: 749px) {div#custom-block-image_QhM7gc {display: none; }}"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "column_gap": 3,
+        "row_gap": 3,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "video_with_text_overlay_bJYX9f": {
+      "type": "video-with-text-overlay",
+      "name": "Video with text overlay",
+      "settings": {
+        "section_width": "container-fluid",
+        "video_hosted": "shopify://files/videos/Making of_Overview_60sec_4k_Master.mp4",
+        "video_url": "",
+        "description_video": "",
+        "desktop_height_mode": "fixed",
+        "desktop_fixed_height": 600,
+        "mobile_height_mode": "fixed",
+        "mobile_fixed_height": 300,
+        "content_width": "max-w-4xl",
+        "desktop_content_position": "bottom-left",
+        "mobile_content_position": "bottom-left",
+        "color_text": "#ffffff",
+        "color_text_highlighted": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_gradient": "",
+        "overlay_opacity": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "Find what you love",
+        "heading_size_section": "h4",
+        "description": "<p>We seek out the rare and extraordinary to represent the loves, commitments and major moments of your story.</p>",
+        "layout": "vertical",
+        "enable_stack_products": false,
+        "show_progress_bar": true,
+        "enable_overflow_visible": false,
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "column_gap": 3,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1.5,
+        "swipe_on_mobile": true,
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "banner_with_product_Pzzhqi": {
+      "type": "banner-with-product",
+      "blocks": {
+        "image_MxdWXY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/download_6.png",
+            "active_video": false,
+            "media_size": "portrait",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "primary-white",
+            "show_icon": false,
+            "desktop_content_position": "middle-center",
+            "text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "overlay_gradient": ""
+          }
+        },
+        "product_im6g9n": {
+          "type": "product",
+          "settings": {
+            "product": [
+              "20-75ct-kunzite-montage-charm",
+              "2-64ct-ruby-basket-ring",
+              "4-67ct-smoky-quartz-prong-set-charm",
+              "6-58ct-green-tourmaline-bezel-ring"
+            ],
+            "columns_desktop": "2",
+            "column_gap": 1.4,
+            "row_gap": 1.5,
+            "columns_mobile": "2",
+            "column_gap_mobile": 1.5,
+            "row_gap_mobile": 1.5,
+            "swipe_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "image_MxdWXY",
+        "product_im6g9n"
+      ],
+      "disabled": true,
+      "name": "Products with banner",
+      "settings": {
+        "section_width": "w-full",
+        "subheading": "One of a Kind",
+        "heading": "",
+        "heading_size_section": "h5",
+        "description": "<p>A year in the making, this new era of one-of-a kind jewels brings forward the vibrant spirit we've always embodied.</p>",
+        "layout": "vertical",
+        "link_url": "shopify://collections/one-of-a-kind-collection",
+        "link_text": "View all",
+        "button_type": "underlined",
+        "show_icon": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "column_gap": 6,
+        "column_gap_mobile": 4,
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "stacking_card_9J4mC4": {
+      "type": "stacking-card",
+      "blocks": {
+        "card_L3VPDF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/STARLING-9096-2_1.jpg",
+            "media_size": "square",
+            "media_placement": "left",
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<p>Need help? Interested in a particular shape, stone, or need this piece by a certain date? Contact us at <a href=\"mailto:bespoke@starlingjewelry.com\" target=\"_blank\" title=\"mailto:bespoke@starlingjewelry.com\">bespoke@starlingjewelry.com</a> or learn more below.<br/><br/><a href=\"/pages/contact-us\" title=\"Contact Us\">Contact Us</a><br/><a href=\"https://www.starlingjewelry.com/pages/studio-appointments\" target=\"_blank\" title=\"https://www.starlingjewelry.com/pages/studio-appointments\">Studio Appointments</a><br/><a href=\"https://www.starlingjewelry.com/pages/bespoke\" title=\"https://www.starlingjewelry.com/pages/bespoke\">Custom Orders</a></p>",
+            "vertical_alignment": "center",
+            "text_alignment": "start",
+            "button_label": "",
+            "button_link": "",
+            "button_type": "underlined-white",
+            "show_icon": false,
+            "bg_color": "#4f0e0d",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "card_L3VPDF"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.stack-cards__item-content-image.md\\:-order-1 {display: none; }}"
+      ],
+      "name": "Stacking Card",
+      "settings": {
+        "section_width": "w-full",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h2",
+        "description": "",
+        "layout": "vertical",
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_top_divider": false,
+        "divider_top_width": "w-full",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "w-full"
+      }
+    },
+    "collection_list_NHnjgy": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_CfPaAj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "engagement-rings",
+            "image": "shopify://shop_images/3.78ct-Zircon-Flat-Tapered-Ring3.png",
+            "title": "Engagement Rings",
+            "url": "shopify://collections/engagement-rings"
+          }
+        },
+        "featured_collection_ignwaF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifting-season",
+            "image": "shopify://shop_images/CloudCuff6ctCitrine3.png",
+            "title": "Gifts",
+            "url": "shopify://collections/gifts"
+          }
+        },
+        "featured_collection_tpHHRR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "one-of-a-kind",
+            "image": "shopify://shop_images/13.58ct-Aquamarine-Charm1.png",
+            "title": "One of a Kind Jewelry",
+            "url": "shopify://collections/one-of-a-kind-collection"
+          }
+        },
+        "featured_collection_U9ic3G": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "birth-flowers",
+            "image": "shopify://shop_images/aster_september_birth_flower_1.png",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_CfPaAj",
+        "featured_collection_ignwaF",
+        "featured_collection_tpHHRR",
+        "featured_collection_U9ic3G"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "",
+        "heading_size_section": "h6",
+        "description": "",
+        "layout": "vertical",
+        "link_url": "",
+        "link_text": "",
+        "button_type": "primary",
+        "show_icon": false,
+        "card_type": "standard",
+        "image_ratio": "square",
+        "show_border_card": false,
+        "show_collection_count": false,
+        "show_button_arrow": false,
+        "show_zoom_on_hover": true,
+        "use_title_italic": true,
+        "heading_size": "body-1",
+        "content_alignment": "start",
+        "title_color": "",
+        "overlay_color": "#000000",
+        "enable_gradient": false,
+        "overlay_opacity": 0,
+        "enable_stack_collections": false,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "columns_desktop": 4,
+        "column_gap": 3,
+        "columns_mobile": "2",
+        "column_gap_mobile": 2,
+        "swipe_on_mobile": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_ka3wVn",
+    "main",
+    "testimonials_NmwCVP",
+    "information-products",
+    "custom_liquid_pXCQFG",
+    "1758934419fc009d58",
+    "custom_content_6MRLyg",
+    "video_with_text_overlay_bJYX9f",
+    "related-products",
+    "banner_with_product_Pzzhqi",
+    "stacking_card_9J4mC4",
+    "collection_list_NHnjgy"
+  ]
+}

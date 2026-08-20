@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "featured_collection_ACELY8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all",
+            "title": "all",
+            "url": "shopify://collections/all"
+          }
+        },
+        "featured_collection_MBQ8ji": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bespoke-gems",
+            "title": "",
+            "url": "shopify://collections/bespoke-gems"
+          }
+        },
+        "featured_collection_Wj9tYU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "birth-flowers",
+            "title": "",
+            "url": "shopify://collections/birth-flowers"
+          }
+        },
+        "featured_collection_i3aHda": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "birthstone",
+            "title": "",
+            "url": "shopify://collections/birthstone"
+          }
+        },
+        "featured_collection_Jq9N3E": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "engagement-rings",
+            "title": "",
+            "url": "shopify://collections/engagement-rings"
+          }
+        },
+        "featured_collection_VhPDCN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "main-collection-1",
+            "title": "Signature Styles",
+            "url": "shopify://collections/main-collection-1"
+          }
+        },
+        "featured_collection_k8aNXL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "one-of-a-kind",
+            "title": "",
+            "url": ""
+          }
+        },
+        "featured_collection_t7wpAb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "engraved",
+            "title": "",
+            "url": ""
+          }
+        },
+        "featured_collection_JFLAWn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wedding-bands",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ACELY8",
+        "featured_collection_MBQ8ji",
+        "featured_collection_Wj9tYU",
+        "featured_collection_i3aHda",
+        "featured_collection_Jq9N3E",
+        "featured_collection_VhPDCN",
+        "featured_collection_k8aNXL",
+        "featured_collection_t7wpAb",
+        "featured_collection_JFLAWn"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "",
+        "heading": "collections",
+        "heading_size_section": "h1",
+        "description": "",
+        "layout": "vertical",
+        "select_collections": "selected",
+        "sort": "alphabetical",
+        "collection_per_page": 9,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "card_type": "button",
+        "image_ratio": "square",
+        "show_collection_count": false,
+        "heading_size": "h4",
+        "content_alignment": "center",
+        "title_color": "",
+        "overlay_color": "#000000",
+        "enable_gradient": false,
+        "overlay_opacity": 0,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
