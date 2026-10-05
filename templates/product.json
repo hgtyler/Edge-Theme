@@ -96,6 +96,25 @@
             "show_progress_bar": false
           }
         },
+        "custom_liquid_T4rf4X": {
+          "type": "custom_liquid",
+          "name": "BIRTHSTONE CUSTOM LIQUID",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.tags contains \"compass\" %} Learn About Our Birthstones {% endif %}"
+          }
+        },
+        "popup_LPybzx": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "About Our Birthstones",
+            "icon": "none",
+            "content": "",
+            "content_liquid": "",
+            "page": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -107,12 +126,6 @@
             "show_pickup_availability": false,
             "show_back_in_stock": false,
             "text_back_in_stock": "Notify me"
-          }
-        },
-        "custom_liquid_xzARxi": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if product.tags contains \"archive-26\" %}\n<h6 style=\"color:#D50032\"> This item is final sale!</h6>\n{% endif %}"
           }
         },
         "rich_text_Htb99K": {
@@ -187,8 +200,9 @@
         "infinite_options_app_block_9mya8m",
         "variant_picker",
         "inventory_DzF7aL",
+        "custom_liquid_T4rf4X",
+        "popup_LPybzx",
         "buy_buttons",
-        "custom_liquid_xzARxi",
         "rich_text_Htb99K",
         "collapsible_tab_bVRE3V",
         "collapsible_tab_AEkqTf",
@@ -375,22 +389,13 @@
             "content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. </p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. </p>",
             "page": ""
           }
-        },
-        "custom_content_cYxFhw": {
-          "type": "custom-content",
-          "settings": {
-            "tab_heading": "Archive Sale 2026",
-            "content": "<p>All Archive Sale pieces are final sale. No returns or exchanges will be accepted. </p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "custom_content_73AKnk",
         "custom_content_Nic9fy",
         "custom_content_4bDa3X",
-        "custom_content_WdbcGA",
-        "custom_content_cYxFhw"
+        "custom_content_WdbcGA"
       ],
       "settings": {
         "section_width": "container",

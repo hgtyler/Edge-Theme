@@ -32,24 +32,15 @@
         "category_3TaWVT": {
           "type": "category",
           "settings": {
-            "heading_row": "Archive Sale"
+            "heading_row": "Holiday 2026"
           }
         },
-        "question_CpUjG8": {
+        "question_gnkt6C": {
           "type": "question",
           "settings": {
-            "heading": "What is the return policy for the archive sale?",
+            "heading": "Bespoke Gem & Custom Projects",
             "icon": "none",
-            "row_content": "<p>All items purchased on the Archive Sale are final sale, no returns or exchanges will be accepted.</p>",
-            "page": ""
-          }
-        },
-        "question_rUXrxq": {
-          "type": "question",
-          "settings": {
-            "heading": "When is the archive sale?",
-            "icon": "none",
-            "row_content": "<p>The annual archive sale runs from August 1-31st, 2026. </p>",
+            "row_content": "<p>The last day to order a Bespoke Gem or start a custom project is October 15th.&nbsp;</p>",
             "page": ""
           }
         },
@@ -188,8 +179,7 @@
       },
       "block_order": [
         "category_3TaWVT",
-        "question_CpUjG8",
-        "question_rUXrxq",
+        "question_gnkt6C",
         "category_caa7w9",
         "question_tcdrMe",
         "question_araiGw",

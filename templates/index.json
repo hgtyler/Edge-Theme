@@ -9,70 +9,57 @@
  */
 {
   "sections": {
-    "slideshow_new_xDeXKH": {
+    "slideshow_new_pY9JyE": {
       "type": "slideshow-new",
       "blocks": {
-        "slide_Uje8F7": {
+        "slide_UXN8Ww": {
           "type": "_slide",
           "settings": {
-            "image": "shopify://shop_images/LARISSA_BANNER_3.png",
-            "mobile_image": "shopify://shop_images/MOBILE_BANNER_1.png",
+            "image": "shopify://shop_images/lapis-ring-yg-3.jpg",
+            "mobile_image": "shopify://shop_images/lapis-ring-wg-3_8b19c423-a225-49cb-a11a-4eafcc78a706.jpg",
             "slide_link": "",
             "video_background": false,
-            "video_hosted": "shopify://files/videos/emerald-lark-ring.mp4",
-            "content_width": 1200,
+            "content_width": 900,
             "content_position": "middle-center",
-            "mobile_content_position": "middle-center",
+            "mobile_content_position": "top-left",
             "content_space": 1,
-            "color_text": "#FFFFFF",
+            "color_text": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "overlay_gradient": ""
           },
           "blocks": {
-            "slide_text_xXeeDw": {
-              "type": "_slide_text",
-              "name": "Text",
-              "settings": {
-                "content": "INTRODUCING:",
-                "description_size": "small"
-              },
-              "blocks": {}
-            },
-            "slide_heading_KdVMGf": {
+            "slide_heading_JbF3Vb": {
               "type": "_slide_heading",
+              "name": "Heading",
               "settings": {
-                "heading": "starling x larissa mills",
+                "heading": "starling x meredith peck",
                 "highlighted_word_type": "single_line",
                 "heading_size": "h1",
-                "color_text_highlighted": "#FFFFFF"
+                "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
             },
-            "slide_button_xed4t7": {
+            "slide_button_8Ff7cp": {
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Shop the New Collaboration",
-                "button_link": "shopify://collections/rings",
+                "button_text": "Explore",
+                "button_link": "shopify://collections/blueprint-lapis",
                 "button_type": "underlined-white",
-                "show_icon": false
+                "show_icon": true
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "slide_text_xXeeDw",
-            "slide_heading_KdVMGf",
-            "slide_button_xed4t7"
+            "slide_heading_JbF3Vb",
+            "slide_button_8Ff7cp"
           ]
         }
       },
       "block_order": [
-        "slide_Uje8F7"
-      ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.container {padding-left: 15%; padding-right: 15%; }}"
+        "slide_UXN8Ww"
       ],
       "name": "Slideshow",
       "settings": {
@@ -80,14 +67,14 @@
         "desktop_height_mode": "fixed",
         "desktop_fixed_height": 560,
         "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 490,
+        "mobile_fixed_height": 540,
         "auto_rotate": false,
         "pause_on_hover": false,
         "change_slides_speed": 5,
         "transition": "zoom",
         "show_moving_cursor": false,
         "controls": "filled-arrows",
-        "accessibility_info": "Slideshow about our brand",
+        "accessibility_info": "",
         "bg_color": "",
         "controls_color": "#ffffff",
         "controls_color_text": "#ffffff",
@@ -100,16 +87,16 @@
         "featured_collection_tpcjiE": {
           "type": "featured_collection",
           "settings": {
-            "collection": "birthstone",
-            "image": "shopify://shop_images/bstones.png",
-            "title": "Shop Birthstone Jewelry",
-            "url": "shopify://collections/birthstone"
+            "collection": "blueprint-lapis",
+            "image": "shopify://shop_images/StarlingxMeridith_-391_1.png",
+            "title": "Shop Starling x Meredith Peck",
+            "url": "shopify://collections/blueprint-lapis"
           }
         },
         "featured_collection_JFxPUL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "one-of-a-kind",
+            "collection": "gifts",
             "image": "shopify://shop_images/Citrine-Georgia-Charm4.png",
             "title": "Shop Gifts",
             "url": "shopify://collections/gifts"
@@ -184,8 +171,8 @@
             "video_hosted": "shopify://files/videos/Rebrand_Red Jacket_Banner_nologo.mp4",
             "subheading": "",
             "heading": "",
-            "heading_size": "h2",
-            "text": "<h6>MADE WITH DEVOTION TO EXQUISITE MATERIALS</h6>",
+            "heading_size": "h6",
+            "text": "<h6><strong>MADE WITH DEVOTION TO EXQUISITE MATERIALS</strong></h6>",
             "button_label": "",
             "button_link": "",
             "button_type": "underlined-white",
@@ -212,7 +199,7 @@
             "subheading": "",
             "heading": "",
             "heading_size": "h2",
-            "text": "<h6>MADE TO BE - EVER YOURS</h6>",
+            "text": "<h6><strong>MADE TO BE - EVER YOURS</strong></h6>",
             "button_label": "",
             "button_link": "",
             "button_type": "underlined-white",
@@ -340,71 +327,72 @@
         "divider_bottom_width": "container"
       }
     },
-    "slideshow_new_pY9JyE": {
+    "slideshow_new_kwQexx": {
       "type": "slideshow-new",
       "blocks": {
-        "slide_UXN8Ww": {
+        "slide_XDjCkC": {
           "type": "_slide",
           "settings": {
-            "image": "shopify://shop_images/FRUITS_BANNER_2.png",
-            "mobile_image": "shopify://shop_images/FRUITS_BANNER_1.png",
+            "image": "shopify://shop_images/DESKTOP-BANNER.png",
+            "mobile_image": "shopify://shop_images/MOBILE-BANNER.png",
             "slide_link": "",
             "video_background": false,
-            "content_width": 900,
+            "content_width": 800,
             "content_position": "middle-center",
-            "mobile_content_position": "bottom-center",
+            "mobile_content_position": "middle-center",
             "content_space": 1,
             "color_text": "#ffffff",
-            "overlay_color": "#000000",
+            "overlay_color": "#ffe2e2",
             "overlay_opacity": 0,
             "overlay_gradient": ""
           },
           "blocks": {
-            "slide_heading_JbF3Vb": {
+            "slide_heading_xeXJkc": {
               "type": "_slide_heading",
               "name": "Heading",
               "settings": {
-                "heading": "one-of-a-kind rings",
+                "heading": "the siren collection",
                 "highlighted_word_type": "single_line",
-                "heading_size": "h1",
+                "heading_size": "h0",
                 "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
             },
-            "slide_button_8Ff7cp": {
+            "slide_button_rayMir": {
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Explore",
-                "button_link": "shopify://collections/one-of-a-kind-rings",
+                "button_text": "Shop Now",
+                "button_link": "shopify://collections/one-of-a-kind-collection",
                 "button_type": "underlined-white",
-                "show_icon": true
+                "show_icon": false
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "slide_heading_JbF3Vb",
-            "slide_button_8Ff7cp"
+            "slide_heading_xeXJkc",
+            "slide_button_rayMir"
           ]
         }
       },
       "block_order": [
-        "slide_UXN8Ww"
+        "slide_XDjCkC"
       ],
+      "custom_css": [],
       "name": "Slideshow",
       "settings": {
         "slide_width": "w-full",
         "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 560,
+        "desktop_fixed_height": 640,
         "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 540,
-        "auto_rotate": false,
+        "mobile_fixed_height": 700,
+        "auto_rotate": true,
         "pause_on_hover": false,
         "change_slides_speed": 5,
-        "transition": "zoom",
+        "transition": "fade",
         "show_moving_cursor": false,
-        "controls": "filled-arrows",
+        "controls": "none",
         "accessibility_info": "",
         "bg_color": "",
         "controls_color": "#ffffff",
@@ -481,82 +469,85 @@
         "divider_bottom_width": "container"
       }
     },
-    "slideshow_new_kwQexx": {
+    "slideshow_new_xDeXKH": {
       "type": "slideshow-new",
       "blocks": {
-        "slide_XDjCkC": {
+        "slide_Uje8F7": {
           "type": "_slide",
           "settings": {
-            "image": "shopify://shop_images/25.GroupGemstones1.png",
+            "image": "shopify://shop_images/LARISSA_BANNER_3.png",
+            "mobile_image": "shopify://shop_images/MOBILE_BANNER_1.png",
             "slide_link": "",
             "video_background": false,
-            "content_width": 800,
-            "content_position": "top-left",
+            "video_hosted": "shopify://files/videos/emerald-lark-ring.mp4",
+            "content_width": 1200,
+            "content_position": "middle-center",
             "mobile_content_position": "middle-center",
             "content_space": 1,
-            "color_text": "#4f0e0d",
-            "overlay_color": "#ffe2e2",
-            "overlay_opacity": 25,
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
             "overlay_gradient": ""
           },
           "blocks": {
-            "spacer_p3mNRe": {
-              "type": "spacer",
-              "name": "Spacer",
+            "slide_text_xXeeDw": {
+              "type": "_slide_text",
+              "name": "Text",
               "settings": {
-                "show_border": false,
-                "space": 10
+                "content": "INTRODUCING:",
+                "description_size": "small"
               },
               "blocks": {}
             },
-            "slide_heading_xeXJkc": {
+            "slide_heading_KdVMGf": {
               "type": "_slide_heading",
-              "name": "Heading",
               "settings": {
-                "heading": "the summer bespoke gem edit",
+                "heading": "starling x larissa mills",
                 "highlighted_word_type": "single_line",
                 "heading_size": "h1",
                 "color_text_highlighted": "#ffffff"
               },
               "blocks": {}
             },
-            "slide_button_rayMir": {
+            "slide_button_xed4t7": {
               "type": "_slide_button",
               "name": "Button",
               "settings": {
-                "button_text": "Shop Now",
-                "button_link": "shopify://collections/bespoke-gems",
-                "button_type": "underlined",
+                "button_text": "Shop the New Collaboration",
+                "button_link": "shopify://collections/rings",
+                "button_type": "underlined-white",
                 "show_icon": false
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "spacer_p3mNRe",
-            "slide_heading_xeXJkc",
-            "slide_button_rayMir"
+            "slide_text_xXeeDw",
+            "slide_heading_KdVMGf",
+            "slide_button_xed4t7"
           ]
         }
       },
       "block_order": [
-        "slide_XDjCkC"
+        "slide_Uje8F7"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.container {padding-left: 15%; padding-right: 15%; }}"
+      ],
       "name": "Slideshow",
       "settings": {
         "slide_width": "w-full",
         "desktop_height_mode": "fixed",
-        "desktop_fixed_height": 640,
+        "desktop_fixed_height": 560,
         "mobile_height_mode": "fixed",
-        "mobile_fixed_height": 330,
-        "auto_rotate": true,
+        "mobile_fixed_height": 490,
+        "auto_rotate": false,
         "pause_on_hover": false,
         "change_slides_speed": 5,
-        "transition": "fade",
+        "transition": "zoom",
         "show_moving_cursor": false,
-        "controls": "none",
-        "accessibility_info": "",
+        "controls": "filled-arrows",
+        "accessibility_info": "Slideshow about our brand",
         "bg_color": "",
         "controls_color": "#ffffff",
         "controls_color_text": "#ffffff",
@@ -686,15 +677,15 @@
     }
   },
   "order": [
-    "slideshow_new_xDeXKH",
+    "slideshow_new_pY9JyE",
     "collection_list_adDQqC",
     "media_grid_UUgHWF",
     "divider_jV4WLm",
     "press_Vih8kQ",
-    "slideshow_new_pY9JyE",
+    "slideshow_new_kwQexx",
     "divider_dC4bMX",
     "collection_tabs_EW3W7b",
-    "slideshow_new_kwQexx",
+    "slideshow_new_xDeXKH",
     "slideshow_new_drq8aj",
     "featured_blog_frpdTr"
   ]

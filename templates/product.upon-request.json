@@ -97,25 +97,6 @@
             "show_border": false,
             "divider_space": 1
           }
-        },
-        "icon_with_text_UW7wKB": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "stacked",
-            "icon_size": 36,
-            "icon_1": "heart",
-            "image_1": "shopify://shop_images/wine-question-mark.png",
-            "heading_1": "Questions?<a href=\"mailto:hello@starlingjewelry.com\" target=\"_blank\" title=\"mailto:hello@starlingjewelry.com\"> <strong>Ask Away.</strong></a>",
-            "icon_2": "none",
-            "image_2": "shopify://shop_images/wine-bird.png",
-            "heading_2": "{{ product.metafields.custom.shipping_estimate.value }}{{ product.metafields.checkoutblocks.trigger.value }}",
-            "icon_3": "none",
-            "image_3": "shopify://shop_images/stars-burgundy3.png",
-            "heading_3": "<a href=\"#reviews\" title=\"#reviews\">Reviews</a>",
-            "icon_4": "none",
-            "heading_4": ""
-          }
         }
       },
       "block_order": [
@@ -127,8 +108,7 @@
         "collapsible_tab_bVRE3V",
         "collapsible_tab_9ni9fQ",
         "collapsible_tab_AEkqTf",
-        "separator_CgCj4T",
-        "icon_with_text_UW7wKB"
+        "separator_CgCj4T"
       ],
       "custom_css": [],
       "settings": {

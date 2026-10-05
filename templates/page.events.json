@@ -1,0 +1,153 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "container-narrow",
+        "show_default_heading": false,
+        "bg_color": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_w7FipG": {
+      "type": "rich-text",
+      "blocks": {
+        "text_YwjMDf": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>SAN FRANCISCO </h6>",
+            "large_text": true,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "text_GtftUb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEPTEMBER 23-24</p><p><a href=\"mailto:bespoke@starlingjewelry.com\" title=\"mailto:bespoke@starlingjewelry.com\">EMAIL FOR PRIVATE APPOINTMENTS</a><br/></p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "separator_3Fhw93": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
+        },
+        "text_bTeYGn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEPTEMBER 25</p><p>MAISON LAN JAENICKE<br/>307 SACRAMENTO ST.<br/>SAN FRANCISCO, CA 94118</p><p>11AM - 5PM</p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "text_YwjMDf",
+        "text_GtftUb",
+        "separator_3Fhw93",
+        "text_bTeYGn"
+      ],
+      "custom_css": [
+        "h6 {font-size: 3rem; color: #d50032;}"
+      ],
+      "name": "SAN FRANCISCO",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    },
+    "rich_text_VRJaJr": {
+      "type": "rich-text",
+      "blocks": {
+        "text_twxBPf": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>NEW YORK CITY</h6>",
+            "large_text": true,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "text_Ja3Djx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>NOVEMBER 12-14</p><p><a href=\"mailto:bespoke@starlingjewelry.com\" title=\"mailto:bespoke@starlingjewelry.com\">EMAIL FOR PRIVATE APPOINTMENTS</a><br/></p>",
+            "large_text": false,
+            "show_more_toggle": false,
+            "max_height": 8
+          }
+        },
+        "separator_HVFPcz": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 8
+          }
+        }
+      },
+      "block_order": [
+        "text_twxBPf",
+        "text_Ja3Djx",
+        "separator_HVFPcz"
+      ],
+      "custom_css": [
+        "h6 {font-size: 3rem; color: #d50032;}"
+      ],
+      "name": "NEW YORK",
+      "settings": {
+        "section_width": "w-full",
+        "content_width": "max-w-4xl",
+        "content_alignment": "center",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "text_color": "",
+        "border_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_top_divider": false,
+        "divider_top_width": "container",
+        "show_bottom_divider": false,
+        "divider_bottom_width": "container"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_w7FipG",
+    "rich_text_VRJaJr"
+  ]
+}

@@ -226,6 +226,11 @@
         "type": "shopify://apps/uploadly-file-upload/blocks/app-embed/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
         "disabled": false,
         "settings": {}
+      },
+      "11103563742112447534": {
+        "type": "shopify://apps/hotjar-install/blocks/star_rating/e3fff6ad-7c3e-4ec4-9f68-02b4350928c5",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

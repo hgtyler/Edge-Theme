@@ -97,6 +97,12 @@
             "max_height": 20
           }
         },
+        "custom_liquid_Hp7iYp": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h4> Order by October 15th for Holiday Delivery! </h4>"
+          }
+        },
         "collapsible_tab_jHUPM9": {
           "type": "collapsible_tab",
           "settings": {
@@ -147,6 +153,7 @@
         "popup_8DRGQt",
         "buy_buttons",
         "description",
+        "custom_liquid_Hp7iYp",
         "collapsible_tab_jHUPM9",
         "collapsible_tab_bVRE3V",
         "icon_with_text_CqGeaM"

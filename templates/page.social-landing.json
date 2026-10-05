@@ -91,7 +91,7 @@
         "text_TRTFpY": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/collections/rings\" title=\"Rings\">Shop Starling x Larissa Mills</a></p><p><a href=\"/collections/archive-sale\" title=\"Archive Sale\">Shop Archive Sale</a></p><p><a href=\"/collections/bespoke-gems\" title=\"Bespoke Gems\">Shop Summer Bespoke Gems</a></p><p></p><p></p><p></p><p></p>",
+            "text": "<p><a href=\"https://www.starlingjewelry.com/collections/blueprint-lapis\" title=\"https://www.starlingjewelry.com/collections/blueprint-lapis\">Shop Starling x Meredith Peck</a></p><p><a href=\"/collections/one-of-a-kind-collection\" title=\"One-of-a-Kind Jewelry\">Shop the Siren Collection</a></p><p><a href=\"/collections/rings\" title=\"Rings\">Shop Starling x Larissa Mills</a></p><p></p><p></p><p></p><p></p><p></p>",
             "large_text": false,
             "show_more_toggle": false,
             "max_height": 8
@@ -123,7 +123,7 @@
         "text_aPt9X8": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/pages/sms-sign-up\" title=\"SMS Sign Up\">Sign Up for SMS for 10% off</a></p><p><a href=\"/pages/our-story\" title=\"Our Story\">Our Story</a></p><p><a href=\"/pages/contact-us\" title=\"Contact Us\">Contact Us</a></p>",
+            "text": "<p><a href=\"/pages/join-us\" title=\"Join Us\">Sign Up for Email for 10% off</a></p><p><a href=\"/pages/our-story\" title=\"Our Story\">Our Story</a></p><p><a href=\"/pages/contact-us\" title=\"Contact Us\">Contact Us</a></p>",
             "large_text": false,
             "show_more_toggle": false,
             "max_height": 8
