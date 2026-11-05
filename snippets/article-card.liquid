@@ -17,12 +17,7 @@
         <div class="article-card__image-wrapper">
           <div class="article-card__image overflow-hidden relative">
             <a href="{{ article.url }}">
-            {%- render 'responsive-image' , 
-              image: article.image.src, 
-              sizes: sizes, 
-              image_aspect_ratio: media_aspect_ratio,
-              alt: article.image.src.alt | escape 
-              -%}
+            {%- render 'responsive-image', image: article.image.src, sizes: sizes, image_aspect_ratio: media_aspect_ratio, alt: article.image.src.alt -%}
               </a>
               {%- if show_category and article.tags.size > 0 -%}
                 <span class="badge badge-article top-4 left-4 absolute badge-{{ badge_style }}">{{ article.tags | first }}</span>
@@ -107,3 +102,16 @@
   </div>
 </div>
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image' , \n              image: article.image.src,
+    \n              sizes: sizes, \n              image_aspect_ratio: media_aspect_ratio,\n
+    \             alt: article.image.src.alt | escape \n              -%}"
+  to: "{%- render 'responsive-image', image: article.image.src, sizes: sizes, image_aspect_ratio:
+    media_aspect_ratio, alt: article.image.src.alt -%}"
+  position: 825..966
+{% endcomment %}

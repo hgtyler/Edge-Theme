@@ -16,6 +16,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "all",
+            "image": "shopify://shop_images/aug1_81cc8fa4-3575-4772-84e3-c08016ae9ee8.png",
             "title": "all",
             "url": "shopify://collections/all"
           }
@@ -24,6 +25,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "bespoke-gems",
+            "image": "shopify://shop_images/FALL-GEMS_12c7c749-fe8a-4878-b27e-739868ba2741.png",
             "title": "",
             "url": "shopify://collections/bespoke-gems"
           }
@@ -32,6 +34,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "birth-flowers",
+            "image": "shopify://shop_images/aster_september_birth_flower_1.png",
             "title": "",
             "url": "shopify://collections/birth-flowers"
           }
@@ -40,6 +43,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "birthstone",
+            "image": "shopify://shop_images/1.16ct-Pink-Sapphire-Ripple-Charm2.png",
             "title": "",
             "url": "shopify://collections/birthstone"
           }
@@ -48,6 +52,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "engagement-rings",
+            "image": "shopify://shop_images/Starling042026-362_1.png",
             "title": "",
             "url": "shopify://collections/engagement-rings"
           }
@@ -55,15 +60,17 @@
         "featured_collection_VhPDCN": {
           "type": "featured_collection",
           "settings": {
-            "collection": "main-collection-1",
+            "collection": "signature-collection",
+            "image": "shopify://shop_images/aug3.png",
             "title": "Signature Styles",
-            "url": "shopify://collections/main-collection-1"
+            "url": "shopify://collections/signature-collection"
           }
         },
         "featured_collection_k8aNXL": {
           "type": "featured_collection",
           "settings": {
             "collection": "one-of-a-kind",
+            "image": "shopify://shop_images/Frame_6_0e49e781-8653-404a-89fc-b6aeeed32c54.png",
             "title": "",
             "url": ""
           }
@@ -72,6 +79,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "engraved",
+            "image": "shopify://shop_images/engraved-bar-signet0ring.webp",
             "title": "",
             "url": ""
           }
@@ -80,6 +88,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "wedding-bands",
+            "image": "shopify://shop_images/diamond-flush-set-wedding-band-starling.webp",
             "title": "",
             "url": ""
           }
@@ -96,6 +105,9 @@
         "featured_collection_t7wpAb",
         "featured_collection_JFLAWn"
       ],
+      "custom_css": [
+        ".collection-card__link {text-transform: uppercase;}"
+      ],
       "settings": {
         "section_width": "container",
         "subheading": "",
@@ -108,12 +120,12 @@
         "collection_per_page": 9,
         "columns_desktop": 3,
         "columns_mobile": "1",
-        "card_type": "button",
+        "card_type": "standard",
         "image_ratio": "square",
         "show_collection_count": false,
-        "heading_size": "h4",
+        "heading_size": "text-body",
         "content_alignment": "center",
-        "title_color": "",
+        "title_color": "#4F0E0D",
         "overlay_color": "#000000",
         "enable_gradient": false,
         "overlay_opacity": 0,

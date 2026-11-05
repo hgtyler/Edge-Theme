@@ -12,13 +12,13 @@
     "main": {
       "type": "main-blog",
       "custom_css": [
-        "h1 {text-transform: lowercase }"
+        "h1 {text-transform: lowercase;}"
       ],
       "settings": {
         "section_width": "container",
         "subheading": "",
         "heading_size_section": "h1",
-        "description": "",
+        "description": "<p>The Jewelbox Blog gives a peek inside the world of Starling.&nbsp;</p>",
         "show_title": true,
         "show_tags": false,
         "image_ratio": "landscape",

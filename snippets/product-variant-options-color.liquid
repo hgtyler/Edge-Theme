@@ -103,19 +103,7 @@
           <span class="sr-only">{{ value -}}</span> 
         </label>
       {%- elsif color_picker_type == 'native_color_swatch' -%}
-        {%
-          render 'swatch-input',
-          id: input_id,
-          name: option.name,
-          value: value | escape,
-          swatch: value.swatch,
-          product_form_id: product_form_id,
-          checked: value.selected,
-          visually_disabled: option_disabled,
-          shape: color_swatch_style,
-          help_text: help_text,
-          color_swatch_style: color_swatch_style
-        %}
+        {% render 'swatch-input', id: input_id, name: option.name, value: value, swatch: value.swatch, product_form_id: product_form_id, checked: value.selected, visually_disabled: option_disabled, shape: color_swatch_style, help_text: help_text, color_swatch_style: color_swatch_style %}
       {%- elsif color_picker_type == 'variant_image' -%}
         {{ input_swatch }}
         {%- if media != blank -%}
@@ -151,3 +139,29 @@
         </option>
       {%- endif -%}
 {%- endfor -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+              render 'swatch-input',
+              id: input_id,
+              name: option.name,
+              value: value | escape,
+              swatch: value.swatch,
+              product_form_id: product_form_id,
+              checked: value.selected,
+              visually_disabled: option_disabled,
+              shape: color_swatch_style,
+              help_text: help_text,
+              color_swatch_style: color_swatch_style
+            %}
+  to: "{% render 'swatch-input', id: input_id, name: option.name, value: value, swatch:
+    value.swatch, product_form_id: product_form_id, checked: value.selected, visually_disabled:
+    option_disabled, shape: color_swatch_style, help_text: help_text, color_swatch_style:
+    color_swatch_style %}"
+  position: 3852..4132
+{% endcomment %}

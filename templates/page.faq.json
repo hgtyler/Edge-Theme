@@ -145,7 +145,7 @@
           "settings": {
             "heading": "What are your shipping methods within the USA?",
             "icon": "none",
-            "row_content": "<p>USPS 2 to 5 business day and UPS 2 Day. We offer free USPS shipping on orders over $500.</p><p>We are not responsible for delayed delivery caused by carrier.</p>",
+            "row_content": "<p>USPS 2 to 5 business day and FedEx 2 Day. We offer free USPS shipping on orders over $500.</p><p>We are not responsible for delayed delivery caused by carrier.</p>",
             "page": ""
           }
         },

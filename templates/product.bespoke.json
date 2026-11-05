@@ -410,6 +410,16 @@
             "image": "shopify://shop_images/cream-dove.png",
             "image_width": 120
           }
+        },
+        "press_V7rd6W": {
+          "type": "press",
+          "name": "Fluffy Bezel",
+          "settings": {
+            "content": "<p><strong>The Fluffy Bezel</strong></p>",
+            "url": "",
+            "image": "shopify://shop_images/FLUFFY-BEZEL-SKETCH.png",
+            "image_width": 120
+          }
         }
       },
       "block_order": [
@@ -419,7 +429,8 @@
         "press_p6Mn7k",
         "press_XJatkE",
         "press_CUwrQP",
-        "press_Xp9AzN"
+        "press_Xp9AzN",
+        "press_V7rd6W"
       ],
       "name": "Settings",
       "settings": {
